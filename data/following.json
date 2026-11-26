@@ -1,0 +1,12 @@
+{
+ "user": "analyserxxx",
+ "at": "2026-11-26T16:14:57.801Z",
+ "profile": {
+  "id": "952632658575659009",
+  "name": "Analyser.",
+  "following": 212,
+  "followers": 9105
+ },
+ "following": [],
+ "error": "following: AuthenticationError: Scraper is not logged-in for profile following."
+}
