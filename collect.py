@@ -339,7 +339,7 @@ def tokens():
             info = p.get("info") or {}
             out[sym_] = {"name": p["baseToken"].get("name"), "price": float(p.get("priceUsd") or 0) or None, "mcap": p.get("marketCap") or p.get("fdv"),
                          "ch24": (p.get("priceChange") or {}).get("h24"), "liq": (p.get("liquidity") or {}).get("usd"), "vol24": (p.get("volume") or {}).get("h24"),
-                         "logo": info.get("imageUrl"), "banner": info.get("header"), "url": p.get("url"), "chain": p.get("chainId"), "pair": p.get("pairAddress"), "ca": a,
+                         "logo": info.get("imageUrl"), "banner": info.get("header"), "url": p.get("url"), "chain": p.get("chainId"), "pair": p.get("pairAddress"), "ca": a, "byca": 1,
                          "x": next((s.get("url") for s in info.get("socials", []) if s.get("type") == "twitter"), None), "age": p.get("pairCreatedAt")}
             for t in tw:
                 if sym_ and sym_ not in t["tickers"]:
