@@ -266,9 +266,35 @@ def influ():
 SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM"}
 @section("top")
 def top():
-    """Classement CoinGecko (top 250) pour masquer les grosses capitalisations dans l'onglet Influenceurs."""
-    j = json.loads(get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1", headers={"Accept": "application/json"}))
-    return [[(x.get("symbol") or "").upper(), x.get("market_cap_rank"), x.get("market_cap")] for x in j if x.get("symbol")]
+    """Classement CoinGecko (top 1000) pour masquer les grosses capitalisations dans l'onglet Influenceurs.
+    La page 1 (top 250) est relue à chaque passage ; les pages 2 à 4 (rangs 251 à 1000) toutes les 6 h, pour rester dans la limite gratuite."""
+    url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page="
+    row = lambda x: [(x.get("symbol") or "").upper(), x.get("market_cap_rank"), x.get("market_cap")]
+    first = [row(x) for x in json.loads(get(url + "1", headers={"Accept": "application/json"})) if x.get("symbol")]
+    try:
+        prev = json.load(open("data/feed.json", encoding="utf-8"))
+    except Exception:
+        prev = {}
+    old = [r for r in (prev.get("top") or []) if (r[1] or 0) > 250]
+    at = prev.get("top_deep_at") or ""
+    fresh = at and (dt.datetime.utcnow() - dt.datetime.strptime(at, "%Y-%m-%dT%H:%M:%SZ")).total_seconds() < 6 * 3600
+    if fresh and len(old) > 500:
+        OUT["top_deep_at"] = at
+        return first + old
+    deep = []
+    for pg in (2, 3, 4):
+        try:
+            time.sleep(2.5)
+            deep += [row(x) for x in json.loads(get(url + str(pg), headers={"Accept": "application/json"})) if x.get("symbol")]
+        except Exception as e:
+            OUT["errors"]["top_deep"] = f"page {pg}: {type(e).__name__}"[:120]
+            break
+    if len(deep) > 500:
+        OUT["top_deep_at"] = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        return first + deep
+    if old:
+        OUT["top_deep_at"] = at
+    return first + (old or deep)
 
 EU_LIST = ["^FCHI", "AC.PA", "AI.PA", "AIR.PA", "MT.AS", "CS.PA", "BNP.PA", "EN.PA", "CAP.PA", "CA.PA", "ACA.PA", "BN.PA", "DSY.PA", "EDEN.PA", "ENGI.PA", "EL.PA", "ERF.PA", "RMS.PA", "KER.PA", "OR.PA", "LR.PA", "MC.PA", "ML.PA", "ORA.PA", "RI.PA", "PUB.PA", "RNO.PA", "SAF.PA", "SGO.PA", "SAN.PA", "SU.PA", "GLE.PA", "STLAP.PA", "STMPA.PA", "HO.PA", "TTE.PA", "URW.PA", "VIE.PA", "DG.PA", "BVI.PA", "AM.PA"]
 @section("eu")
