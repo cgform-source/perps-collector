@@ -214,7 +214,29 @@ def stocktwits():
     return out
 
 IBULL = re.compile(r"\b(long|longed|longing|bull(ish)?|moon|pump(ing)?|send(ing)?|breakout|higher|ath|buy(ing)?|bid|accumulat\w*|undervalued|reversal|bottom(ed)?|rip|green)\b", re.I)
-IBEAR = re.compile(r"\b(short(ed|ing)?|bear(ish)?|dump(ing)?|rug|sell(ing)?|lower|top(ped)?|breakdown|overvalued|rekt|red|crash|exit)\b", re.I)
+IBEAR = re.compile(r"\b(short(s|ed|ing)?|bear(ish)?|dump(s|ed|ing)?|rug(ged)?|sell(s|ing)?|sold|lower|top(ped)? is in|breakdown|overvalued|rekt|crash(es|ed|ing)?|exit|slam(s|med)?|down(side)?|drop(s|ped|ping)?|fall(s|ing)?|nuke[ds]?|fade|fading|puts?|tank(s|ed|ing)?|bleed(ing)?|capitulat\w*|collapse[ds]?)\b", re.I)
+TALIAS = {"MATIC": "POL", "WBTC": "BTC", "WETH": "ETH", "XBT": "BTC"}
+def norm_tk(L):
+    """$ETHUSD -> ETH, $HYPEBTC -> HYPE + BTC, $MATIC -> POL (nom actuel)."""
+    known = {r[0] for r in (OUT.get("top") or [])} | {"BTC", "ETH", "SOL", "HYPE"}
+    out = []
+    for t in L:
+        t = TALIAS.get(t, t)
+        m = re.match(r"^([A-Z0-9]{2,10}?)(USDT|USDC|USDE|USD|PERP)$", t)
+        if m and (m.group(1) in known or len(m.group(1)) >= 3):
+            out.append(TALIAS.get(m.group(1), m.group(1)))
+            continue
+        if t not in known and len(t) >= 5:
+            for i in range(2, len(t) - 1):
+                if t[:i] in known and t[i:] in known:
+                    out += [t[:i], t[i:]]
+                    break
+            else:
+                out.append(t)
+            continue
+        out.append(t)
+    return sorted(set(out))
+
 @section("influ")
 def influ():
     try:
@@ -234,7 +256,7 @@ def influ():
         pr = prof.get((t.get("h") or "").lower()) or {}
         t["fol"] = pr.get("fol", 0)
         txt = t.get("fr", "")
-        tk = sorted(set(x.upper() for x in re.findall(r"\$([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
+        tk = norm_tk(set(x.upper() for x in re.findall(r"\$([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
         b, r = bool(IBULL.search(txt)), bool(IBEAR.search(txt))
         t["tickers"] = tk
         t["tag"] = "bull" if b and not r else "bear" if r and not b else "mix"
