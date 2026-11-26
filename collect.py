@@ -325,6 +325,7 @@ def callpx():
         for k in t.get("tickers", []):
             need.setdefault(k, []).append(t)
     out = {}
+    gtn = [0]
     for k, tw in need.items():
         hist = []
         try:
@@ -332,7 +333,8 @@ def callpx():
         except Exception:
             hist = []
         src = "hl"
-        if not hist and k in toks:
+        if not hist and k in toks and gtn[0] < 25:
+            gtn[0] += 1
             try:
                 time.sleep(2.6)
                 hist = gt_hist(toks[k].get("chain"), toks[k].get("pair"))

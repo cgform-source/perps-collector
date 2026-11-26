@@ -9,6 +9,10 @@ const LOGGED = !!(process.env.X_AUTH_TOKEN && process.env.X_CT0);
 let LOGGED_OK = false;
 if (LOGGED) { try { await s.setCookies([`auth_token=${process.env.X_AUTH_TOKEN.trim()}; Domain=.x.com; Path=/; Secure; HttpOnly`, `ct0=${process.env.X_CT0.trim()}; Domain=.x.com; Path=/; Secure`]); LOGGED_OK = await Promise.race([s.isLoggedIn(), new Promise(r => setTimeout(() => r(false), 15000))]); } catch (e) { console.log('cookies refusés', String(e).slice(0, 160)); } console.log('compte X secondaire connecté :', LOGGED_OK); }
 const out = { at: new Date().toISOString(), tweets: [], errors: {} };
+let prevAll = {}; try { prevAll = JSON.parse(fs.readFileSync('data/x_guest.json', 'utf8')); } catch (e) {}
+// X limite à ~50 lectures par quart d'heure : les comptes d'actualité ne sont relus qu'un passage sur deux
+const SKIP_NEWS = LOGGED_OK && Math.floor(Date.now() / 900000) % 2 === 1 && (prevAll.tweets || []).length > 0;
+if (SKIP_NEWS) out.tweets = prevAll.tweets;
 function mergeInflu() {
   const seen = new Set(out.influ.map(t => t.url)), lim = Date.now() - 30 * 86400e3;
   for (const t of (prevAll.influ || [])) if (!seen.has(t.url)) { seen.add(t.url); out.influ.push(t); }
@@ -18,7 +22,7 @@ function mergeInflu() {
 setTimeout(() => { try { mergeInflu(); fs.mkdirSync('data', { recursive: true }); fs.writeFileSync('data/x_guest.json', JSON.stringify(out)); } catch (e) {} console.log('x_guest: arrêt garde-fou'); process.exit(0); }, 600000).unref();
 const BULL = /\b(beat|surge|soar|jump|rall(y|ies)|upgrade|record|bullish|breakout|deal|rate cut)\b/i, BEAR = /\b(miss|fall|drop|plunge|crash|downgrade|bearish|tariff|sanction|war|ban|probe|lawsuit|hack|default|recession)\b/i;
 const tag = t => { const b = BULL.test(t), r = BEAR.test(t); return b && !r ? 'bull' : r && !b ? 'bear' : 'mix'; };
-for (const a of cfg.x_accounts || []) {
+for (const a of (SKIP_NEWS ? [] : cfg.x_accounts || [])) {
   try {
     let n = 0;
     for await (const t of s.getTweets(a, 12)) {
@@ -30,18 +34,19 @@ for (const a of cfg.x_accounts || []) {
   } catch (e) { out.errors[a] = String(e).slice(0, 160); }
   await new Promise(r => setTimeout(r, 1500));
 }
-let prevAll = {}; try { prevAll = JSON.parse(fs.readFileSync('data/x_guest.json', 'utf8')); } catch (e) {}
 out.influ = [];
 // rotation : on traite une tranche des comptes à chaque passage (toutes les 30 min), et on garde les tweets des passages précédents
-const INF = cfg.influencers || [], SL = LOGGED_OK ? 80 : 40, off = (Math.floor(Date.now() / 1800000) * SL) % Math.max(1, INF.length);
+const INF = cfg.influencers || [], SL = LOGGED_OK ? 80 : 40;
 // priorité : les comptes qui ont fait des calls ($ticker ou CA) ces 7 derniers jours sont relus à chaque passage
-const hot = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, Math.round(SL * 0.4));
+const hot = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 12);
 const rest = INF.filter(h => !hot.some(x => x.toLowerCase() === h.toLowerCase()));
-const slice = INF.length <= SL ? INF : [...hot, ...[...rest, ...rest].slice(off % Math.max(1, rest.length), off % Math.max(1, rest.length) + SL - hot.length)];
-out.influ_mode = LOGGED_OK ? 'compte' : 'invite'; out.logged_try = LOGGED; let rateHit = false;
-let prevProf = prevAll.influ_prof || {};
-out.influ_prof = { ...prevProf }; let profBudget = 12;
+// rotation : on reprend là où le passage précédent s'est arrêté
+let start = Math.max(0, rest.findIndex(h => h.toLowerCase() === String(prevAll.rot_next || '').toLowerCase()));
+const order = [...rest.slice(start), ...rest.slice(0, start)];
+const slice = [...hot, ...order.slice(0, Math.max(0, SL - hot.length))];
+out.rot_next = order[0] || null;
 for (const a of slice) {
+  if (!hot.includes(a)) { const k = order.indexOf(a); out.rot_next = order[(k + 1) % order.length]; }
   if (!prevProf[a.toLowerCase()] && profBudget-- > 0) try { const p = await Promise.race([s.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
   try {
     let n = 0;
@@ -52,7 +57,7 @@ for (const a of slice) {
       if (++n >= (LOGGED_OK ? 20 : 10)) break;
     }
   } catch (e) { out.errors['influ:' + a] = String(e).slice(0, 160); if (/rate|429/i.test(String(e))) { rateHit = true; } }
-  if (rateHit) { out.errors.rate_limit = 'limite X atteinte, reprise au prochain passage'; break; }
+  if (rateHit) { if (!hot.includes(a)) out.rot_next = a; out.errors.rate_limit = 'limite X atteinte, reprise au prochain passage (à @' + a + ')'; break; }
   await new Promise(r => setTimeout(r, 1200));
 }
 mergeInflu();
