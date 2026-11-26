@@ -226,7 +226,8 @@ def influ():
     OUT["influ_prof"] = prof
     OUT["influ_mode"] = g.get("influ_mode", "invite")
     try:
-        OUT["influ_n"] = len(json.load(open("config.json", encoding="utf-8")).get("influencers", []))
+        OUT["influ_list"] = json.load(open("config.json", encoding="utf-8")).get("influencers", [])
+        OUT["influ_n"] = len(OUT["influ_list"])
     except Exception:
         pass
     for t in g.get("influ", []):
