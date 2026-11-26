@@ -1,0 +1,6 @@
+{
+  "x_accounts": ["KobeissiLetter", "unusual_whales", "DeItaone", "zerohedge", "WatcherGuru", "realDonaldTrump", "elonmusk", "Mr_Derivatives", "TheRoaringKitty"],
+  "tickers": ["NVDA", "ANT", "AMD", "MU", "SNDK", "GOOGL", "META", "TSLA", "MSFT", "AAPL", "AMZN", "PLTR", "BTC", "ETH", "SOL", "HYPE"],
+  "min_likes": 100,
+  "subreddits": ["wallstreetbets", "stocks", "CryptoCurrency", "investing"]
+}
