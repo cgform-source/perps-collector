@@ -37,6 +37,9 @@ for (const a of (SKIP_NEWS ? [] : cfg.x_accounts || [])) {
   await new Promise(r => setTimeout(r, 1500));
 }
 out.influ = [];
+let prevProf = prevAll.influ_prof || {};
+out.influ_prof = { ...prevProf }; let profBudget = LOGGED_OK ? 4 : 12;
+out.influ_mode = LOGGED_OK ? 'compte' : 'invite'; out.logged_try = LOGGED; let rateHit = false;
 // rotation : on traite une tranche des comptes à chaque passage (toutes les 30 min), et on garde les tweets des passages précédents
 // préférences réglées depuis le dashboard (étoile = favori relu à chaque passage, croix = compte ignoré)
 try { const r = await fetch('https://lqefewiwrecdjommktgm.supabase.co/rest/v1/influ_prefs?id=eq.analyserxxx&select=vip,hidden', { headers: { apikey: 'sb_publishable_IMMxd7lqThb0elf0Z2JwNQ_3Da4tdWq' }, signal: AbortSignal.timeout(8000) }); const j = await r.json(); if (j && j[0]) PREF = j[0]; } catch (e) { out.errors.prefs = String(e).slice(0, 80); }
