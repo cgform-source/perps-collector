@@ -141,8 +141,23 @@ def _twifork(tok, ct0, accs, tickers, since):
 def x_feed():
     tok = os.environ.get("X_AUTH_TOKEN", "").strip()
     ct0 = os.environ.get("X_CT0", "").strip()
+    def guest(note):
+        try:
+            g = json.load(open("data/x_guest.json", encoding="utf-8"))
+        except Exception:
+            g = {"tweets": []}
+        tick = {}
+        for t in g.get("tweets", []):
+            for tk in set(re.findall(r"\$([A-Z]{2,6})\b", t["fr"])):
+                tick.setdefault(tk, []).append(t)
+        acc = {}
+        for t in g.get("tweets", []):
+            acc.setdefault(t["h"].lower(), []).append(t)
+        if g.get("errors"):
+            OUT["errors"]["x_guest"] = str(g["errors"])[:300]
+        return {"source": "invité (sans compte)", "note": note, "accounts": acc, "tickers": tick, "latest": sorted(g.get("tweets", []), key=lambda x: x["t"], reverse=True)[:40]}
     if not tok:
-        return {"note": "Ajoute le secret X_AUTH_TOKEN pour activer X (voir LISEZMOI.md)", "accounts": {}, "tickers": {}}
+        return guest("Mode invité : tweets des comptes suivis seulement. Ajoute X_AUTH_TOKEN et X_CT0 pour la recherche par action.")
     since = (dt.datetime.utcnow() - dt.timedelta(days=2)).strftime("%Y-%m-%d")
     accs, tickers = CFG.get("x_accounts", []), CFG.get("tickers", [])
     tried = []
@@ -164,7 +179,8 @@ def x_feed():
             return out
         except Exception as e:
             tried.append(f"{name}: {type(e).__name__}: {str(e)[:120]}")
-    raise RuntimeError(" | ".join(tried))
+    OUT["errors"]["x"] = " | ".join(tried)
+    return guest("Les 3 outils avec compte ont échoué, repli en mode invité.")
 
 @section("trump")
 def trump():

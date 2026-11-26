@@ -11,6 +11,13 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: X sans compte (mode invité)
+        run: |
+          npm install --no-save @the-convocation/twitter-scraper || true
+          node x_guest.mjs || echo "mode invité indisponible"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -26,6 +33,6 @@ jobs:
         run: |
           git config user.name "collecteur"
           git config user.email "collecteur@users.noreply.github.com"
-          git add data/feed.json
+          git add data/feed.json data/x_guest.json || git add data/feed.json
           git commit -m "collecte $(date -u +%F_%H%M)" || echo "rien de nouveau"
           git push
