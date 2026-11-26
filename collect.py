@@ -207,6 +207,11 @@ def influ():
     out = []
     prof = g.get("influ_prof", {})
     OUT["influ_prof"] = prof
+    OUT["influ_mode"] = g.get("influ_mode", "invite")
+    try:
+        OUT["influ_n"] = len(json.load(open("config.json", encoding="utf-8")).get("influencers", []))
+    except Exception:
+        pass
     for t in g.get("influ", []):
         pr = prof.get((t.get("h") or "").lower()) or {}
         t["fol"] = pr.get("fol", 0)
