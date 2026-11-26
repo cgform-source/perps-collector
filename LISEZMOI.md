@@ -26,5 +26,7 @@ X n’a plus d’accès gratuit officiel. Le collecteur utilise la bibliothèque
 
 Le collecteur essaie 3 outils open source à la suite (Scweet, puis twscrape, puis twifork) : si X en casse un, les autres prennent le relais.
 5. Relance le workflow. Les comptes et tickers suivis se modifient dans `config.json`.
+6. Avec ces deux secrets, le module **Influenceurs** lit les tweets les plus récents (sans compte, X ne montre que les tweets « populaires », souvent anciens).
+7. Pour récupérer **toute** la liste des comptes suivis par @analyserxxx : onglet Actions → « Liste des abonnements X (manuel) » → Run workflow → `analyserxxx`. Les comptes manquants sont ajoutés tout seuls à `config.json`. Le compte secondaire doit suivre les mêmes comptes ou simplement être connecté : la liste d’abonnements d’un compte public est lisible par n’importe quel compte connecté.
 
 Sans ce secret, tout le reste fonctionne quand même.
