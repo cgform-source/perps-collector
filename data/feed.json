@@ -1,10 +1,11 @@
 {
- "generated": "2026-11-26T11:52:07Z",
+ "generated": "2026-11-26T11:55:28Z",
  "errors": {
   "reddit:wallstreetbets": "HTTP Error 404: Not Found",
   "reddit:stocks": "HTTP Error 429: Too Many Requests",
   "reddit:CryptoCurrency": "HTTP Error 429: Too Many Requests",
-  "reddit:investing": "HTTP Error 429: Too Many Requests"
+  "reddit:investing": "HTTP Error 429: Too Many Requests",
+  "risks": "HTTPError: HTTP Error 429: Too Many Requests"
  },
  "x": {
   "note": "Ajoute le secret X_AUTH_TOKEN pour activer X (voir LISEZMOI.md)",
@@ -189,530 +190,104 @@
   }
  ],
  "reddit": {},
- "risks": [
+ "kidnap_fr": [
   {
-   "t": "20261126T061500Z",
-   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-   "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
-   "src": "thepeterboroughexaminer.com",
-   "lang": "English"
+   "t": "Wed, 04 Nov 2026 08:00:00 GMT",
+   "title": "Vendée : Il tire face à une tentative d’enlèvement, une possible piste crypto évoquée - Journal Du Coin",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPRkhLeVpqaGtDZEhYY1pfd2RxV3Q5SU1vdVlwNGROaG8xZlpUZ1ZKRTBmMzk4RzdMczdQTy12cnA2UDdXTDEwenA0ZC15aTc4bHZ0MFRlX2FtOUZpT3ctcElaa00tTW14UnFJb2pMcEx5SUQweGtLS2VJOGpkZE1iYXhFMlI?oc=5",
+   "src": "Journal Du Coin"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
-   "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
-   "src": "aol.co.uk",
-   "lang": "English"
+   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
+   "title": "Couple séquestré et forcé de virer 900.000 euros en bitcoins : un homme écroué pour un crypto-rapt dans les Yvelines - TF1 Info",
+   "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQR0VpdmpuUDh2NDlBTEI2WHFVN2VZMmU0dmNSVDc1VjBqbm1DS2lwaGo1amVaY05jOFR6MFdzTlRkTURlSlpXTVhKNHhoczFTdDVwYXZxTWFfMUpuYzVHOGMxeGhEeDNFR3c5OWhDN0NhbHhQdk5UdXYwYUpMbkhCRzdqZlRSVGw2RXFQc1RmY3M0bmV4MXRPMFRvMnEyS2RfOXl3MVNsRGtuVmxXWjRCRXRKMVpyME43WjVLM19ObTJaQ2FjZFNoeC11UE1Fdm9pWWtzWmZxZldsbzJuZ1RSVFlmM1VqcmNpT0JFR0IyMHRMbDRIMDJ5QzMzWnlnby1jZFNB?oc=5",
+   "src": "TF1 Info"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Letters to the Editor : Nov . 25 , 2026",
-   "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
-   "src": "kelownadailycourier.ca",
-   "lang": "English"
+   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
+   "title": "Un homme a été mis en examen et écroué dans les Yvelines, après la séquestration d'un couple forcé à virer 900 000 euros en bitcoins - franceinfo",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNQTA3b2hHWjdvUy1VMFFQZ0d0dHNlajVDamJseWJ3bG9JZjA0aS13U0otZ0k0bjRVOUZnczJhSXNlVm52c3Z2V3JTa3FQbklSdFlnT0wtQXJ3bjVrY3FXQ2RSYzJ3bFFsRkhZemxMTUhZZ3hEelhxMXJLMFVTQ2szMEFGNlpDSTZHa3o4Z204T05XR21OZDhJVi1oWGY4blU5cXNPQ0lwZTU3MDc3TFlZdlIwTlp4WHRUcXROdmY3aG9NcHM0LUV0OFVSbVA4YkZBbE53Q1ctS3JyanlWTmVWUzVxOA?oc=5",
+   "src": "franceinfo"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Rassvet ,  Russia Starlink  is expanding rapidly",
-   "url": "https://www.dw.com/en/can-rassvet-russias-starlink-change-the-course-of-the-war-in-ukraine/a-80052579",
-   "src": "dw.com",
-   "lang": "English"
+   "t": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "title": "Un homme mis en examen et écroué après un crypto-rapt à 900.000 euros en bitcoins dans les Yvelines - BFM",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOd1J5YTN0OGVMaDlzWWxoYmNBRVdWVUd0MmR5VXg5dUtYVklRMmoxSURYa0otRnhJUU5PcC1kWkZpV1ZkMDZOTmNsOHdtVXB6d1dvaHBTNWJhc2NWN2lBSHVFSUZ1WHM2WXJfeWVQQXpENWV6UVV1ZG0ySVdVYV9ucGZIdXFHdnlsZ1BLNXQ0LXp3cTA0YnpycmxCR2V6bFJRX003b2tvOUFmUjFMcV9Xdm1ZR0VEcU9fTWpJWkF5TUpzaldPS2h1UVM4Zm5XMHZEWVdSRnkxRlpOeHVmNVVRWVI5RQ?oc=5",
+   "src": "BFM"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Russia hits Kyiv with ballistic missiles , mayor says",
-   "url": "https://www.newcastleherald.com.au/story/9398450/russia-hits-kyiv-with-ballistic-missiles-mayor-says/",
-   "src": "newcastleherald.com.au",
-   "lang": "English"
+   "t": "Tue, 17 Nov 2026 08:00:00 GMT",
+   "title": "L’enlèvement en plein jour à Strasbourg de la sœur d’un influenceur en cryptomonnaie a-t-il été orchestré par la DZ Mafia - Le Parisien",
+   "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNSGlUcGdNamZHNTZaUmNLWVNZcDI2M2dnMEFhbDU2R2ptMVFzM0F4U1hyOTNzVUFuR2JMdWk0U1VIYkd2VUN0RDZWMmJqUmxoS3FYN1R1bkVhbm9XT05iVmxHb2ZNZmNtNHJJVEVsU0dSNVB3T3YybGlCT1ozN2N6c0pBMm9LTV92LU03RUd3cHJIbEFHZDdYMlI0RUo3MTFHMjVCc01pR014U2o0UGpZVTdWMUNTOVhqN3p6c2Z2S2FWVEtYcHBYZmg4ZFBmYnd2cEZDUXowRGY1NlRqT19KT1NHb3ptUU1RUi0wYjhhamxoRTR3Qkw2X1hZXzU5amdhVVZNMTVrM3lYa1R3blcwZVJEZlAtTGxRbWs4cDZPMGVhMzdCZndNUA?oc=5",
+   "src": "Le Parisien"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "France cost of living crisis : why working is no longer enough",
-   "url": "http://www.bignewsnetwork.com/news/279454868/france-cost-of-living-crisis-why-working-is-no-longer-enough",
-   "src": "bignewsnetwork.com",
-   "lang": "English"
+   "t": "Thu, 05 Nov 2026 08:00:00 GMT",
+   "title": "Tentative d'enlèvement en Vendée : prison ferme pour la victime qui a tiré sur ses assaillants - Cryptoast",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObVFWYzNYLVVQWmp5TlE4OVNrQTZQd2dCYlZDWHdCYWluWTJIcnZiSktCUFUxYmhpUWN6YXlKTlJVT29wa0YzWmtoNjlDcmg5dXpWWGYzWU11a2RocGJySU1JbkF5Zy1TaVdlZ2FIU2ZZLXhuQjlDcDJFbGN2ODNqbWpubVU3VDJMR29sYWVuVWNGa1hvUEZz?oc=5",
+   "src": "Cryptoast"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Jared Kushner Thirsts Over  Grandmaster  Putin in Bonkers Interview",
-   "url": "https://www.thedailybeast.com/jared-kushner-thirsts-over-grandmaster-putin-in-bonkers-interview",
-   "src": "thedailybeast.com",
-   "lang": "English"
+   "t": "Thu, 05 Nov 2026 08:00:00 GMT",
+   "title": "«Huit millions contre tes parents…» : révélations sur le cryptorapt ultra-violent d'un couple de retraités - Vanity Fair",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5sN21wb3VYc0dNc2hTcTIwUTN3Z1lwcnFiTmtEQjBhYk1KQm5EaUdUaTlEVHliLXdMRFNzS1FIcmF0VXZFYWtYeEZUd1JqbzVibXV3TnRhaFhsaHdpaGtVUUFPSTFHTGRoc01ySnhrMkMxQ2p6TF9oXw?oc=5",
+   "src": "Vanity Fair"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Korea moves to beef up W10tr stock market rescue fund",
-   "url": "https://www.koreaherald.com/article/10950449",
-   "src": "koreaherald.com",
-   "lang": "English"
+   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
+   "title": "Yvelines : un homme mis en examen et écroué après un crypto-rapt à 900.000 euros - CNews",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVmQzdWJQWks1Y0FCV2Q2VWtwSEdBSDJQMTFIazU4Q3V4MDQ2UUNkQUdiZUMwbU55dkptSU43ZzVycWZXaFJITThsNTdaSzNqZmNmVkxBY05WendUZ2lBLTA0ZkgtOVAzV2VXM25UUGpGd3FxNnYzS0FEeHJYOV9TSHIzT08tSTN6clVsc1FxSnFYdE5MNDdBNE5aSjBmN3lPMlcxbjNKNUpFVzd0TVNLSnE3VjfSAboBQVVfeXFMT2VKZlFaMzBFVHpkdW5IdVdycDN2Mm5FNUFRZXo3TEZsdFp1TGZNQTk5QVdldEMyMzF3dnBTYzcwdnVCSW8zc2k2YWVlcmRxa2c2M2NfR2NqVGczZ2lBVG5BaVBUNW85cXBRT2VuckQ1VlpnY2pxcFVYN21KbjdjTldUemVyMW52Ujl0RG5BZkxJZk9Xbmo3UnVsRGJVS0NHMzlNNTZ0ZWwwUlZ6QmxBNTdxZTVqd29PTFRR?oc=5",
+   "src": "CNews"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "  Trapped in grief : wife of Japanese journalist detained by Russia pleads for his release",
-   "url": "https://www.aol.co.uk/articles/trapped-grief-wife-japanese-journalist-051617000.html",
-   "src": "aol.co.uk",
-   "lang": "English"
+   "t": "Tue, 03 Nov 2026 08:00:00 GMT",
+   "title": "Victime d’une tentative d’enlèvement en Vendée, un homme fait usage d’une arme : il est placé en détention provisoire - Ouest-France",
+   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNN0ZHaWNadGdfRW9jODRTZkJUb2tOLVh1LTl2MTVvQ19jNTM1TkZPdWw3T2MtOHdzZjZDdnNTTUhCNzNSelVXTzd1b0lEUTluNXhxZU9KQUFuSGw1WU01enRER3pwM3gwNEdxOUp0bG0xR2JwcTdOZVdsMGtucE51VXdvVGpQcEhUMmlyeVZmLW1OMUhNR19uVnFxdDZfSWIxeW4xWXpXX0J5OUE0ZHBLT29aSUFLZlFfRFhSMjlaM0g4eE1ERkF2cTNKSUdTRkZueVdHdDVyX0x3ZndGOTBnaUZUMVpQcjJiMVpsRUM4QllYZ0xfaTI1RkthZVF4ZnFiMHg4anpoNjE1Uy1NMnJmbGJaT0VUTEVhYzhqWXJOd3BwQWJ0MEE?oc=5",
+   "src": "Ouest-France"
   },
   {
-   "t": "20261126T061500Z",
-   "title": "Europe Is Wrong to Dismiss Russian Demands for Common Security",
-   "url": "https://www.theamericanconservative.com/europe-is-wrong-to-dismiss-russian-demands-for-common-security/",
-   "src": "theamericanconservative.com",
-   "lang": "English"
+   "t": "Mon, 23 Nov 2026 14:20:13 GMT",
+   "title": "Soudan du Sud : MSF suspend ses activités à Yei River après l’enlèvement de deux soignants - Médecins Sans Frontières",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPX3ZiM0gyZVloUEdMZUhmRkhVOUg0STZoQ0lYNFpVQjNMM2U1TXhhV0VIN2xadmJHQUNtT0RtblpsTXVFTnVFRUkzbTQwMElGYVRuOEtReGxmaXgzLTBZSWV1bG9ia1JNaGhKR3haWnZ6c2xzcXAyZy1seGlLbElRcVJOMHl5NVRkLXBiNURsdF9GbWQwTnJKSUEwRHhyazVKLXdocVd5ek13THpDVk1qQnVxWkVrWEx5TkRONF9TcVR1SVJS?oc=5",
+   "src": "Médecins Sans Frontières"
   },
   {
-   "t": "20261126T054500Z",
-   "title": "Supreme Court : Balance sheet debt acknowledgement can extend IBC limitation period",
-   "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/supreme-court-balance-sheet-debt-acknowledgement-can-extend-ibc-limitation-period/articleshow/136179209.cms",
-   "src": "economictimes.indiatimes.com",
-   "lang": "English"
+   "t": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "title": "Crypto-rapt dans les Yvelines : un homme mis en examen et placé en détention provisoire - Linfo.re",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVEhxUHE0VUhlZTByT0NlR2MwZUFsaHVLdVM4UTVfQkhOc09tRnlZTlpyVTM0X3puT2toQ3U2Mll1ajRRcHloUjM0Q0lDa004MV9DbWl2dWNqM2RYOUNKS2pzcEtZZFQ4QnZzRDlqaDlvWGx6YTNhalVUM01GZmZpTDg4NVBteGVCQlVIZmdObElkTGFjay1Cd1c1ak8zQS1RXzJ2azFSbllseHdOUk82MmtncnFIVmEweUptSTNqRFVfN0xz?oc=5",
+   "src": "Linfo.re"
   },
   {
-   "t": "20261126T054500Z",
-   "title": "Liberal senator defects to One Nation",
-   "url": "https://www.abc.net.au/listen/programs/worldtoday/liberal-senator-defects-to-one-nation/107413202",
-   "src": "abc.net.au",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Overnight News Digest : November 25 , 2026",
-   "url": "https://www.dailykos.com/stories/2026/11/25/800134153/community/overnight-news-digest-november-25-2026/",
-   "src": "dailykos.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Ukraine Invasion Day 1 , 736 : RU demands UKR cede Donbas as a precondition of ceasefire negotiations",
-   "url": "https://www.dailykos.com/stories/2026/11/25/800134195/community/1736/",
-   "src": "dailykos.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-   "url": "http://www.rockymounttelegram.com/news/national/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_030af451-8be8-51fa-907b-aae7f2313d23.html",
-   "src": "rockymounttelegram.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "10 Most Oversold Semiconductor Stocks to Buy for 2027",
-   "url": "https://www.insidermonkey.com/news/10-most-oversold-semiconductor-stocks-to-buy-for-2027-1870302/",
-   "src": "insidermonkey.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "US unveils tariffs on EU , China and others over  unfair  trade",
-   "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/us-unveils-tariffs-on-eu-china-and-others-over-unfair-trade",
-   "src": "freemalaysiatoday.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "Casa Loma home invasion : Michael Eckert , 39 , shot and killed",
-   "url": "https://www.cp24.com/local/toronto/2026/11/26/unthinkable-loss-toronto-musician-shot-and-killed-during-casa-loma-home-invasion/",
-   "src": "cp24.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "Slain Toronto home invasion victim was  brilliant  musician",
-   "url": "https://ottawasun.com/entertainment/music/home-invasion-victim-michael-eckert-mourned",
-   "src": "ottawasun.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "All Under Heaven : Beijing Eight Pillars",
-   "url": "https://www.theepochtimes.com/opinion/all-under-heaven-beijings-eight-pillars-6125753",
-   "src": "theepochtimes.com",
-   "lang": "English"
-  }
- ],
- "kidnap_fr": [],
- "fed_raw": [
-  {
-   "description": "Hearing on Oversight of Prudential Regulators",
-   "live": "https://financialservices.house.gov/",
-   "location": "Before the U.S. House Financial Services Committee",
-   "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman",
-   "time": "10:00 a.m.",
-   "month": "2026-12",
-   "days": "1",
-   "type": "Testimony"
-  },
-  {
-   "description": "Modernizing Banking Supervision: A Shared Agenda for the Americas (via pre-recorded video)",
-   "location": "At a meeting with the Association of Supervisors of Banks of the Americas, Basel Committee on Banking Supervision, and Financial Stability Institute",
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "time": "7:25 a.m.",
-   "month": "2026-11",
-   "days": "25",
-   "type": "Speeches"
+   "t": "Thu, 05 Nov 2026 08:00:00 GMT",
+   "title": "Quatre jeunes interpellés pour avoir séquestré la mauvaise famille - 20 Minutes",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMmREamtBZVRJM1J5UW9hZkNMRTFMWFVhcGtaS1oxWnVFMWc1TjJvNC1UaHIyWTF0anM3a1hVanN6YXV1YS1hUjdoQXE1RWhEZEZMaUZhNk05RlpsMHdPSFhRMmtYRENWbEp1ZkNhd1FXSUUzMEtsbVBRSEZGY1FJeWl3UFpia1c2cF9qZ0ktRDFKTkoydnpja2tlQTM5WWVvNFkwUnNfVkpNaU0xaUFVS2xKN09Mb3VoaUVjWUNWRk8xS0pBcUxEUVNnY1dTWUkzcnRXSg?oc=5",
+   "src": "20 Minutes"
   }
  ],
  "fed": [
   {
    "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "10:00 a.m.",
+   "when": "2026-12-01T15:00:00Z",
    "type": "Testimony",
-   "link": null
+   "desc": "Hearing on Oversight of Prudential Regulators"
   },
   {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "7:25 a.m.",
-   "type": "Speeches",
-   "link": null
+   "title": "FOMC Meeting",
+   "when": "2026-12-09T19:00:00Z",
+   "type": "FOMC",
+   "desc": "&lt;p&gt;Two-day meeting, December 8 - 9&lt;/p&gt;&#10;&#10;&lt;p&gt;Press Conference&lt;/p&gt;"
   },
   {
-   "title": "Discussion - Vice Chair Philip N. Jefferson",
-   "when": "9:25 a.m.",
-   "type": "Speeches",
-   "link": null
+   "title": "FOMC Press Conference",
+   "when": "2026-12-09T19:30:00Z",
+   "type": "FOMC",
+   "desc": ""
   },
   {
-   "title": "Speech - Governor Lisa D. Cook",
-   "when": "12:15 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "8:25 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "1:35 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "9:10 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Chairman Kevin Warsh",
-   "when": "12:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech -  Governor Michael S. Barr",
-   "when": "5:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair Philip N. Jefferson",
-   "when": "7:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "10:50 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "10:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "6:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "3:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "4:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "8:40 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "12:15 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Chairman Kevin Warsh",
-   "when": "11:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "10:55 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "5:40 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "4:30 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "10:45 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "3:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair Philip N. Jefferson",
-   "when": "1:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "10:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook ",
-   "when": "3:25 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "3:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "12:40 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "11:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook",
-   "when": "1:25 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "8:15 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "10:05 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair Philip N. Jefferson",
-   "when": "10:20 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "9:30 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "8:30 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "9:05 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Chairman Kevin Warsh",
-   "when": "10:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "12:45 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook  ",
-   "when": "4:05 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Testimony - Chairman Kevin Warsh",
-   "when": "10:00 a.m.",
-   "type": "Testimony",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair Philip N. Jefferson",
-   "when": "7:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook",
-   "when": "1:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Testimony - Chairman Kevin Warsh",
-   "when": "10:00 a.m.",
-   "type": "Testimony",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "2:55 p.m.",
-   "type": "Speeches",
-   "link": "https://www.federalreserve.gov/conferences/next-gen-financial-inclusion.htm"
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "12:40 p.m.",
-   "type": "Speeches",
-   "link": "https://www.federalreserve.gov/conferences/next-gen-financial-inclusion.htm"
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "12:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "5:25 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "7:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Chairman Kevin Warsh",
-   "when": "9:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "8:45 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook",
-   "when": "2:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Christopher J. Waller",
-   "when": "9:00 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman ",
-   "when": "10:00 a.m.",
-   "type": "Testimony",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "12:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Jerome H. Powell",
-   "when": "8:30 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
-   "when": "9:10 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Discussion - Vice Chair Philip N. Jefferson",
-   "when": "8:00 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Lisa D. Cook",
-   "when": "3:55 p.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Governor Michael S. Barr",
-   "when": "9:15 a.m.",
-   "type": "Speeches",
-   "link": null
-  },
-  {
-   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman ",
-   "when": "1:00 p.m.",
-   "type": "Speeches",
-   "link": null
+   "title": "FOMC Minutes",
+   "when": "2026-12-30T19:00:00Z",
+   "type": "FOMC",
+   "desc": "&lt;p&gt;Meeting of December 8-9&lt;/p&gt;"
   }
  ]
 }
