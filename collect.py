@@ -205,7 +205,11 @@ def influ():
     except Exception:
         return []
     out = []
+    prof = g.get("influ_prof", {})
+    OUT["influ_prof"] = prof
     for t in g.get("influ", []):
+        pr = prof.get((t.get("h") or "").lower()) or {}
+        t["fol"] = pr.get("fol", 0)
         txt = t.get("fr", "")
         tk = sorted(set(x.upper() for x in re.findall(r"[$#]([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
         b, r = bool(IBULL.search(txt)), bool(IBEAR.search(txt))

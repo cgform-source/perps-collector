@@ -20,7 +20,9 @@ for (const a of cfg.x_accounts || []) {
   await new Promise(r => setTimeout(r, 1500));
 }
 out.influ = [];
+out.influ_prof = {};
 for (const a of cfg.influencers || []) {
+  try { const p = await s.getProfile(a); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
   try {
     let n = 0;
     for await (const t of s.getTweets(a, 10)) {
