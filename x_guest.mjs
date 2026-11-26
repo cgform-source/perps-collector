@@ -38,7 +38,10 @@ out.influ = [];
 // rotation : on traite une tranche des comptes à chaque passage (toutes les 30 min), et on garde les tweets des passages précédents
 const INF = cfg.influencers || [], SL = LOGGED_OK ? 80 : 40;
 // priorité : les comptes qui ont fait des calls ($ticker ou CA) ces 7 derniers jours sont relus à chaque passage
-const hot = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 12);
+const VIP = (cfg.influ_vip || []).filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 15);
+const hot0 = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 12);
+// favoris (config.json → influ_vip) : toujours relus en premier
+const hot = [...new Map([...VIP, ...hot0].map(h => [h.toLowerCase(), h])).values()].slice(0, 20);
 const rest = INF.filter(h => !hot.some(x => x.toLowerCase() === h.toLowerCase()));
 // rotation : on reprend là où le passage précédent s'est arrêté
 let start = Math.max(0, rest.findIndex(h => h.toLowerCase() === String(prevAll.rot_next || '').toLowerCase()));
