@@ -165,8 +165,14 @@ def x_feed():
         if needs_ct0 and not ct0:
             tried.append(f"{name}: secret X_CT0 manquant")
             continue
+        import signal
+        def _to(*_):
+            raise TimeoutError("trop long (120 s)")
+        signal.signal(signal.SIGALRM, _to)
+        signal.alarm(120)
         try:
             acc, tick = fn(tok, accs, tickers, since) if not needs_ct0 else fn(tok, ct0, accs, tickers, since)
+            signal.alarm(0)
             n = len(acc) + sum(len(v) for v in tick.values())
             if n == 0:
                 tried.append(f"{name}: 0 tweet")
@@ -179,6 +185,8 @@ def x_feed():
             return out
         except Exception as e:
             tried.append(f"{name}: {type(e).__name__}: {str(e)[:120]}")
+        finally:
+            signal.alarm(0)
     OUT["errors"]["x"] = " | ".join(tried)
     return guest("Les 3 outils avec compte ont échoué, repli en mode invité.")
 
