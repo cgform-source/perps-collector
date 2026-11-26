@@ -42,12 +42,17 @@ out.influ_prof = { ...prevProf }; let profBudget = LOGGED_OK ? 4 : 12;
 out.influ_mode = LOGGED_OK ? 'compte' : 'invite'; out.logged_try = LOGGED; let rateHit = false;
 // rotation : on traite une tranche des comptes à chaque passage (toutes les 30 min), et on garde les tweets des passages précédents
 // préférences réglées depuis le dashboard (étoile = favori relu à chaque passage, croix = compte ignoré)
-try { const r = await fetch('https://lqefewiwrecdjommktgm.supabase.co/rest/v1/influ_prefs?id=eq.analyserxxx&select=vip,hidden', { headers: { apikey: 'sb_publishable_IMMxd7lqThb0elf0Z2JwNQ_3Da4tdWq' }, signal: AbortSignal.timeout(8000) }); const j = await r.json(); if (j && j[0]) PREF = j[0]; } catch (e) { out.errors.prefs = String(e).slice(0, 80); }
+try { const r = await fetch('https://lqefewiwrecdjommktgm.supabase.co/rest/v1/influ_prefs?id=eq.analyserxxx&select=vip,hidden,extra', { headers: { apikey: 'sb_publishable_IMMxd7lqThb0elf0Z2JwNQ_3Da4tdWq' }, signal: AbortSignal.timeout(8000) }); const j = await r.json(); if (j && j[0]) PREF = j[0]; } catch (e) { out.errors.prefs = String(e).slice(0, 80); }
 const HID = new Set((PREF.hidden || []).map(h => String(h).toLowerCase()));
+// comptes ajoutés depuis le dashboard : intégrés à la liste (config.json), et lus en priorité tant qu'ils n'ont aucun tweet en mémoire
+const NEWX = [];
+{ const low = new Set((cfg.influencers || []).map(h => h.toLowerCase()));
+  for (const h of (PREF.extra || [])) { const x = String(h).trim().replace(/^@/, ''); if (/^[A-Za-z0-9_]{1,15}$/.test(x) && !low.has(x.toLowerCase())) { cfg.influencers.push(x); low.add(x.toLowerCase()); NEWX.push(x); } }
+  if (NEWX.length) { try { const disk = JSON.parse(fs.readFileSync('config.json', 'utf8')); disk.influencers = cfg.influencers; fs.writeFileSync('config.json', JSON.stringify(disk, null, 1)); } catch (e) { out.errors.extra = String(e).slice(0, 80); } } }
 cfg.influ_vip = [...(PREF.vip || []), ...(cfg.influ_vip || [])];
 const INF = (cfg.influencers || []).filter(h => !HID.has(h.toLowerCase())), SL = LOGGED_OK ? 80 : 40;
 // priorité : les comptes qui ont fait des calls ($ticker ou CA) ces 7 derniers jours sont relus à chaque passage
-const VIP = (cfg.influ_vip || []).filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 15);
+const VIP = [...new Set([...NEWX, ...(PREF.extra || []).filter(h => !(prevAll.influ || []).some(t => String(t.h).toLowerCase() === String(h).toLowerCase())), ...(cfg.influ_vip || [])])].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 18);
 const hot0 = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 12);
 // favoris (config.json → influ_vip) : toujours relus en premier
 const hot = [...new Map([...VIP, ...hot0].map(h => [h.toLowerCase(), h])).values()].slice(0, 20);

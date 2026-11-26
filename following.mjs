@@ -1,10 +1,11 @@
-// Récupère (une fois) la liste publique des comptes suivis par un utilisateur X, sans connexion si X le permet.
+// Récupère la liste publique des comptes suivis par un utilisateur X, sans connexion si X le permet.
 import { Scraper } from '@the-convocation/twitter-scraper';
 import fs from 'node:fs';
 const user = process.argv[2];
 const s = new Scraper();
-if (process.env.X_AUTH_TOKEN && process.env.X_CT0) await s.setCookies([`auth_token=${process.env.X_AUTH_TOKEN}; Domain=.x.com; Path=/; Secure; HttpOnly`, `ct0=${process.env.X_CT0}; Domain=.x.com; Path=/; Secure`]);
-const out = { user, at: new Date().toISOString(), profile: null, following: [], error: null };
+let logged = false;
+if (process.env.X_AUTH_TOKEN && process.env.X_CT0) { try { await s.setCookies([`auth_token=${process.env.X_AUTH_TOKEN.trim()}; Domain=.x.com; Path=/; Secure; HttpOnly`, `ct0=${process.env.X_CT0.trim()}; Domain=.x.com; Path=/; Secure`]); logged = await Promise.race([s.isLoggedIn(), new Promise(r => setTimeout(() => r(false), 15000))]); } catch (e) {} }
+const out = { user, at: new Date().toISOString(), logged, profile: null, following: [], error: null };
 try {
   const p = await s.getProfile(user);
   out.profile = { id: p.userId, name: p.name, following: p.followingCount, followers: p.followersCount };
