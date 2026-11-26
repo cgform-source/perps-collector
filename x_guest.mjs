@@ -5,6 +5,8 @@ import fs from 'node:fs';
 const cfg = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 const s = new Scraper();
 const out = { at: new Date().toISOString(), tweets: [], errors: {} };
+// garde-fou : au bout de 5 min on enregistre ce qu'on a et on s'arrête
+setTimeout(() => { try { fs.mkdirSync('data', { recursive: true }); fs.writeFileSync('data/x_guest.json', JSON.stringify(out)); } catch (e) {} console.log('x_guest: arrêt garde-fou'); process.exit(0); }, 300000).unref();
 const BULL = /\b(beat|surge|soar|jump|rall(y|ies)|upgrade|record|bullish|breakout|deal|rate cut)\b/i, BEAR = /\b(miss|fall|drop|plunge|crash|downgrade|bearish|tariff|sanction|war|ban|probe|lawsuit|hack|default|recession)\b/i;
 const tag = t => { const b = BULL.test(t), r = BEAR.test(t); return b && !r ? 'bull' : r && !b ? 'bear' : 'mix'; };
 for (const a of cfg.x_accounts || []) {
@@ -20,9 +22,10 @@ for (const a of cfg.x_accounts || []) {
   await new Promise(r => setTimeout(r, 1500));
 }
 out.influ = [];
-out.influ_prof = {};
+let prevProf = {}; try { prevProf = JSON.parse(fs.readFileSync('data/x_guest.json', 'utf8')).influ_prof || {}; } catch (e) {}
+out.influ_prof = { ...prevProf }; let profBudget = 8;
 for (const a of cfg.influencers || []) {
-  try { const p = await s.getProfile(a); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
+  if (!prevProf[a.toLowerCase()] && profBudget-- > 0) try { const p = await Promise.race([s.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
   try {
     let n = 0;
     for await (const t of s.getTweets(a, 10)) {
