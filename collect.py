@@ -239,16 +239,17 @@ def gdelt(query, n=15, days=3):
 
 @section("risks")
 def risks():
-    return gdelt('(financial crisis OR bank run OR default OR sanctions OR invasion OR missile OR "market crash" OR "emergency rate" OR cyberattack) sourcelang:english', 20, 2)
+    return gdelt('("financial crisis" OR "bank run" OR "debt default" OR "new sanctions" OR invasion OR "missile strike" OR "market crash" OR "emergency rate cut" OR cyberattack OR "trade war") sourcelang:english', 20, 2)
 
 @section("kidnap_fr")
 def kidnap():
-    return gdelt('(enlèvement OR séquestration OR kidnapping OR rapt) (crypto OR bitcoin OR cryptomonnaie OR "cryptomonnaies") sourcecountry:FR', 15, 30)
+    return gdelt('(enlèvement OR enlevé OR séquestré OR séquestration OR rapt OR kidnapping) (crypto OR bitcoin OR cryptomonnaie OR cryptomonnaies OR ledger) sourcelang:french', 15, 30)
 
 @section("fed")
 def fed():
     j = json.loads(get("https://www.federalreserve.gov/json/calendar.json"))
     ev = j.get("events", j if isinstance(j, list) else [])
+    OUT["fed_raw"] = ev[:2]
     now = dt.datetime.utcnow()
     out = []
     for e in ev:
