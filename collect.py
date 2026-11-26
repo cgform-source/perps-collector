@@ -182,6 +182,20 @@ def x_feed():
     OUT["errors"]["x"] = " | ".join(tried)
     return guest("Les 3 outils avec compte ont échoué, repli en mode invité.")
 
+@section("stocktwits")
+def stocktwits():
+    out = {}
+    for tk in CFG.get("tickers", []):
+        try:
+            j = json.loads(get(f"https://api.stocktwits.com/api/2/streams/symbol/{tk}.json", headers={"Accept": "application/json"}))
+            out[tk] = [{"h": m["user"]["username"], "fol": m["user"].get("followers", 0), "t": m["created_at"], "eng": (m.get("likes") or {}).get("total", 0),
+                        "url": f"https://stocktwits.com/{m['user']['username']}/message/{m['id']}", "fr": m["body"][:400],
+                        "tag": {"Bullish": "bull", "Bearish": "bear"}.get(((m.get("entities") or {}).get("sentiment") or {}).get("basic"), "mix")} for m in j.get("messages", [])[:15]]
+            time.sleep(1)
+        except Exception as e:
+            OUT["errors"][f"stocktwits:{tk}"] = str(e)[:120]
+    return out
+
 @section("trump")
 def trump():
     xml = get("https://www.trumpstruth.org/feed")
@@ -299,7 +313,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
