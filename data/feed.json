@@ -1,13 +1,10 @@
 {
- "generated": "2026-11-26T11:47:02Z",
+ "generated": "2026-11-26T11:48:49Z",
  "errors": {
-  "reddit:wallstreetbets": "HTTP Error 403: Blocked",
-  "reddit:stocks": "HTTP Error 403: Blocked",
-  "reddit:CryptoCurrency": "HTTP Error 403: Blocked",
-  "reddit:investing": "HTTP Error 403: Blocked",
-  "risks": "HTTPError: HTTP Error 429: Too Many Requests",
-  "kidnap_fr": "HTTPError: HTTP Error 429: Too Many Requests",
-  "fed": "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+  "reddit:wallstreetbets": "HTTP Error 404: Not Found",
+  "reddit:stocks": "HTTP Error 404: Not Found",
+  "reddit:CryptoCurrency": "HTTP Error 429: Too Many Requests",
+  "reddit:investing": "HTTP Error 429: Too Many Requests"
  },
  "x": {
   "note": "Ajoute le secret X_AUTH_TOKEN pour activer X (voir LISEZMOI.md)",
@@ -191,5 +188,510 @@
    "market": false
   }
  ],
- "reddit": {}
+ "reddit": {},
+ "risks": [
+  {
+   "t": "20261126T061500Z",
+   "title": "  Nobody can stop you from having your dream : West Allis 11 - year - old lands role in  MJ the Musical  ",
+   "url": "https://www.cbs58.com/news/nobody-can-stop-you-from-having-your-dreams-west-allis-11-year-old-lands-role-in-mj-the-musical",
+   "src": "cbs58.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Back in Minnesota , Viking Kirk Cousins faces familiar foe in Falcons",
+   "url": "http://www.heraldglobe.com/news/279454864/back-in-minnesota-vikings-kirk-cousins-faces-familiar-foe-in-falcons",
+   "src": "heraldglobe.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Mitratech Positioned as a Leader in the SPARK Matrix™ : Vendor Risk Management , 2026 by QKS Group",
+   "url": "https://www.prnewswire.com/news-releases/mitratech-positioned-as-a-leader-in-the-spark-matrix-vendor-risk-management-2026-by-qks-group-302951027.html",
+   "src": "prnewswire.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
+   "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
+   "src": "thepeterboroughexaminer.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Against the odds , grit powers trio from NK region to KSET success",
+   "url": "https://timesofindia.indiatimes.com/city/hubballi/against-the-odds-grit-powers-trio-from-nk-region-to-kset-success/articleshow/136179457.cms",
+   "src": "timesofindia.indiatimes.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Shastho Batayon helpline : Why let a lifeline to healthcare fall silent over unpaid bills ? ",
+   "url": "https://www.thedailystar.net/opinion/views/news/shastho-batayon-helpline-why-let-lifeline-healthcare-fall-silent-over-unpaid-bills-4333246",
+   "src": "thedailystar.net",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Israel , Netanyahu aims to be prime minister until 2028 . Eisenkot wants a law to block his way",
+   "url": "https://www.odnako.org/israel-netanyahu-aims-to-be-prime-minister-until-2028-eisenkot-wants-a-law-to-block-his-way/",
+   "src": "odnako.org",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "It Still Important to Release the Epstein Files - The American Conservative",
+   "url": "https://www.theamericanconservative.com/its-still-important-to-release-the-epstein-files/",
+   "src": "theamericanconservative.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Warriors keep NBA Cup hopes alive with rout of Kings",
+   "url": "http://www.heraldglobe.com/news/279454872/warriors-keep-nba-cup-hopes-alive-with-rout-of-kings",
+   "src": "heraldglobe.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "On Greece most glamorous island , faith and tradition endure with a celebration of its women",
+   "url": "http://www.reflector.com/news/national/on-greeces-most-glamorous-island-faith-and-tradition-endure-with-a-celebration-of-its-women/article_6fd7c09e-3839-57f7-8af8-a1add1479307.html",
+   "src": "reflector.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Japan data centre boom faces growing revolt from urban residents | WABX 107 . 5 | Evansville Classic Rock Station",
+   "url": "https://wabx.net/2026/11/25/japans-data-centre-boom-faces-growing-revolt-from-urban-residents/",
+   "src": "wabx.net",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Worcester man , 28 , died after taking cocaine and ketamine",
+   "url": "https://www.worcesternews.co.uk/news/26762852.worcester-man-28-died-taking-cocaine-ketamine/",
+   "src": "worcesternews.co.uk",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "CBI Raids Star Housing Finance Ex - Directors in Rs 80 Crore Fraud Case , ETRealty",
+   "url": "https://realty.economictimes.indiatimes.com/news/housing-finance/cbi-conducts-searches-at-premises-of-star-housing-finances-ex-directors/136177894",
+   "src": "realty.economictimes.indiatimes.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "BEL Considers Extending Westlake Diesel Generator Contract Amid Power Supply Concerns",
+   "url": "https://lovefm.com/bel-considers-extending-westlake-diesel-generator-contract-amid-power-supply-concerns/",
+   "src": "lovefm.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "NFC North : Green Bay Packers lose to Los Angeles Rams 23 - 13",
+   "url": "https://www.chicagotribune.com/2026/11/25/green-bay-packers-lose-la-rams/",
+   "src": "chicagotribune.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
+   "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
+   "src": "aol.co.uk",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Tata Trusts moves Bombay HC to challenge N Chandrasekaran reappointment as Tata Sons chairman",
+   "url": "https://www.hindustantimes.com/business/tata-trusts-to-move-bombay-hc-to-challenge-n-chandrasekarans-reappointment-as-chairman-report-101795671677577.html",
+   "src": "hindustantimes.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Mohd Ashhad Arif vs Ali Yavar Jung , National Institute For ... on 24 November , 2026",
+   "url": "https://indiankanoon.org/doc/184947187/",
+   "src": "indiankanoon.org",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Risky business : data centre spending rivals mining boom",
+   "url": "https://www.theleader.com.au/story/9399034/risky-business-data-centre-spending-rivals-mining-boom/",
+   "src": "theleader.com.au",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
+   "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
+   "src": "therecord.com",
+   "lang": "English"
+  }
+ ],
+ "kidnap_fr": [],
+ "fed": [
+  {
+   "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "10:00 a.m.",
+   "type": "Testimony",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "7:25 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair Philip N. Jefferson",
+   "when": "9:25 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook",
+   "when": "12:15 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "8:25 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "1:35 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "9:10 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Chairman Kevin Warsh",
+   "when": "12:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech -  Governor Michael S. Barr",
+   "when": "5:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair Philip N. Jefferson",
+   "when": "7:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "10:50 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "10:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "6:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "3:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "4:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "8:40 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "12:15 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Chairman Kevin Warsh",
+   "when": "11:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "10:55 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "5:40 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "4:30 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "10:45 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "3:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair Philip N. Jefferson",
+   "when": "1:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "10:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook ",
+   "when": "3:25 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "3:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "12:40 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "11:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook",
+   "when": "1:25 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "8:15 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "10:05 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair Philip N. Jefferson",
+   "when": "10:20 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "9:30 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "8:30 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "9:05 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Chairman Kevin Warsh",
+   "when": "10:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "12:45 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook  ",
+   "when": "4:05 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Testimony - Chairman Kevin Warsh",
+   "when": "10:00 a.m.",
+   "type": "Testimony",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair Philip N. Jefferson",
+   "when": "7:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook",
+   "when": "1:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Testimony - Chairman Kevin Warsh",
+   "when": "10:00 a.m.",
+   "type": "Testimony",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "2:55 p.m.",
+   "type": "Speeches",
+   "link": "https://www.federalreserve.gov/conferences/next-gen-financial-inclusion.htm"
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "12:40 p.m.",
+   "type": "Speeches",
+   "link": "https://www.federalreserve.gov/conferences/next-gen-financial-inclusion.htm"
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "12:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "5:25 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "7:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Chairman Kevin Warsh",
+   "when": "9:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "8:45 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook",
+   "when": "2:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Christopher J. Waller",
+   "when": "9:00 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman ",
+   "when": "10:00 a.m.",
+   "type": "Testimony",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "12:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Jerome H. Powell",
+   "when": "8:30 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "when": "9:10 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Discussion - Vice Chair Philip N. Jefferson",
+   "when": "8:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Lisa D. Cook",
+   "when": "3:55 p.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Governor Michael S. Barr",
+   "when": "9:15 a.m.",
+   "type": "Speeches",
+   "link": null
+  },
+  {
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman ",
+   "when": "1:00 p.m.",
+   "type": "Speeches",
+   "link": null
+  }
+ ]
 }
