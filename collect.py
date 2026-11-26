@@ -277,6 +277,21 @@ def eu():
             OUT["errors"]["eu:" + s] = str(e)[:80]
     return out
 
+@section("metals")
+def metals():
+    """Cours de référence de l'or et de l'argent (contrats à terme COMEX, différés ~15 min) et euro/dollar, pour le coffre."""
+    out = {}
+    for key, s in (("au", "GC=F"), ("ag", "SI=F"), ("eurusd", "EURUSD=X")):
+        try:
+            j = json.loads(get("https://query1.finance.yahoo.com/v8/finance/chart/" + urllib.parse.quote(s) + "?range=5d&interval=1h", headers={"Accept": "application/json"}))
+            m = j["chart"]["result"][0]["meta"]
+            out[key] = m.get("regularMarketPrice")
+            out[key + "_prev"] = m.get("chartPreviousClose") or m.get("previousClose")
+            out[key + "_t"] = m.get("regularMarketTime")
+        except Exception as e:
+            OUT["errors"]["metals:" + key] = str(e)[:80]
+    return out
+
 @section("tokens")
 def tokens():
     L = OUT.get("influ") or []
@@ -510,7 +525,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, top, eu, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, top, eu, metals, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
