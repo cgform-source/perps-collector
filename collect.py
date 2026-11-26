@@ -156,8 +156,17 @@ def x_feed():
         if g.get("errors"):
             OUT["errors"]["x_guest"] = str(g["errors"])[:300]
         return {"source": "invité (sans compte)", "note": note, "accounts": acc, "tickers": tick, "latest": sorted(g.get("tweets", []), key=lambda x: x["t"], reverse=True)[:40]}
-    if not tok:
-        return guest("Mode invité : tweets des comptes suivis seulement. Ajoute X_AUTH_TOKEN et X_CT0 pour la recherche par action.")
+    # Les outils Python (Scweet, twscrape) se bloquent avec les cookies : la lecture X passe désormais
+    # uniquement par x_guest.mjs (connecté au compte secondaire quand les secrets existent).
+    try:
+        lg = json.load(open("data/x_guest.json", encoding="utf-8")).get("influ_mode") == "compte"
+    except Exception:
+        lg = False
+    if lg or not tok or os.environ.get("X_PY_TOOLS") != "1":
+        r = guest("Compte X secondaire connecté : tweets récents des comptes suivis." if lg else "Mode invité : tweets des comptes suivis seulement. Ajoute X_AUTH_TOKEN et X_CT0 pour les tweets récents.")
+        if lg:
+            r["source"] = "compte secondaire"
+        return r
     since = (dt.datetime.utcnow() - dt.timedelta(days=2)).strftime("%Y-%m-%d")
     accs, tickers = CFG.get("x_accounts", []), CFG.get("tickers", [])
     tried = []
