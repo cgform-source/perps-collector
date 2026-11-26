@@ -36,11 +36,18 @@ jobs:
         env:
           X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
           X_CT0: ${{ secrets.X_CT0 }}
+      - name: Notifications (iPad)
+        continue-on-error: true
+        run: |
+          pip install -q pywebpush || true
+          timeout 120 python notify.py
+        env:
+          VAPID_PRIVATE: ${{ secrets.VAPID_PRIVATE }}
       - name: Enregistrer feed.json
         run: |
           git config user.name "collecteur"
           git config user.email "collecteur@users.noreply.github.com"
-          git add data/feed.json data/x_guest.json || git add data/feed.json
+          for f in data/feed.json data/x_guest.json data/notify_state.json; do [ -f "$f" ] && git add "$f"; done
           git commit -m "collecte $(date -u +%F_%H%M)" || echo "rien de nouveau"
           git pull --rebase -X theirs origin main || true
           git push

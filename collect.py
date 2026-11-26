@@ -301,7 +301,7 @@ def eu():
 
 @section("metals")
 def metals():
-    """Cours de référence de l'or et de l'argent (contrats à terme COMEX, différés ~15 min) et euro/dollar, pour le coffre."""
+    """Cours de référence de l'or et de l'argent (contrats à terme COMEX, différés ~15 min) et euro/dollar."""
     out = {}
     for key, s in (("au", "GC=F"), ("ag", "SI=F"), ("eurusd", "EURUSD=X")):
         try:
