@@ -233,7 +233,7 @@ def influ():
         pr = prof.get((t.get("h") or "").lower()) or {}
         t["fol"] = pr.get("fol", 0)
         txt = t.get("fr", "")
-        tk = sorted(set(x.upper() for x in re.findall(r"[$#]([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
+        tk = sorted(set(x.upper() for x in re.findall(r"\$([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
         b, r = bool(IBULL.search(txt)), bool(IBEAR.search(txt))
         t["tickers"] = tk
         t["tag"] = "bull" if b and not r else "bear" if r and not b else "mix"
