@@ -1,0 +1,26 @@
+name: Liste des abonnements X (manuel)
+on:
+  workflow_dispatch:
+    inputs:
+      user:
+        description: "Nom d'utilisateur X (sans @)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --no-save @the-convocation/twitter-scraper
+      - run: node following.mjs "${{ github.event.inputs.user }}"
+      - run: |
+          git config user.name "collecteur"
+          git config user.email "collecteur@users.noreply.github.com"
+          git pull --rebase || true
+          git add data/following.json
+          git commit -m "abonnements X" || true
+          git push
