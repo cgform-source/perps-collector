@@ -1,1 +1,195 @@
-{"generated":null,"errors":{},"note":"premiere collecte en attente"}
+{
+ "generated": "2026-11-26T11:47:02Z",
+ "errors": {
+  "reddit:wallstreetbets": "HTTP Error 403: Blocked",
+  "reddit:stocks": "HTTP Error 403: Blocked",
+  "reddit:CryptoCurrency": "HTTP Error 403: Blocked",
+  "reddit:investing": "HTTP Error 403: Blocked",
+  "risks": "HTTPError: HTTP Error 429: Too Many Requests",
+  "kidnap_fr": "HTTPError: HTTP Error 429: Too Many Requests",
+  "fed": "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+ },
+ "x": {
+  "note": "Ajoute le secret X_AUTH_TOKEN pour activer X (voir LISEZMOI.md)",
+  "accounts": {},
+  "tickers": {}
+ },
+ "trump": [
+  {
+   "t": "Thu, 26 Nov 2026 05:47:03 +0000",
+   "fr": "David E. Sanger, the mediocre reporter for the Failing New York Times, didn’t mention in his recent story on me the successful closing of the Border, best crime stats in years (lowest murder rate since 1900 - 126 years!), biggest Tax and Regulation Cuts, EVER, the most successful naval blockade in history, the destruction of Iran’s Navy and Air Force (and more!), the ONE DAY WIN against Venezuela, and today’s big success in straightening out the Obama caused mess in Iowa. David Sanger is a lowlife that only writes what he is told to write by his bosses. Also, until the Election, best Market, E",
+   "url": "https://www.trumpstruth.org/statuses/43740",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Thu, 26 Nov 2026 05:17:46 +0000",
+   "fr": "RT @ WhiteHouse America's Mayor. 🇺🇸 President Donald J. Trump presents Rudy Giuliani with the Presidential Medal of Freedom. Reposted The White House America's Mayor. 🇺🇸 President Donald J. Trump presents Rudy Giuliani with the Presidential Medal of Freedom. View video",
+   "url": "https://www.trumpstruth.org/statuses/43738",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Thu, 26 Nov 2026 05:16:41 +0000",
+   "fr": "RT @ MelaniaTrump Reposted Melania Trump View image",
+   "url": "https://www.trumpstruth.org/statuses/43736",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Thu, 26 Nov 2026 05:13:05 +0000",
+   "fr": "RT @ markkhalil Where does @ realDonaldTrump find the strength, energy, mental acuity, and talent?! Oh wait, I know.☝🏽👍🏽🇺🇸 Reposted Mark Where does @ realDonaldTrump find the strength, energy, mental acuity, and talent?! Oh wait, I know.☝🏽👍🏽🇺🇸 View image",
+   "url": "https://www.trumpstruth.org/statuses/43734",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Thu, 26 Nov 2026 05:08:57 +0000",
+   "fr": "0.000% of Obama caused carcinogens were released into beautiful Iowa air after the Perfect detonation. WE ALL WORKED HARD! President DJT",
+   "url": "https://www.trumpstruth.org/statuses/43733",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 20:37:06 +0000",
+   "fr": "Fake News CNN was hoping for a bad outcome in Iowa. Their pre-coverage was inaccurate and deplorable. When a PERFECT detonation was completed and there for all to see, they went CRAZY with anger. They want our Country to lose. “Another win for Trump!”",
+   "url": "https://www.trumpstruth.org/statuses/43732",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Wed, 25 Nov 2026 20:27:36 +0000",
+   "fr": "Rob Sands, the new future Governor of Iowa, is obviously unhappy that the Obama created (2009!) mess was so perfectly handled by the U.S. Army through a flawless detonation, that he’s now complaining about the lead up to the event. He hurt and delayed the process. Was absolutely no help. Just another politician. He should rejoice at this great success, not nitpick and issue phony complaints on “transparency.” I will remember! President DJT",
+   "url": "https://www.trumpstruth.org/statuses/43731",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 20:03:33 +0000",
+   "fr": "Great job by the Army, and others, in Iowa!!! President DJT",
+   "url": "https://www.trumpstruth.org/statuses/43730",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 17:14:26 +0000",
+   "fr": "Stocks are down sharply because of the November Third Election results. I wasn’t on the Ballot, but if I was, the results, just like all three times before, would have been much different, and the Stock Market, and your 401-k’s, would be BOOMING. I told you so!!! President DJT",
+   "url": "https://www.trumpstruth.org/statuses/43729",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Wed, 25 Nov 2026 15:20:42 +0000",
+   "fr": "Early reports from Iowa are that the Army’s mitigation efforts have far exceeded expectations.",
+   "url": "https://www.trumpstruth.org/statuses/43728",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 01:02:33 +0000",
+   "fr": "https:// vimeo.com/1249782646/7e27022b5 4",
+   "url": "https://www.trumpstruth.org/statuses/43727",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 00:58:03 +0000",
+   "fr": "View image",
+   "url": "https://www.trumpstruth.org/statuses/43723",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 00:57:43 +0000",
+   "fr": "RT @ Schoenlaw Regarding Newsom’s wholesale commutations and an avenue for challenging at least some of them based on the California Constitution. https://www. dropbox.com/scl/fi/92yu855x4cf bdb9ki6ajx/2-SCHOEN.mp4?rlkey=jsw56tbxxhutu1cbo9jzxp4fm&amp;st=kqcljs98&amp;dl=0 Reposted Schoenlaw Regarding Newsom’s wholesale commutations and an avenue for challenging at least some of them based on the California Constitution. https://www. dropbox.com/scl/fi/92yu855x4cf bdb9ki6ajx/2-SCHOEN.mp4?rlkey=jsw56tbxxhutu1cbo9jzxp4fm&amp;st=kqcljs98&amp;dl=0",
+   "url": "https://www.trumpstruth.org/statuses/43724",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Wed, 25 Nov 2026 00:57:33 +0000",
+   "fr": "Ilhan Omar’s legal reckoning is looming, and redactions can't hide it: https://www. foxnews.com/opinion/ilhan-omar s-legal-reckoning-looming-redactions-cant-hide",
+   "url": "https://www.trumpstruth.org/statuses/43726",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Tue, 24 Nov 2026 18:58:04 +0000",
+   "fr": "Judge Ana C. Reyes, who was appointed by Crooked Joe Biden, and is handling the East Potomac Golf Course, referred to as Trash Island because it has been in such bad shape for so many years, is doing everything in her power to stop the Department of the Interior from bringing an old, decrepit, and very unsafe Golf Course from being built into a Course that Washington and, indeed, the U.S.A., can be proud of. The new Course will be open to the Public, and for residents of Washington, D.C., at a substantially reduced rate. It will also be a Course designed to the Highest Standards of Golf. The D",
+   "url": "https://www.trumpstruth.org/statuses/43722",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Tue, 24 Nov 2026 17:40:10 +0000",
+   "fr": "I am pleased to nominate Jim O’Neill to serve as Judge on the United States District Court for the Middle District of North Carolina. Jim has the strong support of both North Carolina Senators, Ted Budd and Thom Tillis. Jim has served as the District Attorney of Forsyth County since 2009, and has been a prosecutor in that office since 1997. He has a deep track record of being tough on crime, and preserving Law and Order. Jim is a graduate of Duke University (where he played varsity lacrosse), and New York Law School. The people of North Carolina are lucky to have a dedicated public servant lik",
+   "url": "https://www.trumpstruth.org/statuses/43721",
+   "tag": "bull",
+   "market": false
+  },
+  {
+   "t": "Tue, 24 Nov 2026 17:34:33 +0000",
+   "fr": "I want to thank Uzbekistan's Highly Respected President, Shavkat Mirziyoyev, for the beautiful Uzbek Gazebos (or “Aywans”) gifted to me in honor of our Country’s 250 years of Independence. It was my Honor to do a flyover in Marine One during last week’s Gazebo Ceremony featuring Uzbek Ambassador Furqat Sidikov and Interior Secretary Doug Burgum — and the Gazebos look STUNNING! Uzbek master craftsmen left their families in Uzbekistan for several months, and skillfully built these Gazebos out of 200-year-old mountain walnut trees, in tough weather conditions. They had real talent! Rather than ke",
+   "url": "https://www.trumpstruth.org/statuses/43720",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Tue, 24 Nov 2026 17:08:51 +0000",
+   "fr": "I am proud to announce that the FIFA Women's World Cup 2031 will take place in the United States! After hosting the Most Successful World Cup in History, no Country is better positioned than the United States to be home to the largest Women's Sporting Event in History. The FIFA Women's World Cup 2031 will bring Generational Economic Impact to the United States, grow the sport of Soccer throughout our Country and the World, and showcase America’s Exceptionalism. Thank you to Gianni Infantino, and his great staff, for working to bring the Tournament to the U.S.A. President DONALD J. TRUMP",
+   "url": "https://www.trumpstruth.org/statuses/43719",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 18:55:49 +0000",
+   "fr": "EXTREME CLIMATE SCIENCE “BITES THE DUST!” Climate Change activists always described their Extreme Climate Science assumptions as “settled science,” and the scenarios of doom and destruction based on “Climate Change” have dominated their outlook. Well, their Climate Science has now been debunked, withdrawn, and taken down by the UN IPCC. That’s right, the same organization that published these projections as “settled science” has now determined they are not reliable and have withdrawn them. No more catastrophic predictions. GONE! GONE! GONE! Thank you for your attention to this matter. Presiden",
+   "url": "https://www.trumpstruth.org/statuses/43718",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 18:00:54 +0000",
+   "fr": "Iowa is a very special place to me, a place that I won, by substantial margins, in all three Elections but, whether I won or lost, would never deter me from making a correct decision. As everyone knows, there is a Military “clean up” operation, without which, a very dangerous situation exists. In 2009, the Obama Administration improperly stored a vast number of explosives, and the Experts, who know it well, and have been studying it for many years, feel there is a substantial chance that this material will explode of its own volition, perhaps sometime in the near future. We have an opportunity",
+   "url": "https://www.trumpstruth.org/statuses/43717",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 16:32:47 +0000",
+   "fr": "View image",
+   "url": "https://www.trumpstruth.org/statuses/43716",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 14:50:52 +0000",
+   "fr": "Congratulations to NVIDIA on having made, what I consider to be, an absolutely GREAT decision! President DONALD J. TRUMP",
+   "url": "https://www.trumpstruth.org/statuses/43715",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 14:07:17 +0000",
+   "fr": "The NVIDIA Board of Directors has made the correct and proper decision to return Jensen Huang to the position of CEO. The Country needs Jensen’s leadership at NVIDIA in order to ensure the Success and Prosperity of not only the Company, but the American Economy. The United States Government has no reason to believe that Jensen’s return to NVIDIA poses any risk to National Security. The Attorney General of the United States has confirmed that the U.S. Government does not possess evidence that he has engaged in any unlawful conduct. On a personal note, I have gotten to know Jensen, and he is a G",
+   "url": "https://www.trumpstruth.org/statuses/43714",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Mon, 23 Nov 2026 11:31:33 +0000",
+   "fr": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/117665528575591688 View image Quoted Donald J. Trump View video",
+   "url": "https://www.trumpstruth.org/statuses/43712",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Mon, 23 Nov 2026 11:31:20 +0000",
+   "fr": "View video",
+   "url": "https://www.trumpstruth.org/statuses/43713",
+   "tag": "mix",
+   "market": false
+  }
+ ],
+ "reddit": {}
+}
