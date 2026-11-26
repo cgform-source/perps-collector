@@ -21,6 +21,9 @@ jobs:
         run: |
           npm install --no-save @the-convocation/twitter-scraper || true
           node x_guest.mjs || echo "mode invité indisponible"
+        env:
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

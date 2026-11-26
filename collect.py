@@ -305,9 +305,9 @@ def callpx():
         src = "hl"
         if not hist and k in toks:
             try:
+                time.sleep(2.6)
                 hist = gt_hist(toks[k].get("chain"), toks[k].get("pair"))
                 src = "dex"
-                time.sleep(2.2)
             except Exception as e:
                 OUT["errors"]["callpx:" + k] = str(e)[:100]
         if not hist:

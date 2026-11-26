@@ -17,10 +17,13 @@ jobs:
           node-version: "22"
       - run: npm install --no-save @the-convocation/twitter-scraper
       - run: node following.mjs "${{ github.event.inputs.user }}"
+        env:
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
       - run: |
           git config user.name "collecteur"
           git config user.email "collecteur@users.noreply.github.com"
           git pull --rebase || true
-          git add data/following.json
+          git add data/following.json config.json
           git commit -m "abonnements X" || true
           git push
