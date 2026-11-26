@@ -642,6 +642,43 @@ def firsts():
     lim = (dt.datetime.utcnow() - dt.timedelta(days=365)).strftime("%Y-%m-%dT%H:%M:%SZ")
     M = {k: v for k, v in M.items() if v["t"] >= lim or len(v.get("acc", {})) >= 3}
     json.dump(M, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # classement d'influence sur toute la mémoire (1 an), pas seulement les 30 jours de tweets :
+    # sur les tokens où il est parmi les 3 premiers, combien de comptes en parlent dans les 48 h qui suivent
+    try:
+        big = {r[0] for r in (OUT.get("top") or []) if (r[1] or 9999) <= 100}
+        P = lambda s: dt.datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S").timestamp()
+        I, calls = {}, {}
+        for T, e in M.items():
+            if T in big:
+                continue
+            a = sorted(((h, P(t)) for h, t in (e.get("acc") or {}).items()), key=lambda x: x[1])
+            for h, _ in a:
+                calls[h] = calls.get(h, 0) + 1
+            if len(a) < 2:
+                continue
+            for i, (h, t0) in enumerate(a[:3]):
+                fl = [x for x in a[i + 1:] if 120 <= x[1] - t0 <= 48 * 3600]
+                q = I.setdefault(h, {"acc": set(), "tok": 0, "rep": 0, "d1": [], "toks": []})
+                q["tok"] += 1
+                q["acc"].update(x[0] for x in fl)
+                if len(fl) >= 2:
+                    q["rep"] += 1
+                if fl:
+                    q["d1"].append(fl[0][1] - t0)
+                    q["toks"].append(T)
+        R = []
+        for h, q in I.items():
+            n = len(q["acc"])
+            cl = max(calls.get(h, 0), q["tok"])
+            if n < 2 or cl < 2:
+                continue
+            d = sorted(q["d1"])
+            R.append({"h": h, "n": n, "rep": q["rep"], "calls": cl, "md": d[len(d) // 2] * 1000 if d else None,
+                      "toks": q["toks"][-6:], "score": round((n + 4 * q["rep"]) * (0.5 + q["rep"] / cl), 2)})
+        R.sort(key=lambda r: -r["score"])
+        OUT["influence"] = R[:40]
+    except Exception as ex:
+        OUT["errors"]["influence"] = f"{type(ex).__name__}: {ex}"[:200]
     # dans le feed : seulement les tokens cités ces 30 derniers jours (le fichier complet reste dans data/)
     cur = {T for t in (OUT.get("influ") or []) for T in (t.get("tickers") or [])}
     return {k: {"h": v["h"], "t": v["t"], "url": v.get("url"), "px": v.get("px"), "mc": v.get("mc"), "n": len(v.get("acc", {})),
