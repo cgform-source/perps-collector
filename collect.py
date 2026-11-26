@@ -228,7 +228,33 @@ def tokens():
             if k not in SKIPT:
                 cnt[k] = cnt.get(k, 0) + 1
     out = {}
+    # adresses de contrat (CA) postées dans les calls : EVM 0x… et Solana (base58)
+    cas = {}
+    for t in L:
+        for a in set(re.findall(r"\b0x[a-fA-F0-9]{40}\b", t.get("fr", "")) + re.findall(r"\b[1-9A-HJ-NP-Za-km-z]{32,44}\b", t.get("fr", ""))):
+            cas.setdefault(a, []).append(t)
+    for a, tw in list(cas.items())[:40]:
+        try:
+            j = json.loads(get("https://api.dexscreener.com/latest/dex/tokens/" + a))
+            ps = [p for p in (j.get("pairs") or []) if (p.get("baseToken") or {}).get("address", "").lower() == a.lower()]
+            if not ps:
+                continue
+            p = max(ps, key=lambda p: (p.get("liquidity") or {}).get("usd") or 0)
+            sym_ = (p["baseToken"].get("symbol") or "").upper()
+            info = p.get("info") or {}
+            out[sym_] = {"name": p["baseToken"].get("name"), "price": float(p.get("priceUsd") or 0) or None, "mcap": p.get("marketCap") or p.get("fdv"),
+                         "ch24": (p.get("priceChange") or {}).get("h24"), "liq": (p.get("liquidity") or {}).get("usd"), "vol24": (p.get("volume") or {}).get("h24"),
+                         "logo": info.get("imageUrl"), "banner": info.get("header"), "url": p.get("url"), "chain": p.get("chainId"), "pair": p.get("pairAddress"), "ca": a,
+                         "x": next((s.get("url") for s in info.get("socials", []) if s.get("type") == "twitter"), None), "age": p.get("pairCreatedAt")}
+            for t in tw:
+                if sym_ and sym_ not in t["tickers"]:
+                    t["tickers"].append(sym_)
+            time.sleep(0.4)
+        except Exception as e:
+            OUT["errors"]["ca:" + a[:10]] = str(e)[:100]
     for k, _ in sorted(cnt.items(), key=lambda x: -x[1])[:45]:
+        if k in out:
+            continue
         try:
             j = json.loads(get("https://api.dexscreener.com/latest/dex/search?q=" + urllib.parse.quote(k)))
             ps = [p for p in j.get("pairs", []) if (p.get("baseToken") or {}).get("symbol", "").upper() == k]
