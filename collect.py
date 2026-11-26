@@ -646,6 +646,17 @@ def firsts():
     # sur les tokens où il est parmi les 3 premiers, combien de comptes en parlent dans les 48 h qui suivent
     try:
         big = {r[0] for r in (OUT.get("top") or []) if (r[1] or 9999) <= 100}
+        # comme le dashboard : on écarte aussi les actions/matières cotées sur Hyperliquid et les tokens plus gros que le 100e
+        try:
+            body = json.dumps({"type": "meta", "dex": "xyz"}).encode()
+            req = urllib.request.Request("https://api.hyperliquid.xyz/info", data=body, headers={**UA, "Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                big |= {u["name"].split(":")[-1].upper() for u in json.loads(r.read()).get("universe", [])}
+        except Exception:
+            pass
+        thr = next((r[2] for r in (OUT.get("top") or []) if r[1] == 100), None)
+        if thr:
+            big |= {k for k, v in (OUT.get("tokens") or {}).items() if (v.get("mcap") or 0) >= thr and not v.get("byca")}
         P = lambda s: dt.datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S").timestamp()
         I, calls = {}, {}
         for T, e in M.items():
