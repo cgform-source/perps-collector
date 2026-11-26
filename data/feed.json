@@ -1,10 +1,11 @@
 {
- "generated": "2026-11-26T11:59:21Z",
+ "generated": "2026-11-26T16:01:42Z",
  "errors": {
   "reddit:wallstreetbets": "HTTP Error 404: Not Found",
   "reddit:stocks": "HTTP Error 429: Too Many Requests",
-  "reddit:CryptoCurrency": "HTTP Error 429: Too Many Requests",
-  "reddit:investing": "HTTP Error 429: Too Many Requests"
+  "reddit:CryptoCurrency": "HTTP Error 404: Not Found",
+  "reddit:investing": "HTTP Error 429: Too Many Requests",
+  "risks": "HTTPError: HTTP Error 429: Too Many Requests"
  },
  "x": {
   "source": "invité (sans compte)",
@@ -15,7 +16,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-01-10T17:30:00.000Z",
-     "eng": 8743,
+     "eng": 8741,
      "url": "https://x.com/KobeissiLetter/status/2010041448486580639",
      "fr": "ANNOUNCEMENT: \n\nWe are excited to present The Kobeissi Letter’s 2025 performance report. \n\nOur analysis provided a net return of +30.7% in 2025, outperforming the S&P 500's 2025 return of +16.4%.\n\nSince 2020, our investment strategy has now returned +516.3%, significantly outperforming the S&P 500’s +111.9% return over the same period.\n\nOur 2025 return builds on +8.1% in 2024, +15.5% in 2023, +92.",
      "tag": "mix"
@@ -23,8 +24,26 @@
     {
      "h": "KobeissiLetter",
      "fol": 0,
+     "t": "2026-11-26T15:49:14.000Z",
+     "eng": 236,
+     "url": "https://x.com/KobeissiLetter/status/2125980206053708183",
+     "fr": "BREAKING: US new home sales jumped +14.2% MoM in October, to an annualized rate of 701,000 units, the highest since December 2025, crushing expectations of a -3.8% decline.\n\nThis marks the largest monthly increase since November 2025 and the 2nd-largest since August 2022.\n\nIt also marks a sharp recovery from the -9.7% MoM decline in September.\n\nOctober's surge was driven by sales in the South, the",
+     "tag": "bull"
+    },
+    {
+     "h": "KobeissiLetter",
+     "fol": 0,
+     "t": "2026-11-26T12:52:49.000Z",
+     "eng": 3230,
+     "url": "https://x.com/KobeissiLetter/status/2125935808930582656",
+     "fr": "BREAKING: S&amp;P 500 futures extend to +0.8% on the day, rising further out of correction territory.\n\nNasdaq 100 futures are nearly +1%. https://t.co/kr4UkF4Hki",
+     "tag": "mix"
+    },
+    {
+     "h": "KobeissiLetter",
+     "fol": 0,
      "t": "2026-11-26T08:22:52.000Z",
-     "eng": 1553,
+     "eng": 2454,
      "url": "https://x.com/KobeissiLetter/status/2125867873218470307",
      "fr": "BREAKING: Elon Musk says SpaceX, $SPCX, will be matching his 1 share donation to every child in America. https://t.co/euRhagXKX1",
      "tag": "mix"
@@ -33,7 +52,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T00:32:35.000Z",
-     "eng": 3168,
+     "eng": 3683,
      "url": "https://x.com/KobeissiLetter/status/2125749523452510647",
      "fr": "BREAKING: US M2 money supply surged +$119 billion in October, to a record $23.53 trillion.\n\nYoY, M2 growth accelerated to +5.9%, its highest since May 2022.\n\nThis also marks its 32nd consecutive month of YoY growth.\n\nSince October 2023, M2 has soared +$2.82 trillion, or +$78 billion per month on average.\n\nUS M2 money supply is now $8.18 trillion above its 2019 pre-pandemic levels.\n\nThe purchasing ",
      "tag": "bull"
@@ -42,7 +61,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T23:01:59.000Z",
-     "eng": 704,
+     "eng": 762,
      "url": "https://x.com/KobeissiLetter/status/2125726722200842708",
      "fr": "BREAKING: US oil prices have recorded 3 drawdowns of at least 20% so far in 2026, matching their 2nd-longest such streak since the 1980s.\n\n2020 was the only year with a longer streak, at 4 such declines, while 1990, 1991, 1998, and 2022 each recorded 3.\n\nTaking intraday prices into account, US oil prices have posted 4 drawdowns of at least 20% this year.\n\nFurthermore, oil prices have seen 8 correc",
      "tag": "mix"
@@ -51,7 +70,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T21:05:21.000Z",
-     "eng": 2179,
+     "eng": 2227,
      "url": "https://x.com/KobeissiLetter/status/2125697370008555911",
      "fr": "BREAKING: The Dow Jones Industrial Average erases its -1,100 point loss and closes the day positive. https://t.co/Ehiu2UREi8",
      "tag": "mix"
@@ -60,7 +79,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T20:21:27.000Z",
-     "eng": 3683,
+     "eng": 4052,
      "url": "https://x.com/KobeissiLetter/status/2125686323818180737",
      "fr": "Gold has rarely been this oversold:\n\nGold prices are trading -20% below their 200-day moving average, their largest negative deviation since June 2013.\n\nThis marks a sharp reversal from the +45% deviation above the 200-day moving average recorded in January, the largest since the 1970s.\n\nThis comes as gold prices have dropped -37% from their January intraday peak, their largest drawdown within a 1",
      "tag": "mix"
@@ -69,7 +88,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T19:20:05.000Z",
-     "eng": 773,
+     "eng": 795,
      "url": "https://x.com/KobeissiLetter/status/2125670879979778245",
      "fr": "“In the US, one out of every five dollars the US government makes is going toward interest expense. On our current fiscal path, there is a 100% chance of bankruptcy. Something must change.” - @TKL_Adam at @WebSummit https://t.co/Pvu2U6XAWR",
      "tag": "mix"
@@ -78,7 +97,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T17:55:44.000Z",
-     "eng": 5114,
+     "eng": 5190,
      "url": "https://x.com/KobeissiLetter/status/2125649652917612803",
      "fr": "BREAKING: The Dow Jones Industrial Average erases all losses and turns green on the day. https://t.co/HYCmFEAtTW",
      "tag": "mix"
@@ -87,7 +106,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T17:38:07.000Z",
-     "eng": 2136,
+     "eng": 2201,
      "url": "https://x.com/KobeissiLetter/status/2125645220524286373",
      "fr": "BREAKING: Anthropic stock, $ANT, erases losses and turns positive on the day.\n\nThe stock is now trading above its $83/share IPO price. https://t.co/MOgY0OcZVr",
      "tag": "mix"
@@ -96,27 +115,9 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T17:30:01.000Z",
-     "eng": 722,
+     "eng": 742,
      "url": "https://x.com/KobeissiLetter/status/2125643178975936763",
      "fr": "Retail demand for Anthropic is accelerating:\n\nRetail investors bought +$100 million in Anthropic, $ANT, shares on Monday, marking a 2nd consecutive daily increase in purchases.\n\nAs a result, $ANT was the 2nd-most purchased stock among retail investors during that session.\n\nThat compares to +$60 million on Thursday, Anthropic's IPO day, the 3rd-largest retail purchase on the first trading day of an",
-     "tag": "mix"
-    },
-    {
-     "h": "KobeissiLetter",
-     "fol": 0,
-     "t": "2026-11-25T17:16:16.000Z",
-     "eng": 4203,
-     "url": "https://x.com/KobeissiLetter/status/2125639719564333126",
-     "fr": "BREAKING: President Trump says the US stock market is “down sharply” because he wasn’t on the ballot for the US Midterm Elections. https://t.co/DIJQSV7sJQ",
-     "tag": "mix"
-    },
-    {
-     "h": "KobeissiLetter",
-     "fol": 0,
-     "t": "2026-11-25T16:51:48.000Z",
-     "eng": 844,
-     "url": "https://x.com/KobeissiLetter/status/2125633563110375867",
-     "fr": "BREAKING: The Bloomberg Commodity Index is on track for its 6th consecutive weekly decline, its longest losing streak since May 2023.\n\nThis index includes 25 exchange-traded futures contracts across energy, metals, and agriculture.\n\nThis would also mark its 6th longest losing streak this century.\n\nThis comes as the Bloomberg Commodity Index has declined -14% from its September peak.\n\nYear-to-date,",
      "tag": "mix"
     }
    ],
@@ -125,7 +126,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-24T13:27:16.000Z",
-     "eng": 50,
+     "eng": 53,
      "url": "https://x.com/unusual_whales/status/2125219701035016673",
      "fr": "Unusual Whales's Black Friday sale starts TODAY!\n\nUp to 25% off the first year!\n\nCome join our trading community, build out your dream trading data dashboards, and swim with the market this year!\n\nJoin here: https://t.co/0NTcHZllpT https://t.co/HcxNP9ve9U",
      "tag": "mix"
@@ -134,7 +135,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2025-02-11T14:17:00.000Z",
-     "eng": 361670,
+     "eng": 361676,
      "url": "https://x.com/unusual_whales/status/1889317717389545556",
      "fr": "\"Gen Z are over having their work ethic questioned: ‘Most boomers don’t know what it’s like to work 40+ hours a week and still not be able to afford a house’,\" per FORTUNE: https://t.co/y2DTbmOBNy",
      "tag": "mix"
@@ -143,7 +144,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2025-07-11T18:11:13.000Z",
-     "eng": 278120,
+     "eng": 278129,
      "url": "https://x.com/unusual_whales/status/1943734838718017717",
      "fr": "BREAKING: The footage from Jeffery Epstein’s cell that was released by the DOJ was edited with Adobe Premiere Pro, stitched from 2 clips, and was saved 4 times, per WIRED",
      "tag": "mix"
@@ -152,7 +153,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2022-12-06T14:51:00.000Z",
-     "eng": 142247,
+     "eng": 142250,
      "url": "https://x.com/unusual_whales/status/1600140756672401408",
      "fr": "Last week, the IRS has stated that Americans must report payments on Venmo, PayPal over $600.\n\nLast week, the Defense Department failed its fifth audit, unable to account  for more than 61% its assets, worth about  $1.8 trillion.",
      "tag": "mix"
@@ -161,7 +162,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2024-11-08T19:15:49.000Z",
-     "eng": 114603,
+     "eng": 114602,
      "url": "https://x.com/unusual_whales/status/1854966072577081584",
      "fr": "BREAKING: Donald Trump to push a constitutional amendment to impose term limits on members of Congress.",
      "tag": "mix"
@@ -170,7 +171,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2022-11-14T20:43:33.000Z",
-     "eng": 102807,
+     "eng": 102802,
      "url": "https://x.com/unusual_whales/status/1592256946001813504",
      "fr": "Elon Musk fired this Twitter employee on Twitter. https://t.co/1Zh8N5nkdM",
      "tag": "mix"
@@ -179,7 +180,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2025-03-24T10:37:00.000Z",
-     "eng": 107978,
+     "eng": 107977,
      "url": "https://x.com/unusual_whales/status/1904120255305113996",
      "fr": "BREAKING: Robert F. Kennedy Jr has announced plans to ban pharmaceutical advertisements on television.",
      "tag": "bear"
@@ -188,7 +189,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2023-12-08T14:21:00.000Z",
-     "eng": 105194,
+     "eng": 105191,
      "url": "https://x.com/unusual_whales/status/1733129553567002953",
      "fr": "BREAKING: A bill has been introduced in the House and Senate that would prevent hedge funds from owning single-family houses in the United States.",
      "tag": "mix"
@@ -197,7 +198,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2025-10-11T11:31:00.000Z",
-     "eng": 107705,
+     "eng": 107706,
      "url": "https://x.com/unusual_whales/status/1976973805999603795",
      "fr": "BREAKING: Look at this.\n\nA new crypto account was opened yesterday morning.\n\n30 minutes BEFORE Trump's announcement of 100% tariffs on China, it added a huge multi-million dollar levered Bitcoin short position, per YF.\n\nThe market dumped.\n\nThe trader made a profit of $192 million in two hours.\n\nUnusual.",
      "tag": "mix"
@@ -206,7 +207,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2025-02-15T15:01:00.000Z",
-     "eng": 98959,
+     "eng": 98960,
      "url": "https://x.com/unusual_whales/status/1890778342401667235",
      "fr": "Trump on DOGE:  “We literally started off with 14 or 15 young geniuses. Now we have 100 young geniuses. And what’s happened…People are calling up from all over the country wanting to help Elon Musk.” https://t.co/OMM89hoRn1",
      "tag": "mix"
@@ -215,7 +216,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2023-05-02T17:54:34.000Z",
-     "eng": 86791,
+     "eng": 86792,
      "url": "https://x.com/unusual_whales/status/1653457970498355200",
      "fr": "BREAKING: AOC and Matt Gaetz have introduced a bill to ban Congress members from owning, trading stocks",
      "tag": "bear"
@@ -224,7 +225,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2023-01-22T23:01:30.000Z",
-     "eng": 97880,
+     "eng": 97881,
      "url": "https://x.com/unusual_whales/status/1617296424982511623",
      "fr": "Moderna has said it will likely charge $130 for its Covid vaccine.\n\nTaxpayers, through the US government, gave $2.5 billion to develop the Moderna vaccine.\n\nIt was nearly entirely funded by taxpayers.\n\nAnd it costs only around $3 to produce.\n\nUnusual.",
      "tag": "mix"
@@ -235,7 +236,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2024-10-28T19:39:21.000Z",
-     "eng": 42441,
+     "eng": 42440,
      "url": "https://x.com/DeItaone/status/1850985726000972103",
      "fr": "JUST IN: Police say fires set at ballot boxes in Oregon and Washington are connected and they have identified a ‘suspect vehicle’",
      "tag": "mix"
@@ -262,7 +263,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2025-08-26T14:12:57.000Z",
-     "eng": 15306,
+     "eng": 15304,
      "url": "https://x.com/DeItaone/status/1960344721051562380",
      "fr": "🚨 MODI REFUSED TRUMP'S CALLS 4 TIMES IN RECENT WEEKS: GERMAN NEWSPAPER",
      "tag": "mix"
@@ -271,7 +272,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2025-04-10T16:41:07.000Z",
-     "eng": 14679,
+     "eng": 14681,
      "url": "https://x.com/DeItaone/status/1910372484177920482",
      "fr": "EU AND CHINA START NEGOTIATIONS TO ABOLISH EU TARIFFS ON CHINESE ELECTRIC VEHICLES - HANDELSBLATT",
      "tag": "mix"
@@ -280,7 +281,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2025-05-08T15:07:10.000Z",
-     "eng": 16394,
+     "eng": 16396,
      "url": "https://x.com/DeItaone/status/1920495697884815524",
      "fr": "🚨 PAKISTAN'S CHINESE-MADE J-10 AIRCRAFT BROUGHT DOWN AT LEAST TWO INDIAN JETS ON WEDNESDAY- TWO U.S. OFFICIALS TELL REUTERS",
      "tag": "mix"
@@ -289,7 +290,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2022-02-27T18:03:43.000Z",
-     "eng": 13473,
+     "eng": 13474,
      "url": "https://x.com/DeItaone/status/1497995878501601285",
      "fr": "NORWAY PRIME MINISTER SAYS NORWAY'S SOVEREIGN WEALTH FUND WILL DIVEST ITS RUSSIA HOLDINGS",
      "tag": "mix"
@@ -316,7 +317,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2025-04-03T13:00:36.000Z",
-     "eng": 11187,
+     "eng": 11186,
      "url": "https://x.com/DeItaone/status/1907780274521292896",
      "fr": "SWISS GOVT SAYS FINDS US GOVERNMENT'S CALCULATIONS ON TRADE TARIFFS INCOMPREHENSIBLE",
      "tag": "mix"
@@ -345,7 +346,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2024-11-06T12:50:12.000Z",
-     "eng": 273222,
+     "eng": 273223,
      "url": "https://x.com/zerohedge/status/1854144250562429081",
      "fr": "Sorry to beat a dead horse, but can we go back to what happened here? https://t.co/FkScNHivuU",
      "tag": "bull"
@@ -354,7 +355,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2025-02-16T05:08:37.000Z",
-     "eng": 158028,
+     "eng": 158032,
      "url": "https://x.com/zerohedge/status/1890991650928841093",
      "fr": "Oh https://t.co/55f0GHBKky",
      "tag": "mix"
@@ -381,7 +382,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2025-02-28T18:06:45.000Z",
-     "eng": 60095,
+     "eng": 60091,
      "url": "https://x.com/zerohedge/status/1895536129996468315",
      "fr": "Somewhere in the Kremlin... https://t.co/rhXUbGKF0d",
      "tag": "mix"
@@ -399,7 +400,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2025-02-25T13:02:05.000Z",
-     "eng": 54438,
+     "eng": 54440,
      "url": "https://x.com/zerohedge/status/1894372293675037106",
      "fr": "https://t.co/83Prnh5VkZ",
      "tag": "mix"
@@ -417,7 +418,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2022-04-14T14:31:34.000Z",
-     "eng": 64513,
+     "eng": 64512,
      "url": "https://x.com/zerohedge/status/1514612329031233547",
      "fr": "Well this is awkward: TWTR board hired Goldman to \"advise\" it that the @elonmusk $54.20 offer is too low. Only problem: Goldman has a SELL rating with a $30 price target. Oops. https://t.co/ViQXnXBD3C",
      "tag": "mix"
@@ -426,7 +427,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2025-04-04T13:29:22.000Z",
-     "eng": 53749,
+     "eng": 53748,
      "url": "https://x.com/zerohedge/status/1908149901185155452",
      "fr": "China has three options:\n\n1. Concede defeat to whatever terms Trump demands\n2. Devalue the yuan by 20-40%\n3. Unleash biggest fiscal stimulus in its history (talking $2-3 trillion) which will push its debt off the chart",
      "tag": "mix"
@@ -435,7 +436,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2025-02-05T05:21:49.000Z",
-     "eng": 54176,
+     "eng": 54175,
      "url": "https://x.com/zerohedge/status/1887008708963565880",
      "fr": "You gotta be kidding https://t.co/ZHapfOEH8Z",
      "tag": "mix"
@@ -444,7 +445,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2022-06-30T16:45:00.000Z",
-     "eng": 56371,
+     "eng": 56373,
      "url": "https://x.com/zerohedge/status/1542549774389415937",
      "fr": "Worst first half for stocks in 52 years. https://t.co/mOYvbJ6pvo",
      "tag": "mix"
@@ -455,7 +456,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-17T16:21:33.000Z",
-     "eng": 2025,
+     "eng": 2029,
      "url": "https://x.com/WatcherGuru/status/2122726848719454429",
      "fr": "Watcher Guru News Terminal is Officially Live.\n\nSign up now: https://t.co/k6hnkX2yyJ https://t.co/5ayrkRUWw9",
      "tag": "mix"
@@ -463,8 +464,35 @@
     {
      "h": "WatcherGuru",
      "fol": 0,
+     "t": "2026-11-26T15:55:31.000Z",
+     "eng": 454,
+     "url": "https://x.com/WatcherGuru/status/2125981785058328882",
+     "fr": "JUST IN: 🇺🇸 President Donald Trump calls for an immediate investigation into \"fake economic numbers\" released before midterm elections, after US GDP growth was revised up from 3.4% to 4.3%. https://t.co/xecWcRV3ML",
+     "tag": "mix"
+    },
+    {
+     "h": "WatcherGuru",
+     "fol": 0,
+     "t": "2026-11-26T14:44:28.000Z",
+     "eng": 614,
+     "url": "https://x.com/WatcherGuru/status/2125963906245960095",
+     "fr": "RT @WatcherGuru: Bitcoin Price on Thanksgiving 🦃 \n\n2010: $0.28\n2011: $2.49\n2012: $12.51\n2013: $813\n2014: $376\n2015: $328\n2016: $739\n2017: $…",
+     "tag": "mix"
+    },
+    {
+     "h": "WatcherGuru",
+     "fol": 0,
+     "t": "2026-11-26T12:45:17.000Z",
+     "eng": 3948,
+     "url": "https://x.com/WatcherGuru/status/2125933915076743212",
+     "fr": "JUST IN: 🇨🇭 Switzerland approves its first spot Bitcoin ETF on its SIX Swiss Exchange.",
+     "tag": "mix"
+    },
+    {
+     "h": "WatcherGuru",
+     "fol": 0,
      "t": "2026-11-26T11:30:08.000Z",
-     "eng": 929,
+     "eng": 4771,
      "url": "https://x.com/WatcherGuru/status/2125915002813260004",
      "fr": "JUST IN: Nvidia $NVDA orders manufacturing partners to halt shipments of servers containing its chips to the following countries: \n\n• Thailand\n• Malaysia\n• Indonesia\n• Singapore",
      "tag": "mix"
@@ -473,7 +501,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T10:45:52.000Z",
-     "eng": 1551,
+     "eng": 3856,
      "url": "https://x.com/WatcherGuru/status/2125903859092787395",
      "fr": "Bitcoin Price on Thanksgiving 🦃 \n\n2010: $0.28\n2011: $2.49\n2012: $12.51\n2013: $813\n2014: $376\n2015: $328\n2016: $739\n2017: $8,771\n2018: $4,015\n2019: $7,150\n2020: $18,764\n2021: $58,927\n2022 $16,353\n2023: $37,035\n2024: $95,531\n2025: $91,711\n2026: $60,400",
      "tag": "mix"
@@ -482,7 +510,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T03:29:43.000Z",
-     "eng": 3338,
+     "eng": 3902,
      "url": "https://x.com/WatcherGuru/status/2125794100083343740",
      "fr": "JUST IN: Banking giant HSBC's crypto stablecoin surpasses 100,000 users in its first month.",
      "tag": "mix"
@@ -491,7 +519,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T00:18:50.000Z",
-     "eng": 5333,
+     "eng": 5776,
      "url": "https://x.com/WatcherGuru/status/2125746063600668963",
      "fr": "JUST IN: Bitcoin reclaims $61,000 https://t.co/aZOl3Y1Plx",
      "tag": "mix"
@@ -500,7 +528,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T00:11:23.000Z",
-     "eng": 9581,
+     "eng": 10191,
      "url": "https://x.com/WatcherGuru/status/2125744187010433137",
      "fr": "JUST IN: 🇺🇸 US House Financial Services Committee advances bill to establish Strategic Bitcoin Reserve.",
      "tag": "mix"
@@ -509,7 +537,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T22:49:10.000Z",
-     "eng": 5473,
+     "eng": 5847,
      "url": "https://x.com/WatcherGuru/status/2125723498395959582",
      "fr": "JUST IN: 🇺🇸 Trump administration discussed invoking wartime powers to forcefully reinstate Jensen Huang as Nvidia $NVDA CEO after he stepped down, WaPo reports. https://t.co/uEUxNwkjXV",
      "tag": "mix"
@@ -518,7 +546,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T21:03:31.000Z",
-     "eng": 23620,
+     "eng": 25934,
      "url": "https://x.com/WatcherGuru/status/2125696909985640728",
      "fr": "JUST IN: 🇺🇸 FDA approves Elon Musk's Neuralink brain implant trials.",
      "tag": "mix"
@@ -527,36 +555,9 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T21:11:18.000Z",
-     "eng": 231,
+     "eng": 243,
      "url": "https://x.com/WatcherGuru/status/2125698868264231104",
      "fr": "https://t.co/9pRR6LFxBS",
-     "tag": "mix"
-    },
-    {
-     "h": "WatcherGuru",
-     "fol": 0,
-     "t": "2026-11-25T18:55:25.000Z",
-     "eng": 7568,
-     "url": "https://x.com/WatcherGuru/status/2125664671545921908",
-     "fr": "JUST IN: 🇺🇸 ICE arrests illegal immigrant days after he claimed $1,000,000 lottery prize. https://t.co/LVkLzOGlrQ",
-     "tag": "mix"
-    },
-    {
-     "h": "WatcherGuru",
-     "fol": 0,
-     "t": "2026-11-25T18:43:24.000Z",
-     "eng": 3270,
-     "url": "https://x.com/WatcherGuru/status/2125661646769012923",
-     "fr": "JUST IN: S&amp;P considers lowering Nvidia's $NVDA credit rating.",
-     "tag": "mix"
-    },
-    {
-     "h": "WatcherGuru",
-     "fol": 0,
-     "t": "2026-11-25T18:14:17.000Z",
-     "eng": 3035,
-     "url": "https://x.com/WatcherGuru/status/2125654321060602364",
-     "fr": "JUST IN: 🇺🇸 93% chance the Fed hikes interest rates by 25 basis points at the next FOMC meeting. https://t.co/kgBzVC9RAi",
      "tag": "mix"
     }
    ],
@@ -565,7 +566,7 @@
      "h": "realDonaldTrump",
      "fol": 0,
      "t": "2026-11-03T19:16:44.000Z",
-     "eng": 16212,
+     "eng": 16232,
      "url": "https://x.com/realDonaldTrump/status/2117697505270100335",
      "fr": "FIND YOUR ELECTION DAY VOTING LOCATION HERE!\nhttps://t.co/o3mbQ7ewdU",
      "tag": "mix"
@@ -610,7 +611,7 @@
      "h": "realDonaldTrump",
      "fol": 0,
      "t": "2026-11-03T20:44:37.000Z",
-     "eng": 15078,
+     "eng": 15076,
      "url": "https://x.com/realDonaldTrump/status/2117719622057173270",
      "fr": "RT @realDonaldTrump: TO THE GREAT PEOPLE OF CALIFORNIA, GET OUT AND VOTE for these Great Patriots! They have my Complete and Total Endorsem…",
      "tag": "mix"
@@ -675,7 +676,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T03:43:05.000Z",
-     "eng": 363351,
+     "eng": 486993,
      "url": "https://x.com/elonmusk/status/2125797463047258119",
      "fr": "Every child in America will receive two SpaceX shares, one from the company and one from me personally",
      "tag": "mix"
@@ -684,7 +685,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-04-28T00:56:58.000Z",
-     "eng": 5313283,
+     "eng": 5313269,
      "url": "https://x.com/elonmusk/status/1519480761749016577",
      "fr": "Next I’m buying Coca-Cola to put the cocaine back in",
      "tag": "mix"
@@ -693,7 +694,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2024-07-13T22:51:28.000Z",
-     "eng": 3875366,
+     "eng": 3875332,
      "url": "https://x.com/elonmusk/status/1812258574049157405",
      "fr": "https://t.co/6eOgN9UdOy",
      "tag": "mix"
@@ -702,7 +703,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-04-25T16:12:30.000Z",
-     "eng": 3441124,
+     "eng": 3441125,
      "url": "https://x.com/elonmusk/status/1518623997054918657",
      "fr": "I hope that even my worst critics remain on Twitter, because that is what free speech means",
      "tag": "mix"
@@ -711,7 +712,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2024-11-06T05:01:15.000Z",
-     "eng": 2839752,
+     "eng": 2839746,
      "url": "https://x.com/elonmusk/status/1854026234339938528",
      "fr": "🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸 https://t.co/x56cqb6oT5",
      "tag": "mix"
@@ -720,7 +721,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-04-28T01:53:50.000Z",
-     "eng": 2630468,
+     "eng": 2630456,
      "url": "https://x.com/elonmusk/status/1519495072802390016",
      "fr": "Let’s make Twitter maximum fun!",
      "tag": "mix"
@@ -729,7 +730,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-04-25T19:43:22.000Z",
-     "eng": 2865101,
+     "eng": 2865090,
      "url": "https://x.com/elonmusk/status/1518677066325053441",
      "fr": "🚀💫♥️ Yesss!!! ♥️💫🚀 https://t.co/0T9HzUHuh6",
      "tag": "mix"
@@ -738,7 +739,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-04-28T01:57:27.000Z",
-     "eng": 2581191,
+     "eng": 2581175,
      "url": "https://x.com/elonmusk/status/1519495982723084290",
      "fr": "Listen, I can’t do miracles ok https://t.co/z7dvLMUXy8",
      "tag": "mix"
@@ -747,7 +748,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2024-11-06T16:39:24.000Z",
-     "eng": 2616937,
+     "eng": 2616906,
      "url": "https://x.com/elonmusk/status/1854201929519247803",
      "fr": "It is morning in America again https://t.co/GNTE0cUWoc",
      "tag": "mix"
@@ -756,7 +757,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2022-10-28T03:49:11.000Z",
-     "eng": 2740161,
+     "eng": 2740109,
      "url": "https://x.com/elonmusk/status/1585841080431321088",
      "fr": "the bird is freed",
      "tag": "mix"
@@ -765,7 +766,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2024-07-13T22:45:13.000Z",
-     "eng": 2812454,
+     "eng": 2812430,
      "url": "https://x.com/elonmusk/status/1812256998588662068",
      "fr": "I fully endorse President Trump and hope for his rapid recovery https://t.co/ZdxkF63EqF",
      "tag": "mix"
@@ -774,7 +775,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2024-11-06T05:35:11.000Z",
-     "eng": 2505003,
+     "eng": 2504992,
      "url": "https://x.com/elonmusk/status/1854034776815972649",
      "fr": "Let that sink in https://t.co/XvYFtDrhRm",
      "tag": "mix"
@@ -785,7 +786,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-23T22:24:16.000Z",
-     "eng": 674,
+     "eng": 677,
      "url": "https://x.com/Mr_Derivatives/status/2124992453451403338",
      "fr": "$SPX The April 2025 Liberation lows had that one day bigly +10% pop, before giving back half of those gains in the next 7 trading days. Then mooned.\n\nJust sayin'.",
      "tag": "mix"
@@ -794,7 +795,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2024-11-22T17:47:17.000Z",
-     "eng": 28049,
+     "eng": 28050,
      "url": "https://x.com/Mr_Derivatives/status/1860017219427795173",
      "fr": "Thanks Ethereum https://t.co/gxrfXt8FnF",
      "tag": "mix"
@@ -839,7 +840,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2025-04-04T13:05:29.000Z",
-     "eng": 7480,
+     "eng": 7479,
      "url": "https://x.com/Mr_Derivatives/status/1908143888814194889",
      "fr": "$4-6 Trillion destroyed from the stock market to save a few billions through tariffs.",
      "tag": "mix"
@@ -895,7 +896,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-05-13T00:00:00.000Z",
-     "eng": 167507,
+     "eng": 167509,
      "url": "https://x.com/TheRoaringKitty/status/1789807772542067105",
      "fr": "https://t.co/YgjVqtgcNS",
      "tag": "mix"
@@ -904,7 +905,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-10T16:30:00.000Z",
-     "eng": 111028,
+     "eng": 111029,
      "url": "https://x.com/TheRoaringKitty/status/1800203775237664965",
      "fr": "https://t.co/wGdvs6xF7w",
      "tag": "mix"
@@ -913,7 +914,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-03T00:02:47.000Z",
-     "eng": 116460,
+     "eng": 116458,
      "url": "https://x.com/TheRoaringKitty/status/1797418617908154621",
      "fr": "https://t.co/zUuccrKWZr",
      "tag": "mix"
@@ -922,7 +923,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-05-13T15:00:00.000Z",
-     "eng": 84171,
+     "eng": 84174,
      "url": "https://x.com/TheRoaringKitty/status/1790034263603139012",
      "fr": "https://t.co/bwtNwY4tuP",
      "tag": "mix"
@@ -940,7 +941,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-12-05T18:45:00.000Z",
-     "eng": 89101,
+     "eng": 89102,
      "url": "https://x.com/TheRoaringKitty/status/1864742787197116887",
      "fr": "https://t.co/tXViICmVFG",
      "tag": "mix"
@@ -958,7 +959,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-13T18:00:00.000Z",
-     "eng": 65616,
+     "eng": 65613,
      "url": "https://x.com/TheRoaringKitty/status/1801313585421029445",
      "fr": "https://t.co/milvQfDdVh",
      "tag": "mix"
@@ -967,7 +968,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2021-02-18T16:47:08.000Z",
-     "eng": 64078,
+     "eng": 64079,
      "url": "https://x.com/TheRoaringKitty/status/1362443542535294985",
      "fr": "https://t.co/gp8S41fAjh",
      "tag": "mix"
@@ -976,7 +977,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-12T14:00:00.000Z",
-     "eng": 68779,
+     "eng": 68780,
      "url": "https://x.com/TheRoaringKitty/status/1800890801632747972",
      "fr": "https://t.co/H2RChMB9Iz",
      "tag": "mix"
@@ -985,7 +986,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-12T01:15:15.000Z",
-     "eng": 63876,
+     "eng": 63875,
      "url": "https://x.com/TheRoaringKitty/status/1800698343540015491",
      "fr": "https://t.co/Ydduqqw0dC",
      "tag": "mix"
@@ -1007,7 +1008,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T08:22:52.000Z",
-     "eng": 1553,
+     "eng": 2454,
      "url": "https://x.com/KobeissiLetter/status/2125867873218470307",
      "fr": "BREAKING: Elon Musk says SpaceX, $SPCX, will be matching his 1 share donation to every child in America. https://t.co/euRhagXKX1",
      "tag": "mix"
@@ -1018,7 +1019,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T17:38:07.000Z",
-     "eng": 2136,
+     "eng": 2201,
      "url": "https://x.com/KobeissiLetter/status/2125645220524286373",
      "fr": "BREAKING: Anthropic stock, $ANT, erases losses and turns positive on the day.\n\nThe stock is now trading above its $83/share IPO price. https://t.co/MOgY0OcZVr",
      "tag": "mix"
@@ -1027,7 +1028,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-25T17:30:01.000Z",
-     "eng": 722,
+     "eng": 742,
      "url": "https://x.com/KobeissiLetter/status/2125643178975936763",
      "fr": "Retail demand for Anthropic is accelerating:\n\nRetail investors bought +$100 million in Anthropic, $ANT, shares on Monday, marking a 2nd consecutive daily increase in purchases.\n\nAs a result, $ANT was the 2nd-most purchased stock among retail investors during that session.\n\nThat compares to +$60 million on Thursday, Anthropic's IPO day, the 3rd-largest retail purchase on the first trading day of an",
      "tag": "mix"
@@ -1038,7 +1039,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T11:30:08.000Z",
-     "eng": 929,
+     "eng": 4771,
      "url": "https://x.com/WatcherGuru/status/2125915002813260004",
      "fr": "JUST IN: Nvidia $NVDA orders manufacturing partners to halt shipments of servers containing its chips to the following countries: \n\n• Thailand\n• Malaysia\n• Indonesia\n• Singapore",
      "tag": "mix"
@@ -1047,18 +1048,9 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T22:49:10.000Z",
-     "eng": 5473,
+     "eng": 5847,
      "url": "https://x.com/WatcherGuru/status/2125723498395959582",
      "fr": "JUST IN: 🇺🇸 Trump administration discussed invoking wartime powers to forcefully reinstate Jensen Huang as Nvidia $NVDA CEO after he stepped down, WaPo reports. https://t.co/uEUxNwkjXV",
-     "tag": "mix"
-    },
-    {
-     "h": "WatcherGuru",
-     "fol": 0,
-     "t": "2026-11-25T18:43:24.000Z",
-     "eng": 3270,
-     "url": "https://x.com/WatcherGuru/status/2125661646769012923",
-     "fr": "JUST IN: S&amp;P considers lowering Nvidia's $NVDA credit rating.",
      "tag": "mix"
     }
    ],
@@ -1067,7 +1059,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-23T22:24:16.000Z",
-     "eng": 674,
+     "eng": 677,
      "url": "https://x.com/Mr_Derivatives/status/2124992453451403338",
      "fr": "$SPX The April 2025 Liberation lows had that one day bigly +10% pop, before giving back half of those gains in the next 7 trading days. Then mooned.\n\nJust sayin'.",
      "tag": "mix"
@@ -1109,8 +1101,53 @@
    {
     "h": "WatcherGuru",
     "fol": 0,
+    "t": "2026-11-26T15:55:31.000Z",
+    "eng": 454,
+    "url": "https://x.com/WatcherGuru/status/2125981785058328882",
+    "fr": "JUST IN: 🇺🇸 President Donald Trump calls for an immediate investigation into \"fake economic numbers\" released before midterm elections, after US GDP growth was revised up from 3.4% to 4.3%. https://t.co/xecWcRV3ML",
+    "tag": "mix"
+   },
+   {
+    "h": "KobeissiLetter",
+    "fol": 0,
+    "t": "2026-11-26T15:49:14.000Z",
+    "eng": 236,
+    "url": "https://x.com/KobeissiLetter/status/2125980206053708183",
+    "fr": "BREAKING: US new home sales jumped +14.2% MoM in October, to an annualized rate of 701,000 units, the highest since December 2025, crushing expectations of a -3.8% decline.\n\nThis marks the largest monthly increase since November 2025 and the 2nd-largest since August 2022.\n\nIt also marks a sharp recovery from the -9.7% MoM decline in September.\n\nOctober's surge was driven by sales in the South, the",
+    "tag": "bull"
+   },
+   {
+    "h": "WatcherGuru",
+    "fol": 0,
+    "t": "2026-11-26T14:44:28.000Z",
+    "eng": 614,
+    "url": "https://x.com/WatcherGuru/status/2125963906245960095",
+    "fr": "RT @WatcherGuru: Bitcoin Price on Thanksgiving 🦃 \n\n2010: $0.28\n2011: $2.49\n2012: $12.51\n2013: $813\n2014: $376\n2015: $328\n2016: $739\n2017: $…",
+    "tag": "mix"
+   },
+   {
+    "h": "KobeissiLetter",
+    "fol": 0,
+    "t": "2026-11-26T12:52:49.000Z",
+    "eng": 3230,
+    "url": "https://x.com/KobeissiLetter/status/2125935808930582656",
+    "fr": "BREAKING: S&amp;P 500 futures extend to +0.8% on the day, rising further out of correction territory.\n\nNasdaq 100 futures are nearly +1%. https://t.co/kr4UkF4Hki",
+    "tag": "mix"
+   },
+   {
+    "h": "WatcherGuru",
+    "fol": 0,
+    "t": "2026-11-26T12:45:17.000Z",
+    "eng": 3948,
+    "url": "https://x.com/WatcherGuru/status/2125933915076743212",
+    "fr": "JUST IN: 🇨🇭 Switzerland approves its first spot Bitcoin ETF on its SIX Swiss Exchange.",
+    "tag": "mix"
+   },
+   {
+    "h": "WatcherGuru",
+    "fol": 0,
     "t": "2026-11-26T11:30:08.000Z",
-    "eng": 929,
+    "eng": 4771,
     "url": "https://x.com/WatcherGuru/status/2125915002813260004",
     "fr": "JUST IN: Nvidia $NVDA orders manufacturing partners to halt shipments of servers containing its chips to the following countries: \n\n• Thailand\n• Malaysia\n• Indonesia\n• Singapore",
     "tag": "mix"
@@ -1119,7 +1156,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-26T10:45:52.000Z",
-    "eng": 1551,
+    "eng": 3856,
     "url": "https://x.com/WatcherGuru/status/2125903859092787395",
     "fr": "Bitcoin Price on Thanksgiving 🦃 \n\n2010: $0.28\n2011: $2.49\n2012: $12.51\n2013: $813\n2014: $376\n2015: $328\n2016: $739\n2017: $8,771\n2018: $4,015\n2019: $7,150\n2020: $18,764\n2021: $58,927\n2022 $16,353\n2023: $37,035\n2024: $95,531\n2025: $91,711\n2026: $60,400",
     "tag": "mix"
@@ -1128,7 +1165,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-26T08:22:52.000Z",
-    "eng": 1553,
+    "eng": 2454,
     "url": "https://x.com/KobeissiLetter/status/2125867873218470307",
     "fr": "BREAKING: Elon Musk says SpaceX, $SPCX, will be matching his 1 share donation to every child in America. https://t.co/euRhagXKX1",
     "tag": "mix"
@@ -1137,7 +1174,7 @@
     "h": "elonmusk",
     "fol": 0,
     "t": "2026-11-26T03:43:05.000Z",
-    "eng": 363351,
+    "eng": 486993,
     "url": "https://x.com/elonmusk/status/2125797463047258119",
     "fr": "Every child in America will receive two SpaceX shares, one from the company and one from me personally",
     "tag": "mix"
@@ -1146,7 +1183,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-26T03:29:43.000Z",
-    "eng": 3338,
+    "eng": 3902,
     "url": "https://x.com/WatcherGuru/status/2125794100083343740",
     "fr": "JUST IN: Banking giant HSBC's crypto stablecoin surpasses 100,000 users in its first month.",
     "tag": "mix"
@@ -1155,7 +1192,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-26T00:32:35.000Z",
-    "eng": 3168,
+    "eng": 3683,
     "url": "https://x.com/KobeissiLetter/status/2125749523452510647",
     "fr": "BREAKING: US M2 money supply surged +$119 billion in October, to a record $23.53 trillion.\n\nYoY, M2 growth accelerated to +5.9%, its highest since May 2022.\n\nThis also marks its 32nd consecutive month of YoY growth.\n\nSince October 2023, M2 has soared +$2.82 trillion, or +$78 billion per month on average.\n\nUS M2 money supply is now $8.18 trillion above its 2019 pre-pandemic levels.\n\nThe purchasing ",
     "tag": "bull"
@@ -1164,7 +1201,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-26T00:18:50.000Z",
-    "eng": 5333,
+    "eng": 5776,
     "url": "https://x.com/WatcherGuru/status/2125746063600668963",
     "fr": "JUST IN: Bitcoin reclaims $61,000 https://t.co/aZOl3Y1Plx",
     "tag": "mix"
@@ -1173,7 +1210,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-26T00:11:23.000Z",
-    "eng": 9581,
+    "eng": 10191,
     "url": "https://x.com/WatcherGuru/status/2125744187010433137",
     "fr": "JUST IN: 🇺🇸 US House Financial Services Committee advances bill to establish Strategic Bitcoin Reserve.",
     "tag": "mix"
@@ -1182,7 +1219,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T23:01:59.000Z",
-    "eng": 704,
+    "eng": 762,
     "url": "https://x.com/KobeissiLetter/status/2125726722200842708",
     "fr": "BREAKING: US oil prices have recorded 3 drawdowns of at least 20% so far in 2026, matching their 2nd-longest such streak since the 1980s.\n\n2020 was the only year with a longer streak, at 4 such declines, while 1990, 1991, 1998, and 2022 each recorded 3.\n\nTaking intraday prices into account, US oil prices have posted 4 drawdowns of at least 20% this year.\n\nFurthermore, oil prices have seen 8 correc",
     "tag": "mix"
@@ -1191,7 +1228,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-25T22:49:10.000Z",
-    "eng": 5473,
+    "eng": 5847,
     "url": "https://x.com/WatcherGuru/status/2125723498395959582",
     "fr": "JUST IN: 🇺🇸 Trump administration discussed invoking wartime powers to forcefully reinstate Jensen Huang as Nvidia $NVDA CEO after he stepped down, WaPo reports. https://t.co/uEUxNwkjXV",
     "tag": "mix"
@@ -1200,7 +1237,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-25T21:11:18.000Z",
-    "eng": 231,
+    "eng": 243,
     "url": "https://x.com/WatcherGuru/status/2125698868264231104",
     "fr": "https://t.co/9pRR6LFxBS",
     "tag": "mix"
@@ -1209,7 +1246,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T21:05:21.000Z",
-    "eng": 2179,
+    "eng": 2227,
     "url": "https://x.com/KobeissiLetter/status/2125697370008555911",
     "fr": "BREAKING: The Dow Jones Industrial Average erases its -1,100 point loss and closes the day positive. https://t.co/Ehiu2UREi8",
     "tag": "mix"
@@ -1218,7 +1255,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-25T21:03:31.000Z",
-    "eng": 23620,
+    "eng": 25934,
     "url": "https://x.com/WatcherGuru/status/2125696909985640728",
     "fr": "JUST IN: 🇺🇸 FDA approves Elon Musk's Neuralink brain implant trials.",
     "tag": "mix"
@@ -1227,7 +1264,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T20:21:27.000Z",
-    "eng": 3683,
+    "eng": 4052,
     "url": "https://x.com/KobeissiLetter/status/2125686323818180737",
     "fr": "Gold has rarely been this oversold:\n\nGold prices are trading -20% below their 200-day moving average, their largest negative deviation since June 2013.\n\nThis marks a sharp reversal from the +45% deviation above the 200-day moving average recorded in January, the largest since the 1970s.\n\nThis comes as gold prices have dropped -37% from their January intraday peak, their largest drawdown within a 1",
     "tag": "mix"
@@ -1236,43 +1273,16 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T19:20:05.000Z",
-    "eng": 773,
+    "eng": 795,
     "url": "https://x.com/KobeissiLetter/status/2125670879979778245",
     "fr": "“In the US, one out of every five dollars the US government makes is going toward interest expense. On our current fiscal path, there is a 100% chance of bankruptcy. Something must change.” - @TKL_Adam at @WebSummit https://t.co/Pvu2U6XAWR",
-    "tag": "mix"
-   },
-   {
-    "h": "WatcherGuru",
-    "fol": 0,
-    "t": "2026-11-25T18:55:25.000Z",
-    "eng": 7568,
-    "url": "https://x.com/WatcherGuru/status/2125664671545921908",
-    "fr": "JUST IN: 🇺🇸 ICE arrests illegal immigrant days after he claimed $1,000,000 lottery prize. https://t.co/LVkLzOGlrQ",
-    "tag": "mix"
-   },
-   {
-    "h": "WatcherGuru",
-    "fol": 0,
-    "t": "2026-11-25T18:43:24.000Z",
-    "eng": 3270,
-    "url": "https://x.com/WatcherGuru/status/2125661646769012923",
-    "fr": "JUST IN: S&amp;P considers lowering Nvidia's $NVDA credit rating.",
-    "tag": "mix"
-   },
-   {
-    "h": "WatcherGuru",
-    "fol": 0,
-    "t": "2026-11-25T18:14:17.000Z",
-    "eng": 3035,
-    "url": "https://x.com/WatcherGuru/status/2125654321060602364",
-    "fr": "JUST IN: 🇺🇸 93% chance the Fed hikes interest rates by 25 basis points at the next FOMC meeting. https://t.co/kgBzVC9RAi",
     "tag": "mix"
    },
    {
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T17:55:44.000Z",
-    "eng": 5114,
+    "eng": 5190,
     "url": "https://x.com/KobeissiLetter/status/2125649652917612803",
     "fr": "BREAKING: The Dow Jones Industrial Average erases all losses and turns green on the day. https://t.co/HYCmFEAtTW",
     "tag": "mix"
@@ -1281,7 +1291,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T17:38:07.000Z",
-    "eng": 2136,
+    "eng": 2201,
     "url": "https://x.com/KobeissiLetter/status/2125645220524286373",
     "fr": "BREAKING: Anthropic stock, $ANT, erases losses and turns positive on the day.\n\nThe stock is now trading above its $83/share IPO price. https://t.co/MOgY0OcZVr",
     "tag": "mix"
@@ -1290,34 +1300,16 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-25T17:30:01.000Z",
-    "eng": 722,
+    "eng": 742,
     "url": "https://x.com/KobeissiLetter/status/2125643178975936763",
     "fr": "Retail demand for Anthropic is accelerating:\n\nRetail investors bought +$100 million in Anthropic, $ANT, shares on Monday, marking a 2nd consecutive daily increase in purchases.\n\nAs a result, $ANT was the 2nd-most purchased stock among retail investors during that session.\n\nThat compares to +$60 million on Thursday, Anthropic's IPO day, the 3rd-largest retail purchase on the first trading day of an",
-    "tag": "mix"
-   },
-   {
-    "h": "KobeissiLetter",
-    "fol": 0,
-    "t": "2026-11-25T17:16:16.000Z",
-    "eng": 4203,
-    "url": "https://x.com/KobeissiLetter/status/2125639719564333126",
-    "fr": "BREAKING: President Trump says the US stock market is “down sharply” because he wasn’t on the ballot for the US Midterm Elections. https://t.co/DIJQSV7sJQ",
-    "tag": "mix"
-   },
-   {
-    "h": "KobeissiLetter",
-    "fol": 0,
-    "t": "2026-11-25T16:51:48.000Z",
-    "eng": 844,
-    "url": "https://x.com/KobeissiLetter/status/2125633563110375867",
-    "fr": "BREAKING: The Bloomberg Commodity Index is on track for its 6th consecutive weekly decline, its longest losing streak since May 2023.\n\nThis index includes 25 exchange-traded futures contracts across energy, metals, and agriculture.\n\nThis would also mark its 6th longest losing streak this century.\n\nThis comes as the Bloomberg Commodity Index has declined -14% from its September peak.\n\nYear-to-date,",
     "tag": "mix"
    },
    {
     "h": "unusual_whales",
     "fol": 0,
     "t": "2026-11-24T13:27:16.000Z",
-    "eng": 50,
+    "eng": 53,
     "url": "https://x.com/unusual_whales/status/2125219701035016673",
     "fr": "Unusual Whales's Black Friday sale starts TODAY!\n\nUp to 25% off the first year!\n\nCome join our trading community, build out your dream trading data dashboards, and swim with the market this year!\n\nJoin here: https://t.co/0NTcHZllpT https://t.co/HcxNP9ve9U",
     "tag": "mix"
@@ -1326,7 +1318,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-23T22:24:16.000Z",
-    "eng": 674,
+    "eng": 677,
     "url": "https://x.com/Mr_Derivatives/status/2124992453451403338",
     "fr": "$SPX The April 2025 Liberation lows had that one day bigly +10% pop, before giving back half of those gains in the next 7 trading days. Then mooned.\n\nJust sayin'.",
     "tag": "mix"
@@ -1335,7 +1327,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-17T16:21:33.000Z",
-    "eng": 2025,
+    "eng": 2029,
     "url": "https://x.com/WatcherGuru/status/2122726848719454429",
     "fr": "Watcher Guru News Terminal is Officially Live.\n\nSign up now: https://t.co/k6hnkX2yyJ https://t.co/5ayrkRUWw9",
     "tag": "mix"
@@ -1380,7 +1372,7 @@
     "h": "realDonaldTrump",
     "fol": 0,
     "t": "2026-11-03T20:44:37.000Z",
-    "eng": 15078,
+    "eng": 15076,
     "url": "https://x.com/realDonaldTrump/status/2117719622057173270",
     "fr": "RT @realDonaldTrump: TO THE GREAT PEOPLE OF CALIFORNIA, GET OUT AND VOTE for these Great Patriots! They have my Complete and Total Endorsem…",
     "tag": "mix"
@@ -1443,7 +1435,7 @@
     "h": "realDonaldTrump",
     "fol": 0,
     "t": "2026-11-03T19:16:44.000Z",
-    "eng": 16212,
+    "eng": 16232,
     "url": "https://x.com/realDonaldTrump/status/2117697505270100335",
     "fr": "FIND YOUR ELECTION DAY VOTING LOCATION HERE!\nhttps://t.co/o3mbQ7ewdU",
     "tag": "mix"
@@ -1452,7 +1444,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-01-10T17:30:00.000Z",
-    "eng": 8743,
+    "eng": 8741,
     "url": "https://x.com/KobeissiLetter/status/2010041448486580639",
     "fr": "ANNOUNCEMENT: \n\nWe are excited to present The Kobeissi Letter’s 2025 performance report. \n\nOur analysis provided a net return of +30.7% in 2025, outperforming the S&P 500's 2025 return of +16.4%.\n\nSince 2020, our investment strategy has now returned +516.3%, significantly outperforming the S&P 500’s +111.9% return over the same period.\n\nOur 2025 return builds on +8.1% in 2024, +15.5% in 2023, +92.",
     "tag": "mix"
@@ -1469,6 +1461,48 @@
   ]
  },
  "trump": [
+  {
+   "t": "Thu, 26 Nov 2026 15:45:00 +0000",
+   "fr": "HAPPY THANKSGIVING TO ALL AMERICAN PATRIOTS WHO HAVE WORKED SO HARD TO MAKE OUR COUNTRY GREAT! Additionally, I would like to wish a Happy Thanksgiving to even those who issued fake Economic Numbers, just prior to the Election, and corrected them yesterday, three weeks late, showing that the GDP was actually 4.3%, versus 3.4%, A RECORD SETTING ERROR, and one so grave that it should be immediately investigated. Also, I would like to wish a very Happy Thanksgiving to all of those people that have worked so hard to bring our Country to the Radical Far Left, those that are looking to change our Cou",
+   "url": "https://www.trumpstruth.org/statuses/43746",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Thu, 26 Nov 2026 14:53:57 +0000",
+   "fr": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/117683175541431490 During my conversations in China with President Vladimir Putin, of Russia, I spent a lot of time talking about the fact that I would like to see President Putin pull back all Military aggression against territories throughout Europe, in the hopes that a Deal can be made between Russia and Ukraine, and made quickly. I really believe this is a strong possibility — Thousands of people are being killed each and every month, A COMPLETE BLOODBATH — and will be a Great Tribute to everyone! It was an Honor meeting with Secre",
+   "url": "https://www.trumpstruth.org/statuses/43745",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Thu, 26 Nov 2026 14:25:11 +0000",
+   "fr": "HAPPY THANKSGIVING TO ALL! President DONALD J. TRUMP",
+   "url": "https://www.trumpstruth.org/statuses/43744",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Thu, 26 Nov 2026 14:24:01 +0000",
+   "fr": "It was just revealed that the REAL Numbers on the Economy, published before the Election, were FAKE, and a correction was issued yesterday by the people in the Government Agency that does these numbers. The American Economy under The Trump Administration is doing FAR BETTER than the good numbers already released. Third Quarter GDP Growth has now been corrected to be 4.3%, instead of 3.4%, a major difference! Why wasn’t the correct number issued before the Election? I am asking for an immediate investigation of this situation. This is not a small error, this is a massive, and purposeful, error.",
+   "url": "https://www.trumpstruth.org/statuses/43743",
+   "tag": "mix",
+   "market": false
+  },
+  {
+   "t": "Thu, 26 Nov 2026 14:19:11 +0000",
+   "fr": "A JOINT STATEMENT MADE BY PRESIDENT DONALD J. TRUMP AND SECRETARY GENERAL OF NATO, MARK RUTTE: President Trump and Secretary General Rutte had an outstanding meeting on Wednesday evening, at what is often referred to as the Southern White House — Mar-a-Lago. The meeting was very impactful, with the War between Russia and Ukraine, and the Conflict in Iran, being the primary subjects of discussion. Additionally, all of the record setting achievements that the U.S. and NATO have made together at the Summits in the Hague, and Ankara, were discussed. We also talked about, at length, the importance ",
+   "url": "https://www.trumpstruth.org/statuses/43742",
+   "tag": "mix",
+   "market": true
+  },
+  {
+   "t": "Thu, 26 Nov 2026 12:38:16 +0000",
+   "fr": "“U.S. Q3 GDP just got revised UP to a massive +4.3% — shattering expert predictions and nearly DOUBLING Q2’s 2.2% growth! The Trump Economy is ROARING, and the mainstream media can’t hide it anymore!” View image",
+   "url": "https://www.trumpstruth.org/statuses/43741",
+   "tag": "mix",
+   "market": false
+  },
   {
    "t": "Thu, 26 Nov 2026 05:47:03 +0000",
    "fr": "David E. Sanger, the mediocre reporter for the Failing New York Times, didn’t mention in his recent story on me the successful closing of the Border, best crime stats in years (lowest murder rate since 1900 - 126 years!), biggest Tax and Regulation Cuts, EVER, the most successful naval blockade in history, the destruction of Iran’s Navy and Air Force (and more!), the ONE DAY WIN against Venezuela, and today’s big success in straightening out the Obama caused mess in Iowa. David Sanger is a lowlife that only writes what he is told to write by his bosses. Also, until the Election, best Market, E",
@@ -1601,193 +1635,9 @@
    "url": "https://www.trumpstruth.org/statuses/43718",
    "tag": "mix",
    "market": false
-  },
-  {
-   "t": "Mon, 23 Nov 2026 18:00:54 +0000",
-   "fr": "Iowa is a very special place to me, a place that I won, by substantial margins, in all three Elections but, whether I won or lost, would never deter me from making a correct decision. As everyone knows, there is a Military “clean up” operation, without which, a very dangerous situation exists. In 2009, the Obama Administration improperly stored a vast number of explosives, and the Experts, who know it well, and have been studying it for many years, feel there is a substantial chance that this material will explode of its own volition, perhaps sometime in the near future. We have an opportunity",
-   "url": "https://www.trumpstruth.org/statuses/43717",
-   "tag": "mix",
-   "market": false
-  },
-  {
-   "t": "Mon, 23 Nov 2026 16:32:47 +0000",
-   "fr": "View image",
-   "url": "https://www.trumpstruth.org/statuses/43716",
-   "tag": "mix",
-   "market": false
-  },
-  {
-   "t": "Mon, 23 Nov 2026 14:50:52 +0000",
-   "fr": "Congratulations to NVIDIA on having made, what I consider to be, an absolutely GREAT decision! President DONALD J. TRUMP",
-   "url": "https://www.trumpstruth.org/statuses/43715",
-   "tag": "mix",
-   "market": false
-  },
-  {
-   "t": "Mon, 23 Nov 2026 14:07:17 +0000",
-   "fr": "The NVIDIA Board of Directors has made the correct and proper decision to return Jensen Huang to the position of CEO. The Country needs Jensen’s leadership at NVIDIA in order to ensure the Success and Prosperity of not only the Company, but the American Economy. The United States Government has no reason to believe that Jensen’s return to NVIDIA poses any risk to National Security. The Attorney General of the United States has confirmed that the U.S. Government does not possess evidence that he has engaged in any unlawful conduct. On a personal note, I have gotten to know Jensen, and he is a G",
-   "url": "https://www.trumpstruth.org/statuses/43714",
-   "tag": "mix",
-   "market": true
-  },
-  {
-   "t": "Mon, 23 Nov 2026 11:31:33 +0000",
-   "fr": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/117665528575591688 View image Quoted Donald J. Trump View video",
-   "url": "https://www.trumpstruth.org/statuses/43712",
-   "tag": "mix",
-   "market": false
-  },
-  {
-   "t": "Mon, 23 Nov 2026 11:31:20 +0000",
-   "fr": "View video",
-   "url": "https://www.trumpstruth.org/statuses/43713",
-   "tag": "mix",
-   "market": false
   }
  ],
  "reddit": {},
- "risks": [
-  {
-   "t": "20261126T061500Z",
-   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-   "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
-   "src": "thepeterboroughexaminer.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
-   "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
-   "src": "aol.co.uk",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Letters to the Editor : Nov . 25 , 2026",
-   "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
-   "src": "kelownadailycourier.ca",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Rassvet ,  Russia Starlink  is expanding rapidly",
-   "url": "https://www.dw.com/en/can-rassvet-russias-starlink-change-the-course-of-the-war-in-ukraine/a-80052579",
-   "src": "dw.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Russia hits Kyiv with ballistic missiles , mayor says",
-   "url": "https://www.newcastleherald.com.au/story/9398450/russia-hits-kyiv-with-ballistic-missiles-mayor-says/",
-   "src": "newcastleherald.com.au",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "France cost of living crisis : why working is no longer enough",
-   "url": "http://www.bignewsnetwork.com/news/279454868/france-cost-of-living-crisis-why-working-is-no-longer-enough",
-   "src": "bignewsnetwork.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Jared Kushner Thirsts Over  Grandmaster  Putin in Bonkers Interview",
-   "url": "https://www.thedailybeast.com/jared-kushner-thirsts-over-grandmaster-putin-in-bonkers-interview",
-   "src": "thedailybeast.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Korea moves to beef up W10tr stock market rescue fund",
-   "url": "https://www.koreaherald.com/article/10950449",
-   "src": "koreaherald.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "  Trapped in grief : wife of Japanese journalist detained by Russia pleads for his release",
-   "url": "https://www.aol.co.uk/articles/trapped-grief-wife-japanese-journalist-051617000.html",
-   "src": "aol.co.uk",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Europe Is Wrong to Dismiss Russian Demands for Common Security",
-   "url": "https://www.theamericanconservative.com/europe-is-wrong-to-dismiss-russian-demands-for-common-security/",
-   "src": "theamericanconservative.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Supreme Court : Balance sheet debt acknowledgement can extend IBC limitation period",
-   "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/supreme-court-balance-sheet-debt-acknowledgement-can-extend-ibc-limitation-period/articleshow/136179209.cms",
-   "src": "economictimes.indiatimes.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Liberal senator defects to One Nation",
-   "url": "https://www.abc.net.au/listen/programs/worldtoday/liberal-senator-defects-to-one-nation/107413202",
-   "src": "abc.net.au",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Overnight News Digest : November 25 , 2026",
-   "url": "https://www.dailykos.com/stories/2026/11/25/800134153/community/overnight-news-digest-november-25-2026/",
-   "src": "dailykos.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T054500Z",
-   "title": "Ukraine Invasion Day 1 , 736 : RU demands UKR cede Donbas as a precondition of ceasefire negotiations",
-   "url": "https://www.dailykos.com/stories/2026/11/25/800134195/community/1736/",
-   "src": "dailykos.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-   "url": "http://www.rockymounttelegram.com/news/national/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_030af451-8be8-51fa-907b-aae7f2313d23.html",
-   "src": "rockymounttelegram.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "10 Most Oversold Semiconductor Stocks to Buy for 2027",
-   "url": "https://www.insidermonkey.com/news/10-most-oversold-semiconductor-stocks-to-buy-for-2027-1870302/",
-   "src": "insidermonkey.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "US unveils tariffs on EU , China and others over  unfair  trade",
-   "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/us-unveils-tariffs-on-eu-china-and-others-over-unfair-trade",
-   "src": "freemalaysiatoday.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "Casa Loma home invasion : Michael Eckert , 39 , shot and killed",
-   "url": "https://www.cp24.com/local/toronto/2026/11/26/unthinkable-loss-toronto-musician-shot-and-killed-during-casa-loma-home-invasion/",
-   "src": "cp24.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "Slain Toronto home invasion victim was  brilliant  musician",
-   "url": "https://ottawasun.com/entertainment/music/home-invasion-victim-michael-eckert-mourned",
-   "src": "ottawasun.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T051500Z",
-   "title": "All Under Heaven : Beijing Eight Pillars",
-   "url": "https://www.theepochtimes.com/opinion/all-under-heaven-beijings-eight-pillars-6125753",
-   "src": "theepochtimes.com",
-   "lang": "English"
-  }
- ],
  "kidnap_fr": [
   {
    "t": "Sun, 15 Nov 2026 08:00:00 GMT",
@@ -1832,16 +1682,22 @@
    "src": "Cryptoast"
   },
   {
+   "t": "Tue, 03 Nov 2026 08:00:00 GMT",
+   "title": "Victime d’une tentative d’enlèvement en Vendée, un homme fait usage d’une arme : il est placé en détention provisoire - Ouest-France",
+   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNN0ZHaWNadGdfRW9jODRTZkJUb2tOLVh1LTl2MTVvQ19jNTM1TkZPdWw3T2MtOHdzZjZDdnNTTUhCNzNSelVXTzd1b0lEUTluNXhxZU9KQUFuSGw1WU01enRER3pwM3gwNEdxOUp0bG0xR2JwcTdOZVdsMGtucE51VXdvVGpQcEhUMmlyeVZmLW1OMUhNR19uVnFxdDZfSWIxeW4xWXpXX0J5OUE0ZHBLT29aSUFLZlFfRFhSMjlaM0g4eE1ERkF2cTNKSUdTRkZueVdHdDVyX0x3ZndGOTBnaUZUMVpQcjJiMVpsRUM4QllYZ0xfaTI1RkthZVF4ZnFiMHg4anpoNjE1Uy1NMnJmbGJaT0VUTEVhYzhqWXJOd3BwQWJ0MEE?oc=5",
+   "src": "Ouest-France"
+  },
+  {
    "t": "Sun, 15 Nov 2026 08:00:00 GMT",
    "title": "Yvelines : un homme mis en examen et écroué après un crypto-rapt à 900.000 euros - CNews",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVmQzdWJQWks1Y0FCV2Q2VWtwSEdBSDJQMTFIazU4Q3V4MDQ2UUNkQUdiZUMwbU55dkptSU43ZzVycWZXaFJITThsNTdaSzNqZmNmVkxBY05WendUZ2lBLTA0ZkgtOVAzV2VXM25UUGpGd3FxNnYzS0FEeHJYOV9TSHIzT08tSTN6clVsc1FxSnFYdE5MNDdBNE5aSjBmN3lPMlcxbjNKNUpFVzd0TVNLSnE3VjfSAboBQVVfeXFMT2VKZlFaMzBFVHpkdW5IdVdycDN2Mm5FNUFRZXo3TEZsdFp1TGZNQTk5QVdldEMyMzF3dnBTYzcwdnVCSW8zc2k2YWVlcmRxa2c2M2NfR2NqVGczZ2lBVG5BaVBUNW85cXBRT2VuckQ1VlpnY2pxcFVYN21KbjdjTldUemVyMW52Ujl0RG5BZkxJZk9Xbmo3UnVsRGJVS0NHMzlNNTZ0ZWwwUlZ6QmxBNTdxZTVqd29PTFRR?oc=5",
    "src": "CNews"
   },
   {
-   "t": "Tue, 03 Nov 2026 08:00:00 GMT",
-   "title": "Victime d’une tentative d’enlèvement en Vendée, un homme fait usage d’une arme : il est placé en détention provisoire - Ouest-France",
-   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNN0ZHaWNadGdfRW9jODRTZkJUb2tOLVh1LTl2MTVvQ19jNTM1TkZPdWw3T2MtOHdzZjZDdnNTTUhCNzNSelVXTzd1b0lEUTluNXhxZU9KQUFuSGw1WU01enRER3pwM3gwNEdxOUp0bG0xR2JwcTdOZVdsMGtucE51VXdvVGpQcEhUMmlyeVZmLW1OMUhNR19uVnFxdDZfSWIxeW4xWXpXX0J5OUE0ZHBLT29aSUFLZlFfRFhSMjlaM0g4eE1ERkF2cTNKSUdTRkZueVdHdDVyX0x3ZndGOTBnaUZUMVpQcjJiMVpsRUM4QllYZ0xfaTI1RkthZVF4ZnFiMHg4anpoNjE1Uy1NMnJmbGJaT0VUTEVhYzhqWXJOd3BwQWJ0MEE?oc=5",
-   "src": "Ouest-France"
+   "t": "Mon, 23 Nov 2026 14:20:13 GMT",
+   "title": "Soudan du Sud : MSF suspend ses activités à Yei River après l’enlèvement de deux soignants - Médecins Sans Frontières",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPX3ZiM0gyZVloUEdMZUhmRkhVOUg0STZoQ0lYNFpVQjNMM2U1TXhhV0VIN2xadmJHQUNtT0RtblpsTXVFTnVFRUkzbTQwMElGYVRuOEtReGxmaXgzLTBZSWV1bG9ia1JNaGhKR3haWnZ6c2xzcXAyZy1seGlLbElRcVJOMHl5NVRkLXBiNURsdF9GbWQwTnJKSUEwRHhyazVKLXdocVd5ek13THpDVk1qQnVxWkVrWEx5TkRONF9TcVR1SVJS?oc=5",
+   "src": "Médecins Sans Frontières"
   },
   {
    "t": "Mon, 16 Nov 2026 08:00:00 GMT",
@@ -1850,16 +1706,10 @@
    "src": "Linfo.re"
   },
   {
-   "t": "Wed, 25 Nov 2026 18:24:47 GMT",
-   "title": "Le Sénat français bloque la nouvelle taxe sur les cryptomonnaies et la liste des portefeuilles, des critiques la qualifiant de risque d'enlèvement - CoinDesk",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYXRiZW9OYjlSRWZlWGRKZTdhQ2c5WDVQdzJPVDhiNUgtZnpmTHVBMkVmd1pzcEVYQ3U4THNDY05VMDVqNVRUVXN1ZE1lWGhxMmJscWlCNGZPTWdPcTA4YU4tTVZ3R3dadDA0eXV5WmFadDBJZHJ3VDRYa0pzbmtWQ1ZKVFg2TVBCLWlfbGJLdXEtWHZIbUdXQ1laaU1VaEhTYkJ5aDd0Z1I4NGN3ZC1SenlrZ0Q5UkZpcHRJblR6OUppZDZlNWJ4Nkhldms?oc=5",
-   "src": "CoinDesk"
-  },
-  {
-   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
-   "title": "Cryptomonnaies : un homme écroué après la séquestration d’un couple dans les Yvelines et le vol de 900 000 € de bitcoins - Ouest-France",
-   "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNbnpkQnlGaEV1Vmw1eEQxNXR4QmRyVHFLMDBpQWZHd0ZocV9ySEloV0o2YnUtX0wwVGhqQzdsUjRxS1gtSXFad2w2NXpvZk9LZlVzYmhMQ1RQT3dVVXFmUkVWeEdWaTVENm9aTm5zWGJvZlVUcnhZOFJ5NWdRNTZVT05za2JrZGdyVWc4ZE1wdi1hbnFyLTJ1TEd1bElpV19HQ2FwSGk2T2JGVDhjQkN0aWR5M0diREpJeFZyMjI4THZSTzBIZjJqcFQwWlBCZktFRklFeXpvWndQcmVVRE1mUEthaVhRSHpzQnpKVXlsV0dmQjZqU1lDUncxQVREUURBX1dfaEFVbFBxYUFBWnprNzFLX3dlUkZiV3padEYtNm0xQ3F1eUcwdU1NN05vY2Z4?oc=5",
-   "src": "Ouest-France"
+   "t": "Thu, 05 Nov 2026 08:00:00 GMT",
+   "title": "Quatre jeunes interpellés pour avoir séquestré la mauvaise famille - 20 Minutes",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMmREamtBZVRJM1J5UW9hZkNMRTFMWFVhcGtaS1oxWnVFMWc1TjJvNC1UaHIyWTF0anM3a1hVanN6YXV1YS1hUjdoQXE1RWhEZEZMaUZhNk05RlpsMHdPSFhRMmtYRENWbEp1ZkNhd1FXSUUzMEtsbVBRSEZGY1FJeWl3UFpia1c2cF9qZ0ktRDFKTkoydnpja2tlQTM5WWVvNFkwUnNfVkpNaU0xaUFVS2xKN09Mb3VoaUVjWUNWRk8xS0pBcUxEUVNnY1dTWUkzcnRXSg?oc=5",
+   "src": "20 Minutes"
   }
  ],
  "fed": [
