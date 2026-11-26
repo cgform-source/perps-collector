@@ -3,7 +3,7 @@ Tourne sur GitHub Actions (gratuit) 3 fois par jour et écrit data/feed.json.
 Sources : X/Twitter (via Scweet + cookie d'un compte X secondaire), Truth Social de Trump (archive trumpstruth.org),
 Reddit, actualités mondiales à risque (GDELT), enlèvements liés à la crypto en France (GDELT), calendrier de la Fed.
 Chaque source est indépendante : si l'une échoue, les autres sont quand même écrites."""
-import json, os, re, time, datetime as dt, traceback, urllib.request, urllib.parse, xml.etree.ElementTree as ET
+import json, os, urllib.error, re, time, datetime as dt, traceback, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; perps-dashboard-collector/1.0)"}
 OUT = {"generated": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "errors": {}}
@@ -12,7 +12,7 @@ CFG = json.load(open("config.json", encoding="utf-8"))
 def get(url, timeout=25, headers=None):
     req = urllib.request.Request(url, headers={**UA, **(headers or {})})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+        return r.read().decode("utf-8-sig", "replace")
 
 def section(name):
     def deco(fn):
@@ -183,19 +183,39 @@ def trump():
             break
     return items
 
+def _reddit_json(sub):
+    for host in ("www.reddit.com", "old.reddit.com", "api.reddit.com"):
+        try:
+            j = json.loads(get(f"https://{host}/r/{sub}/hot.json?limit=30&raw_json=1", headers={"Accept": "application/json", "User-Agent": "linux:perps-collector:1.0 (by /u/perps_dashboard)"}))
+            return [c["data"] for c in j["data"]["children"] if not c["data"].get("stickied")]
+        except Exception:
+            time.sleep(2)
+    return None
+
+def _reddit_rss(sub):
+    x = get(f"https://www.reddit.com/r/{sub}/hot/.rss?limit=30", headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Firefox/128.0"})
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    out = []
+    for e in ET.fromstring(x).findall("a:entry", ns):
+        content = re.sub(r"<[^>]+>", " ", e.findtext("a:content", "", ns))
+        out.append({"title": e.findtext("a:title", "", ns), "selftext": content, "created": e.findtext("a:updated", "", ns),
+                    "permalink": (e.find("a:link", ns).get("href") if e.find("a:link", ns) is not None else ""), "score": 0, "num_comments": 0})
+    return out
+
 @section("reddit")
 def reddit():
     out = {}
     for sub in CFG.get("subreddits", ["wallstreetbets", "stocks", "CryptoCurrency"]):
         try:
-            j = json.loads(get(f"https://www.reddit.com/r/{sub}/hot.json?limit=30", headers={"Accept": "application/json"}))
+            rows = _reddit_json(sub)
+            if rows is None:
+                rows = _reddit_rss(sub)
             posts = []
-            for c in j["data"]["children"]:
-                d = c["data"]
-                if d.get("stickied"):
-                    continue
-                posts.append({"t": dt.datetime.utcfromtimestamp(d["created_utc"]).strftime("%Y-%m-%dT%H:%M:%SZ"), "title": d["title"][:300],
-                              "score": d.get("score", 0), "com": d.get("num_comments", 0), "url": "https://www.reddit.com" + d["permalink"],
+            for d in rows:
+                t = dt.datetime.utcfromtimestamp(d["created_utc"]).strftime("%Y-%m-%dT%H:%M:%SZ") if "created_utc" in d else d.get("created", "")
+                link = d.get("permalink", "")
+                posts.append({"t": t, "title": d["title"][:300], "score": d.get("score", 0), "com": d.get("num_comments", 0),
+                              "url": link if link.startswith("http") else "https://www.reddit.com" + link,
                               "tickers": sorted(set(re.findall(r"\$([A-Z]{2,6})\b", d["title"] + " " + (d.get("selftext") or "")[:2000]))),
                               "tag": tag(d["title"])})
             out[sub] = posts[:20]
@@ -205,8 +225,16 @@ def reddit():
     return out
 
 def gdelt(query, n=15, days=3):
+    time.sleep(7)  # GDELT : 1 requête toutes les 5 s maximum
     q = urllib.parse.quote(query)
-    j = json.loads(get(f"https://api.gdeltproject.org/api/v2/doc/doc?query={q}&mode=artlist&maxrecords={n}&format=json&timespan={days}d&sort=datedesc"))
+    try:
+        txt = get(f"https://api.gdeltproject.org/api/v2/doc/doc?query={q}&mode=artlist&maxrecords={n}&format=json&timespan={days}d&sort=datedesc")
+    except urllib.error.HTTPError as e:
+        if e.code != 429:
+            raise
+        time.sleep(20)
+        txt = get(f"https://api.gdeltproject.org/api/v2/doc/doc?query={q}&mode=artlist&maxrecords={n}&format=json&timespan={days}d&sort=datedesc")
+    j = json.loads(txt)
     return [{"t": a.get("seendate"), "title": a.get("title"), "url": a.get("url"), "src": a.get("domain"), "lang": a.get("language")} for a in j.get("articles", [])]
 
 @section("risks")
