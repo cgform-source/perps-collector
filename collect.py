@@ -547,7 +547,51 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, top, eu, metals, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
+@section("firsts")
+def firsts():
+    """Mémoire longue des premiers calls : pour chaque token, qui en a parlé le premier et quand, gardé 1 an
+    (les tweets eux-mêmes ne sont gardés que 30 jours). Permet de repérer celui qui était early, même des semaines avant la foule."""
+    path = "data/first_calls.json"
+    try:
+        M = json.load(open(path, encoding="utf-8"))
+    except Exception:
+        M = {}
+    cp = OUT.get("callpx") or {}
+    tk = OUT.get("tokens") or {}
+    for t in OUT.get("influ") or []:
+        if t.get("rt") or not t.get("t"):
+            continue
+        tks = t.get("tickers") or []
+        if len(tks) > 4:
+            continue
+        for T in tks:
+            e = M.get(T)
+            if e is None:
+                e = M[T] = {"h": t["h"], "t": t["t"], "url": t.get("url"), "acc": {}}
+            if t["t"] < e["t"]:
+                e.update({"h": t["h"], "t": t["t"], "url": t.get("url")})
+                e.pop("px", None); e.pop("mc", None)
+            a = e.setdefault("acc", {})
+            if t["h"] not in a or t["t"] < a[t["h"]]:
+                if len(a) < 40 or t["h"] in a:
+                    a[t["h"]] = t["t"]
+            if "px" not in e and e.get("url"):
+                p = ((cp.get(T) or {}).get("calls") or {}).get(e["url"])
+                if p and p.get("px"):
+                    e["px"] = p["px"]
+                    if p.get("mc"):
+                        e["mc"] = p["mc"]
+            if not e.get("chain") and (tk.get(T) or {}).get("chain"):
+                e["chain"] = tk[T]["chain"]
+    lim = (dt.datetime.utcnow() - dt.timedelta(days=365)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    M = {k: v for k, v in M.items() if v["t"] >= lim or len(v.get("acc", {})) >= 3}
+    json.dump(M, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # dans le feed : seulement les tokens cités ces 30 derniers jours (le fichier complet reste dans data/)
+    cur = {T for t in (OUT.get("influ") or []) for T in (t.get("tickers") or [])}
+    return {k: {"h": v["h"], "t": v["t"], "url": v.get("url"), "px": v.get("px"), "mc": v.get("mc"), "n": len(v.get("acc", {})),
+                "acc": sorted(v.get("acc", {}).items(), key=lambda x: x[1])[:12]} for k, v in M.items() if k in cur}
+
+for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
