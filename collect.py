@@ -235,10 +235,71 @@ def tokens():
             out[k] = {"name": p["baseToken"].get("name"), "price": float(p.get("priceUsd") or 0) or None, "mcap": p.get("marketCap") or p.get("fdv"),
                       "ch24": (p.get("priceChange") or {}).get("h24"), "liq": (p.get("liquidity") or {}).get("usd"), "vol24": (p.get("volume") or {}).get("h24"),
                       "logo": info.get("imageUrl"), "banner": info.get("header"), "url": p.get("url"), "chain": p.get("chainId"),
-                      "x": next((s.get("url") for s in info.get("socials", []) if s.get("type") == "twitter"), None)}
+                      "x": next((s.get("url") for s in info.get("socials", []) if s.get("type") == "twitter"), None),
+                      "pair": p.get("pairAddress")}
             time.sleep(0.4)
         except Exception as e:
             OUT["errors"]["token:" + k] = str(e)[:100]
+    return out
+
+GT = {"ethereum": "eth", "bsc": "bsc", "solana": "solana", "base": "base", "arbitrum": "arbitrum", "polygon": "polygon_pos", "avalanche": "avax", "sui": "sui-network", "ton": "ton", "hyperevm": "hyperevm", "optimism": "optimism", "blast": "blast", "abstract": "abstract", "sonic": "sonic", "pulsechain": "pulsechain", "cronos": "cro"}
+def hl_hist(coin):
+    body = json.dumps({"type": "candleSnapshot", "req": {"coin": coin, "interval": "1h", "startTime": int((time.time() - 40 * 86400) * 1000), "endTime": int(time.time() * 1000)}}).encode()
+    req = urllib.request.Request("https://api.hyperliquid.xyz/info", data=body, headers={**UA, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        d = json.loads(r.read())
+    return [(int(k["t"]) // 1000, float(k["c"])) for k in d]
+def gt_hist(chain, pair):
+    net = GT.get(chain)
+    if not net or not pair:
+        return []
+    j = json.loads(get(f"https://api.geckoterminal.com/api/v2/networks/{net}/pools/{pair}/ohlcv/hour?limit=1000&currency=usd", headers={"Accept": "application/json"}))
+    rows = ((j.get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []
+    return sorted((int(r[0]), float(r[4])) for r in rows)
+@section("callpx")
+def callpx():
+    """Prix (et market cap) au moment de chaque call, pour mesurer la performance depuis le call."""
+    toks = OUT.get("tokens") or {}
+    L = OUT.get("influ") or []
+    need = {}
+    for t in L:
+        for k in t.get("tickers", []):
+            need.setdefault(k, []).append(t)
+    out = {}
+    for k, tw in need.items():
+        hist = []
+        try:
+            hist = hl_hist(k)
+        except Exception:
+            hist = []
+        src = "hl"
+        if not hist and k in toks:
+            try:
+                hist = gt_hist(toks[k].get("chain"), toks[k].get("pair"))
+                src = "dex"
+                time.sleep(2.2)
+            except Exception as e:
+                OUT["errors"]["callpx:" + k] = str(e)[:100]
+        if not hist:
+            continue
+        supply = None
+        tk = toks.get(k) or {}
+        if src == "dex" and tk.get("mcap") and tk.get("price"):
+            supply = tk["mcap"] / tk["price"]
+        res = {}
+        for t in tw:
+            ts = int(dt.datetime.fromisoformat(t["t"].replace("Z", "+00:00")).timestamp())
+            px = None
+            for (h, c) in hist:
+                if h <= ts:
+                    px = c
+                else:
+                    break
+            if px is None and hist and hist[0][0] - ts < 7200:
+                px = hist[0][1]
+            if px:
+                res[t["url"]] = {"px": px, "mc": supply * px if supply else None}
+        out[k] = {"src": src, "now": hist[-1][1], "calls": res}
     return out
 
 @section("trump")
@@ -358,7 +419,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, influ, tokens, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
