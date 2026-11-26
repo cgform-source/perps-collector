@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-26T11:48:49Z",
+ "generated": "2026-11-26T11:52:07Z",
  "errors": {
   "reddit:wallstreetbets": "HTTP Error 404: Not Found",
-  "reddit:stocks": "HTTP Error 404: Not Found",
+  "reddit:stocks": "HTTP Error 429: Too Many Requests",
   "reddit:CryptoCurrency": "HTTP Error 429: Too Many Requests",
   "reddit:investing": "HTTP Error 429: Too Many Requests"
  },
@@ -192,107 +192,9 @@
  "risks": [
   {
    "t": "20261126T061500Z",
-   "title": "  Nobody can stop you from having your dream : West Allis 11 - year - old lands role in  MJ the Musical  ",
-   "url": "https://www.cbs58.com/news/nobody-can-stop-you-from-having-your-dreams-west-allis-11-year-old-lands-role-in-mj-the-musical",
-   "src": "cbs58.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Back in Minnesota , Viking Kirk Cousins faces familiar foe in Falcons",
-   "url": "http://www.heraldglobe.com/news/279454864/back-in-minnesota-vikings-kirk-cousins-faces-familiar-foe-in-falcons",
-   "src": "heraldglobe.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Mitratech Positioned as a Leader in the SPARK Matrix™ : Vendor Risk Management , 2026 by QKS Group",
-   "url": "https://www.prnewswire.com/news-releases/mitratech-positioned-as-a-leader-in-the-spark-matrix-vendor-risk-management-2026-by-qks-group-302951027.html",
-   "src": "prnewswire.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
    "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
    "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
    "src": "thepeterboroughexaminer.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Against the odds , grit powers trio from NK region to KSET success",
-   "url": "https://timesofindia.indiatimes.com/city/hubballi/against-the-odds-grit-powers-trio-from-nk-region-to-kset-success/articleshow/136179457.cms",
-   "src": "timesofindia.indiatimes.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Shastho Batayon helpline : Why let a lifeline to healthcare fall silent over unpaid bills ? ",
-   "url": "https://www.thedailystar.net/opinion/views/news/shastho-batayon-helpline-why-let-lifeline-healthcare-fall-silent-over-unpaid-bills-4333246",
-   "src": "thedailystar.net",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Israel , Netanyahu aims to be prime minister until 2028 . Eisenkot wants a law to block his way",
-   "url": "https://www.odnako.org/israel-netanyahu-aims-to-be-prime-minister-until-2028-eisenkot-wants-a-law-to-block-his-way/",
-   "src": "odnako.org",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "It Still Important to Release the Epstein Files - The American Conservative",
-   "url": "https://www.theamericanconservative.com/its-still-important-to-release-the-epstein-files/",
-   "src": "theamericanconservative.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Warriors keep NBA Cup hopes alive with rout of Kings",
-   "url": "http://www.heraldglobe.com/news/279454872/warriors-keep-nba-cup-hopes-alive-with-rout-of-kings",
-   "src": "heraldglobe.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "On Greece most glamorous island , faith and tradition endure with a celebration of its women",
-   "url": "http://www.reflector.com/news/national/on-greeces-most-glamorous-island-faith-and-tradition-endure-with-a-celebration-of-its-women/article_6fd7c09e-3839-57f7-8af8-a1add1479307.html",
-   "src": "reflector.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Japan data centre boom faces growing revolt from urban residents | WABX 107 . 5 | Evansville Classic Rock Station",
-   "url": "https://wabx.net/2026/11/25/japans-data-centre-boom-faces-growing-revolt-from-urban-residents/",
-   "src": "wabx.net",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "Worcester man , 28 , died after taking cocaine and ketamine",
-   "url": "https://www.worcesternews.co.uk/news/26762852.worcester-man-28-died-taking-cocaine-ketamine/",
-   "src": "worcesternews.co.uk",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "CBI Raids Star Housing Finance Ex - Directors in Rs 80 Crore Fraud Case , ETRealty",
-   "url": "https://realty.economictimes.indiatimes.com/news/housing-finance/cbi-conducts-searches-at-premises-of-star-housing-finances-ex-directors/136177894",
-   "src": "realty.economictimes.indiatimes.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "BEL Considers Extending Westlake Diesel Generator Contract Amid Power Supply Concerns",
-   "url": "https://lovefm.com/bel-considers-extending-westlake-diesel-generator-contract-amid-power-supply-concerns/",
-   "src": "lovefm.com",
-   "lang": "English"
-  },
-  {
-   "t": "20261126T061500Z",
-   "title": "NFC North : Green Bay Packers lose to Los Angeles Rams 23 - 13",
-   "url": "https://www.chicagotribune.com/2026/11/25/green-bay-packers-lose-la-rams/",
-   "src": "chicagotribune.com",
    "lang": "English"
   },
   {
@@ -304,34 +206,153 @@
   },
   {
    "t": "20261126T061500Z",
-   "title": "Tata Trusts moves Bombay HC to challenge N Chandrasekaran reappointment as Tata Sons chairman",
-   "url": "https://www.hindustantimes.com/business/tata-trusts-to-move-bombay-hc-to-challenge-n-chandrasekarans-reappointment-as-chairman-report-101795671677577.html",
-   "src": "hindustantimes.com",
+   "title": "Letters to the Editor : Nov . 25 , 2026",
+   "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
+   "src": "kelownadailycourier.ca",
    "lang": "English"
   },
   {
    "t": "20261126T061500Z",
-   "title": "Mohd Ashhad Arif vs Ali Yavar Jung , National Institute For ... on 24 November , 2026",
-   "url": "https://indiankanoon.org/doc/184947187/",
-   "src": "indiankanoon.org",
+   "title": "Rassvet ,  Russia Starlink  is expanding rapidly",
+   "url": "https://www.dw.com/en/can-rassvet-russias-starlink-change-the-course-of-the-war-in-ukraine/a-80052579",
+   "src": "dw.com",
    "lang": "English"
   },
   {
    "t": "20261126T061500Z",
-   "title": "Risky business : data centre spending rivals mining boom",
-   "url": "https://www.theleader.com.au/story/9399034/risky-business-data-centre-spending-rivals-mining-boom/",
-   "src": "theleader.com.au",
+   "title": "Russia hits Kyiv with ballistic missiles , mayor says",
+   "url": "https://www.newcastleherald.com.au/story/9398450/russia-hits-kyiv-with-ballistic-missiles-mayor-says/",
+   "src": "newcastleherald.com.au",
    "lang": "English"
   },
   {
    "t": "20261126T061500Z",
-   "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
-   "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
-   "src": "therecord.com",
+   "title": "France cost of living crisis : why working is no longer enough",
+   "url": "http://www.bignewsnetwork.com/news/279454868/france-cost-of-living-crisis-why-working-is-no-longer-enough",
+   "src": "bignewsnetwork.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Jared Kushner Thirsts Over  Grandmaster  Putin in Bonkers Interview",
+   "url": "https://www.thedailybeast.com/jared-kushner-thirsts-over-grandmaster-putin-in-bonkers-interview",
+   "src": "thedailybeast.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Korea moves to beef up W10tr stock market rescue fund",
+   "url": "https://www.koreaherald.com/article/10950449",
+   "src": "koreaherald.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "  Trapped in grief : wife of Japanese journalist detained by Russia pleads for his release",
+   "url": "https://www.aol.co.uk/articles/trapped-grief-wife-japanese-journalist-051617000.html",
+   "src": "aol.co.uk",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T061500Z",
+   "title": "Europe Is Wrong to Dismiss Russian Demands for Common Security",
+   "url": "https://www.theamericanconservative.com/europe-is-wrong-to-dismiss-russian-demands-for-common-security/",
+   "src": "theamericanconservative.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T054500Z",
+   "title": "Supreme Court : Balance sheet debt acknowledgement can extend IBC limitation period",
+   "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/supreme-court-balance-sheet-debt-acknowledgement-can-extend-ibc-limitation-period/articleshow/136179209.cms",
+   "src": "economictimes.indiatimes.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T054500Z",
+   "title": "Liberal senator defects to One Nation",
+   "url": "https://www.abc.net.au/listen/programs/worldtoday/liberal-senator-defects-to-one-nation/107413202",
+   "src": "abc.net.au",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T054500Z",
+   "title": "Overnight News Digest : November 25 , 2026",
+   "url": "https://www.dailykos.com/stories/2026/11/25/800134153/community/overnight-news-digest-november-25-2026/",
+   "src": "dailykos.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T054500Z",
+   "title": "Ukraine Invasion Day 1 , 736 : RU demands UKR cede Donbas as a precondition of ceasefire negotiations",
+   "url": "https://www.dailykos.com/stories/2026/11/25/800134195/community/1736/",
+   "src": "dailykos.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
+   "url": "http://www.rockymounttelegram.com/news/national/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_030af451-8be8-51fa-907b-aae7f2313d23.html",
+   "src": "rockymounttelegram.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "10 Most Oversold Semiconductor Stocks to Buy for 2027",
+   "url": "https://www.insidermonkey.com/news/10-most-oversold-semiconductor-stocks-to-buy-for-2027-1870302/",
+   "src": "insidermonkey.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "US unveils tariffs on EU , China and others over  unfair  trade",
+   "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/us-unveils-tariffs-on-eu-china-and-others-over-unfair-trade",
+   "src": "freemalaysiatoday.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "Casa Loma home invasion : Michael Eckert , 39 , shot and killed",
+   "url": "https://www.cp24.com/local/toronto/2026/11/26/unthinkable-loss-toronto-musician-shot-and-killed-during-casa-loma-home-invasion/",
+   "src": "cp24.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "Slain Toronto home invasion victim was  brilliant  musician",
+   "url": "https://ottawasun.com/entertainment/music/home-invasion-victim-michael-eckert-mourned",
+   "src": "ottawasun.com",
+   "lang": "English"
+  },
+  {
+   "t": "20261126T051500Z",
+   "title": "All Under Heaven : Beijing Eight Pillars",
+   "url": "https://www.theepochtimes.com/opinion/all-under-heaven-beijings-eight-pillars-6125753",
+   "src": "theepochtimes.com",
    "lang": "English"
   }
  ],
  "kidnap_fr": [],
+ "fed_raw": [
+  {
+   "description": "Hearing on Oversight of Prudential Regulators",
+   "live": "https://financialservices.house.gov/",
+   "location": "Before the U.S. House Financial Services Committee",
+   "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman",
+   "time": "10:00 a.m.",
+   "month": "2026-12",
+   "days": "1",
+   "type": "Testimony"
+  },
+  {
+   "description": "Modernizing Banking Supervision: A Shared Agenda for the Americas (via pre-recorded video)",
+   "location": "At a meeting with the Association of Supervisors of Banks of the Americas, Basel Committee on Banking Supervision, and Financial Stability Institute",
+   "title": "Speech - Vice Chair for Supervision Michelle W. Bowman",
+   "time": "7:25 a.m.",
+   "month": "2026-11",
+   "days": "25",
+   "type": "Speeches"
+  }
+ ],
  "fed": [
   {
    "title": "Testimony - Vice Chair for Supervision Michelle W. Bowman",
