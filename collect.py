@@ -248,6 +248,35 @@ def top():
     j = json.loads(get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1", headers={"Accept": "application/json"}))
     return [[(x.get("symbol") or "").upper(), x.get("market_cap_rank"), x.get("market_cap")] for x in j if x.get("symbol")]
 
+EU_LIST = ["^FCHI", "AC.PA", "AI.PA", "AIR.PA", "MT.AS", "CS.PA", "BNP.PA", "EN.PA", "CAP.PA", "CA.PA", "ACA.PA", "BN.PA", "DSY.PA", "EDEN.PA", "ENGI.PA", "EL.PA", "ERF.PA", "RMS.PA", "KER.PA", "OR.PA", "LR.PA", "MC.PA", "ML.PA", "ORA.PA", "RI.PA", "PUB.PA", "RNO.PA", "SAF.PA", "SGO.PA", "SAN.PA", "SU.PA", "GLE.PA", "STLAP.PA", "STMPA.PA", "HO.PA", "TTE.PA", "URW.PA", "VIE.PA", "DG.PA", "BVI.PA", "AM.PA"]
+@section("eu")
+def eu():
+    """CAC 40 et ses actions : cours DIFFÉRÉS (~15 min), source Yahoo Finance, relevés à chaque passage du collecteur."""
+    out = {}
+    for s in EU_LIST:
+        try:
+            j = json.loads(get("https://query1.finance.yahoo.com/v8/finance/chart/" + urllib.parse.quote(s) + "?range=5d&interval=15m", headers={"Accept": "application/json"}))
+            r = j["chart"]["result"][0]
+            m = r["meta"]
+            closes = [x for x in (r["indicators"]["quote"][0].get("close") or []) if x is not None]
+            px = m.get("regularMarketPrice") or (closes[-1] if closes else None)
+            prev = m.get("chartPreviousClose") or m.get("previousClose")
+            # variation du jour : comparée à la clôture de la veille
+            ts = r.get("timestamp") or []
+            day_prev = None
+            if ts:
+                last_day = dt.datetime.utcfromtimestamp(ts[-1]).date()
+                for t_, v_ in zip(ts, r["indicators"]["quote"][0].get("close") or []):
+                    if v_ is not None and dt.datetime.utcfromtimestamp(t_).date() < last_day:
+                        day_prev = v_
+            ref = day_prev or prev
+            out[s] = {"name": m.get("shortName") or m.get("longName") or s, "px": px, "chg": ((px / ref - 1) * 100) if px and ref else None,
+                      "t": m.get("regularMarketTime"), "cur": m.get("currency"), "closes": [round(x, 4) for x in closes[-130:]]}
+            time.sleep(0.3)
+        except Exception as e:
+            OUT["errors"]["eu:" + s] = str(e)[:80]
+    return out
+
 @section("tokens")
 def tokens():
     L = OUT.get("influ") or []
@@ -481,7 +510,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, top, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, top, eu, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
