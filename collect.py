@@ -196,6 +196,24 @@ def stocktwits():
             OUT["errors"][f"stocktwits:{tk}"] = str(e)[:120]
     return out
 
+IBULL = re.compile(r"\b(long|longed|longing|bull(ish)?|moon|pump(ing)?|send(ing)?|breakout|higher|ath|buy(ing)?|bid|accumulat\w*|undervalued|reversal|bottom(ed)?|rip|green)\b", re.I)
+IBEAR = re.compile(r"\b(short(ed|ing)?|bear(ish)?|dump(ing)?|rug|sell(ing)?|lower|top(ped)?|breakdown|overvalued|rekt|red|crash|exit)\b", re.I)
+@section("influ")
+def influ():
+    try:
+        g = json.load(open("data/x_guest.json", encoding="utf-8"))
+    except Exception:
+        return []
+    out = []
+    for t in g.get("influ", []):
+        txt = t.get("fr", "")
+        tk = sorted(set(x.upper() for x in re.findall(r"[$#]([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
+        b, r = bool(IBULL.search(txt)), bool(IBEAR.search(txt))
+        t["tickers"] = tk
+        t["tag"] = "bull" if b and not r else "bear" if r and not b else "mix"
+        out.append(t)
+    return out
+
 @section("trump")
 def trump():
     xml = get("https://www.trumpstruth.org/feed")
@@ -313,7 +331,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, influ, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)

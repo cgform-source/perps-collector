@@ -19,6 +19,19 @@ for (const a of cfg.x_accounts || []) {
   } catch (e) { out.errors[a] = String(e).slice(0, 160); }
   await new Promise(r => setTimeout(r, 1500));
 }
+out.influ = [];
+for (const a of cfg.influencers || []) {
+  try {
+    let n = 0;
+    for await (const t of s.getTweets(a, 10)) {
+      if (!t || !t.text) continue;
+      out.influ.push({ h: t.username || a, n: t.name || '', t: (t.timeParsed ? new Date(t.timeParsed) : new Date()).toISOString(), eng: (t.likes || 0) + 2 * (t.retweets || 0),
+        url: t.permanentUrl || `https://x.com/${a}/status/${t.id}`, fr: t.text.slice(0, 500), rt: !!t.isRetweet, img: (t.photos && t.photos[0] && t.photos[0].url) || null });
+      if (++n >= 10) break;
+    }
+  } catch (e) { out.errors['influ:' + a] = String(e).slice(0, 160); }
+  await new Promise(r => setTimeout(r, 1200));
+}
 fs.mkdirSync('data', { recursive: true });
 fs.writeFileSync('data/x_guest.json', JSON.stringify(out));
 console.log('x_guest', out.tweets.length, Object.keys(out.errors).length);
