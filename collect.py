@@ -241,24 +241,47 @@ def gdelt(query, n=15, days=3):
 def risks():
     return gdelt('("financial crisis" OR "bank run" OR "debt default" OR "new sanctions" OR invasion OR "missile strike" OR "market crash" OR "emergency rate cut" OR cyberattack OR "trade war") sourcelang:english', 20, 2)
 
+def gnews(q, n=12):
+    x = get("https://news.google.com/rss/search?q=" + urllib.parse.quote(q) + "&hl=fr&gl=FR&ceid=FR:fr")
+    out = []
+    for it in ET.fromstring(x).iter("item"):
+        src = it.find("source")
+        out.append({"t": it.findtext("pubDate"), "title": it.findtext("title"), "url": it.findtext("link"), "src": src.text if src is not None else "Google Actualités"})
+        if len(out) >= n:
+            break
+    return out
+
 @section("kidnap_fr")
 def kidnap():
-    return gdelt('(enlèvement OR enlevé OR séquestré OR séquestration OR rapt OR kidnapping) (crypto OR bitcoin OR cryptomonnaie OR cryptomonnaies OR ledger) sourcelang:french', 15, 30)
+    return gnews('(enlèvement OR séquestration OR rapt OR kidnapping) (crypto OR bitcoin OR cryptomonnaie) when:30d')
 
 @section("fed")
 def fed():
+    from zoneinfo import ZoneInfo
     j = json.loads(get("https://www.federalreserve.gov/json/calendar.json"))
     ev = j.get("events", j if isinstance(j, list) else [])
-    OUT["fed_raw"] = ev[:2]
-    now = dt.datetime.utcnow()
     out = []
     for e in ev:
-        title = e.get("title") or e.get("name") or ""
-        when = e.get("time") or e.get("date") or e.get("month")
-        if not re.search(r"FOMC|Powell|Chair|Speech|Testimony|Minutes|Beige", title, re.I):
+        title = e.get("title") or ""
+        if not re.search(r"FOMC|Chair|Powell|Speech|Testimony|Minutes|Beige", title, re.I):
             continue
-        out.append({"title": title, "when": when, "type": e.get("type"), "link": e.get("link")})
-    return out[:60]
+        days = [int(x) for x in re.findall(r"\d+", str(e.get("days", "")))]
+        if not days or not e.get("month"):
+            continue
+        day = days[-1] if re.search(r"FOMC", title) else days[0]
+        h, m = 14, 0
+        tm = re.match(r"(\d{1,2}):(\d{2})\s*([ap])", str(e.get("time", "")).lower())
+        if tm:
+            h, m = int(tm.group(1)) % 12 + (12 if tm.group(3) == "p" else 0), int(tm.group(2))
+        try:
+            y, mo = map(int, e["month"].split("-"))
+            ts = dt.datetime(y, mo, day, h, m, tzinfo=ZoneInfo("America/New_York")).astimezone(dt.timezone.utc)
+        except Exception:
+            continue
+        out.append({"title": title, "when": ts.strftime("%Y-%m-%dT%H:%M:%SZ"), "type": e.get("type"), "desc": (e.get("description") or "")[:160]})
+    out.sort(key=lambda x: x["when"])
+    now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return [x for x in out if x["when"] >= now[:10]][:40]
 
 for fn in (x_feed, trump, reddit, risks, kidnap, fed):
     fn()
