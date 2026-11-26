@@ -224,6 +224,12 @@ def influ():
     return out
 
 SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM"}
+@section("top")
+def top():
+    """Classement CoinGecko (top 250) pour masquer les grosses capitalisations dans l'onglet Influenceurs."""
+    j = json.loads(get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1", headers={"Accept": "application/json"}))
+    return [[(x.get("symbol") or "").upper(), x.get("market_cap_rank"), x.get("market_cap")] for x in j if x.get("symbol")]
+
 @section("tokens")
 def tokens():
     L = OUT.get("influ") or []
@@ -257,7 +263,8 @@ def tokens():
             time.sleep(0.4)
         except Exception as e:
             OUT["errors"]["ca:" + a[:10]] = str(e)[:100]
-    for k, _ in sorted(cnt.items(), key=lambda x: -x[1])[:45]:
+    topset = {r[0] for r in (OUT.get("top") or []) if r[1] and r[1] <= 100}
+    for k, _ in sorted(cnt.items(), key=lambda x: (x[0] in topset, -x[1]))[:45]:
         if k in out:
             continue
         try:
@@ -454,7 +461,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, top, influ, tokens, callpx, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
