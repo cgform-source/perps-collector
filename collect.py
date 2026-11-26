@@ -214,6 +214,33 @@ def influ():
         out.append(t)
     return out
 
+SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM"}
+@section("tokens")
+def tokens():
+    L = OUT.get("influ") or []
+    cnt = {}
+    for t in L:
+        for k in t.get("tickers", []):
+            if k not in SKIPT:
+                cnt[k] = cnt.get(k, 0) + 1
+    out = {}
+    for k, _ in sorted(cnt.items(), key=lambda x: -x[1])[:45]:
+        try:
+            j = json.loads(get("https://api.dexscreener.com/latest/dex/search?q=" + urllib.parse.quote(k)))
+            ps = [p for p in j.get("pairs", []) if (p.get("baseToken") or {}).get("symbol", "").upper() == k]
+            if not ps:
+                continue
+            p = max(ps, key=lambda p: (p.get("liquidity") or {}).get("usd") or 0)
+            info = p.get("info") or {}
+            out[k] = {"name": p["baseToken"].get("name"), "price": float(p.get("priceUsd") or 0) or None, "mcap": p.get("marketCap") or p.get("fdv"),
+                      "ch24": (p.get("priceChange") or {}).get("h24"), "liq": (p.get("liquidity") or {}).get("usd"), "vol24": (p.get("volume") or {}).get("h24"),
+                      "logo": info.get("imageUrl"), "banner": info.get("header"), "url": p.get("url"), "chain": p.get("chainId"),
+                      "x": next((s.get("url") for s in info.get("socials", []) if s.get("type") == "twitter"), None)}
+            time.sleep(0.4)
+        except Exception as e:
+            OUT["errors"]["token:" + k] = str(e)[:100]
+    return out
+
 @section("trump")
 def trump():
     xml = get("https://www.trumpstruth.org/feed")
@@ -331,7 +358,7 @@ def fed():
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
 
-for fn in (x_feed, influ, stocktwits, trump, reddit, risks, kidnap, fed):
+for fn in (x_feed, influ, tokens, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
