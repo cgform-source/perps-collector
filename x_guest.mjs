@@ -51,6 +51,7 @@ const NEWX = [];
   if (NEWX.length) { try { const disk = JSON.parse(fs.readFileSync('config.json', 'utf8')); disk.influencers = cfg.influencers; fs.writeFileSync('config.json', JSON.stringify(disk, null, 1)); } catch (e) { out.errors.extra = String(e).slice(0, 80); } } }
 cfg.influ_vip = [...(PREF.vip || []), ...(cfg.influ_vip || [])];
 const INF = (cfg.influencers || []).filter(h => !HID.has(h.toLowerCase())), SL = LOGGED_OK ? 80 : 40;
+const INFL = new Set((cfg.influencers || []).map(h => String(h).toLowerCase()));
 // priorité : les comptes qui ont fait des calls ($ticker ou CA) ces 7 derniers jours sont relus à chaque passage
 const VIP = [...new Set([...NEWX, ...(PREF.extra || []).filter(h => !(prevAll.influ || []).some(t => String(t.h).toLowerCase() === String(h).toLowerCase())), ...(cfg.influ_vip || [])])].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 18);
 const hot0 = [...new Set((prevAll.influ || []).filter(t => Date.parse(t.t) > Date.now() - 7 * 86400e3 && /\$[A-Za-z]{2,10}\b|\b0x[a-fA-F0-9]{40}\b/.test(t.fr || '')).map(t => t.h))].filter(h => INF.some(x => x.toLowerCase() === String(h).toLowerCase())).slice(0, 12);
@@ -67,10 +68,22 @@ for (const a of slice) {
   if (!prevProf[a.toLowerCase()] && profBudget-- > 0) try { const p = await Promise.race([s.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
   try {
     let n = 0;
-    for await (const t of s.getTweets(a, LOGGED_OK ? 20 : 10)) {
+    // connecté : tweets ET réponses. Une réponse est gardée seulement si elle répond à un autre compte de la liste
+    // (ex. « agreed », « this will send ») ou si elle cite elle-même un $ticker : c'est une validation du call.
+    const gen = LOGGED_OK ? s.getTweetsAndReplies(a, 20) : s.getTweets(a, 10);
+    for await (const t of gen) {
       if (!t || !t.text) continue;
-      out.influ.push({ h: t.username || a, n: t.name || '', t: (t.timeParsed ? new Date(t.timeParsed) : new Date()).toISOString(), eng: (t.likes || 0) + 2 * (t.retweets || 0),
-        url: t.permanentUrl || `https://x.com/${a}/status/${t.id}`, fr: t.text.slice(0, 500), rt: !!t.isRetweet, img: (t.photos && t.photos[0] && t.photos[0].url) || null });
+      const row = { h: t.username || a, n: t.name || '', t: (t.timeParsed ? new Date(t.timeParsed) : new Date()).toISOString(), eng: (t.likes || 0) + 2 * (t.retweets || 0),
+        url: t.permanentUrl || `https://x.com/${a}/status/${t.id}`, fr: t.text.slice(0, 500), rt: !!t.isRetweet, img: (t.photos && t.photos[0] && t.photos[0].url) || null };
+      if (t.isReply) {
+        const pu = (t.inReplyToStatus && t.inReplyToStatus.username) || ((t.mentions || [])[0] || {}).username || '';
+        const inList = pu && INFL.has(pu.toLowerCase()) && pu.toLowerCase() !== String(row.h).toLowerCase();
+        if (!inList && !/\$[A-Za-z][A-Za-z0-9]{1,9}\b/.test(t.text)) continue;
+        if (inList) row.re = { id: t.inReplyToStatusId || null, h: pu, tx: ((t.inReplyToStatus && t.inReplyToStatus.text) || '').slice(0, 300) };
+      }
+      if (t.isQuoted && t.quotedStatus && t.quotedStatus.username && INFL.has(t.quotedStatus.username.toLowerCase()) && t.quotedStatus.username.toLowerCase() !== String(row.h).toLowerCase())
+        row.q = { id: t.quotedStatusId || null, h: t.quotedStatus.username, tx: (t.quotedStatus.text || '').slice(0, 300) };
+      out.influ.push(row);
       if (++n >= (LOGGED_OK ? 20 : 10)) break;
     }
   } catch (e) { out.errors['influ:' + a] = String(e).slice(0, 160); if (/rate|429/i.test(String(e))) { rateHit = true; } }

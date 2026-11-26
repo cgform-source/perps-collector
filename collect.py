@@ -252,14 +252,44 @@ def influ():
         OUT["influ_n"] = len(OUT["influ_list"])
     except Exception:
         pass
-    for t in g.get("influ", []):
+    TKRX = r"\$([A-Za-z][A-Za-z0-9]{1,9})\b"
+    def tks(txt):
+        return norm_tk(set(x.upper() for x in re.findall(TKRX, txt or "")) - {"BTC.D", "USDT", "USDC", "USD"})
+    def tagof(txt):
+        b, r = bool(IBULL.search(txt or "")), bool(IBEAR.search(txt or ""))
+        return "bull" if b and not r else "bear" if r and not b else "mix"
+    rows = g.get("influ", [])
+    byid = {}
+    for t in rows:
+        m = re.search(r"/status/(\d+)", t.get("url") or "")
+        if m:
+            byid[m.group(1)] = t
+    for t in rows:
         pr = prof.get((t.get("h") or "").lower()) or {}
         t["fol"] = pr.get("fol", 0)
         txt = t.get("fr", "")
-        tk = norm_tk(set(x.upper() for x in re.findall(r"\$([A-Za-z][A-Za-z0-9]{1,9})\b", txt)) - {"BTC.D", "USDT", "USDC", "USD"})
-        b, r = bool(IBULL.search(txt)), bool(IBEAR.search(txt))
-        t["tickers"] = tk
-        t["tag"] = "bull" if b and not r else "bear" if r and not b else "mix"
+        t["tickers"] = tks(txt)
+        t["tag"] = tagof(txt)
+        # réponse ou citation d'un autre influenceur de la liste : elle valide son call
+        link = t.get("re") or t.get("q")
+        wasre = bool(t.get("re"))
+        if link:
+            par = byid.get(str(link.get("id") or "")) or {}
+            ptxt = par.get("fr") or link.get("tx") or ""
+            ptk = tks(ptxt)
+            if ptk:
+                t["via"] = "reply" if t.get("re") else "quote"
+                t["of"] = link.get("h")
+                if not t["tickers"]:
+                    t["tickers"] = ptk
+                    own = t["tag"]
+                    ptag = par.get("tag") or tagof(ptxt)
+                    # « agreed », « this », « 🚀 » : même sens que le call ; un désaccord explicite garde son propre sens
+                    t["tag"] = own if own != "mix" else (ptag if ptag != "mix" else "bull")
+            elif not t["tickers"]:
+                t.pop("re", None); t.pop("q", None)
+        if wasre and not t["tickers"]:
+            continue  # simple réponse sans token : bruit
         out.append(t)
     return out
 
