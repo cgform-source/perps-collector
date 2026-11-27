@@ -237,6 +237,63 @@ def norm_tk(L):
         out.append(t)
     return sorted(set(out))
 
+# ---- traduction en français avec le jargon crypto protégé (« shorts » ne doit pas devenir « courts métrages »)
+JARGON = ["shorts", "short", "shorted", "shorting", "longs", "long", "longed", "longing", "pump", "pumps", "pumping", "dump", "dumps",
+          "dumping", "bullish", "bearish", "bull", "bear", "ATH", "gm", "gn", "aped", "ape", "bags", "bag", "moon", "mooning", "send", "sends",
+          "rug", "rugged", "degen", "alpha", "CT", "dip", "bid", "TP", "TPs", "SL", "stop loss", "breakout", "retest", "leverage", "perps", "perp",
+          "spot", "airdrop", "memecoin", "memecoins", "entry", "entries", "invalidation", "invalidations", "chart", "charts", "rekt", "fade", "ser", "fren", "wagmi", "ngmi", "fomo", "fud"]
+JRX = re.compile(r"(?<![\w$])(" + "|".join(sorted((re.escape(w) for w in JARGON), key=len, reverse=True)) + r")(?![\w])", re.I)
+
+def tr_fr(text):
+    keep = []
+    def sub(m):
+        keep.append(m.group(0))
+        return f"ZQ{len(keep) - 1}Q"
+    prot = JRX.sub(sub, text)
+    # les $tickers, @comptes et liens ne sont pas traduits non plus
+    prot = re.sub(r"(\$[A-Za-z][A-Za-z0-9]{1,9}|@\w+|https?://\S+)", lambda m: (keep.append(m.group(0)), f"ZQ{len(keep) - 1}Q")[1], prot)
+    url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q=" + urllib.parse.quote(prot)
+    j = json.loads(get(url, timeout=10))
+    src = j[2] if len(j) > 2 else ""
+    if src == "fr":
+        return None
+    out = "".join(seg[0] for seg in j[0] if seg and seg[0])
+    out = re.sub(r"Z\s?Q\s?(\d+)\s?Q", lambda m: keep[int(m.group(1))] if int(m.group(1)) < len(keep) else m.group(0), out, flags=re.I)
+    if re.search(r"Z\s?Q\s?\d", out, re.I):
+        return None  # repère abîmé par la traduction : on laisse le dashboard traduire lui-même
+    return out
+
+def translate_influ(rows):
+    path = "data/tr_cache.json"
+    try:
+        cache = json.load(open(path, encoding="utf-8"))
+    except Exception:
+        cache = {}
+    t0, n = time.time(), 0
+    for t in rows:
+        u, txt = t.get("url"), t.get("fr") or ""
+        if not u or not txt.strip():
+            continue
+        if u in cache:
+            if cache[u]:
+                t["o_fr"], t["fr"] = txt, cache[u]
+            continue
+        if n >= 80 or time.time() - t0 > 90:
+            continue
+        n += 1
+        try:
+            v = tr_fr(txt)
+            cache[u] = v if v and v != txt else ""
+            if cache[u]:
+                t["o_fr"], t["fr"] = txt, cache[u]
+            time.sleep(0.4)
+        except Exception as e:
+            OUT["errors"]["traduction"] = f"{type(e).__name__}"[:80]
+            break
+    keep = {t.get("url") for t in rows}
+    cache = {k: v for k, v in cache.items() if k in keep}
+    json.dump(cache, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+
 @section("influ")
 def influ():
     try:
@@ -291,6 +348,7 @@ def influ():
         if wasre and not t["tickers"]:
             continue  # simple réponse sans token : bruit
         out.append(t)
+    translate_influ(out)
     return out
 
 SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM"}
