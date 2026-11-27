@@ -105,6 +105,26 @@ def main():
                            "body": "Dans l'ordre : " + ", ".join("@" + h for h in hs[:5]) + ("…" if n > 5 else ""),
                            "tag": "heat:" + T, "url": "/"})
 
+    # 3) déclencheur : un des 5 comptes « À suivre » call un token dont personne n'avait parlé ces 7 derniers jours
+    top5 = [r["h"].lower() for r in (F.get("follow") or [])[:5]]
+    hidden = set()
+    try:
+        hidden = {str(x).upper() for x in (json.load(open("config.json")).get("tok_hidden") or [])}
+    except Exception:
+        pass
+    for t in tw:
+        if t["h"].lower() not in top5 or now - ts(t) > 2 * 3600:
+            continue
+        for T in (t.get("tickers") or [])[:3]:
+            if big(T) or T in hidden:
+                continue
+            t0 = ts(t)
+            before = [u for u in tw if T in (u.get("tickers") or []) and t0 - 7 * 86400 <= ts(u) < t0 - 60]
+            if before:
+                continue
+            rk = [r["h"].lower() for r in (F.get("follow") or [])].index(t["h"].lower()) + 1
+            events.append({"k": "trig:" + t["url"] + ":" + T, "type": "trig", "title": f"@{t['h']} (n°{rk} à suivre) call ${T}",
+                           "body": "Nouveau token, personne n'en parlait avant lui. " + (t.get("fr") or "").replace("\n", " ")[:110], "tag": "trig:" + T, "url": "/"})
     new = [e for e in events if e["k"] not in sent]
     for e in new:
         sent[e["k"]] = now
@@ -119,7 +139,7 @@ def main():
         p = s.get("prefs") or {}
         if quiet(p, h):
             continue
-        mine = [e for e in new if (e["type"] == "vip" and p.get("vip", True)) or
+        mine = [e for e in new if (e["type"] == "trig" and p.get("trig", True)) or (e["type"] == "vip" and p.get("vip", True)) or
                 (e["type"] == "heat" and p.get("heat", True) and e["n"] >= int(p.get("heatMin", 3)))]
         # pour un même token qui chauffe, une seule notification (le palier le plus haut)
         best = {}

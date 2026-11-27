@@ -8,6 +8,14 @@ import json, os, html, urllib.error, re, time, datetime as dt, traceback, urllib
 UA = {"User-Agent": "Mozilla/5.0 (compatible; perps-dashboard-collector/1.0)"}
 OUT = {"generated": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "errors": {}}
 CFG = json.load(open("config.json", encoding="utf-8"))
+try:  # tokens masqués depuis le dashboard (bouton « Masquer »), ajoutés à ceux de config.json
+    _rq = urllib.request.Request("https://lqefewiwrecdjommktgm.supabase.co/rest/v1/influ_prefs?id=eq.analyserxxx&select=tok_hidden",
+                                 headers={"apikey": "sb_publishable_IMMxd7lqThb0elf0Z2JwNQ_3Da4tdWq", "User-Agent": "perps-collector"})
+    with urllib.request.urlopen(_rq, timeout=10) as _r:
+        _j = json.loads(_r.read() or b"[]")
+    CFG["tok_hidden"] = sorted({str(x).upper().lstrip("$") for x in (CFG.get("tok_hidden") or []) + ((_j[0].get("tok_hidden") or []) if _j else [])})
+except Exception:
+    pass
 
 def get(url, timeout=25, headers=None):
     req = urllib.request.Request(url, headers={**UA, **(headers or {})})
@@ -287,6 +295,31 @@ def tr_fr(text):
         return None  # repère abîmé par la traduction : on laisse le dashboard traduire lui-même
     return out
 
+def translate_rows(rows, key):
+    """Traduit le champ fr (l'original passe dans o_fr), avec cache par lien."""
+    path = "data/tr_cache.json"
+    try:
+        cache = json.load(open(path, encoding="utf-8"))
+    except Exception:
+        cache = {}
+    n = 0
+    for t in rows:
+        u, txt = t.get("url"), t.get("fr") or ""
+        if not u or not txt.strip():
+            continue
+        if u not in cache and n < 25:
+            n += 1
+            try:
+                v = tr_fr(txt)
+                cache[u] = v if v and v != txt else ""
+                time.sleep(0.4)
+            except Exception as e:
+                OUT["errors"]["traduction_" + key] = (f"{type(e).__name__} {getattr(e, 'code', '')}").strip()[:80]
+                break
+        if cache.get(u):
+            t["o_fr"], t["fr"] = txt, cache[u]
+    json.dump(cache, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+
 def translate_influ(rows):
     path = "data/tr_cache.json"
     try:
@@ -315,7 +348,7 @@ def translate_influ(rows):
             OUT["errors"]["traduction"] = (f"{type(e).__name__} {getattr(e, 'code', '')}").strip()[:80]
             break
     keep = {t.get("url") for t in rows}
-    cache = {k: v for k, v in cache.items() if k in keep}
+    cache = {k: v for k, v in cache.items() if k in keep or "truth" in str(k)}
     json.dump(cache, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 @section("influ")
@@ -626,6 +659,7 @@ def trump():
                       "market": bool(re.search(r"tariff|china|fed|rate|stock|market|crypto|bitcoin|oil|deal|trade|dollar|powell|inflation|tax", txt, re.I))})
         if len(items) >= 25:
             break
+    translate_rows(items, "trump")
     return items
 
 def _reddit_json(sub):
@@ -724,6 +758,13 @@ def fed():
         except Exception:
             continue
         out.append({"title": title, "when": ts.strftime("%Y-%m-%dT%H:%M:%SZ"), "type": e.get("type"), "desc": (e.get("description") or "")[:160]})
+    # inflation US (CPI) : calendrier officiel du BLS, 8 h 30 heure de New York
+    CPI = ["2026-12-10", "2027-01-13", "2027-02-11", "2027-03-10", "2027-04-13", "2027-05-12", "2027-06-10",
+           "2027-07-14", "2027-08-11", "2027-09-14", "2027-10-14", "2027-11-10", "2027-12-10"]
+    for d in CPI:
+        y, mo, da = map(int, d.split("-"))
+        ts = dt.datetime(y, mo, da, 8, 30, tzinfo=ZoneInfo("America/New_York")).astimezone(dt.timezone.utc)
+        out.append({"title": "CPI – inflation US", "when": ts.strftime("%Y-%m-%dT%H:%M:%SZ"), "type": "CPI", "desc": "Chiffre mensuel de l'inflation (BLS)"})
     out.sort(key=lambda x: x["when"])
     now = dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     return [x for x in out if x["when"] >= now[:10]][:40]
@@ -887,7 +928,98 @@ def callstats():
     R.sort(key=lambda x: -(x["avgmx24"] * 0.6 + x["avg24"] * 0.4) * min(1, x["n"] / 10))
     return {"by": R[:40], "n": len(allrec)}
 
-for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, callstats, stocktwits, trump, reddit, risks, kidnap, fed):
+@section("trends")
+def trends():
+    """Tendances du moment (remplace Reddit, qui bloque les serveurs GitHub) : StockTwits (actions) et CoinGecko (crypto)."""
+    res = {"stocks": [], "crypto": []}
+    try:
+        j = json.loads(get("https://api.stocktwits.com/api/2/trending/symbols.json", headers={"Accept": "application/json"}))
+        for s_ in (j.get("symbols") or [])[:20]:
+            res["stocks"].append({"sym": s_.get("symbol"), "name": s_.get("title"), "watch": s_.get("watchlist_count"),
+                                  "why": ((s_.get("trends") or {}).get("summary") or "")[:200]})
+    except Exception as e:
+        OUT["errors"]["trends_stocktwits"] = str(e)[:100]
+    try:
+        j = json.loads(get("https://api.coingecko.com/api/v3/search/trending", headers={"Accept": "application/json"}))
+        for it in (j.get("coins") or [])[:15]:
+            x = it.get("item") or {}
+            d = x.get("data") or {}
+            ch = (d.get("price_change_percentage_24h") or {}).get("usd")
+            res["crypto"].append({"sym": (x.get("symbol") or "").upper(), "name": x.get("name"), "rank": x.get("market_cap_rank"),
+                                  "img": x.get("small") or x.get("thumb"), "ch24": round(ch, 2) if isinstance(ch, (int, float)) else None})
+    except Exception as e:
+        OUT["errors"]["trends_coingecko"] = str(e)[:100]
+    return res
+
+@section("analyst")
+def analyst():
+    """Objectifs des analystes (moyenne, médiane, fourchette, nombre d'avis) pour les actions Hyperliquid, relus une fois par jour (Yahoo Finance)."""
+    path = "data/analyst.json"
+    try:
+        old = json.load(open(path, encoding="utf-8"))
+    except Exception:
+        old = {}
+    if old.get("at") and (dt.datetime.utcnow() - dt.datetime.strptime(old["at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds() < 20 * 3600:
+        return old
+    import http.cookiejar
+    cj = http.cookiejar.CookieJar()
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    hd = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"}
+    try:
+        op.open(urllib.request.Request("https://fc.yahoo.com", headers=hd), timeout=15)
+    except Exception:
+        pass  # répond 404 mais pose le cookie
+    crumb = op.open(urllib.request.Request("https://query2.finance.yahoo.com/v1/test/getcrumb", headers=hd), timeout=15).read().decode().strip()
+    names = []
+    try:
+        body = json.dumps({"type": "meta", "dex": "xyz"}).encode()
+        req = urllib.request.Request("https://api.hyperliquid.xyz/info", data=body, headers={**UA, "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            names = [u["name"].split(":")[-1].upper() for u in json.loads(r.read()).get("universe", [])]
+    except Exception:
+        pass
+    skip = MACROW | {"SP500", "XYZ100", "EUR", "JPY", "GBP", "CL", "BRENTOIL", "NATGAS", "GOLD", "SILVER", "COPPER", "PLATINUM", "URANIUM", "CORN", "WHEAT", "DXY", "VIX", "NDX"}
+    names = [n for n in dict.fromkeys(names + (CFG.get("tickers") or [])) if re.fullmatch(r"[A-Z]{1,5}", n) and n not in skip][:70]
+    res = {"at": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "by": {}}
+    for n in names:
+        try:
+            u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{n}?modules=financialData&crumb={urllib.parse.quote(crumb)}"
+            j = json.loads(op.open(urllib.request.Request(u, headers=hd), timeout=15).read())
+            fd = (((j.get("quoteSummary") or {}).get("result") or [{}])[0] or {}).get("financialData") or {}
+            val = lambda k: (fd.get(k) or {}).get("raw") if isinstance(fd.get(k), dict) else None
+            if val("targetMeanPrice"):
+                res["by"][n] = {"avg": val("targetMeanPrice"), "med": val("targetMedianPrice"), "lo": val("targetLowPrice"), "hi": val("targetHighPrice"),
+                                "n": val("numberOfAnalystOpinions"), "rec": fd.get("recommendationKey"), "px": val("currentPrice")}
+            time.sleep(0.6)
+        except Exception as e:
+            OUT["errors"]["analyst"] = f"{n}: {type(e).__name__} {getattr(e, 'code', '')}"[:100]
+    if len(res["by"]) < 5 and old.get("by"):
+        return old  # Yahoo indisponible : on garde la dernière version
+    json.dump(res, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    return res
+
+@section("follow")
+def follow():
+    """Score « À suivre » : déclenche des reprises (influence) ET fait de bons call (résultat à 24 h, plus haut atteint, réussite)."""
+    inf = {r["h"].lower(): r for r in (OUT.get("influence") or [])}
+    perf = {r["h"].lower(): r for r in ((OUT.get("callstats") or {}).get("by") or [])}
+    mi = max([r.get("score") or 0 for r in inf.values()] + [1e-9])
+    def pscore(r):
+        q = (r.get("avgmx24") or 0) * 0.6 + (r.get("avg24") or 0) * 0.4
+        return max(0.0, q) * min(1.0, (r.get("n") or 0) / 8) * (0.5 + (r.get("win") or 0))
+    mp = max([pscore(r) for r in perf.values()] + [1e-9])
+    R = []
+    for k in set(inf) | set(perf):
+        a, b = inf.get(k), perf.get(k)
+        si = (a.get("score") or 0) / mi if a else 0.0
+        sp = pscore(b) / mp if b else 0.0
+        R.append({"h": (a or b)["h"], "score": round(100 * (0.55 * si + 0.45 * sp), 1), "si": round(si, 3), "sp": round(sp, 3),
+                  "infl": {x: a.get(x) for x in ("n", "rep", "calls", "md", "toks")} if a else None,
+                  "perf": {x: b.get(x) for x in ("n", "win", "avg24", "avgmx24", "best", "toks")} if b else None})
+    R.sort(key=lambda r: -r["score"])
+    return R[:40]
+
+for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, callstats, follow, stocktwits, trump, trends, analyst, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
