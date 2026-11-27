@@ -1,6 +1,6 @@
 // Lecture de X SANS compte (mode invité) avec la bibliothèque open source the-convocation/twitter-scraper.
 // Limité aux tweets publics des comptes suivis (la recherche par ticker exige un compte).
-import { Scraper, ErrorRateLimitStrategy } from '@the-convocation/twitter-scraper';
+import { Scraper, ErrorRateLimitStrategy, SearchMode } from '@the-convocation/twitter-scraper';
 import fs from 'node:fs';
 const cfg = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 const s = new Scraper({ rateLimitStrategy: new ErrorRateLimitStrategy() });
@@ -76,7 +76,44 @@ out.rot_next = order[0] || null;
     catch (e) { out.prof_fail[a.toLowerCase()] = Date.now(); if (!out.errors.profils) out.errors.profils = (a + ': ' + String(e)).slice(0, 160); if (/status: 429|Too Many Requests|Rate limit exceeded/i.test(String(e).split('| headers')[0])) break; }
   }
   out.prof_ok = ok; }
-for (const a of slice) {
+function mkRow(t, a) {
+  const row = { h: t.username || a, n: t.name || '', t: (t.timeParsed ? new Date(t.timeParsed) : new Date()).toISOString(), eng: (t.likes || 0) + 2 * (t.retweets || 0),
+    url: t.permanentUrl || `https://x.com/${t.username || a}/status/${t.id}`, fr: t.text.slice(0, 500), rt: !!t.isRetweet, img: (t.photos && t.photos[0] && t.photos[0].url) || null };
+  if (t.isQuoted && t.quotedStatus && t.quotedStatus.username && INFL.has(t.quotedStatus.username.toLowerCase()) && t.quotedStatus.username.toLowerCase() !== String(row.h).toLowerCase())
+    row.q = { id: t.quotedStatusId || null, h: t.quotedStatus.username, tx: (t.quotedStatus.text || '').slice(0, 300) };
+  return row;
+}
+// BALAYAGE RAPIDE (compte connecté) : une recherche X « from:a OR from:b … » couvre ~20 comptes d'un coup.
+// ~11 recherches suffisent pour toute la liste : chaque compte est vu à chaque passage (15 min) au lieu de toutes les 4-5 h.
+// Les comptes dont la recherche a échoué retombent dans la lecture compte par compte ci-dessous.
+const covered = new Set();
+if (LOGGED_OK) {
+  const groups = []; let cur = [];
+  const qOf = g => '(' + g.map(h => 'from:' + h).join(' OR ') + ') -filter:replies';
+  for (const h of INF) { const nx = [...cur, h]; if (qOf(nx).length > 480 && cur.length) { groups.push(cur); cur = [h]; } else cur = nx; }
+  if (cur.length) groups.push(cur);
+  let okG = 0, nT = 0;
+  for (const g of groups) {
+    try {
+      const seen = new Set(); let cursor;
+      for (let page = 0; page < 2; page++) {
+        const r = await Promise.race([s.fetchSearchTweets(qOf(g), 20, SearchMode.Latest, cursor), new Promise((_, rj) => setTimeout(() => rj(new Error('timeout')), 15000))]);
+        const tw = (r && r.tweets) || [];
+        for (const t of tw) { if (!t || !t.text || seen.has(t.id)) continue; seen.add(t.id); out.influ.push(mkRow(t, t.username)); nT++; }
+        // 2e page seulement si la 1re est pleine de tweets récents (sinon tout le quart d'heure est déjà couvert)
+        const oldest = tw.length ? Math.min(...tw.map(t => t.timeParsed ? +new Date(t.timeParsed) : Date.now())) : 0;
+        if (!r || !r.next || tw.length < 15 || oldest < Date.now() - 45 * 60e3) break;
+        cursor = r.next; await new Promise(rr => setTimeout(rr, 800));
+      }
+      g.forEach(h => covered.add(h.toLowerCase())); okG++;
+    } catch (e) { out.errors.balayage = String(e).slice(0, 160); if (/status: 429|Too Many Requests|Rate limit exceeded/i.test(String(e).split('| headers')[0])) break; }
+    await new Promise(rr => setTimeout(rr, 900));
+  }
+  out.sweep = { groups: groups.length, ok: okG, tweets: nT, covered: covered.size };
+}
+// filet de sécurité : 8 comptes de la rotation sont quand même relus directement (un compte peut être absent de la recherche X)
+const direct = covered.size ? [...new Set([...slice.filter(h => !covered.has(h.toLowerCase())), ...order.slice(0, 8)])] : slice;
+for (const a of direct) {
   if (!hot.includes(a)) { const k = order.indexOf(a); out.rot_next = order[(k + 1) % order.length]; }
   try {
     let n = 0;
