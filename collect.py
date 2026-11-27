@@ -316,6 +316,8 @@ def influ():
         b, r = bool(IBULL.search(txt or "")), bool(IBEAR.search(txt or ""))
         return "bull" if b and not r else "bear" if r and not b else "mix"
     rows = g.get("influ", [])
+    # tokens masqués (pas de vrais calls) : retirés partout, dans config.json → tok_hidden
+    TH = {str(x).upper().lstrip("$") for x in (CFG.get("tok_hidden") or [])}
     byid = {}
     for t in rows:
         m = re.search(r"/status/(\d+)", t.get("url") or "")
@@ -345,6 +347,8 @@ def influ():
                     t["tag"] = own if own != "mix" else (ptag if ptag != "mix" else "bull")
             elif not t["tickers"]:
                 t.pop("re", None); t.pop("q", None)
+        if TH:
+            t["tickers"] = [x for x in t["tickers"] if x not in TH]
         if wasre and not t["tickers"]:
             continue  # simple réponse sans token : bruit
         out.append(t)
