@@ -806,8 +806,6 @@ def _detail(V):
     # repères à tracer sur le graphique (le dashboard ajoute le prix à l'étiquette)
     ann = [{"k": "lvl", "p": _r8(e20h4), "l": "Moy. 20 (4 h)", "c": "vio", "pr": 2},
            {"k": "lvl", "p": _r8(e50h4), "l": "Moy. 50 (4 h)", "c": "vio", "pr": 1}]
-    if vwap:
-        ann.append({"k": "lvl", "p": _r8(vwap), "l": "Prix moyen 24 h", "c": "mut", "pr": 1})
     for v_, l_ in ((e50d, "Moy. 50 jours"), (e200d, "Moy. 200 jours")):
         if v_ and px and abs(v_ / px - 1) <= 0.12:
             ann.append({"k": "lvl", "p": _r8(v_), "l": l_, "c": "vio", "pr": 2})

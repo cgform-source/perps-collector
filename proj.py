@@ -166,7 +166,7 @@ def calendar():
             continue
         lp = ts.astimezone(PAR)
         quand = ("aujourd'hui" if lp.date() == dt.datetime.now(PAR).date() else J[lp.weekday()]) + lp.strftime(" à %H h %M").replace(" h 00", " h")
-        out.append({"lbl": lbl, "h": round(h, 1), "quand": quand})
+        out.append({"lbl": lbl, "h": round(h, 1), "quand": quand, "t": int(ts.timestamp() * 1000)})
     seen, ev = set(), []
     for x in sorted(out, key=lambda x: x["h"]):
         if x["lbl"] not in seen:
@@ -382,7 +382,7 @@ if BT.get("variants"):
 CAL = [[t, k] for t, k in trader.EVENTS if NOW - 40 * 86400000 <= t <= NOW + 15 * 86400000]
 for e in EVENTS:
     if "Discours" in e.get("lbl", ""):
-        CAL.append([int(NOW + e["h"] * 3600000), "SPEECH"])
+        CAL.append([int(e.get("t") or NOW + e["h"] * 3600000), "SPEECH"])
 F["proj"] = {"at": NOW, "by": BY, "stats": ST, "bt": bt, "cal": sorted(CAL),
              "par": {k: trader.PARAM.get(k) for k in ("ev", "ev_pre", "ev_post")},
              "recent": [{k: r.get(k) for k in ("coin", "t0", "bias", "setup", "conf", "status", "r", "dir_ok", "end", "px0", "px_end", "px_hz", "e", "sl", "tp", "band", "fill")} for r in recent],
