@@ -267,8 +267,8 @@ def extra_detail(a, cls, an):
         for side, nm in (("sup", "supports"), ("res", "résistances")):
             s_ = lvl_stat(cls, side, tdj)
             if s_:
-                fx.append(["Niveaux", f"Historique des {nm} testé{'e' if side == 'res' else ''}s 3 fois ou plus",
-                           f"tiennent {s_['hold']} % · cèdent {s_['brk']} % ({s_['nst']} contacts" + (", dans le sens de la tendance)" if s_["cx"] == "avec" else ")"), ""])
+                fx.append(["Niveaux", f"{'Supports' if side == 'sup' else 'Résistances'} testé{'e' if side == 'res' else ''}s 3 fois et plus",
+                           f"tiennent {s_['hold']} % · cèdent {s_['brk']} % · {s_['nst']} cas" + (" dans le sens de la tendance" if s_["cx"] == "avec" else ""), ""])
 
 
 BY, NEWREC = {}, []
