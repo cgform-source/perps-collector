@@ -983,13 +983,16 @@ def analyst():
     res = {"at": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "by": {}}
     for n in names:
         try:
-            u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{n}?modules=financialData&crumb={urllib.parse.quote(crumb)}"
+            u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{n}?modules=financialData,calendarEvents&crumb={urllib.parse.quote(crumb)}"
             j = json.loads(op.open(urllib.request.Request(u, headers=hd), timeout=15).read())
-            fd = (((j.get("quoteSummary") or {}).get("result") or [{}])[0] or {}).get("financialData") or {}
+            res0 = (((j.get("quoteSummary") or {}).get("result") or [{}])[0] or {})
+            fd = res0.get("financialData") or {}
+            ed = (((res0.get("calendarEvents") or {}).get("earnings") or {}).get("earningsDate") or [])
             val = lambda k: (fd.get(k) or {}).get("raw") if isinstance(fd.get(k), dict) else None
             if val("targetMeanPrice"):
                 res["by"][n] = {"avg": val("targetMeanPrice"), "med": val("targetMedianPrice"), "lo": val("targetLowPrice"), "hi": val("targetHighPrice"),
-                                "n": val("numberOfAnalystOpinions"), "rec": fd.get("recommendationKey"), "px": val("currentPrice")}
+                                "n": val("numberOfAnalystOpinions"), "rec": fd.get("recommendationKey"), "px": val("currentPrice"),
+                                "earn": (ed[0] or {}).get("raw") if ed and isinstance(ed[0], dict) else None}
             time.sleep(0.6)
         except Exception as e:
             OUT["errors"]["analyst"] = f"{n}: {type(e).__name__} {getattr(e, 'code', '')}"[:100]
