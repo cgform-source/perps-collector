@@ -22,7 +22,8 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6}
+ENGINE = 3  # version du moteur : une projection pas encore déclenchée d'une ancienne version est retirée (sans compter dans les résultats)
 
 
 def post(body, timeout=20):
@@ -419,7 +420,31 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         pull = (r <= 45 or px < e20h4) if D > 0 else (r >= 55 or px > e20h4) if D < 0 else False
         bias = "long" if D > 0 and pull else "short" if D < 0 and pull else "neutre"
         score = round(trend, 2)
-        if D and not pull:
+        # entrée sur rejet : le rebond (repli pour un long) est déjà venu toucher une zone de valeur, puis s'est retourné.
+        # Un trader entre alors sur le retournement, stop juste derrière l'extrême du rebond, sans attendre un nouveau rebond.
+        rej = None
+        if PARAM.get("rej") and D and len(c1h) >= 60:
+            n1 = len(c1h)
+            w = c1h[-12:]
+            if D < 0:
+                j = max(range(len(w)), key=lambda i: w[i]["h"]); ext = w[j]["h"]
+            else:
+                j = min(range(len(w)), key=lambda i: w[i]["l"]); ext = w[j]["l"]
+            ti = n1 - 12 + j
+            pre = c1h[max(0, ti - 36):ti]
+            if pre and ti <= n1 - 3:  # extrême vieux d'au moins 2 h : le retournement est confirmé
+                if D < 0:
+                    move, back = ext - min(k["l"] for k in pre), ext - px
+                    touched = ext >= e20h4 - 0.2 * a4 or any(abs(ext - z["p"]) <= 0.5 * a4 for z in res)
+                    turning = c1h[-1]["c"] < c1h[-3]["c"]
+                else:
+                    move, back = max(k["h"] for k in pre) - ext, px - ext
+                    touched = ext <= e20h4 + 0.2 * a4 or any(abs(ext - z["p"]) <= 0.5 * a4 for z in sup)
+                    turning = c1h[-1]["c"] > c1h[-3]["c"]
+                if move >= a4 and touched and turning and PARAM["rej_k"] * a4 <= back <= 1.6 * a4:
+                    rej = {"ext": ext}
+                    bias = "long" if D > 0 else "short"
+        if D and not pull and not rej:
             lean_txt = (f"Tendance de fond {'haussière' if D > 0 else 'baissière'}, mais le prix est déjà tendu (RSI 4 h {r:.0f}) : "
                         f"un trader attend un {'repli' if D > 0 else 'rebond'} vers {fmt(e20h4)} (moyenne 20 en 4 h) "
                         f"ou un RSI 4 h {'sous 45' if D > 0 else 'au-dessus de 55'} pour {'acheter' if D > 0 else 'vendre à découvert'}")
@@ -437,7 +462,10 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         cands = [z["p"] for z in lv] + [e20h4, e50h4] + ([vwap] if vwap else [])
         cands = [x for x in cands if dmin <= (px - x) * sgn <= 2.5 * a4]
         brk = H[-1][2] if (lg and bos == 1 and H) else (L[-1][2] if (not lg and bos == -1 and L) else None)
-        if mr:
+        if mr and rej:
+            setup = "Achat sur reprise" if lg else "Vente sur rejet"
+            e = [px - 0.2 * a4, px] if lg else [px, px + 0.2 * a4]
+        elif mr:
             # le repli est en cours : entrée près du prix, stop sous le dernier creux (au-dessus du dernier sommet pour un short)
             setup = "Achat sur repli" if lg else "Vente sur rebond"
             e = [px - 0.3 * a4, px] if lg else [px, px + 0.3 * a4]
@@ -454,6 +482,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             sl = e[0] - PARAM["sl_k"] * a4
             if L and e[0] - L[-1][2] < 2.5 * a4 and L[-1][2] < e[0]:
                 sl = min(sl, L[-1][2] - 0.25 * a4)
+            if mr and rej:
+                sl = min(rej["ext"] - 0.25 * a4, e[0] - 0.3 * a4)  # stop juste sous le creux du repli
             risk = e[1] - sl
             if risk > 3 * a4:
                 sl = e[1] - 3 * a4; risk = 3 * a4
@@ -465,6 +495,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             sl = e[1] + PARAM["sl_k"] * a4
             if H and H[-1][2] - e[1] < 2.5 * a4 and H[-1][2] > e[1]:
                 sl = max(sl, H[-1][2] + 0.25 * a4)
+            if mr and rej:
+                sl = max(rej["ext"] + 0.25 * a4, e[1] + 0.3 * a4)  # stop juste au-dessus du sommet du rebond
             risk = sl - e[0]
             if risk > 3 * a4:
                 sl = e[0] + 3 * a4; risk = 3 * a4
@@ -589,7 +621,7 @@ def to_neutral(a, why):
 
 def new_proj(coin, cls, a, now):
     op = {"id": f"{coin}:{now}", "coin": coin, "cls": cls, "t0": now, "px0": a["px"], "bias": a["bias"], "setup": a["setup"],
-          "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"]}
+          "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"], "v": ENGINE}
     if a.get("nref") is not None:  # chances et gain moyen annoncés au départ (pour l'affichage et la calibration)
         op.update(edge=a.get("edge"), nref=a.get("nref"))
     if a["plan"]:
@@ -613,6 +645,8 @@ def track(op, a, c1h, now, coin, cls):
         op = evaluate(op, c1h, now)
         if op.get("status") != "open":
             done.append(op); op = None
+        elif not op.get("fill") and op.get("v") != ENGINE:
+            op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None
         elif not op.get("fill") and a["bias"] != "neutre" and a.get("sconf", a["conf"]) >= 60:
             age = now - op["t0"]
             rev = op["bias"] in ("long", "short") and op["bias"] != a["bias"]

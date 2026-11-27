@@ -12,8 +12,9 @@ COINS = ["BTC", "ETH", "SOL", "HYPE", "XRP", "DOGE", "BNB", "SUI", "LINK", "AVAX
          "xyz:NVDA", "xyz:AAPL", "xyz:MSFT", "xyz:AMZN", "xyz:GOOGL", "xyz:META", "xyz:TSLA", "xyz:AMD", "xyz:PLTR",
          "xyz:COIN", "xyz:MSTR", "xyz:GOLD", "xyz:SILVER", "xyz:CL", "xyz:SP500"]
 STEP_H = 4
-VARIANTS = {"tendance + repli 1,5": {"thr": 1.5, "mr": 1}, "tendance + repli 2": {"thr": 2.0, "mr": 1},
-            "niveaux 0,6": {"thr": 2.0, "pb_min": 0.6, "mr": 0}}
+VARIANTS = {"tendance + repli 2": {"thr": 2.0, "mr": 1, "rej": 0},
+            "+ rejet 0,6": {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 0.6},
+            "+ rejet 1": {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0}}
 H, D = 3600000, 86400000
 T0 = time.time()
 
@@ -114,7 +115,8 @@ for vname, par in VARIANTS.items():
     print(vname, a_, f"{time.time() - T0:.0f}s", flush=True)
 
 span = [min(v[0][0]["t"] for v in DATA.values()), max(v[0][-1]["t"] for v in DATA.values())] if DATA else [0, 0]
-best = max(RES, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
+ok_ = [k for k in RES if (RES[k]["stats"]["all"].get("trades") or 0) >= 300] or list(RES)  # assez de trades pour ne pas choisir sur du bruit
+best = max(ok_, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
 json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best},
           open("data/backtest.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", f"{time.time() - T0:.0f}s")
