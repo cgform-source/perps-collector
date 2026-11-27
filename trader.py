@@ -419,6 +419,10 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         pull = (r <= 45 or px < e20h4) if D > 0 else (r >= 55 or px > e20h4) if D < 0 else False
         bias = "long" if D > 0 and pull else "short" if D < 0 and pull else "neutre"
         score = round(trend, 2)
+        if D and not pull:
+            lean_txt = (f"Tendance de fond {'haussière' if D > 0 else 'baissière'}, mais le prix est déjà tendu (RSI 4 h {r:.0f}) : "
+                        f"un trader attend un {'repli' if D > 0 else 'rebond'} vers {fmt(e20h4)} (moyenne 20 en 4 h) "
+                        f"ou un RSI 4 h {'sous 45' if D > 0 else 'au-dessus de 55'} pour {'acheter' if D > 0 else 'vendre à découvert'}")
     if any("Résultats" in x for x in risk_flags):
         bias = "neutre"
     plan, setup = None, "Attendre"
@@ -482,6 +486,9 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     good = [s[2] for s in sorted(dirs, key=lambda s: -abs(s[1])) if (s[0] == "bull") == (bias == "long")][:3] if bias != "neutre" else []
     bad = [s[2] for s in sorted(dirs, key=lambda s: -abs(s[1])) if (s[0] == "bull") != (bias == "long")][:2] if bias != "neutre" else []
     band = None
+    lean = None
+    if mr and bias == "neutre" and D:
+        lean = {"dir": "long" if D > 0 else "short", "lvl": round(e20h4, 8), "txt": lean_txt}
     if bias == "neutre":
         band = [min(sup[0]["p"] if sup else px, px - 1.5 * a4), max(res[0]["p"] if res else px, px + 1.5 * a4)]
         view = (f"ATTENDRE : les signaux se contredisent (score {score:+.1f}). Zone de range attendue entre {fmt(band[0])} et {fmt(band[1])}. "
@@ -497,7 +504,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
             "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags, "view": view, "invalid": invalid,
-            "band": [round(band[0], 8), round(band[1], 8)] if band else None,
+            "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean,
             "hz": 72 if extra.get("crypto") else 96}
 
 
