@@ -228,6 +228,49 @@ def edge(setup, cls):
     return round(p * 100), round(e, 2), hw + hl + lw + ll
 
 
+LV = BT.get("levels") if isinstance(BT.get("levels"), dict) and not BT["levels"].get("err") else {}
+
+
+def timing(setup, cls):
+    """Temps médians mesurés pour ce type de setup (test historique, sinon direct) : départ → entrée, entrée → 1re cible, entrée → stop."""
+    for src, S_ in (("historique", BV), ("direct", ST)):
+        for x in ((S_.get("sc") or {}).get(f"{setup}|{cls}"), (S_.get("setup") or {}).get(setup), S_.get("all")):
+            if x and x.get("h_fill") is not None and x.get("h_t1") is not None and (x.get("n_t1") or 0) >= (20 if src == "historique" else 10):
+                return {"fill": x["h_fill"], "t1": x["h_t1"], "sl": x.get("h_sl"), "n": x.get("n_t1"), "src": src}
+    return None
+
+
+def lvl_stat(cls, side, tdj):
+    """Part des contacts où un niveau testé au moins 3 fois a cédé ou tenu (test historique), dans le sens de la tendance si possible."""
+    cx = "avec" if tdj == (-1 if side == "sup" else 1) else "tous"
+    for key in (cls, "tous"):
+        e_ = ((LV.get(key) or {}).get(side) or {}).get(cx)
+        if e_ and (e_.get("n") or 0) >= 30 and e_.get("p_hold") is not None:
+            return {"hold": round(e_["p_hold"] * 100), "brk": round(e_["p_brk"] * 100), "nst": e_["n"], "cx": cx, "cl": key}
+    return None
+
+
+def extra_detail(a, cls, an):
+    tdj = ((a.get("x") or {}).get("tf") or {}).get("1j")
+    if a["bias"] != "neutre":
+        tm = timing(a["setup"], cls)
+        if tm:
+            a["tm"] = tm
+    if a.get("obst"):
+        s_ = lvl_stat(cls, "sup" if a["bias"] == "short" else "res", tdj)
+        if s_:
+            a["obst"].update(s_)
+    if an and an.get("earn"):
+        a["earn_t"] = int(an["earn"] * 1000)
+    fx = a.get("fx")
+    if isinstance(fx, list):
+        for side, nm in (("sup", "supports"), ("res", "résistances")):
+            s_ = lvl_stat(cls, side, tdj)
+            if s_:
+                fx.append(["Niveaux", f"Historique des {nm} testé{'e' if side == 'res' else ''}s 3 fois ou plus",
+                           f"tiennent {s_['hold']} % · cèdent {s_['brk']} % ({s_['nst']} contacts" + (", dans le sens de la tendance)" if s_["cx"] == "avec" else ")"), ""])
+
+
 BY, NEWREC = {}, []
 for coin in UNI:
     try:
@@ -273,7 +316,7 @@ for coin in UNI:
             earn = None if dd < -1 else max(0, int(dd + 0.999))
         bull = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bull")
         bear = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bear")
-        extra = {"crypto": crypto, "fg": FG, "analyst": an, "senti": (bull, bear), "oi_chg": oi_chg, "book": book,
+        extra = {"crypto": crypto, "fg": FG, "analyst": an, "senti": (bull, bear), "oi_chg": oi_chg, "book": book, "detail": True,
                  "events": EVENTS, "early": (not crypto) and EARLY, "now": NOW,
                  "closed": (not crypto) and sym not in trader.NOT_STOCK and CLOSED, "earn_days": earn}
         a = trader.analyze(coin, c1h, d1, ctx, bench, extra)
@@ -290,6 +333,10 @@ for coin in UNI:
             ch, ed, nref = edge("Attendre", cls)
         a["sconf"] = a["conf"]  # force du signal (règles de suivi, identiques au test historique)
         a["conf"], a["edge"], a["nref"] = ch, ed, nref
+        try:  # compléments pour le graphique et le verdict (sans effet sur le signal ni sur le suivi)
+            extra_detail(a, cls, an)
+        except Exception as e_:
+            ERR["détail:" + coin] = str(e_)[:80]
         # direction à l'échéance des projections terminées avant leur horizon (stop ou cible touchés tôt)
         for m in MONTHS:
             for r in BYM[m]:
@@ -332,7 +379,12 @@ if BT.get("variants"):
     vv = BT["variants"].get(BT.get("chosen") or "standard") or {}
     bt = {"at": BT.get("at"), "from": BT.get("from"), "to": BT.get("to"), "n_coins": len(BT.get("coins") or []), "all": (vv.get("stats") or {}).get("all"),
           "setup": (vv.get("stats") or {}).get("setup"), "class": (vv.get("stats") or {}).get("class"), "conf": (vv.get("stats") or {}).get("conf")}
-F["proj"] = {"at": NOW, "by": BY, "stats": ST, "bt": bt,
+CAL = [[t, k] for t, k in trader.EVENTS if NOW - 40 * 86400000 <= t <= NOW + 15 * 86400000]
+for e in EVENTS:
+    if "Discours" in e.get("lbl", ""):
+        CAL.append([int(NOW + e["h"] * 3600000), "SPEECH"])
+F["proj"] = {"at": NOW, "by": BY, "stats": ST, "bt": bt, "cal": sorted(CAL),
+             "par": {k: trader.PARAM.get(k) for k in ("ev", "ev_pre", "ev_post")},
              "recent": [{k: r.get(k) for k in ("coin", "t0", "bias", "setup", "conf", "status", "r", "dir_ok", "end", "px0", "px_end", "px_hz", "e", "sl", "tp", "band", "fill")} for r in recent],
              "fg": FG, "closed": CLOSED, "errors": ERR}
 json.dump(F, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

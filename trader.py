@@ -652,11 +652,166 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                 + f"Plan : entrée {fmt(p['e'][0])} – {fmt(p['e'][1])}, stop {fmt(p['sl'])}, cibles {fmt(p['tp'][0])} puis {fmt(p['tp'][1])} (R/R {str(p['rr']).replace('.', ',')}).")
         invalid = f"Clôture 4 h {'sous' if bias == 'long' else 'au-dessus de'} {fmt(p['sl'])}"
     zone = lambda z: [round(z["p"] - 0.15 * a4, 8), round(z["p"] + 0.15 * a4, 8)]
-    return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
+    det = None
+    if extra.get("detail"):  # valeurs détaillées pour le graphique et le verdict du dashboard : aucun effet sur le signal
+        try:
+            det = _detail(dict(locals()))
+        except Exception as e_:
+            det = {"x": {"err": f"{type(e_).__name__}: {e_}"[:100]}}
+    out = {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
             "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags + notes, "view": view, "invalid": invalid,
             "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean, "freeze": bool(freeze), "obst": obst_out,
             "hz": 72 if extra.get("crypto") else 96}
+    if det:
+        out.update(det)
+    return out
+
+
+def _r8(v):
+    """6 chiffres significatifs (assez pour tracer un niveau, moins lourd dans le feed)."""
+    if v is None or v == 0:
+        return v
+    return round(v, max(0, 5 - int(math.floor(math.log10(abs(v))))))
+
+
+def _sg(v, d=1):
+    s = f"{abs(v):.{d}f}".replace(".", ",")
+    return ("+" if v > 0 else "−" if v < 0 else "") + s
+
+
+_MOT = {1: "haussière", -1: "baissière", 0: "neutre"}
+_TON = {1: "up", -1: "dn", 0: "amb"}
+
+
+def _detail(V):
+    """Graphique et verdict du dashboard : indicateurs chiffrés (x), tableau de bord en français (fx), repères à tracer (ann)."""
+    px, a4, ad = V["px"], V["a4"], V["ad"]
+    ctx, extra, bench = V["ctx"] or {}, V["extra"] or {}, V["bench"]
+    c1c = [k["c"] for k in V["c1h"]]
+    e20h1, e50h1 = ema(c1c, 20)[-1], ema(c1c, 50)[-1]
+    r1 = rsi(c1c)[-1]
+    e20d, e50d, e200d, e20h4, e50h4 = V["e20d"], V["e50d"], V["e200d"], V["e20h4"], V["e50h4"]
+    wk = V["wk"]
+    tw = None
+    if len(wk) >= 22:
+        wc = [k["c"] for k in wk]
+        w10, w20 = ema(wc, 10)[-1], ema(wc, 20)[-1]
+        tw = 1 if wc[-1] > w10 > w20 else -1 if wc[-1] < w10 < w20 else 0
+    tdj = 1 if px > e50d and (e200d is None or e50d > e200d) else -1 if px < e50d and (e200d is None or e50d < e200d) else 0
+    st4 = {"up": 1, "down": -1}.get(V["struct"], 0)
+    t1h = 1 if px > e20h1 > e50h1 else -1 if px < e20h1 < e50h1 else 0
+    mh, r4, rj = V["mh"], V["r"], V["rd"][-1]
+    f = ctx.get("fund")
+    fund = f * 24 * 365 * 100 if f is not None else None
+    prem = (ctx["mark"] / ctx["orc"] - 1) * 100 if ctx.get("mark") and ctx.get("orc") else None
+    bk = extra.get("book")
+    rb = (bk[0] / max(bk[1], 1e-9)) if bk and bk[0] + bk[1] > 0 else None
+    oi = extra.get("oi_chg")
+    cld = V["cld"]
+    rs = (cld[-1] / cld[-21] - 1) * 100 - bench[2] if bench and len(cld) > 21 and bench[2] is not None else None
+    caps = V["caps"]
+    cat = {k: round(max(-caps.get(k, 1), min(caps.get(k, 1), v)), 2) for k, v in V["cat"].items()}
+    ob = V["ob"]
+    obv = None
+    if len(ob) > 30:
+        o20 = ob[-1] - ob[-21]
+        obv = 1 if o20 > 0 else -1 if o20 < 0 else 0
+    vwap = V["vwap"]
+    sup, res = V["sup"], V["res"]
+    x = {"tf": {"1s": tw, "1j": tdj, "4h": st4, "1h": t1h},
+         "ema": {"j20": _r8(e20d), "j50": _r8(e50d), "j200": _r8(e200d), "h20": _r8(e20h4), "h50": _r8(e50h4), "h1_20": _r8(e20h1)},
+         "vwap": _r8(vwap), "rsi": {"1h": round(r1), "4h": round(r4), "1j": round(rj)},
+         "macd": [round(mh[-1] / a4, 3), round(mh[-2] / a4, 3)] if len(mh) > 2 and a4 else None,
+         "adx": {"4h": round(V["adx4"]), "1j": round(V["adxd"]), "d4": 1 if V["pdi4"] > V["mdi4"] else -1, "dj": 1 if V["pdid"] > V["mdid"] else -1},
+         "sq": round(V["sq"]), "rv": round(V["rv"], 2), "obv": obv,
+         "fund": round(fund, 1) if fund is not None else None, "prem": round(prem, 3) if prem is not None else None,
+         "book": round(rb, 2) if rb is not None else None, "oi": [round(oi[0], 1), round(oi[1], 1)] if oi else None,
+         "rs": round(rs, 1) if rs is not None else None, "bench": [bench[0], bench[1]] if bench else None,
+         "fg": extra.get("fg") if extra.get("crypto") else None,
+         "lv": {"sup": [[_r8(z["p"]), z["n"]] for z in sup], "res": [[_r8(z["p"]), z["n"]] for z in res]},
+         "cat": cat, "thr": V["thr"], "st": V["struct"], "bos": V["bos"]}
+    if V.get("mr"):
+        x["mode"] = "mr"
+        x["dir"] = V.get("score")
+        if V.get("D"):
+            x["pull"] = {"ok": bool(V.get("pull")), "rej": bool(V.get("rej")), "d": V["D"]}
+    nx, pv = V.get("nxt"), V.get("prv")
+    x["ev"] = {"next": [nx[0], nx[1]] if nx else None, "prev": [pv[0], pv[1]] if pv else None,
+               "frz": V["freeze"][0] if V.get("freeze") else None}
+    # tableau de bord : [groupe, libellé, valeur, ton]
+    fx = []
+    A = fx.append
+    if tw is not None:
+        A(["Tendance", "Semaine", _MOT[tw], _TON[tw]])
+    A(["Tendance", "Jour", _MOT[tdj] + f" · moy. 50 j {fmt(e50d)}" + (f", 200 j {fmt(e200d)}" if e200d else ""), _TON[tdj]])
+    A(["Tendance", "4 h", {"up": "sommets et creux montants", "down": "sommets et creux descendants"}.get(V["struct"], "sans direction nette"), _TON[st4]])
+    A(["Tendance", "1 h", _MOT[t1h], _TON[t1h]])
+    adxd = V["adxd"]
+    A(["Tendance", "Force (ADX jour / 4 h)", f"{adxd:.0f} / {V['adx4']:.0f} · " + ("tendance solide" if adxd >= 25 else "pas de tendance claire" if adxd < 18 else "tendance modérée"),
+       (_TON[x["adx"]["dj"]] if adxd >= 25 else "mut")])
+    A(["Élan", "RSI 1 h / 4 h / jour", f"{r1:.0f} / {r4:.0f} / {rj:.0f}" + (" · surachat" if r4 >= 70 else " · survente" if r4 <= 30 else ""),
+       "dn" if r4 >= 70 else "up" if r4 <= 30 else ""])
+    if x["macd"]:
+        m0, m1 = mh[-1], mh[-2]
+        A(["Élan", "MACD 4 h", ("positif" if m0 > 0 else "négatif") + (", en accélération" if abs(m0) > abs(m1) and (m0 > 0) == (m1 > 0) else ", en ralentissement" if (m0 > 0) == (m1 > 0) else ", vient de changer de signe"),
+           "up" if m0 > m1 else "dn"])
+    dv = [s for s in V["sig"] if "Divergence" in s[2]]
+    if dv:
+        A(["Élan", "Divergence RSI 4 h", "baissière" if dv[0][0] == "bear" else "haussière", "dn" if dv[0][0] == "bear" else "up"])
+    if obv is not None:
+        A(["Élan", "Volume (OBV 4 h, 80 h)", "flux acheteur" if obv > 0 else "flux vendeur" if obv < 0 else "neutre", _TON[obv]])
+    A(["Volatilité", "ATR 4 h", f"{fmt(a4)} ({a4 / px * 100:.1f} % du prix)".replace(".", ",", 1) if px else fmt(a4), ""])
+    A(["Volatilité", "ATR jour", f"{fmt(ad)} ({ad / px * 100:.1f} % du prix)".replace(".", ",", 1) if px else fmt(ad), ""])
+    sq = V["sq"]
+    A(["Volatilité", "Bandes de Bollinger 4 h", "très resserrées : mouvement fort en préparation" if sq <= 15 else "très larges : marché agité" if sq >= 85 else "normales",
+       "amb" if sq <= 15 or sq >= 85 else ""])
+    A(["Volatilité", "Volume du jour", f"{V['rv']:.1f}× la moyenne 20 jours".replace(".", ","), "amb" if V["rv"] >= 1.6 else ""])
+    if sup:
+        A(["Niveaux", "Supports testés", " · ".join(f"{fmt(z['p'])} ({z['n']}×)" for z in sup), "up"])
+    if res:
+        A(["Niveaux", "Résistances testées", " · ".join(f"{fmt(z['p'])} ({z['n']}×)" for z in res), "dn"])
+    A(["Niveaux", "Moy. 20 / 50 (4 h)", f"{fmt(e20h4)} / {fmt(e50h4)} · prix " + ("au-dessus" if px > e20h4 else "en dessous"), "up" if px > e20h4 else "dn"])
+    if vwap:
+        A(["Niveaux", "Prix moyen pondéré 24 h", f"{fmt(vwap)} · prix " + ("au-dessus" if px > vwap else "en dessous"), "up" if px > vwap else "dn"])
+    if fund is not None:
+        A(["Dérivés", "Funding", f"{_sg(fund)} %/an · " + ("trop de longs" if fund > 40 else "beaucoup de shorts" if fund < -15 else "équilibré"),
+           "dn" if fund > 40 else "up" if fund < -15 else ""])
+    if prem is not None:
+        A(["Dérivés", "Écart perp / prix de référence", f"{_sg(prem, 2)} %", ("dn" if prem > 0 else "up") if abs(prem) >= 0.3 else ""])
+    if oi:
+        dp, doi = oi
+        it = ("argent frais à l'achat" if dp > 0 else "nouveaux vendeurs") if doi > 3 else ("rachats de shorts" if dp > 0 else "des longs sortent") if doi < -3 else "stable"
+        A(["Dérivés", "Open interest ~24 h", f"{_sg(doi)} % (prix {_sg(dp)} %) · {it}", ("up" if dp > 0 else "dn") if doi > 3 else ""])
+    if rb is not None:
+        A(["Dérivés", "Carnet à ±0,5 %", (f"{rb:.1f}× plus d'acheteurs" if rb >= 1 else f"{1 / max(rb, 1e-9):.1f}× plus de vendeurs").replace(".", ","),
+           "up" if rb >= 2 else "dn" if rb <= 0.5 else ""])
+    if bench:
+        bn = "Bitcoin" if "bitcoin" in bench[1] else "S&P 500"
+        A(["Contexte", bn, "tendance " + _MOT[bench[0]], _TON[bench[0]]])
+        if rs is not None:
+            A(["Contexte", "Force relative 20 jours", f"{_sg(rs, 0)} points vs {bn}", ("up" if rs > 0 else "dn") if abs(rs) > 5 else ""])
+    if x["fg"] is not None:
+        fg = x["fg"]
+        A(["Contexte", "Peur et avidité crypto", f"{fg}/100 · " + ("peur extrême" if fg <= 20 else "peur" if fg < 45 else "neutre" if fg <= 55 else "avidité" if fg < 80 else "avidité extrême"),
+           "up" if fg <= 20 else "dn" if fg >= 80 else ""])
+    an_ = extra.get("analyst")
+    if an_ and an_.get("avg") and px:
+        up_ = (an_["avg"] / px - 1) * 100
+        A(["Contexte", "Objectif des analystes", f"{fmt(an_['avg'])} ({_sg(up_, 0)} %)", "up" if up_ > 15 else "dn" if up_ < 0 else ""])
+    st_ = extra.get("senti")
+    if st_ and st_[0] + st_[1] > 0:
+        A(["Contexte", "Influenceurs 24 h", f"{st_[0]} haussier{'s' if st_[0] > 1 else ''} / {st_[1]} baissier{'s' if st_[1] > 1 else ''}",
+           "up" if st_[0] >= 2 * max(1, st_[1]) else "dn" if st_[1] >= 2 * max(1, st_[0]) else ""])
+    # repères à tracer sur le graphique (le dashboard ajoute le prix à l'étiquette)
+    ann = [{"k": "lvl", "p": _r8(e20h4), "l": "Moy. 20 (4 h)", "c": "vio", "pr": 2},
+           {"k": "lvl", "p": _r8(e50h4), "l": "Moy. 50 (4 h)", "c": "vio", "pr": 1}]
+    if vwap:
+        ann.append({"k": "lvl", "p": _r8(vwap), "l": "Prix moyen 24 h", "c": "mut", "pr": 1})
+    for v_, l_ in ((e50d, "Moy. 50 jours"), (e200d, "Moy. 200 jours")):
+        if v_ and px and abs(v_ / px - 1) <= 0.12:
+            ann.append({"k": "lvl", "p": _r8(v_), "l": l_, "c": "vio", "pr": 2})
+    return {"x": x, "fx": fx, "ann": ann}
 
 
 # ---------------------------------------------------------------- suivi des projections
@@ -811,7 +966,11 @@ def stats(recs):
         dirs = [r for r in rs if r.get("dir_ok") is not None]
         rng = [r for r in rs if r.get("status") in ("range tenu", "range cassé")]
         dr = [r for r in rs if r.get("bias") in ("long", "short") and r.get("status") not in (None, "open")]
-        return {"n": len(rs), "trades": len(tr_), "win": w, "loss": l_, "wr": round(w / (w + l_), 3) if w + l_ else None,
+        hf = [(r["fill_t"] - r["t0"]) / 3600000 for r in tr_ if r.get("fill_t") and r.get("t0")]
+        hw = [(r["end"] - r["fill_t"]) / 3600000 for r in tr_ if r.get("fill_t") and r.get("end") and r["status"] in ("cible1", "cible2")]
+        hs = [(r["end"] - r["fill_t"]) / 3600000 for r in tr_ if r.get("fill_t") and r.get("end") and r["status"] == "stop"]
+        med = lambda L: round(sorted(L)[len(L) // 2], 1) if L else None
+        return {"h_fill": med(hf), "h_t1": med(hw), "h_sl": med(hs), "n_t1": len(hw),"n": len(rs), "trades": len(tr_), "win": w, "loss": l_, "wr": round(w / (w + l_), 3) if w + l_ else None,
                 "avgR": round(sum(r.get("r", 0) for r in tr_) / len(tr_), 2) if tr_ else None,
                 "dir": round(sum(1 for r in dirs if r["dir_ok"]) / len(dirs), 3) if dirs else None,
                 "range": round(sum(1 for r in rng if r["status"] == "range tenu") / len(rng), 3) if rng else None,

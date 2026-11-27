@@ -149,10 +149,80 @@ def ev_study():
 
 EVS = ev_study() if DATA else {}
 print("évènements", EVS)
+
+
+def lvl_study():
+    """Supports et résistances testés au moins 3 fois : quand le prix vient les toucher, cèdent-ils ou tiennent-ils ?
+    Contact : le prix arrive à 0,1 ATR 4 h du niveau pendant l'horizon d'une projection (3 jours crypto, 4 jours actions),
+    sans s'être d'abord éloigné de 1,5 ATR. Ensuite, dans les 24 h : « cède » = clôture 1 h à plus d'un demi-ATR de
+    l'autre côté ; « tient » = rebond d'un ATR depuis le niveau ; sinon indécis (non compté dans les pourcentages).
+    « avec » = niveau visité dans le sens de la tendance de fond (support en tendance baissière, résistance en haussière)."""
+    def cls_of(c):
+        return "crypto" if ":" not in c else ("indice/matière" if c.split(":")[-1] in trader.NOT_STOCK else "action")
+    out = {}
+    for c, (h1, d1) in DATA.items():
+        cl_, seen, hz = cls_of(c), set(), (72 if ":" not in c else 96)
+        for i in range(24 * 25, len(h1) - hz - 26, 8):
+            c1h = h1[max(0, i - 503):i + 1]
+            c4 = trader.agg(c1h, 4)
+            d = daily_upto(d1, h1, i)
+            if len(c4) < 60 or len(d) < 60:
+                continue
+            px = h1[i]["c"]
+            a4 = trader.atr(c4)[-1]
+            if not a4:
+                continue
+            sup, res = trader.levels(c4, d, px, a4)
+            cl = [k["c"] for k in d]
+            e50 = trader.ema(cl, 50)[-1]
+            e200 = trader.ema(cl, 200)[-1] if len(cl) >= 200 else None
+            tdj = 1 if px > e50 and (e200 is None or e50 > e200) else -1 if px < e50 and (e200 is None or e50 < e200) else 0
+            for side, L, sg in (("sup", sup, 1), ("res", res, -1)):
+                z = next((z for z in L if z["n"] >= 3 and 0.3 * a4 <= (px - z["p"]) * sg <= 3 * a4), None)
+                if not z:
+                    continue
+                S, j = z["p"], None
+                for k in range(i + 1, min(len(h1), i + 1 + hz)):
+                    kk = h1[k]
+                    if (kk["l"] <= S + 0.1 * a4) if sg > 0 else (kk["h"] >= S - 0.1 * a4):
+                        j = k
+                        break
+                    if (kk["h"] >= px + 1.5 * a4) if sg > 0 else (kk["l"] <= px - 1.5 * a4):
+                        break
+                if j is None or (side, j) in seen:
+                    continue
+                seen.add((side, j))
+                o = "und"
+                for k in range(j, min(len(h1), j + 25)):
+                    kk = h1[k]
+                    if (kk["c"] < S - 0.5 * a4) if sg > 0 else (kk["c"] > S + 0.5 * a4):
+                        o = "brk"
+                        break
+                    if k > j and ((kk["h"] >= S + a4) if sg > 0 else (kk["l"] <= S - a4)):
+                        o = "hold"
+                        break
+                cx = "avec" if tdj == -sg else "contre" if tdj == sg else "neutre"
+                for key in (cl_, "tous"):
+                    for cx_ in (cx, "tous"):
+                        e_ = out.setdefault(key, {}).setdefault(side, {}).setdefault(cx_, {"brk": 0, "hold": 0, "und": 0})
+                        e_[o] += 1
+    for sides in out.values():
+        for ctxs in sides.values():
+            for e_ in ctxs.values():
+                n = e_["brk"] + e_["hold"]
+                e_.update(n=n, p_brk=round(e_["brk"] / n, 3) if n else None, p_hold=round(e_["hold"] / n, 3) if n else None)
+    return out
+
+
+try:
+    LVS = lvl_study() if DATA else {}
+except Exception as e:
+    LVS = {"err": str(e)[:100]}
+print("niveaux", json.dumps((LVS.get("tous") or {}), ensure_ascii=False)[:600], f"{time.time() - T0:.0f}s", flush=True)
 ok_ = [k for k in RES if (RES[k]["stats"]["all"].get("trades") or 0) >= 300] or list(RES)  # assez de trades pour ne pas choisir sur du bruit
 # la pause autour des publications protège des sauts de prix que ce test ne sait pas mesurer (il suppose un stop toujours
 # exécuté au bon prix) : à résultat presque égal (écart de moins de 0,015 R), on la préfère par prudence
 best = max(ok_, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9) + (0.015 if RES[k]["par"].get("ev") else 0), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
-json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best, "events": EVS},
+json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best, "events": EVS, "levels": LVS},
           open("data/backtest.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", f"{time.time() - T0:.0f}s")
