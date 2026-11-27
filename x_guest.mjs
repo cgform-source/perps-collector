@@ -38,7 +38,7 @@ for (const a of (SKIP_NEWS ? [] : cfg.x_accounts || [])) {
 }
 out.influ = [];
 let prevProf = prevAll.influ_prof || {};
-out.influ_prof = { ...prevProf }; let profBudget = LOGGED_OK ? 4 : 12;
+out.influ_prof = { ...prevProf }; 
 out.influ_mode = LOGGED_OK ? 'compte' : 'invite'; out.logged_try = LOGGED; let rateHit = false;
 // rotation : on traite une tranche des comptes à chaque passage (toutes les 30 min), et on garde les tweets des passages précédents
 // préférences réglées depuis le dashboard (étoile = favori relu à chaque passage, croix = compte ignoré)
@@ -63,9 +63,21 @@ let start = Math.max(0, rest.findIndex(h => h.toLowerCase() === String(prevAll.r
 const order = [...rest.slice(start), ...rest.slice(0, start)];
 const slice = [...hot, ...order.slice(0, Math.max(0, SL - hot.length))];
 out.rot_next = order[0] || null;
+// photos et abonnés : lus avec une session invitée séparée (le compte connecté renvoyait des erreurs sur les profils),
+// 10 comptes manquants par passage, ceux qui échouent sont retentés 6 h plus tard
+{ const sp = LOGGED_OK ? new Scraper({ rateLimitStrategy: new ErrorRateLimitStrategy() }) : s;
+  const fail = prevAll.prof_fail || {}; out.prof_fail = {};
+  for (const [k, v] of Object.entries(fail)) if (Date.now() - v < 6 * 36e5) out.prof_fail[k] = v;
+  const miss = INF.filter(h => !out.influ_prof[h.toLowerCase()] && !out.prof_fail[h.toLowerCase()]).slice(0, 10);
+  let ok = 0;
+  for (const a of miss) {
+    try { const p = await Promise.race([sp.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]);
+      out.influ_prof[a.toLowerCase()] = { h: p.username || a, n: p.name || '', fol: p.followersCount || 0, av: p.avatar || null }; ok++; }
+    catch (e) { out.prof_fail[a.toLowerCase()] = Date.now(); if (!out.errors.profils) out.errors.profils = (a + ': ' + String(e)).slice(0, 160); if (/rate|429/i.test(String(e))) break; }
+  }
+  out.prof_ok = ok; }
 for (const a of slice) {
   if (!hot.includes(a)) { const k = order.indexOf(a); out.rot_next = order[(k + 1) % order.length]; }
-  if (!prevProf[a.toLowerCase()] && profBudget-- > 0) try { const p = await Promise.race([s.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]); out.influ_prof[a.toLowerCase()] = { h: p.username, n: p.name, fol: p.followersCount || 0, av: p.avatar || null }; } catch (e) {}
   try {
     let n = 0;
     // connecté : tweets ET réponses. Une réponse est gardée seulement si elle répond à un autre compte de la liste
