@@ -1,12 +1,13 @@
 {
- "generated": "2026-11-27T02:21:49Z",
+ "generated": "2026-11-27T02:37:02Z",
  "errors": {
   "x_guest": "{'influ:ElonTrades': 'Error: Response status: 404 | headers: \"access-control-allow-credentials: true\\\\naccess-control-allow-origin: https://x.com\\\\naccess-control-expose-headers: Backo', 'rate_limit': 'limite X atteinte, reprise au prochain passage (à @ElonTrades)'}",
+  "callpx:SLC": "HTTP Error 429: Too Many Requests",
   "callpx:MANIFEST": "HTTP Error 429: Too Many Requests",
+  "callpx:CLAUDIA": "HTTP Error 429: Too Many Requests",
   "callpx:SPCX": "HTTP Error 429: Too Many Requests",
   "callpx:ANSEM": "HTTP Error 429: Too Many Requests",
   "callpx:TSLA": "HTTP Error 429: Too Many Requests",
-  "callpx:OBI": "HTTP Error 429: Too Many Requests",
   "stocktwits:HYPE": "HTTP Error 404: Not Found",
   "reddit:wallstreetbets": "HTTP Error 404: Not Found",
   "reddit:stocks": "HTTP Error 429: Too Many Requests",
@@ -32,7 +33,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-27T00:43:08.000Z",
-     "eng": 511,
+     "eng": 607,
      "url": "https://x.com/KobeissiLetter/status/2126114568061538638",
      "fr": "Inflationary is intensifying in Japan:\n\nJapan’s Services Producer Price Index (SPPI) jumped +4.2% YoY in October, its largest annual increase since 1990, and far above expectations of +3.6%.\n\nThis index tracks domestic prices businesses charge each other for services, and serves as a key inflation metric in Japan.\n\nMoM, the index rose +1.1%, up from +0.3% in the previous month and marking its bigg",
      "tag": "bull"
@@ -41,7 +42,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T22:49:53.000Z",
-     "eng": 655,
+     "eng": 695,
      "url": "https://x.com/KobeissiLetter/status/2126086064679047463",
      "fr": "BREAKING: The Nasdaq 100 has recorded an average intraday range of 3.8% over the last 5 trading sessions, its highest 5-day volatility since April 2025.\n\nThis is also its 2nd-highest reading since the 2022 bear market, when it peaked at 4.0%.\n\nOn Wednesday alone, this figure rose to 4.2%, while on last Friday it surged to 5.7%, its widest single-session intraday trading range since April 9th, 2025",
      "tag": "mix"
@@ -50,7 +51,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T20:28:20.000Z",
-     "eng": 1123,
+     "eng": 1152,
      "url": "https://x.com/KobeissiLetter/status/2126050442513961064",
      "fr": "The US Dollar is experiencing one of its strongest rallies in years:\n\nThe US Dollar Index has surged +7.0% over the last 9 months, its strongest 9-month rolling performance since November 2022.\n\nThis also marks its 2nd-strongest such run since October 2015.\n\nOver the last 3 months alone, the US Dollar Index has risen +4.8%, its largest 3-month increase since December 2024.\n\nSince its January 2026 ",
      "tag": "bull"
@@ -59,7 +60,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T18:38:16.000Z",
-     "eng": 928,
+     "eng": 944,
      "url": "https://x.com/KobeissiLetter/status/2126022743519101369",
      "fr": "Demand for corporate default protection is rapidly rising.\n\nCumulative trading volume in US corporate credit default swap (CDS) indexes is up to a record $9.6 trillion so far in 2026.\n\nThis already surpasses the full-year 2025 record of $9.0 trillion and exceeds the full-year 2024 figure by +66%.\n\nMeanwhile, just 7 stocks saw a record $9.5 billion in CDS volume traded on average per week in Septem",
      "tag": "mix"
@@ -68,7 +69,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T17:35:59.000Z",
-     "eng": 1488,
+     "eng": 1531,
      "url": "https://x.com/KobeissiLetter/status/2126007068456854006",
      "fr": "Investors are piling into leveraged semiconductor trades:\n\nThe 3x leveraged long semiconductor ETF, SOXL, has attracted +$1.9 billion in inflows so far this week.\n\nOn Monday alone, the fund recorded +$1.7 billion in inflows, its largest daily intake since November 6th.\n\nThis follows +$2.7 billion in inflows during the previous week, its 3rd-largest weekly intake since June.\n\nMeanwhile, over the 20",
      "tag": "mix"
@@ -77,7 +78,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T16:02:08.000Z",
-     "eng": 3514,
+     "eng": 3542,
      "url": "https://x.com/KobeissiLetter/status/2125983454097543386",
      "fr": "BREAKING: President Trump issues a Thanksgiving message and claims that fake US economic data was released prior to the US Midterm Elections.\n\n“It should be immediately investigated, Trump says. https://t.co/TU0Mnnj8kW",
      "tag": "mix"
@@ -86,7 +87,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T15:49:14.000Z",
-     "eng": 1555,
+     "eng": 1578,
      "url": "https://x.com/KobeissiLetter/status/2125980206053708183",
      "fr": "BREAKING: US new home sales jumped +14.2% MoM in October, to an annualized rate of 701,000 units, the highest since December 2025, crushing expectations of a -3.8% decline.\n\nThis marks the largest monthly increase since November 2025 and the 2nd-largest since August 2022.\n\nIt also marks a sharp recovery from the -9.7% MoM decline in September.\n\nOctober's surge was driven by sales in the South, the",
      "tag": "bull"
@@ -95,7 +96,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T12:52:49.000Z",
-     "eng": 4436,
+     "eng": 4463,
      "url": "https://x.com/KobeissiLetter/status/2125935808930582656",
      "fr": "BREAKING: S&amp;P 500 futures extend to +0.8% on the day, rising further out of correction territory.\n\nNasdaq 100 futures are nearly +1%. https://t.co/kr4UkF4Hki",
      "tag": "mix"
@@ -104,7 +105,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T08:22:52.000Z",
-     "eng": 3215,
+     "eng": 3237,
      "url": "https://x.com/KobeissiLetter/status/2125867873218470307",
      "fr": "BREAKING: Elon Musk says SpaceX, $SPCX, will be matching his 1 share donation to every child in America. https://t.co/euRhagXKX1",
      "tag": "mix"
@@ -113,7 +114,7 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T00:32:35.000Z",
-     "eng": 4287,
+     "eng": 4305,
      "url": "https://x.com/KobeissiLetter/status/2125749523452510647",
      "fr": "BREAKING: US M2 money supply surged +$119 billion in October, to a record $23.53 trillion.\n\nYoY, M2 growth accelerated to +5.9%, its highest since May 2022.\n\nThis also marks its 32nd consecutive month of YoY growth.\n\nSince October 2023, M2 has soared +$2.82 trillion, or +$78 billion per month on average.\n\nUS M2 money supply is now $8.18 trillion above its 2019 pre-pandemic levels.\n\nThe purchasing ",
      "tag": "bull"
@@ -141,8 +142,26 @@
     {
      "h": "unusual_whales",
      "fol": 0,
+     "t": "2026-11-25T17:52:00.000Z",
+     "eng": 1791,
+     "url": "https://x.com/unusual_whales/status/2125648711808151866",
+     "fr": "BREAKING: Iowa residents within 20 miles of the Army’s lead detonation are still being told to shelter in place until officials give the all-clear, per FEMA.\n\nThe Army set off nearly 5 tons of toxic lead explosives at the Iowa Army Ammunition Plant in Middletown",
+     "tag": "mix"
+    },
+    {
+     "h": "unusual_whales",
+     "fol": 0,
+     "t": "2026-11-27T02:31:00.000Z",
+     "eng": 3,
+     "url": "https://x.com/unusual_whales/status/2126141710606499876",
+     "fr": "Residents within 20 miles of the Iowa Army Ammunition Plant were told to shelter in place during a lead detonation.\n\nRead more: https://t.co/m8iv84XI5u",
+     "tag": "mix"
+    },
+    {
+     "h": "unusual_whales",
+     "fol": 0,
      "t": "2026-11-25T18:18:00.000Z",
-     "eng": 4868,
+     "eng": 4904,
      "url": "https://x.com/unusual_whales/status/2125655255178469647",
      "fr": "BREAKING: Michael Burry says he’s now almost entirely long after selling the rest of his bearish Nasdaq 100 puts.\n\n“Globally, my portfolio is more long, and less short, than it has been in some time.\"\n\n“In fact, when I say less short, right now apart from Palantir puts and MetLife puts, I am temporarily almost entirely long.\"",
      "tag": "bear"
@@ -151,7 +170,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-27T02:01:00.000Z",
-     "eng": 3,
+     "eng": 8,
      "url": "https://x.com/unusual_whales/status/2126134160851099937",
      "fr": "Michael Burry says he has sold his Nasdaq 100 puts and is now almost entirely long.\n\nRead more: https://t.co/qwoy7zrFRJ",
      "tag": "mix"
@@ -169,7 +188,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-27T00:01:00.000Z",
-     "eng": 529,
+     "eng": 593,
      "url": "https://x.com/unusual_whales/status/2126103961975365708",
      "fr": "The EU is planning a tech fund of up to €50 billion to cut its reliance on US and Chinese technology, per the FT.\n\nThe Sovereign Tech Equity Fund would invest in AI and quantum computing companies. It would make larger, riskier and longer-term investments.",
      "tag": "mix"
@@ -178,7 +197,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-26T23:01:00.000Z",
-     "eng": 3461,
+     "eng": 3879,
      "url": "https://x.com/unusual_whales/status/2126088862544121865",
      "fr": "“Grand Theft Auto VI” sold 47 million copies over its launch weekend, according to data from Sensor Tower. \n\nMeanwhile, engagement with other video games has fallen. “Call of Duty” saw a 46% plunge, while “Fortnite” fell 25%.",
      "tag": "bear"
@@ -187,7 +206,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-26T22:01:00.000Z",
-     "eng": 1636,
+     "eng": 1763,
      "url": "https://x.com/unusual_whales/status/2126073763141943317",
      "fr": "Former Nvidia CEO Jensen Huang allegedly told a room of employees that everyone hoped a colleague in their 70s would die soon, per NYT.",
      "tag": "mix"
@@ -196,7 +215,7 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-26T21:01:00.000Z",
-     "eng": 1668,
+     "eng": 1754,
      "url": "https://x.com/unusual_whales/status/2126058663710199988",
      "fr": "'GTA 6' players can't stop doomscrolling in the game, per BI",
      "tag": "mix"
@@ -214,27 +233,9 @@
      "h": "unusual_whales",
      "fol": 0,
      "t": "2026-11-26T19:20:53.000Z",
-     "eng": 457,
+     "eng": 472,
      "url": "https://x.com/unusual_whales/status/2126033468618395954",
      "fr": "BREAKING: Polymarket has launched perpetual trading on the hourly rental price of Nvidia H100 GPUs.\n\nTraders can now go long or short the cost of AI compute 24/7 with up to 3x leverage.",
-     "tag": "mix"
-    },
-    {
-     "h": "unusual_whales",
-     "fol": 0,
-     "t": "2026-11-26T19:01:00.000Z",
-     "eng": 1941,
-     "url": "https://x.com/unusual_whales/status/2126028464499073301",
-     "fr": "Elon Musk says some of SpaceX’s, $SPCX, “best” data center construction workers come from outside the industry, including former baristas, shelf-stockers and fast food cooks, per BI.",
-     "tag": "mix"
-    },
-    {
-     "h": "unusual_whales",
-     "fol": 0,
-     "t": "2026-11-26T18:17:44.000Z",
-     "eng": 398,
-     "url": "https://x.com/unusual_whales/status/2126017577243799643",
-     "fr": "BREAKING: While Wall Street is closed for Thanksgiving, major U.S. stock indices are moving higher on @liquidtrading \n\nThe S&P 500 and Nasdaq 100 perpetuals are up 0.57% and 0.48%, respectively, since Wednesday's market close, with AI infrastructure stocks among the biggest gainers.",
      "tag": "mix"
     }
    ],
@@ -243,7 +244,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-27T00:59:27.000Z",
-     "eng": 453,
+     "eng": 543,
      "url": "https://x.com/DeItaone/status/2126118672477372600",
      "fr": "TRUMP SAYS WALL STREET’S SHARP SELLOFF BRIEFLY CONCERNED HIM\n\nPresident Donald Trump said Thursday he was briefly concerned by Wednesday’s steep stock market decline, before major indexes recovered much of their losses.\n\n“I was a little concerned yesterday when I saw some pretty big dips, and by the end of the day, it was up again,” Trump told reporters, according to Reuters.\n\nThe Nasdaq plunged m",
      "tag": "mix"
@@ -252,7 +253,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-27T00:58:12.000Z",
-     "eng": 419,
+     "eng": 512,
      "url": "https://x.com/DeItaone/status/2126118358596886832",
      "fr": "TRUMP: WAS CONCERNED ABOUT EARLIER MARKET DIPS",
      "tag": "mix"
@@ -261,7 +262,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-27T00:57:49.000Z",
-     "eng": 343,
+     "eng": 439,
      "url": "https://x.com/DeItaone/status/2126118261058113576",
      "fr": "TRUMP: WILL PROBABLY SPEAK TO NVIDIA'S HUANG SOON",
      "tag": "mix"
@@ -270,7 +271,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-27T00:57:23.000Z",
-     "eng": 84,
+     "eng": 93,
      "url": "https://x.com/DeItaone/status/2126118154254393577",
      "fr": "TRUMP: DON’T KNOW IF PUTIN WILL COME TO G20",
      "tag": "mix"
@@ -279,7 +280,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-27T00:57:00.000Z",
-     "eng": 94,
+     "eng": 112,
      "url": "https://x.com/DeItaone/status/2126118056523170128",
      "fr": "TRUMP: IF HE WANTED TO COME TO G20, HE CAN",
      "tag": "mix"
@@ -288,7 +289,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-26T15:59:46.000Z",
-     "eng": 332,
+     "eng": 334,
      "url": "https://x.com/DeItaone/status/2125982857948795307",
      "fr": "TRUMP’S THANKSGIVING MESSAGE TARGETS ECONOMIC DATA, IMMIGRATION AND POLITICAL OPPONENTS\n\nPresident Donald Trump addressed economic data, immigration policy and political opponents in a lengthy Thanksgiving message.\n\nTrump called for an investigation into the revision of Q3 GDP growth from 3.4% to 4.3%, describing it as a “RECORD SETTING ERROR.”\n\nHe also criticized progressive policies and made dis",
      "tag": "bull"
@@ -297,7 +298,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:42:03.000Z",
-     "eng": 945,
+     "eng": 946,
      "url": "https://x.com/DeItaone/status/2125661310369366182",
      "fr": "$NVDA  - S&P PLACES NVIDIA'S AA CREDIT RATING ON WATCH FOR POSSIBLE DOWNGRADE\n\nS&P Global Ratings has placed Nvidia's AA credit ratings on CreditWatch Negative, citing rising management and governance risks.\n\nThe agency says Jensen Huang's departure and subsequent reinstatement as CEO have not adequately resolved concerns about board oversight of executive conduct.\n\nS&P also flagged vulnerabilitie",
      "tag": "bear"
@@ -306,7 +307,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:35:02.000Z",
-     "eng": 347,
+     "eng": 348,
      "url": "https://x.com/DeItaone/status/2125659543556460847",
      "fr": "ANTHROPIC PBC CEO DARIO AMODEI: CLEAR AND OBVIOUS IMPLICATION IS THAT HUMANS SHOULD REMAIN THE ONES MAKING POLITICAL AND GOVERNANCE DECISIONS",
      "tag": "mix"
@@ -315,7 +316,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:34:40.000Z",
-     "eng": 390,
+     "eng": 391,
      "url": "https://x.com/DeItaone/status/2125659449461215289",
      "fr": "VANCE ON NVIDIA: IT WAS THE BOARD'S DECISION TO BRING HUANG BACK",
      "tag": "mix"
@@ -324,7 +325,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:34:06.000Z",
-     "eng": 456,
+     "eng": 457,
      "url": "https://x.com/DeItaone/status/2125659308184817904",
      "fr": "VANCE ON NVIDIA: I DON'T THINK HUANG NEEDS A PARDON",
      "tag": "mix"
@@ -342,7 +343,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:33:07.000Z",
-     "eng": 974,
+     "eng": 975,
      "url": "https://x.com/DeItaone/status/2125659061462978629",
      "fr": "VANCE ON NVIDIA'S HUANG: WE RECEIVED ASSURANCES THAT HE WAS UNDER NO INVESTIGATION",
      "tag": "mix"
@@ -352,8 +353,35 @@
     {
      "h": "zerohedge",
      "fol": 0,
+     "t": "2026-11-27T02:15:33.000Z",
+     "eng": 599,
+     "url": "https://x.com/zerohedge/status/2126137822922850616",
+     "fr": "Gold, silver just went vertical https://t.co/o3cB9aXNYA",
+     "tag": "mix"
+    },
+    {
+     "h": "zerohedge",
+     "fol": 0,
+     "t": "2026-11-27T02:18:42.000Z",
+     "eng": 17,
+     "url": "https://x.com/zerohedge/status/2126138617768587657",
+     "fr": "Word from our sponsor, @Monetary_Metals \n\nGold is down nearly 30% from its January high. \nEveryone's asking when the next rally will come. But there's a question gold owners aren't asking: What does waiting for the next rally cost you?\n\nhttps://t.co/w6UId4F0JT",
+     "tag": "bull"
+    },
+    {
+     "h": "zerohedge",
+     "fol": 0,
+     "t": "2026-11-27T02:12:40.000Z",
+     "eng": 12,
+     "url": "https://x.com/zerohedge/status/2126137095852872099",
+     "fr": "RT @EricBalchunas: Bruh https://t.co/zPnYTiciqb",
+     "tag": "mix"
+    },
+    {
+     "h": "zerohedge",
+     "fol": 0,
      "t": "2026-11-27T01:35:26.000Z",
-     "eng": 160,
+     "eng": 234,
      "url": "https://x.com/zerohedge/status/2126127729317712348",
      "fr": "Father And Son Who Scammed IRS Out Of $46 Million Plead Guilty... And The Son Even Rapped About It https://t.co/kS7gKohbnF",
      "tag": "mix"
@@ -362,7 +390,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-27T01:03:23.000Z",
-     "eng": 320,
+     "eng": 476,
      "url": "https://x.com/zerohedge/status/2126119662970896562",
      "fr": "RT @kevinnbass: Well well well @Scott_Wiener. What have we here...\n\nIt was not just gifts from Anthropic donors that materialized into your…",
      "tag": "mix"
@@ -371,7 +399,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-27T01:00:27.000Z",
-     "eng": 445,
+     "eng": 596,
      "url": "https://x.com/zerohedge/status/2126118925364547845",
      "fr": "\"This Is A Cyber Attack. All Day\": Hackers Call BS On Official Story After NSA, FAA, Microsoft And Banks Go Dark https://t.co/TFG8qqjEUO",
      "tag": "mix"
@@ -380,7 +408,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-27T00:25:27.000Z",
-     "eng": 95,
+     "eng": 102,
      "url": "https://x.com/zerohedge/status/2126110117468811386",
      "fr": "Americans Set To Put A Record $21 Billion Of Christmas On Buy-Now-Pay-Later... Mostly From Their Phones https://t.co/Oj5Idg9Uvm",
      "tag": "bull"
@@ -389,7 +417,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-26T23:50:27.000Z",
-     "eng": 191,
+     "eng": 208,
      "url": "https://x.com/zerohedge/status/2126101308386017633",
      "fr": "Venezuela Admits Its $237.5 Billion Debt Is Unsustainable https://t.co/wQ6vQrmX3x",
      "tag": "mix"
@@ -398,7 +426,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-26T23:15:26.000Z",
-     "eng": 150,
+     "eng": 161,
      "url": "https://x.com/zerohedge/status/2126092496933372152",
      "fr": "Deutsche Sees S&amp;P 9,000 And Three More Fed Hikes In 2027... While Its Own Credit Team Says Buy Puts https://t.co/Q9y4iiqM81",
      "tag": "mix"
@@ -407,7 +435,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-26T23:03:33.000Z",
-     "eng": 106,
+     "eng": 111,
      "url": "https://x.com/zerohedge/status/2126089503307878738",
      "fr": "Goldman estimates 0.5 to 0.75GW of China-linked AI load; assume ~1.9kW of IT power per Blackwell-class GPU (a 135kW rack of 72), and you get between 263,000 and 395,000 GPUs that either need a US license, a non-Chinese tenant, or a buyer within 90 days. At Liquid's B300 index that is $17 billion to $25 billion a year of rent to re-let.",
      "tag": "mix"
@@ -416,7 +444,7 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-26T23:01:46.000Z",
-     "eng": 501,
+     "eng": 566,
      "url": "https://x.com/zerohedge/status/2126089057000477095",
      "fr": "Who was renting to whom: this is the offshore compute trade Washington just shut https://t.co/SdR6F2QJfc",
      "tag": "mix"
@@ -425,36 +453,9 @@
      "h": "zerohedge",
      "fol": 0,
      "t": "2026-11-26T22:42:29.000Z",
-     "eng": 330,
+     "eng": 332,
      "url": "https://x.com/zerohedge/status/2126084203158859988",
      "fr": "RT @TencentAI_News: We just open-sourced a speculative decoder that speeds up sparse models like DeepSeek-V4.1-Flash, GLM-5.3-Flash, and ou…",
-     "tag": "mix"
-    },
-    {
-     "h": "zerohedge",
-     "fol": 0,
-     "t": "2026-11-26T22:40:26.000Z",
-     "eng": 156,
-     "url": "https://x.com/zerohedge/status/2126083686630056087",
-     "fr": "Zelensky Says He Will Seek More Military Aid From New Dem-Controlled Congress https://t.co/nM57YeL6Of",
-     "tag": "mix"
-    },
-    {
-     "h": "zerohedge",
-     "fol": 0,
-     "t": "2026-11-26T22:20:26.000Z",
-     "eng": 436,
-     "url": "https://x.com/zerohedge/status/2126078656044793903",
-     "fr": "Two Streaming Platforms Welcome Thanksgiving In Starkly Different Ways  https://t.co/54dPWNFKUH",
-     "tag": "mix"
-    },
-    {
-     "h": "zerohedge",
-     "fol": 0,
-     "t": "2026-11-26T22:05:27.000Z",
-     "eng": 297,
-     "url": "https://x.com/zerohedge/status/2126074882999869943",
-     "fr": "Capitol Hill Erupts Over American Billionaire's Govt-Backed Buyout Of Lukoil's Global Assets Using Frozen Russian Securities https://t.co/2ix4tjF3mo",
      "tag": "mix"
     }
    ],
@@ -463,7 +464,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-17T16:21:33.000Z",
-     "eng": 2037,
+     "eng": 2038,
      "url": "https://x.com/WatcherGuru/status/2122726848719454429",
      "fr": "Watcher Guru News Terminal is Officially Live.\n\nSign up now: https://t.co/k6hnkX2yyJ https://t.co/5ayrkRUWw9",
      "tag": "mix"
@@ -472,7 +473,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T21:29:41.000Z",
-     "eng": 3199,
+     "eng": 3309,
      "url": "https://x.com/WatcherGuru/status/2126065882195714275",
      "fr": "JUST IN: 🇺🇸 Elon Musk pledges to donate a share of his SpaceX $SPCX stock to every child in America every year.",
      "tag": "mix"
@@ -481,7 +482,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T16:21:05.000Z",
-     "eng": 3232,
+     "eng": 3272,
      "url": "https://x.com/WatcherGuru/status/2125988222862061598",
      "fr": "JUST IN: 🇷🇺 Russian President Putin warns AI has the potential to become a dangerous force capable of harming humanity. https://t.co/jeOIA8IxKI",
      "tag": "mix"
@@ -490,7 +491,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T16:05:47.000Z",
-     "eng": 14891,
+     "eng": 15240,
      "url": "https://x.com/WatcherGuru/status/2125984371387605039",
      "fr": "JUST IN: 🇺🇸🇨🇳 US lawmakers reach bipartisan deal to permanently ban Chinese cars from the United States. https://t.co/z2zzq9EufS",
      "tag": "mix"
@@ -499,7 +500,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T15:55:31.000Z",
-     "eng": 4835,
+     "eng": 4912,
      "url": "https://x.com/WatcherGuru/status/2125981785058328882",
      "fr": "JUST IN: 🇺🇸 President Donald Trump calls for an immediate investigation into \"fake economic numbers\" released before midterm elections, after US GDP growth was revised up from 3.4% to 4.3%. https://t.co/xecWcRV3ML",
      "tag": "mix"
@@ -508,7 +509,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T12:45:17.000Z",
-     "eng": 6171,
+     "eng": 6207,
      "url": "https://x.com/WatcherGuru/status/2125933915076743212",
      "fr": "JUST IN: 🇨🇭 Switzerland approves its first spot Bitcoin ETF on its SIX Swiss Exchange.",
      "tag": "mix"
@@ -517,7 +518,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T11:30:08.000Z",
-     "eng": 7395,
+     "eng": 7476,
      "url": "https://x.com/WatcherGuru/status/2125915002813260004",
      "fr": "JUST IN: Nvidia $NVDA orders manufacturing partners to halt shipments of servers containing its chips to the following countries: \n\n• Thailand\n• Malaysia\n• Indonesia\n• Singapore",
      "tag": "mix"
@@ -526,7 +527,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T10:45:52.000Z",
-     "eng": 6875,
+     "eng": 6976,
      "url": "https://x.com/WatcherGuru/status/2125903859092787395",
      "fr": "Bitcoin Price on Thanksgiving 🦃 \n\n2010: $0.28\n2011: $2.49\n2012: $12.51\n2013: $813\n2014: $376\n2015: $328\n2016: $739\n2017: $8,771\n2018: $4,015\n2019: $7,150\n2020: $18,764\n2021: $58,927\n2022 $16,353\n2023: $37,035\n2024: $95,531\n2025: $91,711\n2026: $60,400",
      "tag": "mix"
@@ -535,7 +536,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T03:29:43.000Z",
-     "eng": 4741,
+     "eng": 4759,
      "url": "https://x.com/WatcherGuru/status/2125794100083343740",
      "fr": "JUST IN: Banking giant HSBC's crypto stablecoin surpasses 100,000 users in its first month.",
      "tag": "mix"
@@ -544,7 +545,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T00:18:50.000Z",
-     "eng": 6391,
+     "eng": 6408,
      "url": "https://x.com/WatcherGuru/status/2125746063600668963",
      "fr": "JUST IN: Bitcoin reclaims $61,000 https://t.co/aZOl3Y1Plx",
      "tag": "mix"
@@ -553,7 +554,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T00:11:23.000Z",
-     "eng": 11317,
+     "eng": 11331,
      "url": "https://x.com/WatcherGuru/status/2125744187010433137",
      "fr": "JUST IN: 🇺🇸 US House Financial Services Committee advances bill to establish Strategic Bitcoin Reserve.",
      "tag": "mix"
@@ -562,7 +563,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T22:49:10.000Z",
-     "eng": 6304,
+     "eng": 6305,
      "url": "https://x.com/WatcherGuru/status/2125723498395959582",
      "fr": "JUST IN: 🇺🇸 Trump administration discussed invoking wartime powers to forcefully reinstate Jensen Huang as Nvidia $NVDA CEO after he stepped down, WaPo reports. https://t.co/uEUxNwkjXV",
      "tag": "mix"
@@ -573,7 +574,7 @@
      "h": "realDonaldTrump",
      "fol": 0,
      "t": "2026-11-03T19:16:44.000Z",
-     "eng": 16314,
+     "eng": 16324,
      "url": "https://x.com/realDonaldTrump/status/2117697505270100335",
      "fr": "FIND YOUR ELECTION DAY VOTING LOCATION HERE!\nhttps://t.co/o3mbQ7ewdU",
      "tag": "mix"
@@ -582,7 +583,7 @@
      "h": "realDonaldTrump",
      "fol": 0,
      "t": "2026-11-03T20:44:47.000Z",
-     "eng": 5668,
+     "eng": 5670,
      "url": "https://x.com/realDonaldTrump/status/2117719664008851609",
      "fr": "RT @realDonaldTrump: TO THE GREAT PEOPLE OF ALABAMA, GET OUT AND VOTE for these Great Patriots! They have my Complete and Total Endorsement…",
      "tag": "mix"
@@ -683,7 +684,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T03:43:05.000Z",
-     "eng": 639060,
+     "eng": 644247,
      "url": "https://x.com/elonmusk/status/2125797463047258119",
      "fr": "Every child in America will receive two SpaceX shares, one from the company and one from me personally",
      "tag": "mix"
@@ -692,7 +693,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-27T00:26:21.000Z",
-     "eng": 17635,
+     "eng": 20017,
      "url": "https://x.com/elonmusk/status/2126110344120762593",
      "fr": "Vital that children have a stake in the future",
      "tag": "mix"
@@ -701,7 +702,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T21:23:31.000Z",
-     "eng": 35466,
+     "eng": 37680,
      "url": "https://x.com/elonmusk/status/2126064330022265197",
      "fr": "Super appreciate your support. Tesla wouldn’t be where it is without our awesome customers.",
      "tag": "mix"
@@ -710,7 +711,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T21:21:54.000Z",
-     "eng": 312,
+     "eng": 326,
      "url": "https://x.com/elonmusk/status/2126063925938762222",
      "fr": "RT @SamSokolin: The team has been cooking over the last few weeks! You should now see an additional 11% more usage out of your plan, and up…",
      "tag": "mix"
@@ -719,7 +720,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T20:07:10.000Z",
-     "eng": 157012,
+     "eng": 163701,
      "url": "https://x.com/elonmusk/status/2126045116624216127",
      "fr": "❤️❤️ Happy Thanksgiving! ❤️❤️",
      "tag": "mix"
@@ -728,7 +729,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T19:27:35.000Z",
-     "eng": 790,
+     "eng": 800,
      "url": "https://x.com/elonmusk/status/2126035157308055882",
      "fr": "RT @firesidealpha: JUST IN: ~70% of signers on the petition against SpaceX's data center in Arizona's Cochise County don't even live there,…",
      "tag": "mix"
@@ -737,7 +738,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T19:17:21.000Z",
-     "eng": 1918,
+     "eng": 1972,
      "url": "https://x.com/elonmusk/status/2126032581397516487",
      "fr": "RT @Geiger_Capital: Half of the English settlers who arrived on the Mayflower were dead after the first winter…\n\nThe first harvest in 1621…",
      "tag": "mix"
@@ -746,7 +747,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T19:17:01.000Z",
-     "eng": 1732,
+     "eng": 1738,
      "url": "https://x.com/elonmusk/status/2126032496315777161",
      "fr": "RT @SpaceX: Teams encapsulated the Cygnus XL spacecraft earlier this week ahead of Falcon 9’s launch of @northropgrumman's commercial resup…",
      "tag": "mix"
@@ -755,7 +756,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T09:01:00.000Z",
-     "eng": 1558,
+     "eng": 1564,
      "url": "https://x.com/elonmusk/status/2125877472361140302",
      "fr": "RT @iam_smx: Fraudsters always complain the loudest when they’re exposed. Just look at what happened with USAID\n\n“One lesson I remember fro…",
      "tag": "mix"
@@ -764,7 +765,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T09:00:19.000Z",
-     "eng": 336,
+     "eng": 338,
      "url": "https://x.com/elonmusk/status/2125877299849425282",
      "fr": "RT @ericzakariasson: grok @bot 1.3.0 is rolling out!\n\nsmarter slack bots, restock alerts and mobile buy now, automatic teams setup with org…",
      "tag": "mix"
@@ -773,7 +774,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T08:59:15.000Z",
-     "eng": 26214,
+     "eng": 26554,
      "url": "https://x.com/elonmusk/status/2125877031816630636",
      "fr": "Boring Co has built a lot of tunnels under Vegas",
      "tag": "mix"
@@ -782,7 +783,7 @@
      "h": "elonmusk",
      "fol": 0,
      "t": "2026-11-26T08:58:25.000Z",
-     "eng": 462,
+     "eng": 464,
      "url": "https://x.com/elonmusk/status/2125876818515497340",
      "fr": "RT @WayneVaughan: Here’s the Trump account sign-up page. \n\nhttps://t.co/Ec6bnWU08a",
      "tag": "mix"
@@ -792,17 +793,44 @@
     {
      "h": "Mr_Derivatives",
      "fol": 0,
-     "t": "2026-11-23T22:24:16.000Z",
-     "eng": 681,
-     "url": "https://x.com/Mr_Derivatives/status/2124992453451403338",
-     "fr": "$SPX The April 2025 Liberation lows had that one day bigly +10% pop, before giving back half of those gains in the next 7 trading days. Then mooned.\n\nJust sayin'.",
+     "t": "2026-11-26T02:36:07.000Z",
+     "eng": 1339,
+     "url": "https://x.com/Mr_Derivatives/status/2125780612762251573",
+     "fr": "For near term bull's 👀only:\n\n$QQQ If we get some kind of 2022 bear market analog ish going on, we could be in for a decently big DCB near term before next leg lower. \n\nLet's see... https://t.co/Sf7MMtAI6v",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
+     "t": "2026-11-27T02:30:49.000Z",
+     "eng": 60,
+     "url": "https://x.com/Mr_Derivatives/status/2126141666214256978",
+     "fr": "$QQQ +2% overnight now.",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
+     "t": "2026-11-27T02:18:48.000Z",
+     "eng": 142,
+     "url": "https://x.com/Mr_Derivatives/status/2126138642460778815",
+     "fr": "RT @Mr_Derivatives: During the 2000 Dot-com crash, the $QQQ dropped -84% peak to trough. But it had about eight +20-50% bear market rallies…",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
+     "t": "2026-11-27T02:17:10.000Z",
+     "eng": 116,
+     "url": "https://x.com/Mr_Derivatives/status/2126138228394852689",
+     "fr": "At the rate this bigly bounce is going overnight, we could see a sub 20 $VIX tomorrow. Or close to it….",
      "tag": "mix"
     },
     {
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:59:21.000Z",
-     "eng": 14,
+     "eng": 35,
      "url": "https://x.com/Mr_Derivatives/status/2126133745233313979",
      "fr": "An X idea: \n\n@allegrajacchia \n\nNothing against having an X subscription. Like go get your bread and support your fanbase/followers. All for it. \n\nBut I think the individual’s X page should have subscription posts in another tab or something separate from public posts.\n\nOtherwise there are accounts (not subscribed to)I love but sometimes when I scroll through their X page and all I see is this belo",
      "tag": "mix"
@@ -811,7 +839,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:46:59.000Z",
-     "eng": 78,
+     "eng": 123,
      "url": "https://x.com/Mr_Derivatives/status/2126130633810612527",
      "fr": "$SPX is 7.9% away from ATH’s currently.\n\nI mean in the grand scheme of things. Not that bad.",
      "tag": "mix"
@@ -820,7 +848,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:44:28.000Z",
-     "eng": 228,
+     "eng": 234,
      "url": "https://x.com/Mr_Derivatives/status/2126130000382566584",
      "fr": "RT @Mr_Derivatives: For near term bull's 👀only:\n\n$QQQ If we get some kind of 2022 bear market analog ish going on, we could be in for a dec…",
      "tag": "mix"
@@ -829,7 +857,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:32:33.000Z",
-     "eng": 201,
+     "eng": 232,
      "url": "https://x.com/Mr_Derivatives/status/2126127003200114848",
      "fr": "How the heck did Dallas Cowboys lose that game omg!",
      "tag": "mix"
@@ -847,7 +875,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:20:01.000Z",
-     "eng": 44,
+     "eng": 51,
      "url": "https://x.com/Mr_Derivatives/status/2126123846172610968",
      "fr": "First NFL game between Lions/Bears: Wild!\n\nSecond NFL game between Eagles/Cowboys: Wilder!!\n\nThird NFL game tonight between Bills/Chiefs: ______\n\nFill in the blank.",
      "tag": "mix"
@@ -856,7 +884,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:09:30.000Z",
-     "eng": 141,
+     "eng": 166,
      "url": "https://x.com/Mr_Derivatives/status/2126121199885549814",
      "fr": "One prominent bear I follow, who I highly respect, even he suggests the $QQQ is due for a bounce up to $660. But you sell that bounce.\n\n@AtlasShrug1",
      "tag": "mix"
@@ -865,36 +893,9 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:06:44.000Z",
-     "eng": 258,
+     "eng": 343,
      "url": "https://x.com/Mr_Derivatives/status/2126120504155337094",
      "fr": "$QQQ now up 5.3% from yesterday’s intraday low to tonight’s overnight peak.\n\nJeezus.",
-     "tag": "mix"
-    },
-    {
-     "h": "Mr_Derivatives",
-     "fol": 0,
-     "t": "2026-11-27T01:05:01.000Z",
-     "eng": 99,
-     "url": "https://x.com/Mr_Derivatives/status/2126120074394415508",
-     "fr": "Stats:\n\nThe Fear/Greed meter has not hit Greed in 3 months now.\n\nThis is the longest such streak since Dec 2024-May 2025!\n\nThe Fear/Greed meter has not hit Extreme Greed in 17 months!\n\nWild.",
-     "tag": "mix"
-    },
-    {
-     "h": "Mr_Derivatives",
-     "fol": 0,
-     "t": "2026-11-27T00:50:31.000Z",
-     "eng": 134,
-     "url": "https://x.com/Mr_Derivatives/status/2126116423575732228",
-     "fr": "$ETH Something about that blue box area that you will get rewarded each time until proven otherwise...\n\nWhy not one more time? https://t.co/bICksLLG7m",
-     "tag": "mix"
-    },
-    {
-     "h": "Mr_Derivatives",
-     "fol": 0,
-     "t": "2026-11-27T00:41:31.000Z",
-     "eng": 107,
-     "url": "https://x.com/Mr_Derivatives/status/2126114158668345698",
-     "fr": "$BTC Chart Update:\n\nBulls gotta use that weekly RSI divergence like the other two times and go boing boing. Also sitting on this notable blue random trend line.\n\nHolding $60k is a start. But gotta start pushing prices higher now to get away from making new lower lows... https://t.co/N58wVMyIcp",
      "tag": "mix"
     }
    ],
@@ -912,7 +913,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2025-01-23T01:00:36.000Z",
-     "eng": 57987,
+     "eng": 57991,
      "url": "https://x.com/TheRoaringKitty/status/1882231930021949446",
      "fr": "https://t.co/cQLyEYs5Wl",
      "tag": "mix"
@@ -930,7 +931,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-12-25T15:00:02.000Z",
-     "eng": 66495,
+     "eng": 66494,
      "url": "https://x.com/TheRoaringKitty/status/1871933930963693706",
      "fr": "https://t.co/RLv8w97uPp",
      "tag": "mix"
@@ -939,7 +940,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-12-05T18:45:00.000Z",
-     "eng": 89100,
+     "eng": 89099,
      "url": "https://x.com/TheRoaringKitty/status/1864742787197116887",
      "fr": "https://t.co/tXViICmVFG",
      "tag": "mix"
@@ -957,7 +958,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-27T17:00:01.000Z",
-     "eng": 50689,
+     "eng": 50692,
      "url": "https://x.com/TheRoaringKitty/status/1806371920495186041",
      "fr": "https://t.co/jQBMX4jwjR",
      "tag": "mix"
@@ -984,7 +985,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-13T18:00:00.000Z",
-     "eng": 65610,
+     "eng": 65609,
      "url": "https://x.com/TheRoaringKitty/status/1801313585421029445",
      "fr": "https://t.co/milvQfDdVh",
      "tag": "mix"
@@ -993,7 +994,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-12T14:00:00.000Z",
-     "eng": 68778,
+     "eng": 68777,
      "url": "https://x.com/TheRoaringKitty/status/1800890801632747972",
      "fr": "https://t.co/H2RChMB9Iz",
      "tag": "mix"
@@ -1002,7 +1003,7 @@
      "h": "TheRoaringKitty",
      "fol": 0,
      "t": "2024-06-12T01:15:15.000Z",
-     "eng": 63874,
+     "eng": 63877,
      "url": "https://x.com/TheRoaringKitty/status/1800698343540015491",
      "fr": "https://t.co/Ydduqqw0dC",
      "tag": "mix"
@@ -1015,25 +1016,16 @@
      "h": "KobeissiLetter",
      "fol": 0,
      "t": "2026-11-26T08:22:52.000Z",
-     "eng": 3215,
+     "eng": 3237,
      "url": "https://x.com/KobeissiLetter/status/2125867873218470307",
      "fr": "BREAKING: Elon Musk says SpaceX, $SPCX, will be matching his 1 share donation to every child in America. https://t.co/euRhagXKX1",
-     "tag": "mix"
-    },
-    {
-     "h": "unusual_whales",
-     "fol": 0,
-     "t": "2026-11-26T19:01:00.000Z",
-     "eng": 1941,
-     "url": "https://x.com/unusual_whales/status/2126028464499073301",
-     "fr": "Elon Musk says some of SpaceX’s, $SPCX, “best” data center construction workers come from outside the industry, including former baristas, shelf-stockers and fast food cooks, per BI.",
      "tag": "mix"
     },
     {
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T21:29:41.000Z",
-     "eng": 3199,
+     "eng": 3309,
      "url": "https://x.com/WatcherGuru/status/2126065882195714275",
      "fr": "JUST IN: 🇺🇸 Elon Musk pledges to donate a share of his SpaceX $SPCX stock to every child in America every year.",
      "tag": "mix"
@@ -1044,7 +1036,7 @@
      "h": "DeItaone",
      "fol": 0,
      "t": "2026-11-25T18:42:03.000Z",
-     "eng": 945,
+     "eng": 946,
      "url": "https://x.com/DeItaone/status/2125661310369366182",
      "fr": "$NVDA  - S&P PLACES NVIDIA'S AA CREDIT RATING ON WATCH FOR POSSIBLE DOWNGRADE\n\nS&P Global Ratings has placed Nvidia's AA credit ratings on CreditWatch Negative, citing rising management and governance risks.\n\nThe agency says Jensen Huang's departure and subsequent reinstatement as CEO have not adequately resolved concerns about board oversight of executive conduct.\n\nS&P also flagged vulnerabilitie",
      "tag": "bear"
@@ -1053,7 +1045,7 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-26T11:30:08.000Z",
-     "eng": 7395,
+     "eng": 7476,
      "url": "https://x.com/WatcherGuru/status/2125915002813260004",
      "fr": "JUST IN: Nvidia $NVDA orders manufacturing partners to halt shipments of servers containing its chips to the following countries: \n\n• Thailand\n• Malaysia\n• Indonesia\n• Singapore",
      "tag": "mix"
@@ -1062,29 +1054,9 @@
      "h": "WatcherGuru",
      "fol": 0,
      "t": "2026-11-25T22:49:10.000Z",
-     "eng": 6304,
+     "eng": 6305,
      "url": "https://x.com/WatcherGuru/status/2125723498395959582",
      "fr": "JUST IN: 🇺🇸 Trump administration discussed invoking wartime powers to forcefully reinstate Jensen Huang as Nvidia $NVDA CEO after he stepped down, WaPo reports. https://t.co/uEUxNwkjXV",
-     "tag": "mix"
-    }
-   ],
-   "SPX": [
-    {
-     "h": "Mr_Derivatives",
-     "fol": 0,
-     "t": "2026-11-23T22:24:16.000Z",
-     "eng": 681,
-     "url": "https://x.com/Mr_Derivatives/status/2124992453451403338",
-     "fr": "$SPX The April 2025 Liberation lows had that one day bigly +10% pop, before giving back half of those gains in the next 7 trading days. Then mooned.\n\nJust sayin'.",
-     "tag": "mix"
-    },
-    {
-     "h": "Mr_Derivatives",
-     "fol": 0,
-     "t": "2026-11-27T01:46:59.000Z",
-     "eng": 78,
-     "url": "https://x.com/Mr_Derivatives/status/2126130633810612527",
-     "fr": "$SPX is 7.9% away from ATH’s currently.\n\nI mean in the grand scheme of things. Not that bad.",
      "tag": "mix"
     }
    ],
@@ -1092,8 +1064,35 @@
     {
      "h": "Mr_Derivatives",
      "fol": 0,
+     "t": "2026-11-26T02:36:07.000Z",
+     "eng": 1339,
+     "url": "https://x.com/Mr_Derivatives/status/2125780612762251573",
+     "fr": "For near term bull's 👀only:\n\n$QQQ If we get some kind of 2022 bear market analog ish going on, we could be in for a decently big DCB near term before next leg lower. \n\nLet's see... https://t.co/Sf7MMtAI6v",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
+     "t": "2026-11-27T02:30:49.000Z",
+     "eng": 60,
+     "url": "https://x.com/Mr_Derivatives/status/2126141666214256978",
+     "fr": "$QQQ +2% overnight now.",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
+     "t": "2026-11-27T02:18:48.000Z",
+     "eng": 142,
+     "url": "https://x.com/Mr_Derivatives/status/2126138642460778815",
+     "fr": "RT @Mr_Derivatives: During the 2000 Dot-com crash, the $QQQ dropped -84% peak to trough. But it had about eight +20-50% bear market rallies…",
+     "tag": "mix"
+    },
+    {
+     "h": "Mr_Derivatives",
+     "fol": 0,
      "t": "2026-11-27T01:44:28.000Z",
-     "eng": 228,
+     "eng": 234,
      "url": "https://x.com/Mr_Derivatives/status/2126130000382566584",
      "fr": "RT @Mr_Derivatives: For near term bull's 👀only:\n\n$QQQ If we get some kind of 2022 bear market analog ish going on, we could be in for a dec…",
      "tag": "mix"
@@ -1102,7 +1101,7 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:09:30.000Z",
-     "eng": 141,
+     "eng": 166,
      "url": "https://x.com/Mr_Derivatives/status/2126121199885549814",
      "fr": "One prominent bear I follow, who I highly respect, even he suggests the $QQQ is due for a bounce up to $660. But you sell that bounce.\n\n@AtlasShrug1",
      "tag": "mix"
@@ -1111,31 +1110,31 @@
      "h": "Mr_Derivatives",
      "fol": 0,
      "t": "2026-11-27T01:06:44.000Z",
-     "eng": 258,
+     "eng": 343,
      "url": "https://x.com/Mr_Derivatives/status/2126120504155337094",
      "fr": "$QQQ now up 5.3% from yesterday’s intraday low to tonight’s overnight peak.\n\nJeezus.",
      "tag": "mix"
     }
    ],
-   "ETH": [
+   "VIX": [
     {
      "h": "Mr_Derivatives",
      "fol": 0,
-     "t": "2026-11-27T00:50:31.000Z",
-     "eng": 134,
-     "url": "https://x.com/Mr_Derivatives/status/2126116423575732228",
-     "fr": "$ETH Something about that blue box area that you will get rewarded each time until proven otherwise...\n\nWhy not one more time? https://t.co/bICksLLG7m",
+     "t": "2026-11-27T02:17:10.000Z",
+     "eng": 116,
+     "url": "https://x.com/Mr_Derivatives/status/2126138228394852689",
+     "fr": "At the rate this bigly bounce is going overnight, we could see a sub 20 $VIX tomorrow. Or close to it….",
      "tag": "mix"
     }
    ],
-   "BTC": [
+   "SPX": [
     {
      "h": "Mr_Derivatives",
      "fol": 0,
-     "t": "2026-11-27T00:41:31.000Z",
-     "eng": 107,
-     "url": "https://x.com/Mr_Derivatives/status/2126114158668345698",
-     "fr": "$BTC Chart Update:\n\nBulls gotta use that weekly RSI divergence like the other two times and go boing boing. Also sitting on this notable blue random trend line.\n\nHolding $60k is a start. But gotta start pushing prices higher now to get away from making new lower lows... https://t.co/N58wVMyIcp",
+     "t": "2026-11-27T01:46:59.000Z",
+     "eng": 123,
+     "url": "https://x.com/Mr_Derivatives/status/2126130633810612527",
+     "fr": "$SPX is 7.9% away from ATH’s currently.\n\nI mean in the grand scheme of things. Not that bad.",
      "tag": "mix"
     }
    ]
@@ -1144,8 +1143,71 @@
    {
     "h": "unusual_whales",
     "fol": 0,
-    "t": "2026-11-27T02:01:00.000Z",
+    "t": "2026-11-27T02:31:00.000Z",
     "eng": 3,
+    "url": "https://x.com/unusual_whales/status/2126141710606499876",
+    "fr": "Residents within 20 miles of the Iowa Army Ammunition Plant were told to shelter in place during a lead detonation.\n\nRead more: https://t.co/m8iv84XI5u",
+    "tag": "mix"
+   },
+   {
+    "h": "Mr_Derivatives",
+    "fol": 0,
+    "t": "2026-11-27T02:30:49.000Z",
+    "eng": 60,
+    "url": "https://x.com/Mr_Derivatives/status/2126141666214256978",
+    "fr": "$QQQ +2% overnight now.",
+    "tag": "mix"
+   },
+   {
+    "h": "Mr_Derivatives",
+    "fol": 0,
+    "t": "2026-11-27T02:18:48.000Z",
+    "eng": 142,
+    "url": "https://x.com/Mr_Derivatives/status/2126138642460778815",
+    "fr": "RT @Mr_Derivatives: During the 2000 Dot-com crash, the $QQQ dropped -84% peak to trough. But it had about eight +20-50% bear market rallies…",
+    "tag": "mix"
+   },
+   {
+    "h": "zerohedge",
+    "fol": 0,
+    "t": "2026-11-27T02:18:42.000Z",
+    "eng": 17,
+    "url": "https://x.com/zerohedge/status/2126138617768587657",
+    "fr": "Word from our sponsor, @Monetary_Metals \n\nGold is down nearly 30% from its January high. \nEveryone's asking when the next rally will come. But there's a question gold owners aren't asking: What does waiting for the next rally cost you?\n\nhttps://t.co/w6UId4F0JT",
+    "tag": "bull"
+   },
+   {
+    "h": "Mr_Derivatives",
+    "fol": 0,
+    "t": "2026-11-27T02:17:10.000Z",
+    "eng": 116,
+    "url": "https://x.com/Mr_Derivatives/status/2126138228394852689",
+    "fr": "At the rate this bigly bounce is going overnight, we could see a sub 20 $VIX tomorrow. Or close to it….",
+    "tag": "mix"
+   },
+   {
+    "h": "zerohedge",
+    "fol": 0,
+    "t": "2026-11-27T02:15:33.000Z",
+    "eng": 599,
+    "url": "https://x.com/zerohedge/status/2126137822922850616",
+    "fr": "Gold, silver just went vertical https://t.co/o3cB9aXNYA",
+    "tag": "mix"
+   },
+   {
+    "h": "zerohedge",
+    "fol": 0,
+    "t": "2026-11-27T02:12:40.000Z",
+    "eng": 12,
+    "url": "https://x.com/zerohedge/status/2126137095852872099",
+    "fr": "RT @EricBalchunas: Bruh https://t.co/zPnYTiciqb",
+    "tag": "mix"
+   },
+   {
+    "h": "unusual_whales",
+    "fol": 0,
+    "t": "2026-11-27T02:01:00.000Z",
+    "eng": 8,
     "url": "https://x.com/unusual_whales/status/2126134160851099937",
     "fr": "Michael Burry says he has sold his Nasdaq 100 puts and is now almost entirely long.\n\nRead more: https://t.co/qwoy7zrFRJ",
     "tag": "mix"
@@ -1154,7 +1216,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:59:21.000Z",
-    "eng": 14,
+    "eng": 35,
     "url": "https://x.com/Mr_Derivatives/status/2126133745233313979",
     "fr": "An X idea: \n\n@allegrajacchia \n\nNothing against having an X subscription. Like go get your bread and support your fanbase/followers. All for it. \n\nBut I think the individual’s X page should have subscription posts in another tab or something separate from public posts.\n\nOtherwise there are accounts (not subscribed to)I love but sometimes when I scroll through their X page and all I see is this belo",
     "tag": "mix"
@@ -1163,7 +1225,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:46:59.000Z",
-    "eng": 78,
+    "eng": 123,
     "url": "https://x.com/Mr_Derivatives/status/2126130633810612527",
     "fr": "$SPX is 7.9% away from ATH’s currently.\n\nI mean in the grand scheme of things. Not that bad.",
     "tag": "mix"
@@ -1172,7 +1234,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:44:28.000Z",
-    "eng": 228,
+    "eng": 234,
     "url": "https://x.com/Mr_Derivatives/status/2126130000382566584",
     "fr": "RT @Mr_Derivatives: For near term bull's 👀only:\n\n$QQQ If we get some kind of 2022 bear market analog ish going on, we could be in for a dec…",
     "tag": "mix"
@@ -1181,7 +1243,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-27T01:35:26.000Z",
-    "eng": 160,
+    "eng": 234,
     "url": "https://x.com/zerohedge/status/2126127729317712348",
     "fr": "Father And Son Who Scammed IRS Out Of $46 Million Plead Guilty... And The Son Even Rapped About It https://t.co/kS7gKohbnF",
     "tag": "mix"
@@ -1190,7 +1252,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:32:33.000Z",
-    "eng": 201,
+    "eng": 232,
     "url": "https://x.com/Mr_Derivatives/status/2126127003200114848",
     "fr": "How the heck did Dallas Cowboys lose that game omg!",
     "tag": "mix"
@@ -1208,7 +1270,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:20:01.000Z",
-    "eng": 44,
+    "eng": 51,
     "url": "https://x.com/Mr_Derivatives/status/2126123846172610968",
     "fr": "First NFL game between Lions/Bears: Wild!\n\nSecond NFL game between Eagles/Cowboys: Wilder!!\n\nThird NFL game tonight between Bills/Chiefs: ______\n\nFill in the blank.",
     "tag": "mix"
@@ -1217,7 +1279,7 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:09:30.000Z",
-    "eng": 141,
+    "eng": 166,
     "url": "https://x.com/Mr_Derivatives/status/2126121199885549814",
     "fr": "One prominent bear I follow, who I highly respect, even he suggests the $QQQ is due for a bounce up to $660. But you sell that bounce.\n\n@AtlasShrug1",
     "tag": "mix"
@@ -1226,25 +1288,16 @@
     "h": "Mr_Derivatives",
     "fol": 0,
     "t": "2026-11-27T01:06:44.000Z",
-    "eng": 258,
+    "eng": 343,
     "url": "https://x.com/Mr_Derivatives/status/2126120504155337094",
     "fr": "$QQQ now up 5.3% from yesterday’s intraday low to tonight’s overnight peak.\n\nJeezus.",
-    "tag": "mix"
-   },
-   {
-    "h": "Mr_Derivatives",
-    "fol": 0,
-    "t": "2026-11-27T01:05:01.000Z",
-    "eng": 99,
-    "url": "https://x.com/Mr_Derivatives/status/2126120074394415508",
-    "fr": "Stats:\n\nThe Fear/Greed meter has not hit Greed in 3 months now.\n\nThis is the longest such streak since Dec 2024-May 2025!\n\nThe Fear/Greed meter has not hit Extreme Greed in 17 months!\n\nWild.",
     "tag": "mix"
    },
    {
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-27T01:03:23.000Z",
-    "eng": 320,
+    "eng": 476,
     "url": "https://x.com/zerohedge/status/2126119662970896562",
     "fr": "RT @kevinnbass: Well well well @Scott_Wiener. What have we here...\n\nIt was not just gifts from Anthropic donors that materialized into your…",
     "tag": "mix"
@@ -1262,7 +1315,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-27T01:00:27.000Z",
-    "eng": 445,
+    "eng": 596,
     "url": "https://x.com/zerohedge/status/2126118925364547845",
     "fr": "\"This Is A Cyber Attack. All Day\": Hackers Call BS On Official Story After NSA, FAA, Microsoft And Banks Go Dark https://t.co/TFG8qqjEUO",
     "tag": "mix"
@@ -1271,7 +1324,7 @@
     "h": "DeItaone",
     "fol": 0,
     "t": "2026-11-27T00:59:27.000Z",
-    "eng": 453,
+    "eng": 543,
     "url": "https://x.com/DeItaone/status/2126118672477372600",
     "fr": "TRUMP SAYS WALL STREET’S SHARP SELLOFF BRIEFLY CONCERNED HIM\n\nPresident Donald Trump said Thursday he was briefly concerned by Wednesday’s steep stock market decline, before major indexes recovered much of their losses.\n\n“I was a little concerned yesterday when I saw some pretty big dips, and by the end of the day, it was up again,” Trump told reporters, according to Reuters.\n\nThe Nasdaq plunged m",
     "tag": "mix"
@@ -1280,7 +1333,7 @@
     "h": "DeItaone",
     "fol": 0,
     "t": "2026-11-27T00:58:12.000Z",
-    "eng": 419,
+    "eng": 512,
     "url": "https://x.com/DeItaone/status/2126118358596886832",
     "fr": "TRUMP: WAS CONCERNED ABOUT EARLIER MARKET DIPS",
     "tag": "mix"
@@ -1289,7 +1342,7 @@
     "h": "DeItaone",
     "fol": 0,
     "t": "2026-11-27T00:57:49.000Z",
-    "eng": 343,
+    "eng": 439,
     "url": "https://x.com/DeItaone/status/2126118261058113576",
     "fr": "TRUMP: WILL PROBABLY SPEAK TO NVIDIA'S HUANG SOON",
     "tag": "mix"
@@ -1298,7 +1351,7 @@
     "h": "DeItaone",
     "fol": 0,
     "t": "2026-11-27T00:57:23.000Z",
-    "eng": 84,
+    "eng": 93,
     "url": "https://x.com/DeItaone/status/2126118154254393577",
     "fr": "TRUMP: DON’T KNOW IF PUTIN WILL COME TO G20",
     "tag": "mix"
@@ -1307,43 +1360,25 @@
     "h": "DeItaone",
     "fol": 0,
     "t": "2026-11-27T00:57:00.000Z",
-    "eng": 94,
+    "eng": 112,
     "url": "https://x.com/DeItaone/status/2126118056523170128",
     "fr": "TRUMP: IF HE WANTED TO COME TO G20, HE CAN",
-    "tag": "mix"
-   },
-   {
-    "h": "Mr_Derivatives",
-    "fol": 0,
-    "t": "2026-11-27T00:50:31.000Z",
-    "eng": 134,
-    "url": "https://x.com/Mr_Derivatives/status/2126116423575732228",
-    "fr": "$ETH Something about that blue box area that you will get rewarded each time until proven otherwise...\n\nWhy not one more time? https://t.co/bICksLLG7m",
     "tag": "mix"
    },
    {
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-27T00:43:08.000Z",
-    "eng": 511,
+    "eng": 607,
     "url": "https://x.com/KobeissiLetter/status/2126114568061538638",
     "fr": "Inflationary is intensifying in Japan:\n\nJapan’s Services Producer Price Index (SPPI) jumped +4.2% YoY in October, its largest annual increase since 1990, and far above expectations of +3.6%.\n\nThis index tracks domestic prices businesses charge each other for services, and serves as a key inflation metric in Japan.\n\nMoM, the index rose +1.1%, up from +0.3% in the previous month and marking its bigg",
     "tag": "bull"
    },
    {
-    "h": "Mr_Derivatives",
-    "fol": 0,
-    "t": "2026-11-27T00:41:31.000Z",
-    "eng": 107,
-    "url": "https://x.com/Mr_Derivatives/status/2126114158668345698",
-    "fr": "$BTC Chart Update:\n\nBulls gotta use that weekly RSI divergence like the other two times and go boing boing. Also sitting on this notable blue random trend line.\n\nHolding $60k is a start. But gotta start pushing prices higher now to get away from making new lower lows... https://t.co/N58wVMyIcp",
-    "tag": "mix"
-   },
-   {
     "h": "elonmusk",
     "fol": 0,
     "t": "2026-11-27T00:26:21.000Z",
-    "eng": 17635,
+    "eng": 20017,
     "url": "https://x.com/elonmusk/status/2126110344120762593",
     "fr": "Vital that children have a stake in the future",
     "tag": "mix"
@@ -1352,7 +1387,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-27T00:25:27.000Z",
-    "eng": 95,
+    "eng": 102,
     "url": "https://x.com/zerohedge/status/2126110117468811386",
     "fr": "Americans Set To Put A Record $21 Billion Of Christmas On Buy-Now-Pay-Later... Mostly From Their Phones https://t.co/Oj5Idg9Uvm",
     "tag": "bull"
@@ -1361,7 +1396,7 @@
     "h": "unusual_whales",
     "fol": 0,
     "t": "2026-11-27T00:01:00.000Z",
-    "eng": 529,
+    "eng": 593,
     "url": "https://x.com/unusual_whales/status/2126103961975365708",
     "fr": "The EU is planning a tech fund of up to €50 billion to cut its reliance on US and Chinese technology, per the FT.\n\nThe Sovereign Tech Equity Fund would invest in AI and quantum computing companies. It would make larger, riskier and longer-term investments.",
     "tag": "mix"
@@ -1370,7 +1405,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-26T23:50:27.000Z",
-    "eng": 191,
+    "eng": 208,
     "url": "https://x.com/zerohedge/status/2126101308386017633",
     "fr": "Venezuela Admits Its $237.5 Billion Debt Is Unsustainable https://t.co/wQ6vQrmX3x",
     "tag": "mix"
@@ -1379,7 +1414,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-26T23:15:26.000Z",
-    "eng": 150,
+    "eng": 161,
     "url": "https://x.com/zerohedge/status/2126092496933372152",
     "fr": "Deutsche Sees S&amp;P 9,000 And Three More Fed Hikes In 2027... While Its Own Credit Team Says Buy Puts https://t.co/Q9y4iiqM81",
     "tag": "mix"
@@ -1388,7 +1423,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-26T23:03:33.000Z",
-    "eng": 106,
+    "eng": 111,
     "url": "https://x.com/zerohedge/status/2126089503307878738",
     "fr": "Goldman estimates 0.5 to 0.75GW of China-linked AI load; assume ~1.9kW of IT power per Blackwell-class GPU (a 135kW rack of 72), and you get between 263,000 and 395,000 GPUs that either need a US license, a non-Chinese tenant, or a buyer within 90 days. At Liquid's B300 index that is $17 billion to $25 billion a year of rent to re-let.",
     "tag": "mix"
@@ -1397,7 +1432,7 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-26T23:01:46.000Z",
-    "eng": 501,
+    "eng": 566,
     "url": "https://x.com/zerohedge/status/2126089057000477095",
     "fr": "Who was renting to whom: this is the offshore compute trade Washington just shut https://t.co/SdR6F2QJfc",
     "tag": "mix"
@@ -1406,7 +1441,7 @@
     "h": "unusual_whales",
     "fol": 0,
     "t": "2026-11-26T23:01:00.000Z",
-    "eng": 3461,
+    "eng": 3879,
     "url": "https://x.com/unusual_whales/status/2126088862544121865",
     "fr": "“Grand Theft Auto VI” sold 47 million copies over its launch weekend, according to data from Sensor Tower. \n\nMeanwhile, engagement with other video games has fallen. “Call of Duty” saw a 46% plunge, while “Fortnite” fell 25%.",
     "tag": "bear"
@@ -1415,7 +1450,7 @@
     "h": "KobeissiLetter",
     "fol": 0,
     "t": "2026-11-26T22:49:53.000Z",
-    "eng": 655,
+    "eng": 695,
     "url": "https://x.com/KobeissiLetter/status/2126086064679047463",
     "fr": "BREAKING: The Nasdaq 100 has recorded an average intraday range of 3.8% over the last 5 trading sessions, its highest 5-day volatility since April 2025.\n\nThis is also its 2nd-highest reading since the 2022 bear market, when it peaked at 4.0%.\n\nOn Wednesday alone, this figure rose to 4.2%, while on last Friday it surged to 5.7%, its widest single-session intraday trading range since April 9th, 2025",
     "tag": "mix"
@@ -1424,43 +1459,16 @@
     "h": "zerohedge",
     "fol": 0,
     "t": "2026-11-26T22:42:29.000Z",
-    "eng": 330,
+    "eng": 332,
     "url": "https://x.com/zerohedge/status/2126084203158859988",
     "fr": "RT @TencentAI_News: We just open-sourced a speculative decoder that speeds up sparse models like DeepSeek-V4.1-Flash, GLM-5.3-Flash, and ou…",
-    "tag": "mix"
-   },
-   {
-    "h": "zerohedge",
-    "fol": 0,
-    "t": "2026-11-26T22:40:26.000Z",
-    "eng": 156,
-    "url": "https://x.com/zerohedge/status/2126083686630056087",
-    "fr": "Zelensky Says He Will Seek More Military Aid From New Dem-Controlled Congress https://t.co/nM57YeL6Of",
-    "tag": "mix"
-   },
-   {
-    "h": "zerohedge",
-    "fol": 0,
-    "t": "2026-11-26T22:20:26.000Z",
-    "eng": 436,
-    "url": "https://x.com/zerohedge/status/2126078656044793903",
-    "fr": "Two Streaming Platforms Welcome Thanksgiving In Starkly Different Ways  https://t.co/54dPWNFKUH",
-    "tag": "mix"
-   },
-   {
-    "h": "zerohedge",
-    "fol": 0,
-    "t": "2026-11-26T22:05:27.000Z",
-    "eng": 297,
-    "url": "https://x.com/zerohedge/status/2126074882999869943",
-    "fr": "Capitol Hill Erupts Over American Billionaire's Govt-Backed Buyout Of Lukoil's Global Assets Using Frozen Russian Securities https://t.co/2ix4tjF3mo",
     "tag": "mix"
    },
    {
     "h": "unusual_whales",
     "fol": 0,
     "t": "2026-11-26T22:01:00.000Z",
-    "eng": 1636,
+    "eng": 1763,
     "url": "https://x.com/unusual_whales/status/2126073763141943317",
     "fr": "Former Nvidia CEO Jensen Huang allegedly told a room of employees that everyone hoped a colleague in their 70s would die soon, per NYT.",
     "tag": "mix"
@@ -1469,7 +1477,7 @@
     "h": "WatcherGuru",
     "fol": 0,
     "t": "2026-11-26T21:29:41.000Z",
-    "eng": 3199,
+    "eng": 3309,
     "url": "https://x.com/WatcherGuru/status/2126065882195714275",
     "fr": "JUST IN: 🇺🇸 Elon Musk pledges to donate a share of his SpaceX $SPCX stock to every child in America every year.",
     "tag": "mix"
@@ -1478,7 +1486,7 @@
     "h": "elonmusk",
     "fol": 0,
     "t": "2026-11-26T21:23:31.000Z",
-    "eng": 35466,
+    "eng": 37680,
     "url": "https://x.com/elonmusk/status/2126064330022265197",
     "fr": "Super appreciate your support. Tesla wouldn’t be where it is without our awesome customers.",
     "tag": "mix"
@@ -1487,18 +1495,9 @@
     "h": "elonmusk",
     "fol": 0,
     "t": "2026-11-26T21:21:54.000Z",
-    "eng": 312,
+    "eng": 326,
     "url": "https://x.com/elonmusk/status/2126063925938762222",
     "fr": "RT @SamSokolin: The team has been cooking over the last few weeks! You should now see an additional 11% more usage out of your plan, and up…",
-    "tag": "mix"
-   },
-   {
-    "h": "unusual_whales",
-    "fol": 0,
-    "t": "2026-11-26T21:01:00.000Z",
-    "eng": 1668,
-    "url": "https://x.com/unusual_whales/status/2126058663710199988",
-    "fr": "'GTA 6' players can't stop doomscrolling in the game, per BI",
     "tag": "mix"
    }
   ]
@@ -1508,202 +1507,202 @@
   [
    "BTC",
    1,
-   1231087488693
+   1240373691848
   ],
   [
    "ETH",
    2,
-   209596579998
+   211858032635
   ],
   [
    "USDT",
    3,
-   173831912633
+   173833272871
   ],
   [
    "BNB",
    4,
-   73603049484
+   74127861357
   ],
   [
    "USDC",
    5,
-   69216466924
+   69213384380
   ],
   [
    "XRP",
    6,
-   60742988094
+   61162471609
   ],
   [
    "SOL",
    7,
-   42680693558
+   43077232944
   ],
   [
    "FIGR_HELOC",
    8,
-   29221105392
+   29220780425
   ],
   [
    "TRX",
    9,
-   28913112528
+   28939924950
   ],
   [
    "HYPE",
    10,
-   15187423362
+   15415289034
   ],
   [
    "ZEC",
    11,
-   12378010457
+   12679054470
   ],
   [
    "DOGE",
    12,
-   8986617118
+   9067026113
   ],
   [
    "XMR",
    13,
-   8779071496
+   8836016020
   ],
   [
    "LEO",
    14,
-   8352320161
+   8351753376
   ],
   [
    "WBT",
    15,
-   7326780289
+   7384063897
   ],
   [
    "LINK",
    16,
-   7240846108
+   7308975298
   ],
   [
    "USDS",
    17,
-   6296875052
+   6296944999
   ],
   [
    "ADA",
    18,
-   5666106025
+   5708530057
   ],
   [
    "USDE",
    19,
-   4916186279
+   4916327340
   ],
   [
    "XLM",
    20,
-   4549940636
-  ],
-  [
-   "DAI",
-   21,
-   4339934481
+   4584336761
   ],
   [
    "BCH",
+   21,
+   4409137526
+  ],
+  [
+   "DAI",
    22,
-   4328588202
+   4340731814
   ],
   [
    "NEAR",
    23,
-   4083282293
+   4124225569
   ],
   [
    "LTC",
    24,
-   3456642920
+   3479899120
   ],
   [
    "CC",
    25,
-   3013898040
+   3035046725
   ],
   [
    "AVAX",
    26,
-   2988123242
+   3012184729
   ],
   [
    "UNI",
    27,
-   2934363166
+   2961202949
   ],
   [
    "XAUT",
    28,
-   2919268469
+   2932127851
   ],
   [
    "USD1",
    29,
-   2851998003
+   2851996915
   ],
   [
    "SUI",
    30,
-   2805642898
-  ],
-  [
-   "RLUSD",
-   31,
-   2800593730
+   2828900297
   ],
   [
    "GRAM",
+   31,
+   2814163758
+  ],
+  [
+   "RLUSD",
    32,
-   2792136139
+   2800570358
   ],
   [
    "USDG",
    33,
-   2573862525
+   2573916660
   ],
   [
    "HBAR",
    34,
-   2416576569
+   2434415519
   ],
   [
    "USDY",
    35,
-   2374160991
+   2374089327
   ],
   [
    "PYUSD",
    36,
-   2372065898
+   2372097453
   ],
   [
    "QNT",
    37,
-   2185190848
+   2204721214
   ],
   [
    "TAO",
    38,
-   2176736512
+   2200811976
   ],
   [
    "SHIB",
    39,
-   2158033679
+   2174860138
   ],
   [
    "EURSAFO",
    40,
-   2120987912
+   2120808665
   ],
   [
    "USYC",
@@ -1713,37 +1712,37 @@
   [
    "CRO",
    42,
-   2086733494
+   2106451201
   ],
   [
    "M",
    43,
-   1926737166
+   1935114508
   ],
   [
    "RAIN",
    44,
-   1788094209
+   1797785386
   ],
   [
    "OKB",
    45,
-   1755868916
+   1775392307
   ],
   [
    "USDF",
    46,
-   1712058450
+   1712089226
   ],
   [
    "PAXG",
    47,
-   1612642201
+   1618908129
   ],
   [
    "U",
    48,
-   1601608824
+   1601530033
   ],
   [
    "BUIDL",
@@ -1753,177 +1752,177 @@
   [
    "PEPE",
    50,
-   1497478321
+   1514038564
   ],
   [
    "BTW",
-   52,
-   1489784787
-  ],
-  [
-   "USDD",
    51,
-   1487071347
+   1494611112
   ],
   [
    "AAVE",
+   52,
+   1492772766
+  ],
+  [
+   "USDD",
    53,
-   1476009760
+   1487158106
   ],
   [
    "ONDO",
    54,
-   1422831615
+   1435007777
   ],
   [
    "ENA",
    55,
-   1394541076
+   1406315660
   ],
   [
    "WLFI",
    56,
-   1333331207
-  ],
-  [
-   "BFUSD",
-   57,
-   1318208144
+   1335230801
   ],
   [
    "VVV",
+   57,
+   1319733994
+  ],
+  [
+   "BFUSD",
    58,
-   1313027228
+   1318089616
   ],
   [
    "ASTER",
    59,
-   1306149402
+   1313436410
   ],
   [
    "HTX",
    60,
-   1291386780
+   1288875579
   ],
   [
    "MNT",
    61,
-   1276225962
+   1281327842
   ],
   [
    "DOT",
    62,
-   1171725363
+   1181528955
   ],
   [
    "MORPHO",
    63,
-   1164745311
+   1172811221
   ],
   [
    "ICP",
    64,
-   1149011240
+   1163019719
   ],
   [
    "JST",
    65,
-   1146311253
+   1145092620
   ],
   [
    "SKY",
    66,
-   1091775664
+   1117020707
   ],
   [
    "PIEVERSE",
    67,
-   1083097928
+   1080213336
   ],
   [
    "BGB",
    68,
-   1066047323
+   1068182430
   ],
   [
    "OUSD",
    69,
-   1009852755
+   1011788008
   ],
   [
    "ETC",
    70,
-   949222485
+   954860946
   ],
   [
    "WLD",
    71,
-   940065926
+   948484961
   ],
   [
    "PUMP",
    72,
-   930708111
+   938639959
   ],
   [
    "USDGO",
    73,
-   923037617
+   923046805
   ],
   [
    "KCS",
    74,
-   843458959
+   850693703
   ],
   [
    "POL",
    75,
-   832451863
+   837591387
   ],
   [
    "NIGHT",
-   77,
-   810255496
+   76,
+   819241006
   ],
   [
    "ARB",
-   76,
-   810138064
+   77,
+   816909267
   ],
   [
    "JUP",
    78,
-   807236415
+   812045293
   ],
   [
    "ALGO",
    79,
-   753059630
+   761230550
   ],
   [
    "RENDER",
    80,
-   751962646
+   756503805
   ],
   [
    "KAS",
    81,
-   750133070
-  ],
-  [
-   "PEARL",
-   82,
-   715349919
+   754227961
   ],
   [
    "GT",
+   82,
+   720523533
+  ],
+  [
+   "PEARL",
    83,
-   714538910
+   718470288
   ],
   [
    "GHO",
    84,
-   697851736
+   697813741
   ],
   [
    "USTB",
@@ -1933,27 +1932,27 @@
   [
    "ATOM",
    86,
-   669846747
+   675226761
   ],
   [
    "INJ",
    87,
-   635388855
-  ],
-  [
-   "NEXO",
-   88,
-   629414972
+   639647087
   ],
   [
    "LIT",
+   88,
+   638319274
+  ],
+  [
+   "NEXO",
    89,
-   628893196
+   632467604
   ],
   [
    "PI",
    90,
-   614963356
+   619852944
   ],
   [
    "JAAA",
@@ -1963,147 +1962,147 @@
   [
    "USD0",
    92,
-   536673193
+   536677666
   ],
   [
    "BDX",
    93,
-   531878227
+   532339489
   ],
   [
    "XDC",
    94,
-   522948589
-  ],
-  [
-   "EURC",
-   95,
-   502374973
+   522141369
   ],
   [
    "CAKE",
+   95,
+   506208682
+  ],
+  [
+   "EURC",
    96,
-   502306230
+   502396458
   ],
   [
    "STX",
    97,
-   494509562
+   500173301
   ],
   [
    "TUSD",
    98,
-   493850471
+   493642648
   ],
   [
    "EUTBL",
    99,
-   475984486
+   475944260
   ],
   [
    "DASH",
    100,
-   470210391
+   472723830
   ],
   [
    "FIL",
    101,
-   468645949
+   470421065
   ],
   [
    "STABLE",
-   102,
-   461637025
-  ],
-  [
-   "币安人生",
    103,
-   458467768
+   462517544
   ],
   [
    "ZRO",
-   104,
-   458207114
+   102,
+   461892056
   ],
   [
-   "A7A5",
-   105,
-   453588124
+   "币安人生",
+   104,
+   460023035
   ],
   [
    "ETHFI",
+   105,
+   458893447
+  ],
+  [
+   "A7A5",
    106,
-   452970578
+   453593168
   ],
   [
    "FLR",
    107,
-   443630131
+   445102025
   ],
   [
    "VET",
    108,
-   424147079
+   428162822
   ],
   [
    "DRV",
    109,
-   408433812
+   410002618
   ],
   [
    "PYTH",
    110,
-   391748834
+   395778942
   ],
   [
    "SOFID",
    111,
-   380045050
+   380043451
   ],
   [
    "HASH",
    112,
-   378686009
+   379369190
   ],
   [
    "FF",
    113,
-   367312187
+   368803326
   ],
   [
    "YLDS",
    114,
-   365932889
+   365936606
   ],
   [
    "RAY",
    115,
-   360303244
+   363484416
   ],
   [
    "APT",
    116,
-   347009524
+   349553765
   ],
   [
    "KITE",
    117,
-   345713520
+   344491712
   ],
   [
    "TIA",
    118,
-   340762729
+   342957849
   ],
   [
    "REUSD",
    119,
-   336826633
+   336832658
   ],
   [
    "AERO",
    120,
-   319251599
+   320785433
   ],
   [
    "OUSG",
@@ -2113,82 +2112,82 @@
   [
    "KAU",
    122,
-   315162752
+   315164500
   ],
   [
    "APEPE",
    123,
-   295707891
-  ],
-  [
-   "BTT",
-   124,
-   291147839
+   295552785
   ],
   [
    "BSV",
-   125,
-   290220416
+   124,
+   291544854
   ],
   [
-   "FET",
-   126,
-   282714165
+   "BTT",
+   125,
+   291134909
   ],
   [
    "CRV",
-   127,
-   281860027
+   126,
+   284361046
   ],
   [
-   "PENGU",
-   128,
-   281466784
+   "FET",
+   127,
+   283764322
   ],
   [
    "GRASS",
+   128,
+   283163775
+  ],
+  [
+   "PENGU",
    129,
-   279947097
+   282767396
   ],
   [
    "SUN",
    130,
-   278524064
+   278562541
   ],
   [
    "FDUSD",
    131,
-   271944402
-  ],
-  [
-   "APXUSD",
-   132,
-   270515798
+   271950518
   ],
   [
    "UB",
    133,
-   267762967
+   270905810
+  ],
+  [
+   "APXUSD",
+   132,
+   270511731
   ],
   [
    "MON",
    134,
-   267029368
+   269089250
   ],
   [
    "SEI",
    135,
-   261484673
+   263245017
   ],
   [
    "SPX",
    136,
-   258947368
+   261184764
   ],
   [
    "TRUMP",
    137,
-   258120890
+   259510907
   ],
   [
    "SAFO",
@@ -2198,32 +2197,32 @@
   [
    "LUNC",
    139,
-   250608910
+   252244944
   ],
   [
    "STRK",
    140,
-   245839363
+   247549720
   ],
   [
    "VIRTUAL",
    141,
-   244162803
+   246252731
   ],
   [
    "XTZ",
    142,
-   243120556
+   244080486
   ],
   [
    "XPL",
    143,
-   238722693
+   240250233
   ],
   [
    "GNO",
    144,
-   229502067
+   231531094
   ],
   [
    "PC0000031",
@@ -2238,102 +2237,102 @@
   [
    "OZO",
    147,
-   221547245
+   221913188
   ],
   [
    "OHM",
    148,
-   220009176
+   221396725
   ],
   [
    "FRAX",
    149,
-   217764023
+   218432113
   ],
   [
    "PENDLE",
    150,
-   213425084
+   216282403
   ],
   [
    "NVDAB",
    151,
-   201372507
+   202500046
   ],
   [
    "USX",
    152,
-   201054429
+   201049175
   ],
   [
    "LDO",
    153,
-   196391477
+   197819315
   ],
   [
    "BONK",
    154,
-   192857505
+   194171398
   ],
   [
    "DCR",
    155,
-   189150806
-  ],
-  [
-   "USAT",
-   156,
-   189072192
-  ],
-  [
-   "BEAM",
-   157,
-   188380260
+   190068807
   ],
   [
    "BP",
    158,
-   187573710
+   189319942
+  ],
+  [
+   "USAT",
+   156,
+   189059728
+  ],
+  [
+   "BEAM",
+   157,
+   188869237
   ],
   [
    "KAIA",
    159,
-   185293745
+   187222117
   ],
   [
    "RUNE",
-   160,
-   184728155
-  ],
-  [
-   "EURCV",
    161,
-   184621654
+   185712479
   ],
   [
    "GRT",
+   160,
+   185677894
+  ],
+  [
+   "EURCV",
    162,
-   184299517
+   184701461
+  ],
+  [
+   "CFX",
+   164,
+   182420634
   ],
   [
    "BTSE",
    163,
-   181948309
+   182112225
   ],
   [
    "COMP",
-   164,
-   180809572
-  ],
-  [
-   "CFX",
    165,
-   180213573
+   181157401
   ],
   [
    "NFT",
    166,
-   178106788
+   178092177
   ],
   [
    "USTBL",
@@ -2341,144 +2340,139 @@
    174806713
   ],
   [
-   "SHFL",
+   "KOGE",
    168,
-   174405186
+   174531128
   ],
   [
-   "KOGE",
+   "SHFL",
    169,
-   173924298
+   174081590
   ],
   [
    "ZBCN",
    170,
-   169111062
-  ],
-  [
-   "PC0000033",
-   171,
-   162500000
-  ],
-  [
-   "FLOKI",
-   173,
-   161856467
+   170959222
   ],
   [
    "OP",
+   171,
+   163340317
+  ],
+  [
+   "FLOKI",
    172,
-   161851834
+   162935284
+  ],
+  [
+   "PC0000033",
+   173,
+   162500000
   ],
   [
    "USDAI",
    174,
-   159240663
+   159242451
   ],
   [
    "KAG",
    175,
-   157489712
+   158595929
   ],
   [
    "JASMY",
-   176,
-   157273492
+   177,
+   157542526
   ],
   [
    "SENT",
-   177,
-   155734948
+   176,
+   157396631
   ],
   [
    "IOTA",
    178,
-   154738240
+   155975693
   ],
   [
-   "AUSD",
+   "AR",
    179,
-   152084516
+   153322086
   ],
   [
    "CARDS",
    180,
-   151900533
-  ],
-  [
-   "AR",
-   181,
-   151776316
+   152750755
   ],
   [
    "AKT",
+   181,
+   152604605
+  ],
+  [
+   "AUSD",
    182,
-   151717179
+   152081631
   ],
   [
    "ENS",
    183,
-   150939071
+   151913345
   ],
   [
    "GUSD",
    184,
-   149631599
+   149648226
   ],
   [
    "GOMINING",
    185,
-   148117693
+   148166951
   ],
   [
    "KMNO",
    186,
-   145493036
+   146069784
   ],
   [
    "CAP",
    187,
-   143729509
+   144273610
   ],
   [
    "DGAI",
    188,
-   140461332
+   140287339
   ],
   [
    "CRVUSD",
    189,
-   139708948
+   139999071
   ],
   [
    "GEOD",
    190,
-   139437230
+   139503351
   ],
   [
    "ZAMA",
    191,
-   138394981
+   139274976
   ],
   [
    "WIF",
    192,
-   136940805
+   138549200
   ],
   [
    "NVDAX",
-   193,
-   135927816
+   194,
+   136658561
   ],
   [
    "THETA",
-   194,
-   135781636
-  ],
-  [
-   "CASH",
-   196,
-   134012671
+   193,
+   136344901
   ],
   [
    "PC0000097",
@@ -2486,124 +2480,134 @@
    134000000
   ],
   [
+   "CASH",
+   196,
+   133985801
+  ],
+  [
    "APYUSD",
    197,
-   131608148
+   131602314
   ],
   [
    "TWT",
    198,
-   129710246
+   130768437
   ],
   [
    "MX",
    199,
-   129373786
-  ],
-  [
-   "BORG",
-   200,
-   128747336
+   129428621
   ],
   [
    "FLUID",
+   200,
+   129411154
+  ],
+  [
+   "BORG",
    201,
-   128447786
+   129195713
   ],
   [
    "JTO",
-   203,
-   127635416
-  ],
-  [
-   "JPYSC",
    202,
-   127499343
+   129053971
   ],
   [
    "Q",
+   203,
+   127576720
+  ],
+  [
+   "JPYSC",
    204,
-   126575435
+   127492037
   ],
   [
    "S",
    205,
-   125867585
+   127184708
   ],
   [
    "COCO",
    206,
-   125734815
+   126152538
   ],
   [
    "VSN",
    207,
-   123847464
+   124275999
   ],
   [
    "XCN",
    208,
-   121003369
+   120679377
   ],
   [
    "USDF",
-   209,
-   119585052
+   210,
+   119586191
   ],
   [
    "BAT",
-   210,
-   118537661
-  ],
-  [
-   "TRAC",
-   211,
-   118403252
-  ],
-  [
-   "THBILL",
-   212,
-   117712647
-  ],
-  [
-   "MET",
-   213,
-   117388695
+   209,
+   119460181
   ],
   [
    "SOXLB",
-   214,
-   116820879
+   211,
+   119169047
+  ],
+  [
+   "MET",
+   212,
+   118872672
   ],
   [
    "CRCLB",
+   213,
+   117794526
+  ],
+  [
+   "THBILL",
+   214,
+   117713956
+  ],
+  [
+   "TRAC",
    215,
-   116693832
-  ],
-  [
-   "SOSO",
-   216,
-   116292775
-  ],
-  [
-   "AUTO",
-   218,
-   115723423
-  ],
-  [
-   "BR",
-   217,
-   115692241
+   117498605
   ],
   [
    "EIGEN",
-   219,
-   115274494
+   216,
+   116442437
+  ],
+  [
+   "SOSO",
+   217,
+   116103792
   ],
   [
    "AXS",
+   219,
+   115931367
+  ],
+  [
+   "BR",
+   218,
+   115919401
+  ],
+  [
+   "AUTO",
    220,
-   115030895
+   115741903
+  ],
+  [
+   "MANA",
+   222,
+   114575373
   ],
   [
    "PC0000023",
@@ -2612,68 +2616,63 @@
   ],
   [
    "ALFW",
-   222,
-   114330001
-  ],
-  [
-   "MANA",
    223,
-   113720614
+   114330001
   ],
   [
    "SN51",
    224,
-   112441567
-  ],
-  [
-   "PC0000085",
-   225,
-   111874199
+   113845920
   ],
   [
    "NEO",
+   225,
+   112733446
+  ],
+  [
+   "PC0000085",
    226,
-   111673591
+   111874199
   ],
   [
    "SPCXB",
    227,
-   110912945
-  ],
-  [
-   "NOPAL",
-   228,
-   110680127
+   111275477
   ],
   [
    "ANVL",
-   229,
-   110447278
+   228,
+   111048719
   ],
   [
-   "USD3",
-   230,
-   110133894
+   "NOPAL",
+   229,
+   110680127
   ],
   [
    "A",
+   230,
+   110456040
+  ],
+  [
+   "USD3",
    231,
-   109788779
+   110129051
   ],
   [
    "CVX",
    232,
-   108247805
-  ],
-  [
-   "BC",
-   234,
-   106534525
+   108986022
   ],
   [
    "O",
+   234,
+   106971767
+  ],
+  [
+   "BC",
    233,
-   106518729
+   106957512
   ],
   [
    "STAC",
@@ -2688,72 +2687,72 @@
   [
    "XEC",
    237,
-   104904159
+   105434477
   ],
   [
    "AWE",
    238,
-   103420531
+   104112873
   ],
   [
    "SAND",
    239,
-   102600584
+   102870019
   ],
   [
    "STRCX",
    240,
-   102201962
+   102306800
+  ],
+  [
+   "CRCLX",
+   241,
+   100609208
   ],
   [
    "PC0000077",
-   241,
+   242,
    100000000
   ],
   [
    "UUSD",
-   242,
-   99853406
-  ],
-  [
-   "CRCLX",
    243,
-   99546458
+   99911211
   ],
   [
    "B",
    244,
-   98613906
-  ],
-  [
-   "RLB",
-   245,
-   97201915
+   99042775
   ],
   [
    "CHZ",
+   245,
+   97569068
+  ],
+  [
+   "RLB",
    246,
-   96980504
+   97460499
   ],
   [
    "2Z",
    247,
-   95667635
+   96769994
   ],
   [
    "GLM",
    249,
-   95114831
+   95748709
   ],
   [
    "AIOZ",
    248,
-   94896009
+   95743019
   ],
   [
    "ULTIMA",
    250,
-   94586014
+   94676574
   ],
   [
    "GLM",
@@ -12208,15 +12207,15 @@
   }
  },
  "metals": {
-  "au": 3648.9,
+  "au": 3642.8,
   "au_prev": 3515.4,
-  "au_t": 1795745525,
-  "ag": 43.51,
+  "au_t": 1795746434,
+  "ag": 43.305,
   "ag_prev": 41.035,
-  "ag_t": 1795745525,
-  "eurusd": 1.0979,
+  "ag_t": 1795746441,
+  "eurusd": 1.0983,
   "eurusd_prev": 1.0972,
-  "eurusd_t": 1795746106
+  "eurusd_t": 1795747006
  },
  "influ_prof": {
   "altstreetbet": {
@@ -23300,9 +23299,9 @@
     "POMPOM",
     "WASTED",
     "TEXEL",
-    "JAOJIU",
     "JINGYU",
-    "DUH"
+    "DUH",
+    "JAOJIU"
    ],
    "tag": "bull"
   },
@@ -46948,11 +46947,11 @@
  "tokens": {
   "POL": {
    "name": "Polygon Ecosystem Token",
-   "price": 0.07838,
-   "mcap": 835317211,
-   "ch24": 2.04,
-   "liq": 32056.55,
-   "vol24": 3480.97,
+   "price": 0.07875,
+   "mcap": 839304799,
+   "ch24": 3.16,
+   "liq": 32266.78,
+   "vol24": 3601.66,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/ethereum/0x88ada7b1dd1c728ea87404cea7a0780139eb35d1",
@@ -46965,11 +46964,11 @@
   },
   "WLFI": {
    "name": "World Liberty Financial",
-   "price": 0.04255,
-   "mcap": 1348208261,
-   "ch24": -0.14,
-   "liq": 2037741.62,
-   "vol24": 6762.2,
+   "price": 0.04254,
+   "mcap": 1347756982,
+   "ch24": -0.17,
+   "liq": 2043840.21,
+   "vol24": 10216.97,
    "logo": "https://cdn.dexscreener.com/cms/images/25b7206903f26b9c4ba9a53c6e9d38ba56f32241f78bd0e1c6c35b81ed3df7ed?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/ba789ad56091c0a6af3ea56c622c2a4f60d816b33b29a182169acd6511a41dfa?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/ethereum/0x7f2869b24d83f03e0438c045ce24fd18045b2b6cdec47cd7b62e67e2284d1be9",
@@ -46982,11 +46981,11 @@
   },
   "SWOGE": {
    "name": "Swole Doge",
-   "price": 0.0001122,
-   "mcap": 112278,
-   "ch24": 331,
-   "liq": 28407.75,
-   "vol24": 436816.36,
+   "price": 0.0001164,
+   "mcap": 116402,
+   "ch24": 347,
+   "liq": 29040.52,
+   "vol24": 441215.73,
    "logo": "https://cdn.dexscreener.com/cms/images/S6T603vhYg6MHwbF?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/VKVWp6M5sSfPepec?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/bsc/0xc84118b31a79cb4120b5a72bb763a89567109210",
@@ -46999,11 +46998,11 @@
   },
   "TORCH": {
    "name": "Torch",
-   "price": 0.003387,
-   "mcap": 3192734,
-   "ch24": -2.14,
-   "liq": 1014673.55,
-   "vol24": 88205.32,
+   "price": 0.003414,
+   "mcap": 3217650,
+   "ch24": -1.37,
+   "liq": 1022601.11,
+   "vol24": 88247.1,
    "logo": "https://cdn.dexscreener.com/cms/images/XhCHHfeIrnIrPUXz?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/WB_GdPszcGTp_Rbs?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x1649550af1e3363b4c25236434530af7e6886b183e1f574a98fdd1d04d287a2d",
@@ -47016,11 +47015,11 @@
   },
   "VVV": {
    "name": "Venice Token",
-   "price": 26.65,
-   "mcap": 1320665574,
-   "ch24": -11.78,
-   "liq": 7267138.43,
-   "vol24": 2460081.11,
+   "price": 26.74,
+   "mcap": 1324883535,
+   "ch24": -9.62,
+   "liq": 7319328.88,
+   "vol24": 2428722.34,
    "logo": "https://cdn.dexscreener.com/cms/images/a581d4cf10079a278196c97485dda06cf4fb77d539a94f8d986be6d1f2445ddc?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/19c7cb5ca5528b41b262b9bfd5a8c5594cedf5e792a0577f6c0d6ff7ce70582e?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/base/0x01784ef301d79e4b2df3a21ad9a536d4cf09a5ce",
@@ -47050,11 +47049,11 @@
   },
   "TEXEL": {
    "name": "Texel",
-   "price": 0.001905,
-   "mcap": 1782911,
-   "ch24": -15.89,
-   "liq": 105797.22,
-   "vol24": 260132.63,
+   "price": 0.001761,
+   "mcap": 1647752,
+   "ch24": -22.32,
+   "liq": 102110.17,
+   "vol24": 260789.42,
    "logo": "https://cdn.dexscreener.com/cms/images/6ST6AfcBaYreF3Hq?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/j7i7EezuQs-K-Jur?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x5e73f5892ef5cf4d553fe0cc9b109e884c3c2a52635bf6c4f1dceff9637fe932",
@@ -47067,11 +47066,11 @@
   },
   "IDLEX": {
    "name": "Idlex Network",
-   "price": 0.0001437,
-   "mcap": 136523,
-   "ch24": -16.66,
-   "liq": 29064.07,
-   "vol24": 88754.62,
+   "price": 0.0001484,
+   "mcap": 140959,
+   "ch24": -10.07,
+   "liq": 29643.02,
+   "vol24": 88670.07,
    "logo": "https://cdn.dexscreener.com/cms/images/c2ZMJk4I-E827alT?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/_NbrHqFO9xuw4OAD?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xaec1358ed0f1057b498209f75903c86885a2d046da76d53bfdf372bd11e6bf9d",
@@ -47084,11 +47083,11 @@
   },
   "LOBIN": {
    "name": "LOBIN",
-   "price": 0.0003575,
-   "mcap": 356521,
-   "ch24": 8.63,
-   "liq": 108167.63,
-   "vol24": 11315.05,
+   "price": 0.0003683,
+   "mcap": 367331,
+   "ch24": 11.93,
+   "liq": 110519.57,
+   "vol24": 12072.99,
    "logo": "https://cdn.dexscreener.com/cms/images/zrIOzsO5_pVKWyWh?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/h2v3GKzzimC0SJso?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xf1289106ef25c46c4c2c0d7c87f7f506723650f5629ea17ad27c20f896029667",
@@ -47101,11 +47100,11 @@
   },
   "PRIORS": {
    "name": "Priors Agents",
-   "price": 0.002352,
-   "mcap": 2352201,
-   "ch24": -11.49,
-   "liq": 320699.05,
-   "vol24": 40634.18,
+   "price": 0.002406,
+   "mcap": 2406730,
+   "ch24": -9.44,
+   "liq": 326680.39,
+   "vol24": 41353.08,
    "logo": "https://cdn.dexscreener.com/cms/images/8KTm_COcGu7GjsW0?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/6q0Ed8NXqtmJ0qBs?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xff7b3bd2db34d9ed8160e6dedf1d448777abaa1fa6fc8a31144930a1a656fd92",
@@ -47120,9 +47119,9 @@
    "name": "Avici",
    "price": 0.2348,
    "mcap": 3029819,
-   "ch24": 2.06,
+   "ch24": 1.86,
    "liq": 1146879.73,
-   "vol24": 35042.96,
+   "vol24": 34044.96,
    "logo": "https://cdn.dexscreener.com/cms/images/c4ba034e91f254cf25913e9d44080722b5f9f40957d5b14bca0836b4961c278d?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/423f25cc752c023e8dacdcb9f1ee460e528876d83289ff1a22426ec653926805?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/3d854kknnqhu9xvarnv154oz9on2wf3txsq3ldu7ffmn",
@@ -47133,30 +47132,13 @@
    "x": "https://x.com/Avici",
    "age": 1760806818000
   },
-  "JAOJIU": {
-   "name": "JaoJiu",
-   "price": 6.582e-06,
-   "mcap": 6383,
-   "ch24": -43.09,
-   "liq": 5265.74,
-   "vol24": 11974.98,
-   "logo": "https://cdn.dexscreener.com/cms/images/m4GPG6AJ4x7jQGR6?width=800&height=800&quality=95&format=auto",
-   "banner": null,
-   "url": "https://dexscreener.com/solana/4f4f69asrnnyycidkkmng9esft1fgw2cwineqcrwatn8",
-   "chain": "solana",
-   "pair": "4f4F69asRNnyyCidkkmNG9EsFt1fGw2CWiNeqcRwAtN8",
-   "ca": "2UyrvgCRXiEwiKRVk96gs6B4myrBHZAfcLyMVLE8vSCy",
-   "byca": 1,
-   "x": "https://x.com/khaokheowzoo/status/2125478838293651888?a=XRf3Z7D9IXutgLY6q_Q&s=46",
-   "age": 1795590938000
-  },
   "JINGYU": {
    "name": "The Great Whale",
-   "price": 1.319e-05,
-   "mcap": 12796,
-   "ch24": -86.95,
-   "liq": 8680.37,
-   "vol24": 44108.17,
+   "price": 1.379e-05,
+   "mcap": 13375,
+   "ch24": -85.92,
+   "liq": 8921.62,
+   "vol24": 43902.08,
    "logo": "https://cdn.dexscreener.com/cms/images/90Rl7H_rYM4BKnMG?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/r_bOzLDKbq96_CId?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/3d4szgvyhhwdo3dndzkqnppdqp1ffnvrzfvlrn94j1bp",
@@ -47169,11 +47151,11 @@
   },
   "DUH": {
    "name": "duh",
-   "price": 0.0003539,
-   "mcap": 343240,
-   "ch24": -24.23,
-   "liq": 49985.79,
-   "vol24": 156117.37,
+   "price": 0.0003591,
+   "mcap": 348318,
+   "ch24": -21.41,
+   "liq": 50478.95,
+   "vol24": 155390.97,
    "logo": "https://cdn.dexscreener.com/cms/images/7ThfyOrimP6hfkTm?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/aEU4Tfp1V0rQHqFv?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/3igr3kungvhed9hadx4hc4y9phhjunci2gawtpt2jra6",
@@ -47183,6 +47165,23 @@
    "byca": 1,
    "x": "https://x.com/duhscat?s=11",
    "age": 1794334818000
+  },
+  "JAOJIU": {
+   "name": "JaoJiu",
+   "price": 5.979e-06,
+   "mcap": 5797,
+   "ch24": -50.5,
+   "liq": 4984.06,
+   "vol24": 12001.43,
+   "logo": "https://cdn.dexscreener.com/cms/images/m4GPG6AJ4x7jQGR6?width=800&height=800&quality=95&format=auto",
+   "banner": null,
+   "url": "https://dexscreener.com/solana/4f4f69asrnnyycidkkmng9esft1fgw2cwineqcrwatn8",
+   "chain": "solana",
+   "pair": "4f4F69asRNnyyCidkkmNG9EsFt1fGw2CWiNeqcRwAtN8",
+   "ca": "2UyrvgCRXiEwiKRVk96gs6B4myrBHZAfcLyMVLE8vSCy",
+   "byca": 1,
+   "x": "https://x.com/khaokheowzoo/status/2125478838293651888?a=XRf3Z7D9IXutgLY6q_Q&s=46",
+   "age": 1795590938000
   },
   "ODDS": {
    "name": "OddsEngine",
@@ -47205,9 +47204,9 @@
    "name": "zipcoin",
    "price": 0.0003716,
    "mcap": 371660,
-   "ch24": -30.12,
+   "ch24": -30.05,
    "liq": 64118.96,
-   "vol24": 100688.74,
+   "vol24": 100520.18,
    "logo": "https://cdn.dexscreener.com/cms/images/NpW_xg88-pWBFy3W?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/OSTNCOugSM8TsHLO?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/ethereum/0x9da454e2798840f8eb5fa9044165dff321a32bb4",
@@ -47220,11 +47219,11 @@
   },
   "HOOKR": {
    "name": "Hookr.fun",
-   "price": 0.009118,
-   "mcap": 9052098,
-   "ch24": -1.87,
-   "liq": 637714.5,
-   "vol24": 213874.68,
+   "price": 0.009197,
+   "mcap": 9130533,
+   "ch24": -1.11,
+   "liq": 643006.34,
+   "vol24": 215429.73,
    "logo": "https://cdn.dexscreener.com/cms/images/DeCi17PPGMS19XYS?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/aDdgTAdHk2nRzVIb?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
@@ -47237,11 +47236,11 @@
   },
   "ANSEM": {
    "name": "The Black Bull",
-   "price": 0.01896,
-   "mcap": 18910703,
-   "ch24": -3.22,
-   "liq": 768201.94,
-   "vol24": 514976.37,
+   "price": 0.01969,
+   "mcap": 19641649,
+   "ch24": 1.15,
+   "liq": 786943.32,
+   "vol24": 522046.72,
    "logo": "https://cdn.dexscreener.com/cms/images/A8aHRXC8VPrpfPIF?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/et-RLU3d-f5Hg851?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/fnzky6x7entq1er3d225dqyt7ybfka4pskbmqhb8l3cc",
@@ -47254,11 +47253,11 @@
   },
   "HODL": {
    "name": "HODL",
-   "price": 0.0014,
-   "mcap": 1399878,
-   "ch24": 0.95,
-   "liq": 175643.97,
-   "vol24": 29331.1,
+   "price": 0.001414,
+   "mcap": 1413990,
+   "ch24": -1.04,
+   "liq": 177418.89,
+   "vol24": 28605.67,
    "logo": "https://cdn.dexscreener.com/cms/images/Ur9HtTsmXtjiJF1E?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/E865TcOfYXgoj1BB?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/dtdthux79bmnmnesv3au7pzbkakb3muui8gwudz6suw",
@@ -47271,11 +47270,11 @@
   },
   "BLUAI": {
    "name": "Bluwhale AI",
-   "price": 0.005605,
-   "mcap": 112101,
-   "ch24": 1.21,
-   "liq": 233199.34,
-   "vol24": 34291.32,
+   "price": 0.005656,
+   "mcap": 113138,
+   "ch24": 2.59,
+   "liq": 235329.33,
+   "vol24": 34507.84,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/dnbaw9cs3qlixetpvtmprjhrxhun2d5t64dxhxbuzjz6",
@@ -47288,11 +47287,11 @@
   },
   "CARDS": {
    "name": "Collector Crypt",
-   "price": 0.1702,
-   "mcap": 151634102,
-   "ch24": 4.25,
-   "liq": 3409567.04,
-   "vol24": 571057.55,
+   "price": 0.1707,
+   "mcap": 152049142,
+   "ch24": 4.55,
+   "liq": 3414954.06,
+   "vol24": 574204.7,
    "logo": "https://cdn.dexscreener.com/cms/images/3277f5f414a940e7d009f9cbc9147c6ab25eae6a6cda10e682319f7b6394e328?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/572d776262a45078bc6ece228e95ee4b2c2e918aafce66fa2fd95c1ba1fe6193?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/hnhpjpjgbg2kwnimtnw8cvbhvk1hfog3rc3kjnyc23td",
@@ -47305,11 +47304,11 @@
   },
   "WW": {
    "name": "The Wizarding World ",
-   "price": 0.0006077,
-   "mcap": 570020,
-   "ch24": 54.98,
-   "liq": 58604.63,
-   "vol24": 107219.23,
+   "price": 0.0006015,
+   "mcap": 564234,
+   "ch24": 58.04,
+   "liq": 58596.78,
+   "vol24": 107357.26,
    "logo": "https://cdn.dexscreener.com/cms/images/BeXJI_JjPrT9IbTd?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Unw98V4BB4o6FGUi?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/pjxgzmudyerjcvi1etnfkcyhhmnnpgwutlqtf63p6oa",
@@ -47322,11 +47321,11 @@
   },
   "CORE": {
    "name": "core",
-   "price": 0.0007794,
-   "mcap": 777215,
-   "ch24": 4.17,
-   "liq": 95161.53,
-   "vol24": 21401.36,
+   "price": 0.0008061,
+   "mcap": 803852,
+   "ch24": 8.01,
+   "liq": 97275.09,
+   "vol24": 21517.66,
    "logo": "https://cdn.dexscreener.com/cms/images/IfGezOSXIstKrcO9?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/f1yu9lOnKNXqUshr?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/cmrjpwzrclfrw3iyi2dt7s5osxqdstw5z2dybtbuxq7a",
@@ -47339,11 +47338,11 @@
   },
   "CBUCKS": {
    "name": "Cartoon Money",
-   "price": 0.007601,
-   "mcap": 7163227,
-   "ch24": 25.27,
-   "liq": 311298.68,
-   "vol24": 275608.61,
+   "price": 0.007568,
+   "mcap": 7132126,
+   "ch24": 22.83,
+   "liq": 310644.78,
+   "vol24": 277893.65,
    "logo": "https://cdn.dexscreener.com/cms/images/2bajn2a05AdQGV-4?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/dQ4E_XBvLaPRg67y?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
@@ -47356,11 +47355,11 @@
   },
   "EXFIL": {
    "name": "Exfil.fun",
-   "price": 0.001076,
-   "mcap": 1045475,
-   "ch24": -11.16,
-   "liq": 90562.18,
-   "vol24": 37225.18,
+   "price": 0.001098,
+   "mcap": 1067033,
+   "ch24": -18.73,
+   "liq": 91578.93,
+   "vol24": 32480.41,
    "logo": "https://cdn.dexscreener.com/cms/images/JXVT03G4pLMgLsGu?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Ct770pf8EML_c2R3?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/2zpfdgd48k7b2u9yqz4hjspaptovu9uiebfqyxeoexkv",
@@ -47373,11 +47372,11 @@
   },
   "SYMB": {
    "name": "Symbolon",
-   "price": 0.0004431,
-   "mcap": 438523,
-   "ch24": 69.32,
-   "liq": 59269.29,
-   "vol24": 221570.02,
+   "price": 0.000398,
+   "mcap": 393851,
+   "ch24": 36.36,
+   "liq": 56514.74,
+   "vol24": 223158.82,
    "logo": "https://cdn.dexscreener.com/cms/images/Iw4qCH3BGohrfZeP?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/bN9Xegaia-J7FIKZ?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/elysium/0x0ed997775a0e19a1e45483538679486d099a830e9f1abda89423577fffb829e2",
@@ -47392,7 +47391,7 @@
    "name": "Agorian",
    "price": 0.0003068,
    "mcap": 305453,
-   "ch24": 50.88,
+   "ch24": 51.34,
    "liq": 54787.75,
    "vol24": 72920.51,
    "logo": "https://cdn.dexscreener.com/cms/images/TV2vP7CqLSoEYHYh?width=800&height=800&quality=95&format=auto",
@@ -47409,9 +47408,9 @@
    "name": "Etchy",
    "price": 0.0006891,
    "mcap": 640622,
-   "ch24": -6.31,
+   "ch24": -6,
    "liq": 72284.54,
-   "vol24": 28132.68,
+   "vol24": 27861.87,
    "logo": "https://cdn.dexscreener.com/cms/images/ZkY0_FpUTxxeSION?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/p9w1WNZUHJg2gZvw?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/a17ssu23iadcwlx5ykz7qxpgdlptpcsegfl9dbzjphx2",
@@ -47424,11 +47423,11 @@
   },
   "INJ": {
    "name": "Injective Token",
-   "price": 6.28,
-   "mcap": 628583965,
-   "ch24": 3.14,
-   "liq": 371604.98,
-   "vol24": 5629.24,
+   "price": 6.32,
+   "mcap": 632683064,
+   "ch24": 3.37,
+   "liq": 373996.59,
+   "vol24": 5699.39,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/ethereum/0xbe0c5a04c471267beea7586550008f4892a62833e071a9f96e5ca4bc0ff5cbb3",
@@ -47441,11 +47440,11 @@
   },
   "VINE": {
    "name": "Vine Coin",
-   "price": 0.00907,
-   "mcap": 9070658,
-   "ch24": -3.84,
-   "liq": 1459692.37,
-   "vol24": 370081.09,
+   "price": 0.009017,
+   "mcap": 9016906,
+   "ch24": -5.25,
+   "liq": 1462836.35,
+   "vol24": 363390.15,
    "logo": "https://cdn.dexscreener.com/cms/images/74a2255eb11fd430603a2ae1823456c98a5e241fa2e526c253c92ad16d1fa1ce?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/03362b3c1cdb3a1fb8c1d1aaec131a08573c5dad0081a9ea1441a3f30106a227?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/58fzjmbx5patnfjpqwwsqkvfprkptkbb5r2vcw4qq3z9",
@@ -47458,11 +47457,11 @@
   },
   "MIHAO": {
    "name": "ni hao cat",
-   "price": 0.005565,
-   "mcap": 5235838,
-   "ch24": 24.1,
-   "liq": 296238.66,
-   "vol24": 830706.72,
+   "price": 0.005695,
+   "mcap": 5358094,
+   "ch24": 29.87,
+   "liq": 301234.02,
+   "vol24": 828368.34,
    "logo": "https://cdn.dexscreener.com/cms/images/CN2GXn9xCwxqB6AH?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/7UaNwmp2IgLSZCvA?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/ho1asg6wgh1ffxdehrk2f4ggt1hoxo9s5jclmdqeyebz",
@@ -47475,11 +47474,11 @@
   },
   "XMRVM": {
    "name": "XMRvm",
-   "price": 3.346e-05,
-   "mcap": 31544,
-   "ch24": 1.15,
-   "liq": 12448.86,
-   "vol24": 5599.06,
+   "price": 3.278e-05,
+   "mcap": 30900,
+   "ch24": -0.91,
+   "liq": 12365.23,
+   "vol24": 5653.62,
    "logo": "https://cdn.dexscreener.com/cms/images/Pkn8Cb548gaH49z_?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/9mjq5RUxu0jwV-6Q?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/6arhcprfzn1gz9xlhtjhci94thrd4ki61yrhwdee8wrk",
@@ -47492,11 +47491,11 @@
   },
   "DOT": {
    "name": "Dot",
-   "price": 0.004065,
-   "mcap": 3378300,
-   "ch24": -8.16,
-   "liq": 294668.29,
-   "vol24": 152342.88,
+   "price": 0.00412,
+   "mcap": 3423514,
+   "ch24": -6.93,
+   "liq": 298415,
+   "vol24": 153360.42,
    "logo": "https://cdn.dexscreener.com/cms/images/dicwjZDJp7ma1FU9?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/q1Ds1M-OJ3j0_d_f?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/base/0x5f547579519beaa158cddd3543604029165f66e86a00c373d0ee90c38784921b",
@@ -47509,11 +47508,11 @@
   },
   "NVDA": {
    "name": "NVIDIA • Robinhood Token",
-   "price": 153.48,
-   "mcap": 21351318,
-   "ch24": 0.61,
-   "liq": 1966214.22,
-   "vol24": 6916458.08,
+   "price": 154.31,
+   "mcap": 21467370,
+   "ch24": 1.32,
+   "liq": 1978405.26,
+   "vol24": 6942698.22,
    "logo": "https://cdn.dexscreener.com/cms/images/https%3A%2F%2Fcoin-images.coingecko.com%2Fcoins%2Fimages%2F102174110%2Flarge%2F0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec.png%3F1782444565?width=800&height=800&quality=95&format=auto",
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
@@ -47537,11 +47536,11 @@
   },
   "ANT": {
    "name": "Anthropic, PBC Class A Common Stock • Robinhood Token",
-   "price": 85.48,
-   "mcap": 3504918,
+   "price": 85.68,
+   "mcap": 3473732,
    "ch24": 1.28,
-   "liq": 1050196.21,
-   "vol24": 9960264.48,
+   "liq": 1041073.79,
+   "vol24": 9782648.99,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x75ae79fd767a7cc410ab4eed13f8d3498e878d6a",
@@ -47551,11 +47550,11 @@
   },
   "CLAUDIA": {
    "name": "Claudia",
-   "price": 84.28,
-   "mcap": 79751094303,
-   "ch24": 7.72,
-   "liq": 13739500.77,
-   "vol24": 66870268.94,
+   "price": 85.99,
+   "mcap": 81370039904,
+   "ch24": 9.91,
+   "liq": 13909436.15,
+   "vol24": 68145392.88,
    "logo": "https://cdn.dexscreener.com/cms/images/qF2ypYau95TgBZR8?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/fGrMUqZ31YKjxmk0?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/62phjxdxrhottqfdz7mblsd655ffdr7yvu3qjxhjzxkp",
@@ -47597,7 +47596,7 @@
    "mcap": 513465,
    "ch24": 1.26,
    "liq": 189494.18,
-   "vol24": 862.15,
+   "vol24": 862.08,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/bsc/0xee56cab7a8fe03c1077589fbc2fd32acd726a6bd",
@@ -47637,9 +47636,9 @@
    "name": "AMD",
    "price": 14.79,
    "mcap": 2256914,
-   "ch24": 1.01,
+   "ch24": 0.72,
    "liq": 473515.39,
-   "vol24": 1711.18,
+   "vol24": 1076.92,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/arbitrum/0xe5757c7db63f1e2f119a9335351741ec2b27b14b",
@@ -47649,11 +47648,11 @@
   },
   "WALLET": {
    "name": "Robinhood Wallet",
-   "price": 0.009904,
-   "mcap": 9361545,
-   "ch24": 2.14,
-   "liq": 1193084.78,
-   "vol24": 67532.09,
+   "price": 0.009999,
+   "mcap": 9451454,
+   "ch24": 3.87,
+   "liq": 1203619.99,
+   "vol24": 66375.14,
    "logo": "https://cdn.dexscreener.com/cms/images/I2L-IaR50qberU4d?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/7nG68p6Jwved9Gya?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x9501a20bedb8bea0798fe5d4c411f5e270965d49",
@@ -47663,11 +47662,11 @@
   },
   "MU": {
    "name": "Micron Technology - Backpack Securities",
-   "price": 629.91,
-   "mcap": 764931,
-   "ch24": -2.3,
-   "liq": 2502108.31,
-   "vol24": 298485.43,
+   "price": 633.69,
+   "mcap": 769526,
+   "ch24": -1.72,
+   "liq": 2513986.33,
+   "vol24": 310873.74,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/13mex6gjradjnudmtoagszgewhlh7fzscuqs9mc5nyf5",
@@ -47691,11 +47690,11 @@
   },
   "MSFT": {
    "name": "Microsoft - Backpack Securities",
-   "price": 496.26,
-   "mcap": 282872,
-   "ch24": 0.51,
-   "liq": 220962.28,
-   "vol24": 3405.95,
+   "price": 498.69,
+   "mcap": 284255,
+   "ch24": 1,
+   "liq": 221585.25,
+   "vol24": 6186.41,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/ggt6bcqthdbtkjkqi3yexqmawyx6x74vs64komwhf2gt",
@@ -47705,11 +47704,11 @@
   },
   "PLTR": {
    "name": "Palantir Technologies • Robinhood Token",
-   "price": 166.98,
-   "mcap": 2068805,
-   "ch24": 0.94,
-   "liq": 241658.22,
-   "vol24": 53131.54,
+   "price": 167.66,
+   "mcap": 2077215,
+   "ch24": 1.26,
+   "liq": 242351.95,
+   "vol24": 53957.27,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xb8d9b6b622bb03dd06d95790553f327710a73d85d845a59fa9e652638ca96ae6",
@@ -47747,11 +47746,11 @@
   },
   "TSLA": {
    "name": "Tesla - Backpack Securities",
-   "price": 387.14,
-   "mcap": 1039484,
-   "ch24": 0.81,
-   "liq": 927756.09,
-   "vol24": 82919.22,
+   "price": 388.28,
+   "mcap": 1042557,
+   "ch24": 1.08,
+   "liq": 929242.42,
+   "vol24": 88817.76,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/4hzm9mbgp4a8hxm9tb7dnfqfyt7qrxr58q8jyxcxldo3",
@@ -47789,11 +47788,11 @@
   },
   "WASTED": {
    "name": "WASTED",
-   "price": 0.0008172,
-   "mcap": 801812,
-   "ch24": -7.2,
-   "liq": 90253.56,
-   "vol24": 119181.24,
+   "price": 0.0008517,
+   "mcap": 835661,
+   "ch24": -2.73,
+   "liq": 92636.04,
+   "vol24": 119562.63,
    "logo": "https://cdn.dexscreener.com/cms/images/SQKcaWEJWDeZewbS?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/4FqlijzC7aBLOQ4U?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/tt7dks9yjjzj1fwmgopmkbmdrezzymamrhodcgdfwqn",
@@ -47803,11 +47802,11 @@
   },
   "SNDK": {
    "name": "Sandisk Corporation • Robinhood Token",
-   "price": 619.38,
-   "mcap": 835122,
-   "ch24": 1.18,
-   "liq": 187042.54,
-   "vol24": 20232.86,
+   "price": 625.66,
+   "mcap": 843585,
+   "ch24": 2.55,
+   "liq": 188474.46,
+   "vol24": 22416.44,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x2707cb88a6a40fa0f948f58958051ba097d6f6a3cf7f87929bd68ccc5becea24",
@@ -47817,11 +47816,11 @@
   },
   "YEE": {
    "name": "Yee Token",
-   "price": 0.003719,
-   "mcap": 3719759,
-   "ch24": 3.94,
-   "liq": 389658.86,
-   "vol24": 20740,
+   "price": 0.003932,
+   "mcap": 3932408,
+   "ch24": 9.72,
+   "liq": 402580.57,
+   "vol24": 24884.61,
    "logo": "https://cdn.dexscreener.com/cms/images/VpfOXuEWTs9zFFGO?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/ImaBDNuyRdltqe2d?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/ethereum/0xbc7ce7b6b5437d7d715fbb1cc7b4ec12399c5516",
@@ -47831,11 +47830,11 @@
   },
   "MANIFEST": {
    "name": "Manifesting",
-   "price": 0.002842,
-   "mcap": 2558272,
-   "ch24": 7.49,
-   "liq": 232213.33,
-   "vol24": 29566.4,
+   "price": 0.002871,
+   "mcap": 2584001,
+   "ch24": 8.45,
+   "liq": 234556.94,
+   "vol24": 29121.26,
    "logo": "https://cdn.dexscreener.com/cms/images/rBThiQOd4Gq-4ZgI?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Y3p75O_FiB9BzDX6?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/2dvbu5h8jcd37gaxajuz4t77hsjjw22lldutzk7gsa43",
@@ -47845,11 +47844,11 @@
   },
   "INTC": {
    "name": "Intel • Robinhood Token",
-   "price": 56.11,
-   "mcap": 1293025,
-   "ch24": 1.67,
-   "liq": 224977.41,
-   "vol24": 123869.57,
+   "price": 56.48,
+   "mcap": 1301525,
+   "ch24": 2.51,
+   "liq": 226118.69,
+   "vol24": 125529.33,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x7fb585f108d921de3b197cf7e26b5aebc96b035fec13f972b868e008ea062394",
@@ -47859,11 +47858,11 @@
   },
   "OBI": {
    "name": "ORBOFI",
-   "price": 0.0005732,
-   "mcap": 531424,
-   "ch24": -4.71,
-   "liq": 46401.91,
-   "vol24": 6257.46,
+   "price": 0.0005734,
+   "mcap": 531553,
+   "ch24": -4.69,
+   "liq": 46407.53,
+   "vol24": 6260.28,
    "logo": "https://cdn.dexscreener.com/cms/images/641f80bd4a2f7054de8b9b6685d9aa4b560d1fc95e74d247023968ad64b645a0?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/f0b3fa1313ff4b41d4df1646a5b3d3159bf98a0732c21ba8dea6b25007eae46b?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/bsc/0x4b85749cdb12edb26bbf8bc80016ff354fe7da74",
@@ -47873,11 +47872,11 @@
   },
   "AAPL": {
    "name": "Apple • Robinhood Token",
-   "price": 356.76,
-   "mcap": 3275992,
-   "ch24": 0.34,
-   "liq": 365903.22,
-   "vol24": 136180.41,
+   "price": 357.034,
+   "mcap": 3234220,
+   "ch24": 0.47,
+   "liq": 366467.54,
+   "vol24": 144954.22,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xeab0adac76db99a233ed077ca6be7a3f708baee6f98b17df69f7e1a07d1dc2e4",
@@ -47887,11 +47886,11 @@
   },
   "AMZN": {
    "name": "Amazon • Robinhood Token",
-   "price": 248.44,
-   "mcap": 2414479,
-   "ch24": 0.66,
-   "liq": 462541.11,
-   "vol24": 75875.92,
+   "price": 248.98,
+   "mcap": 2419804,
+   "ch24": 0.89,
+   "liq": 463332.74,
+   "vol24": 77398.9,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x68beff3b4270ffbbb78a48d7670648909b9de6736456b0f450fee242e1d10a8b",
@@ -47901,11 +47900,11 @@
   },
   "DELL": {
    "name": "Dell • Robinhood Token",
-   "price": 307.68,
-   "mcap": 451589,
-   "ch24": 2.11,
-   "liq": 195935.27,
-   "vol24": 9500.34,
+   "price": 308.48,
+   "mcap": 452758,
+   "ch24": 2.37,
+   "liq": 196316.61,
+   "vol24": 10697.38,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xc30c89cb7815a1488b7998d15eec73961707fc5a",
@@ -47915,11 +47914,11 @@
   },
   "TSM": {
    "name": "Taiwan Semiconductor Manufacturing • Robinhood Token",
-   "price": 350.061,
-   "mcap": 1225572,
-   "ch24": 0.96,
-   "liq": 275883.88,
-   "vol24": 47597.03,
+   "price": 351.76,
+   "mcap": 1231541,
+   "ch24": 1.45,
+   "liq": 277094.53,
+   "vol24": 49574.96,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x4c862e5846659b086fe73896bbb9058513417e4e6938a1be93aeb7a768fa5754",
@@ -47943,11 +47942,11 @@
   },
   "PONS": {
    "name": "Pons",
-   "price": 0.09089,
-   "mcap": 60709164,
-   "ch24": 3.18,
-   "liq": 1170687.58,
-   "vol24": 144765.53,
+   "price": 0.09161,
+   "mcap": 61190800,
+   "ch24": 3.94,
+   "liq": 1179969.56,
+   "vol24": 143364.18,
    "logo": "https://cdn.dexscreener.com/cms/images/dkmXs8KYMyMXjuU1?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/6IKrI-WtX92dxhL0?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x10cc6bd38112cac182db90b6a71d8bb5939526ba",
@@ -47987,7 +47986,7 @@
  "callpx": {
   "BTC": {
    "src": "hl",
-   "now": 61289.0,
+   "now": 61673.0,
    "calls": {
     "https://x.com/trader1sz/status/2126082096498082112": {
      "px": 60516.0,
@@ -48801,7 +48800,7 @@
   },
   "ETH": {
    "src": "hl",
-   "now": 1716.1,
+   "now": 1732.5,
    "calls": {
     "https://x.com/trader1sz/status/2126082096498082112": {
      "px": 1692.9,
@@ -48975,7 +48974,7 @@
   },
   "XMR": {
    "src": "hl",
-   "now": 466.87,
+   "now": 471.16,
    "calls": {
     "https://x.com/trader1sz/status/2126082096498082112": {
      "px": 453.61,
@@ -49025,7 +49024,7 @@
   },
   "ZEC": {
    "src": "hl",
-   "now": 731.94,
+   "now": 743.33,
    "calls": {
     "https://x.com/trader1sz/status/2126082096498082112": {
      "px": 695.95,
@@ -49159,7 +49158,7 @@
   },
   "NEAR": {
    "src": "hl",
-   "now": 3.1188,
+   "now": 3.1297,
    "calls": {
     "https://x.com/trader1sz/status/2126080943534514463": {
      "px": 3.0601,
@@ -49217,7 +49216,7 @@
   },
   "GAS": {
    "src": "hl",
-   "now": 0.95453,
+   "now": 0.96052,
    "calls": {
     "https://x.com/gsmferrari/status/2126078289986920461": {
      "px": 0.94303,
@@ -49307,7 +49306,7 @@
   },
   "INJ": {
    "src": "hl",
-   "now": 6.3405,
+   "now": 6.3872,
    "calls": {
     "https://x.com/CryptoWizardd/status/2126067680645923188": {
      "px": 6.2494,
@@ -49345,7 +49344,7 @@
   },
   "LTC": {
    "src": "hl",
-   "now": 44.347,
+   "now": 44.73,
    "calls": {
     "https://x.com/BigCheds/status/2126058625831759947": {
      "px": 44.15,
@@ -49375,7 +49374,7 @@
   },
   "POL": {
    "src": "hl",
-   "now": 0.078101,
+   "now": 0.0784,
    "calls": {
     "https://x.com/trader1sz/status/2126054211544576367": {
      "px": 0.077483,
@@ -49385,7 +49384,7 @@
   },
   "HYPE": {
    "src": "hl",
-   "now": 64.176,
+   "now": 64.717,
    "calls": {
     "https://x.com/trader1sz/status/2126049479769956766": {
      "px": 63.129,
@@ -49455,7 +49454,7 @@
   },
   "DOT": {
    "src": "hl",
-   "now": 0.68417,
+   "now": 0.68916,
    "calls": {
     "https://x.com/MaxCrypto/status/2126045828770898031": {
      "px": 0.67338,
@@ -49495,7 +49494,7 @@
   },
   "BNB": {
    "src": "hl",
-   "now": 560.09,
+   "now": 563.32,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 554.66,
@@ -49521,7 +49520,7 @@
   },
   "LINK": {
    "src": "hl",
-   "now": 9.4443,
+   "now": 9.5277,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 9.2703,
@@ -49555,7 +49554,7 @@
   },
   "SOL": {
    "src": "hl",
-   "now": 72.158,
+   "now": 72.658,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 71.259,
@@ -49621,7 +49620,7 @@
   },
   "XRP": {
    "src": "hl",
-   "now": 0.95682,
+   "now": 0.96424,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 0.9527,
@@ -49643,7 +49642,7 @@
   },
   "TAO": {
    "src": "hl",
-   "now": 185.59,
+   "now": 187.3,
    "calls": {
     "https://x.com/LongtermR/status/2126031153706435056": {
      "px": 184.36,
@@ -49717,7 +49716,7 @@
   },
   "PUMP": {
    "src": "hl",
-   "now": 0.002644,
+   "now": 0.002667,
    "calls": {
     "https://x.com/trader1sz/status/2126027240563765754": {
      "px": 0.002592,
@@ -49735,7 +49734,7 @@
   },
   "WLFI": {
    "src": "hl",
-   "now": 0.042118,
+   "now": 0.042255,
    "calls": {
     "https://x.com/trader1sz/status/2126023212555460951": {
      "px": 0.04224,
@@ -49745,17 +49744,17 @@
   },
   "SWOGE": {
    "src": "dex",
-   "now": 0.000111690853596495,
+   "now": 0.00011601499567608499,
    "calls": {
     "https://x.com/moneymancalls/status/2126023111426392225": {
      "px": 8.898120226364979e-05,
-     "mc": 89043.06085345875
+     "mc": 88982.73115028664
     }
    }
   },
   "ADA": {
    "src": "hl",
-   "now": 0.15081,
+   "now": 0.15171,
    "calls": {
     "https://x.com/CW8900/status/2126018222780711319": {
      "px": 0.1502,
@@ -49769,7 +49768,7 @@
   },
   "VVV": {
    "src": "hl",
-   "now": 26.744,
+   "now": 26.723,
    "calls": {
     "https://x.com/Tareeq_23/status/2126012895393992868": {
      "px": 27.099,
@@ -49811,7 +49810,7 @@
   },
   "PENDLE": {
    "src": "hl",
-   "now": 1.2287,
+   "now": 1.2402,
    "calls": {
     "https://x.com/LongtermR/status/2126000879535030377": {
      "px": 1.2123,
@@ -49825,39 +49824,25 @@
   },
   "YEE": {
    "src": "dex",
-   "now": 0.0037249330754666994,
+   "now": 0.0039440293037407296,
    "calls": {
     "https://x.com/moneymancalls/status/2125993196488433753": {
      "px": 0.00365025870104876,
-     "mc": 3651003.6718350183
+     "mc": 3650637.4664480546
     },
     "https://x.com/moneymancalls/status/2125690598619578773": {
      "px": 0.00339716875701458,
-     "mc": 3397862.0754030105
+     "mc": 3397521.260792012
     },
     "https://x.com/moneymancalls/status/2125630390027370648": {
      "px": 0.0032753038473978297,
-     "mc": 3275972.294727804
-    }
-   }
-  },
-  "SLC": {
-   "src": "dex",
-   "now": 0.000386001285708063,
-   "calls": {
-    "https://x.com/sjdedic/status/2125989916614042054": {
-     "px": 0.00038293717573607605,
-     "mc": 22787420.166107863
-    },
-    "https://x.com/sjdedic/status/2125865030214168832": {
-     "px": 0.00036687780384501723,
-     "mc": 21831776.06030405
+     "mc": 3275643.705986268
     }
    }
   },
   "AAVE": {
    "src": "hl",
-   "now": 95.861,
+   "now": 96.508,
    "calls": {
     "https://x.com/LongtermR/status/2125985953944944943": {
      "px": 93.25,
@@ -49877,23 +49862,9 @@
     }
    }
   },
-  "CLAUDIA": {
-   "src": "dex",
-   "now": 0.008792951029506748,
-   "calls": {
-    "https://x.com/thebreadmakerx/status/2125982582550786330": {
-     "px": 0.008831647845132339,
-     "mc": 8357066.684243425
-    },
-    "https://x.com/thebreadmakerx/status/2125660539938324550": {
-     "px": 0.008198309665846499,
-     "mc": 7757761.833010447
-    }
-   }
-  },
   "CASHCAT": {
    "src": "hl",
-   "now": 0.043639,
+   "now": 0.044114,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.042158,
@@ -49927,7 +49898,7 @@
   },
   "FARTCOIN": {
    "src": "hl",
-   "now": 0.08276,
+   "now": 0.08326,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.08091,
@@ -49937,7 +49908,7 @@
   },
   "TRUMP": {
    "src": "hl",
-   "now": 0.87838,
+   "now": 0.88239,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.86977,
@@ -49947,7 +49918,7 @@
   },
   "STX": {
    "src": "hl",
-   "now": 0.263,
+   "now": 0.26477,
    "calls": {
     "https://x.com/BeatTheInsider/status/2125953958091075946": {
      "px": 0.26479,
@@ -49961,7 +49932,7 @@
   },
   "AXS": {
    "src": "hl",
-   "now": 0.65539,
+   "now": 0.66049,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.64444,
@@ -49971,7 +49942,7 @@
   },
   "FET": {
    "src": "hl",
-   "now": 0.12226,
+   "now": 0.12355,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.11542,
@@ -49981,7 +49952,7 @@
   },
   "SUSHI": {
    "src": "hl",
-   "now": 0.1549,
+   "now": 0.15561,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.15331,
@@ -49991,7 +49962,7 @@
   },
   "YGG": {
    "src": "hl",
-   "now": 0.020631,
+   "now": 0.020705,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.020494,
@@ -50087,7 +50058,7 @@
   },
   "LIT": {
    "src": "hl",
-   "now": 2.5254,
+   "now": 2.5414,
    "calls": {
     "https://x.com/asedd72/status/2125872082739482828": {
      "px": 2.5054,
@@ -50111,6 +50082,24 @@
     }
    }
   },
+  "OBI": {
+   "src": "dex",
+   "now": 0.000573639509345345,
+   "calls": {
+    "https://x.com/CryptoNaija042/status/2125867966612795595": {
+     "px": 0.0006073479296,
+     "mc": 563023.3938309536
+    },
+    "https://x.com/CryptoNaija042/status/2125614837074190570": {
+     "px": 0.0005481643310775969,
+     "mc": 508159.04199039045
+    },
+    "https://x.com/crypto_ideology/status/2124803848456056956": {
+     "px": 0.000569604706973722,
+     "mc": 528034.6892326523
+    }
+   }
+  },
   "JIMMY": {
    "src": "dex",
    "now": 0.0008913706222069913,
@@ -50118,7 +50107,7 @@
   },
   "DOGE": {
    "src": "hl",
-   "now": 0.057427,
+   "now": 0.057751,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.056703,
@@ -50128,7 +50117,7 @@
   },
   "SUI": {
    "src": "hl",
-   "now": 0.67996,
+   "now": 0.68404,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.67579,
@@ -50138,7 +50127,7 @@
   },
   "TRX": {
    "src": "hl",
-   "now": 0.30423,
+   "now": 0.30465,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.30313,
@@ -50152,7 +50141,7 @@
   },
   "SPX": {
    "src": "hl",
-   "now": 0.27859,
+   "now": 0.28007,
    "calls": {
     "https://x.com/thuhkang/status/2125674273595367495": {
      "px": 0.26904,
@@ -50182,7 +50171,7 @@
   },
   "UNI": {
    "src": "hl",
-   "now": 4.8905,
+   "now": 4.8608,
    "calls": {
     "https://x.com/AltcoinDaily/status/2125653432296243466": {
      "px": 4.6599,
@@ -50192,7 +50181,7 @@
   },
   "MON": {
    "src": "hl",
-   "now": 0.010342,
+   "now": 0.010451,
    "calls": {
     "https://x.com/Okada_DeFi0x/status/2125580364416795061": {
      "px": 0.009826,
@@ -50202,7 +50191,7 @@
   },
   "PONS": {
    "src": "hl",
-   "now": 0.091194,
+   "now": 0.09429,
    "calls": {
     "https://x.com/Okada_DeFi0x/status/2125449066935103905": {
      "px": 0.083761,
@@ -50220,7 +50209,7 @@
   },
   "USELESS": {
    "src": "hl",
-   "now": 0.075072,
+   "now": 0.075569,
    "calls": {
     "https://x.com/TraderShaoor/status/2123346790703648964": {
      "px": 0.10444,
@@ -50228,78 +50217,38 @@
     }
    }
   },
-  "PYTH": {
+  "AERO": {
    "src": "hl",
-   "now": 0.049706,
+   "now": 0.41109,
    "calls": {
-    "https://x.com/CryptoNewton/status/2122719297881403827": {
-     "px": 0.05375,
-     "mc": null
-    }
-   }
-  },
-  "ASTER": {
-   "src": "hl",
-   "now": 0.50953,
-   "calls": {
-    "https://x.com/CRyptOracl3/status/2122596679278821818": {
-     "px": 0.595,
-     "mc": null
-    },
-    "https://x.com/CRyptOracl3/status/2122359714973426131": {
-     "px": 0.56763,
-     "mc": null
-    },
-    "https://x.com/CRyptOracl3/status/2122075251970572312": {
-     "px": 0.51897,
-     "mc": null
-    }
-   }
-  },
-  "JUP": {
-   "src": "hl",
-   "now": 0.24314,
-   "calls": {
-    "https://x.com/CRyptOracl3/status/2122071793993502932": {
-     "px": 0.26572,
-     "mc": null
-    }
-   }
-  },
-  "GOAT": {
-   "src": "hl",
-   "now": 0.01132,
-   "calls": {
-    "https://x.com/shintosworld/status/2120997984292770165": {
-     "px": 0.012089,
+    "https://x.com/TheEuroSniper/status/2120466194847216083": {
+     "px": 0.54121,
      "mc": null
     }
    }
   },
   "VIRTUAL": {
    "src": "hl",
-   "now": 0.37174,
+   "now": 0.37453,
    "calls": {
     "https://x.com/TheEuroSniper/status/2120466194847216083": {
      "px": 0.53195,
      "mc": null
     }
    }
+  },
+  "ENA": {
+   "src": "hl",
+   "now": 0.10421,
+   "calls": {
+    "https://x.com/thecryptocactus/status/2120220408897269925": {
+     "px": 0.14894,
+     "mc": null
+    }
+   }
   }
  },
  "influence": [
-  {
-   "h": "88krxxs",
-   "n": 11,
-   "rep": 1,
-   "calls": 16,
-   "md": 136003000.0,
-   "toks": [
-    "NVDA",
-    "PLTR"
-   ],
-   "score": 8.44
-  },
   {
    "h": "iambroots",
    "n": 3,
@@ -50337,12 +50286,12 @@
    "h": "ka1n0s",
    "n": 2,
    "rep": 1,
-   "calls": 7,
+   "calls": 4,
    "md": 44126000.0,
    "toks": [
     "SPX"
    ],
-   "score": 3.86
+   "score": 4.5
   },
   {
    "h": "anger_trading",
@@ -53213,142 +53162,160 @@
  "stocktwits": {
   "NVDA": [
    {
-    "h": "Vanilla_Coffee_Time",
-    "fol": 20,
-    "t": "2026-11-27T02:24:41Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/Vanilla_Coffee_Time/message/670262954",
-    "fr": "$NVDA can we get like 180 by tomorrow that would be nice",
-    "tag": "bull"
-   },
-   {
-    "h": "goodmeyer83",
-    "fol": 181,
-    "t": "2026-11-27T02:24:05Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/goodmeyer83/message/670262938",
-    "fr": "$NVDA I’m writing this so nobody makes the same mistake. I’m a nine year trader, profitable. And I bought $130 strike calls for November 27 on Friday last week. I went in heavy initially, I bought it when Nvidia was around 135. By EOD, afer it dropped, my calls were cut by about 50%. I added a little too soon and the account was down heavy. Had I bought an extra week out I never would’ve sold. But",
-    "tag": "bull"
-   },
-   {
-    "h": "LIFE_SUCKS",
-    "fol": 0,
-    "t": "2026-11-27T02:23:23Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/LIFE_SUCKS/message/670262920",
-    "fr": "$NVDA, I need this to drop far below $140 by tomorrow so I can live. These put options expiring tomorrow must be profitable. When you realize that there is no God and you have been lied to, it all makes so much sense  Money is the only thing that matters in this world. The market is not fair  The insiders with the big money trade amongst themselves to keep the price in a certain range. The money i",
-    "tag": "mix"
-   },
-   {
     "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T02:23:07Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/TheUnmaker/message/670262913",
-    "fr": "$AMD $NVDA $BB You&#39;ll say the game is rigged but until you understand the Fibonacci matrix then you&#39;ll truly understand the truth.  @nelsonwaters0110",
-    "tag": "bull"
-   },
-   {
-    "h": "JB_MIL",
-    "fol": 10,
-    "t": "2026-11-27T02:23:01Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/JB_MIL/message/670262908",
-    "fr": "$NVDA Dumbass bears gunna be barfing up their Thanksgiving dinner by open tomorrow morning!!! How stupid do you have to be to short Jensen and Trump?!?! Like seriously LMAOOOOOO!!!!",
-    "tag": "bull"
-   },
-   {
-    "h": "LIFE_SUCKS",
-    "fol": 0,
-    "t": "2026-11-27T02:22:31Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/LIFE_SUCKS/message/670262894",
-    "fr": "I need $NVDA to drop far below $140 tomorrow so I don’t have to commit suicide. These put options becoming extremely profitable would be a blessing. When you realize that there is no God, everything makes sense. The stock market is a manipulated casino controlled by the big money. The money in the options. Money is the only thing that matters in this world.",
-    "tag": "mix"
-   },
-   {
-    "h": "FlowTradingOfficial",
-    "fol": 3,
-    "t": "2026-11-27T02:21:21Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/FlowTradingOfficial/message/670262854",
-    "fr": "$NVDA clearly you are clueless haha.",
-    "tag": "mix"
-   },
-   {
-    "h": "danglino",
-    "fol": 11,
-    "t": "2026-11-27T02:20:59Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/danglino/message/670262840",
-    "fr": "$NVDA 💪 strong.",
-    "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T02:20:47Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/TheUnmaker/message/670262831",
-    "fr": "$BB Almost 40k shares.. BBeliever for long time.. $27 in 2027 undeniably and undoubedly $AMD $NVDA $SPY $QQQ",
-    "tag": "bull"
-   },
-   {
-    "h": "GR2020",
-    "fol": 30,
-    "t": "2026-11-27T02:20:41Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/GR2020/message/670262826",
-    "fr": "$SPY $NVDA looks heading back to over 200",
-    "tag": "mix"
-   },
-   {
-    "h": "PejalPapa",
-    "fol": 98,
-    "t": "2026-11-27T02:20:31Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/PejalPapa/message/670262818",
-    "fr": "$NVDA any insight on the price movement during the Jensen Inquisition Dec 1st-3rd? Thanks.",
-    "tag": "bull"
-   },
-   {
-    "h": "ivan8311",
-    "fol": 22,
-    "t": "2026-11-27T02:19:44Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/ivan8311/message/670262784",
-    "fr": "$NVDA are my puts fuxked chat????",
-    "tag": "mix"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T02:19:35Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/TheUnmaker/message/670262778",
-    "fr": "$AMD $NVDA I told yall early on Wednesday! Now you buy higher! $SPY $QQQ $BB",
-    "tag": "bull"
-   },
-   {
-    "h": "RGNR",
-    "fol": 110,
-    "t": "2026-11-27T02:19:35Z",
+    "fol": 488,
+    "t": "2026-11-27T02:36:46Z",
     "eng": 2,
-    "url": "https://stocktwits.com/RGNR/message/670262777",
-    "fr": "$NVDA Rumors heating up. 🔥\n\nThere’s rumours the U.S. government might take a Stake in $NVDA tonight before thanksgiving \n\nPossible announcement of a government stake come out on Friday",
+    "url": "https://stocktwits.com/TheUnmaker/message/670263350",
+    "fr": "$BTC.X Will you doubt or believe when it breaks over $68,800? $SPY $QQQ $AMD $NVDA",
     "tag": "bull"
    },
    {
-    "h": "GSP",
-    "fol": 31383,
-    "t": "2026-11-27T02:19:21Z",
+    "h": "PivotPoint_101Official",
+    "fol": 5387,
+    "t": "2026-11-27T02:36:26Z",
     "eng": 0,
-    "url": "https://stocktwits.com/GSP/message/670262764",
-    "fr": "$ANT $BENF $CRWV $NVDA $SPY",
+    "url": "https://stocktwits.com/PivotPoint_101Official/message/670263339",
+    "fr": "$SPY $QQQ $NVDA \n$IWM \n#pivotgroup⚡️🔐\n#woofstreets🎬\n\nI swear The way we play this sh*t Should be illegal.\n\nGobble Gobble 🦃💪  \n\nCheers to another decade of wins 🥇🎖️",
     "tag": "mix"
+   },
+   {
+    "h": "Bullshouse",
+    "fol": 29,
+    "t": "2026-11-27T02:36:26Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/Bullshouse/message/670263338",
+    "fr": "$NVDA 1 hour $1.. 165 before market open",
+    "tag": "mix"
+   },
+   {
+    "h": "JoJoEdge",
+    "fol": 22,
+    "t": "2026-11-27T02:36:04Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/JoJoEdge/message/670263332",
+    "fr": "$NVDA Holy Take Off Batman !!!!\n\n#EXTREMELYBULLISH",
+    "tag": "bull"
+   },
+   {
+    "h": "FaTKaT69",
+    "fol": 25,
+    "t": "2026-11-27T02:35:22Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/FaTKaT69/message/670263310",
+    "fr": "$NVDA BIG WALLS are starting to fall and the biggest ones; well………",
+    "tag": "bull"
+   },
+   {
+    "h": "gaineous",
+    "fol": 763,
+    "t": "2026-11-27T02:35:13Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/gaineous/message/670263305",
+    "fr": "Arbitrary events are only explained properly w/hindsight &amp; we’re nowhere near there….yet.\n\n$ANT $NVDA $SPCX $TSLA $ONDS \n\n“Pentagon leaders weighed an audacious idea: invoking a Cold War-era law to pressure Nvidia to restore Jensen Huang as CEO, according to three people familiar with the debate.\n\nThe Defense Production Act, a 1950 law that grants the president broad authority to intervene in ",
+    "tag": "mix"
+   },
+   {
+    "h": "Ppdaazn",
+    "fol": 32,
+    "t": "2026-11-27T02:35:12Z",
+    "eng": 3,
+    "url": "https://stocktwits.com/Ppdaazn/message/670263302",
+    "fr": "$NVDA at this climb rate we might see 170 by the bell",
+    "tag": "bull"
+   },
+   {
+    "h": "Kayx13",
+    "fol": 13,
+    "t": "2026-11-27T02:35:09Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/Kayx13/message/670263299",
+    "fr": "$NVDA  fingers crossed . 170-180 plus",
+    "tag": "bull"
+   },
+   {
+    "h": "bobbik",
+    "fol": 214,
+    "t": "2026-11-27T02:34:43Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/bobbik/message/670263290",
+    "fr": "$NVDA yes my calls go u mfr go",
+    "tag": "bull"
+   },
+   {
+    "h": "Emolinaoptions",
+    "fol": 38,
+    "t": "2026-11-27T02:34:05Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/Emolinaoptions/message/670263271",
+    "fr": "$NVDA",
+    "tag": "bull"
+   },
+   {
+    "h": "DocMP",
+    "fol": 62,
+    "t": "2026-11-27T02:33:43Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/DocMP/message/670263259",
+    "fr": "$NVDA Asian markets up! Stock futures look good! \n\nSqueeze alert 🚨 Buy shares not calls",
+    "tag": "bull"
+   },
+   {
+    "h": "TheUnmaker",
+    "fol": 488,
+    "t": "2026-11-27T02:33:38Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/TheUnmaker/message/670263257",
+    "fr": "$BTC.X $SPY $QQQ AS I said.. It is time! $AMD $NVDA The Fibonacci sequence will be fullfilled!",
+    "tag": "bull"
+   },
+   {
+    "h": "TIGHTSTOPLOSS",
+    "fol": 1638,
+    "t": "2026-11-27T02:33:10Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/TIGHTSTOPLOSS/message/670263241",
+    "fr": "$NVDA I know I know … how does he do it",
+    "tag": "mix"
+   },
+   {
+    "h": "QNT_BRO",
+    "fol": 45,
+    "t": "2026-11-27T02:31:56Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/QNT_BRO/message/670263201",
+    "fr": "$BTC.X The end is near. $QNT.X $ZEC.X $NVDA $MSTR",
+    "tag": "bull"
+   },
+   {
+    "h": "Tonysmu",
+    "fol": 24,
+    "t": "2026-11-27T02:31:29Z",
+    "eng": 3,
+    "url": "https://stocktwits.com/Tonysmu/message/670263182",
+    "fr": "$NVDA need to add call at openn",
+    "tag": "bull"
    }
   ],
   "ANT": [
+   {
+    "h": "yoda2",
+    "fol": 40,
+    "t": "2026-11-27T02:38:18Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/yoda2/message/670263395",
+    "fr": "$ANT bears are you guys scared look at the futures",
+    "tag": "bull"
+   },
+   {
+    "h": "gaineous",
+    "fol": 763,
+    "t": "2026-11-27T02:35:13Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/gaineous/message/670263305",
+    "fr": "Arbitrary events are only explained properly w/hindsight &amp; we’re nowhere near there….yet.\n\n$ANT $NVDA $SPCX $TSLA $ONDS \n\n“Pentagon leaders weighed an audacious idea: invoking a Cold War-era law to pressure Nvidia to restore Jensen Huang as CEO, according to three people familiar with the debate.\n\nThe Defense Production Act, a 1950 law that grants the president broad authority to intervene in ",
+    "tag": "mix"
+   },
    {
     "h": "Mountainbiker168",
     "fol": 578,
@@ -53380,7 +53347,7 @@
     "h": "Baruch_Hashem",
     "fol": 10,
     "t": "2026-11-27T02:03:22Z",
-    "eng": 4,
+    "eng": 5,
     "url": "https://stocktwits.com/Baruch_Hashem/message/670262282",
     "fr": "$NQ_F $QQQ rising. $ANT didn’t shit the bed again.  I think $NVDA $NBIS and related ai should significantly rise Friday.",
     "tag": "bull"
@@ -53465,39 +53432,75 @@
     "url": "https://stocktwits.com/JensenNVDA/message/670259986",
     "fr": "$BABA \n\nThe U.S. has tried non-stop to destroy Alibaba and its AI ambitions.  Non-stop.\n\nIf this company were a scam and a fraud, why would they bother?   If it were a fake fraudulent company, Such a mass effort from the Pentagon to $NVDA Chips to the media would be competely SUPERFLUOUS!!!\n\nEver stop to wonder why the mass effort?  \n\nMight it be because our biggest nightmare might be the actual s",
     "tag": "bull"
-   },
-   {
-    "h": "TheUltimatePayoff",
-    "fol": 168,
-    "t": "2026-11-27T00:03:46Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/TheUltimatePayoff/message/670259866",
-    "fr": "$ANT Markets are returning to normal.  This security is the future of mankind and we see $125 by end of year.",
-    "tag": "bull"
-   },
-   {
-    "h": "Super_Sketch",
-    "fol": 15,
-    "t": "2026-11-26T23:48:50Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/Super_Sketch/message/670259598",
-    "fr": "$ANT $META $QQQ $SPY don&#39;t trust a bear that&#39;s bearish on EVERYTHING",
-    "tag": "mix"
    }
   ],
   "AMD": [
    {
     "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T02:23:07Z",
+    "fol": 488,
+    "t": "2026-11-27T02:36:46Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/TheUnmaker/message/670263350",
+    "fr": "$BTC.X Will you doubt or believe when it breaks over $68,800? $SPY $QQQ $AMD $NVDA",
+    "tag": "bull"
+   },
+   {
+    "h": "shonv",
+    "fol": 67,
+    "t": "2026-11-27T02:35:51Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/shonv/message/670263322",
+    "fr": "$AMD Squeeze the Shorts",
+    "tag": "bull"
+   },
+   {
+    "h": "TheUnmaker",
+    "fol": 488,
+    "t": "2026-11-27T02:33:38Z",
     "eng": 1,
+    "url": "https://stocktwits.com/TheUnmaker/message/670263257",
+    "fr": "$BTC.X $SPY $QQQ AS I said.. It is time! $AMD $NVDA The Fibonacci sequence will be fullfilled!",
+    "tag": "bull"
+   },
+   {
+    "h": "SPD2025",
+    "fol": 170,
+    "t": "2026-11-27T02:30:53Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/SPD2025/message/670263163",
+    "fr": "$AMD these fucking MMs just liquidate everyone to pump it back up and then dumps hard again",
+    "tag": "mix"
+   },
+   {
+    "h": "TheUnmaker",
+    "fol": 488,
+    "t": "2026-11-27T02:25:48Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/TheUnmaker/message/670263000",
+    "fr": "$BTC.X $SPY $QQQ $AMD $NVDA Truely you will believe the Fibonacci matrix when you see Bitcoin break recent highs. Then will you believe?",
+    "tag": "bull"
+   },
+   {
+    "h": "Flickted",
+    "fol": 266,
+    "t": "2026-11-27T02:25:04Z",
+    "eng": 7,
+    "url": "https://stocktwits.com/Flickted/message/670262965",
+    "fr": "$NVDA $AMD $MU $SKHY $SMCI",
+    "tag": "bull"
+   },
+   {
+    "h": "TheUnmaker",
+    "fol": 488,
+    "t": "2026-11-27T02:23:07Z",
+    "eng": 2,
     "url": "https://stocktwits.com/TheUnmaker/message/670262913",
     "fr": "$AMD $NVDA $BB You&#39;ll say the game is rigged but until you understand the Fibonacci matrix then you&#39;ll truly understand the truth.  @nelsonwaters0110",
     "tag": "bull"
    },
    {
     "h": "TheUnmaker",
-    "fol": 487,
+    "fol": 488,
     "t": "2026-11-27T02:20:47Z",
     "eng": 0,
     "url": "https://stocktwits.com/TheUnmaker/message/670262831",
@@ -53506,9 +53509,9 @@
    },
    {
     "h": "TheUnmaker",
-    "fol": 487,
+    "fol": 488,
     "t": "2026-11-27T02:19:35Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/TheUnmaker/message/670262778",
     "fr": "$AMD $NVDA I told yall early on Wednesday! Now you buy higher! $SPY $QQQ $BB",
     "tag": "bull"
@@ -53517,7 +53520,7 @@
     "h": "GSP",
     "fol": 31383,
     "t": "2026-11-27T02:19:24Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/GSP/message/670262766",
     "fr": "$AMD $FCUV $NTSK $SLS $SNDK",
     "tag": "mix"
@@ -53533,7 +53536,7 @@
    },
    {
     "h": "TheUnmaker",
-    "fol": 487,
+    "fol": 488,
     "t": "2026-11-27T02:17:29Z",
     "eng": 0,
     "url": "https://stocktwits.com/TheUnmaker/message/670262709",
@@ -53542,7 +53545,7 @@
    },
    {
     "h": "TheUnmaker",
-    "fol": 487,
+    "fol": 488,
     "t": "2026-11-27T02:16:33Z",
     "eng": 0,
     "url": "https://stocktwits.com/TheUnmaker/message/670262674",
@@ -53553,7 +53556,7 @@
     "h": "JoeAlerts",
     "fol": 25118,
     "t": "2026-11-27T02:10:48Z",
-    "eng": 2,
+    "eng": 5,
     "url": "https://stocktwits.com/JoeAlerts/message/670262500",
     "fr": "$NVDA $AMD moving overnight 👀",
     "tag": "mix"
@@ -53566,68 +53569,86 @@
     "url": "https://stocktwits.com/Flickted/message/670262299",
     "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \n9PM EST Overnight \n \n~",
     "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T01:50:45Z",
-    "eng": 5,
-    "url": "https://stocktwits.com/TheUnmaker/message/670261976",
-    "fr": "$BB As you were hating, I was buying! $AMD $NVDA $SPY $QQQ",
-    "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T01:49:22Z",
-    "eng": 7,
-    "url": "https://stocktwits.com/TheUnmaker/message/670261947",
-    "fr": "$BB As tutes increase their position sizing, what are you doing? $AMD $NVDA $QQQ $SPCX",
-    "tag": "bull"
-   },
-   {
-    "h": "SimplifiedTrader",
-    "fol": 67,
-    "t": "2026-11-27T01:47:39Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/SimplifiedTrader/message/670261908",
-    "fr": "$AMD let’s go 500",
-    "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T01:47:13Z",
-    "eng": 5,
-    "url": "https://stocktwits.com/TheUnmaker/message/670261898",
-    "fr": "$AMD $NVDA $BB The time has come.. Will you stand and watch or join in the parade? Your choice! @nelsonwaters0110",
-    "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T01:44:41Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/TheUnmaker/message/670261824",
-    "fr": "$AMD $NVDA $BB You didnt listen when I said to buy under $150. It&#39;s ok the Fibonacci matrix will favor the faithful. Still time to buy!",
-    "tag": "bull"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 487,
-    "t": "2026-11-27T01:39:34Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/TheUnmaker/message/670261682",
-    "fr": "$NVDA You didnt buy.. now you over $152 or $155.. you choose! $AMD $BB $QQQ",
-    "tag": "bull"
    }
   ],
   "MU": [
    {
     "h": "TheLordoftheRings",
     "fol": 2,
-    "t": "2026-11-27T02:17:43Z",
+    "t": "2026-11-27T02:37:10Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/TheLordoftheRings/message/670263365",
+    "fr": "$MU $2000 still here bitches",
+    "tag": "bull"
+   },
+   {
+    "h": "ShadowBanningIsBad",
+    "fol": 481,
+    "t": "2026-11-27T02:35:17Z",
     "eng": 0,
+    "url": "https://stocktwits.com/ShadowBanningIsBad/message/670263309",
+    "fr": "$MU 18 years ago and 6 days.  Someone sold at least 1 share of micron for $1.59. \n \nThe quarter ending in 3 months is expected to make 42.06. \n \nThat means $MU will make about 26.5x the share price from 18 years ago.   \n \nIf that trend continues them in 18 years I guess $MU will make 16,700 a quarter in EPS... hmmm  \n \nstrange times. \n \nSo yes $MU is up 400x in 18 years.    \n \nif that happens agai",
+    "tag": "bull"
+   },
+   {
+    "h": "JDsince20",
+    "fol": 46,
+    "t": "2026-11-27T02:31:07Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/JDsince20/message/670263172",
+    "fr": "$NVDA $QQQ $GOOG $MU Earnings never been better, prices never been lower relative to earnings. Sets up a massive rally.",
+    "tag": "mix"
+   },
+   {
+    "h": "sprasad03",
+    "fol": 70,
+    "t": "2026-11-27T02:29:26Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/sprasad03/message/670263117",
+    "fr": "$MU $650 by morning",
+    "tag": "bull"
+   },
+   {
+    "h": "Tomleeks",
+    "fol": 55,
+    "t": "2026-11-27T02:26:47Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Tomleeks/message/670263033",
+    "fr": "$MU wow actually making money on my calls now",
+    "tag": "mix"
+   },
+   {
+    "h": "Tradernumber0",
+    "fol": 63,
+    "t": "2026-11-27T02:26:07Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Tradernumber0/message/670263007",
+    "fr": "$MU $SNDK $SPY",
+    "tag": "mix"
+   },
+   {
+    "h": "ShadowBanningIsBad",
+    "fol": 481,
+    "t": "2026-11-27T02:25:11Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/ShadowBanningIsBad/message/670262970",
+    "fr": "$MU WOW that is a really retarded take.   A bunch of whales got bad advice form retards that pushed the myth of a memory cycle \n \nCOMPUTE IS GETTING MORE EXPENSIVE EVERY MONTH!!!! \n \nGPU are selling for more money EVERY MONTH \n \nAn H100 PCIE sold for like 30k a few weeks ago a month before it was 27k or something I don&#39;t even fucking remember \n \nLiterally GPUS bought a year ago that may still ",
+    "tag": "mix"
+   },
+   {
+    "h": "Flickted",
+    "fol": 266,
+    "t": "2026-11-27T02:25:04Z",
+    "eng": 7,
+    "url": "https://stocktwits.com/Flickted/message/670262965",
+    "fr": "$NVDA $AMD $MU $SKHY $SMCI",
+    "tag": "bull"
+   },
+   {
+    "h": "TheLordoftheRings",
+    "fol": 2,
+    "t": "2026-11-27T02:17:43Z",
+    "eng": 2,
     "url": "https://stocktwits.com/TheLordoftheRings/message/670262713",
     "fr": "$MU $2000",
     "tag": "bull"
@@ -53636,7 +53657,7 @@
     "h": "Tomleeks",
     "fol": 55,
     "t": "2026-11-27T02:15:55Z",
-    "eng": 2,
+    "eng": 3,
     "url": "https://stocktwits.com/Tomleeks/message/670262658",
     "fr": "$MU near term 700 and then recover 900",
     "tag": "mix"
@@ -53645,7 +53666,7 @@
     "h": "mmmmama",
     "fol": 196,
     "t": "2026-11-27T02:15:18Z",
-    "eng": 4,
+    "eng": 5,
     "url": "https://stocktwits.com/mmmmama/message/670262639",
     "fr": "$MU i hope the fckers don’t rugpull this again!!!!",
     "tag": "mix"
@@ -53654,7 +53675,7 @@
     "h": "CmonManGiveMeABreak",
     "fol": 185,
     "t": "2026-11-27T02:14:34Z",
-    "eng": 2,
+    "eng": 3,
     "url": "https://stocktwits.com/CmonManGiveMeABreak/message/670262614",
     "fr": "$MU happy thanksgiving 🦃",
     "tag": "mix"
@@ -53670,9 +53691,9 @@
    },
    {
     "h": "Maribor",
-    "fol": 118,
+    "fol": 119,
     "t": "2026-11-27T02:12:01Z",
-    "eng": 6,
+    "eng": 7,
     "url": "https://stocktwits.com/Maribor/message/670262537",
     "fr": "$MU Near term, expect volatile consolidation between $550 and $710 as the market digests Wednesday&#39;s reversal from $548.13 ahead of the Dec 8–9 Fed meeting. From there, $MU&#39;s $35.16B buyback eligibility on Dec 9 and Q1 earnings on Dec 17 (guided to $61.5B revenue and $38.15 EPS) give it a clear path back toward $775–$900+ if 2027 HBM margins hold up.",
     "tag": "bull"
@@ -53681,85 +53702,67 @@
     "h": "WAS80",
     "fol": 3,
     "t": "2026-11-27T02:11:26Z",
-    "eng": 7,
+    "eng": 8,
     "url": "https://stocktwits.com/WAS80/message/670262521",
     "fr": "$MU looking strong again.  Really hoping everyone doesn’t pile into the Call Options again.  Buy the damn shares and let it climb!",
-    "tag": "mix"
-   },
-   {
-    "h": "Maribor",
-    "fol": 118,
-    "t": "2026-11-27T02:11:19Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/Maribor/message/670262517",
-    "fr": "@topstockalerts Near term, expect volatile consolidation between $550 and $710 as the market digests Wednesday&#39;s reversal from $548.13 ahead of the Dec 8–9 Fed meeting. From there, $MU&#39;s $35.16B buyback eligibility on Dec 9 and Q1 earnings on Dec 17 (guided to $61.5B revenue and $38.15 EPS) give it a clear path back toward $775–$900+ if 2027 HBM margins hold up",
-    "tag": "mix"
-   },
-   {
-    "h": "1manfund",
-    "fol": 1041,
-    "t": "2026-11-27T02:08:46Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/1manfund/message/670262439",
-    "fr": "Can Chinese HBM End the Memory Boom? A Critical Analysis \n$MU $SKHY  \n \n- Chinese HBM is real enough to take seriously and still far too early to break the cycle \n- Huawei has never said who manufactures its HBM due in Ascend chips this quarter, and independent analysts have not yet taken it apart \n- CXMT reportedly planned to move about 60,000 wafers a month, around a fifth of its capacity, towar",
-    "tag": "mix"
-   },
-   {
-    "h": "Doowut2391",
-    "fol": 2,
-    "t": "2026-11-27T02:08:27Z",
-    "eng": 7,
-    "url": "https://stocktwits.com/Doowut2391/message/670262427",
-    "fr": "$MU 650+ open?",
-    "tag": "bull"
-   },
-   {
-    "h": "bullsbearsrtds",
-    "fol": 50,
-    "t": "2026-11-27T02:06:40Z",
-    "eng": 5,
-    "url": "https://stocktwits.com/bullsbearsrtds/message/670262377",
-    "fr": "$MU well, i’ll gladly take 660 tomorrow.\n\nthis shit has been hurting just too much",
-    "tag": "bull"
-   },
-   {
-    "h": "ShadowBanningIsBad",
-    "fol": 481,
-    "t": "2026-11-27T02:06:31Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/ShadowBanningIsBad/message/670262374",
-    "fr": "$SKHY $MU Oh no guys.   $SSNLF MicroSD card prices have crashed 6% from high and they are in stock.  Its only up 238% from last Black friday deals.   \n \nI guess the tards at TrendForce will be right. \n \nI wonder if there are black friday deals on stacks of HBM",
-    "tag": "mix"
-   },
-   {
-    "h": "GR8BIGBLZ",
-    "fol": 14,
-    "t": "2026-11-27T02:06:28Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/GR8BIGBLZ/message/670262369",
-    "fr": "$MU people seem to forget how the last AI buildout cycle went for Micron",
-    "tag": "mix"
-   },
-   {
-    "h": "moneybags1000",
-    "fol": 9,
-    "t": "2026-11-27T02:05:47Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/moneybags1000/message/670262349",
-    "fr": "$MU can we hold till morning.  Thank you",
-    "tag": "mix"
-   },
-   {
-    "h": "OptionsPlayers",
-    "fol": 17829,
-    "t": "2026-11-27T02:04:41Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/OptionsPlayers/message/670262318",
-    "fr": "$MU $NUGT been doing this longer and better than anyone else here… all documented",
     "tag": "mix"
    }
   ],
   "SNDK": [
+   {
+    "h": "Nonenone18",
+    "fol": 1,
+    "t": "2026-11-27T02:37:31Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Nonenone18/message/670263380",
+    "fr": "$SNDK wow. Will it hold the gain this time?",
+    "tag": "mix"
+   },
+   {
+    "h": "NMQ",
+    "fol": 12,
+    "t": "2026-11-27T02:37:02Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/NMQ/message/670263355",
+    "fr": "$SNDK",
+    "tag": "mix"
+   },
+   {
+    "h": "SmellMyFingers",
+    "fol": 56,
+    "t": "2026-11-27T02:31:08Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/SmellMyFingers/message/670263173",
+    "fr": "$SNDK It&#39;s not unreasonable to believe that we could easily reach 400 by 2029 considering the demand for robotics and a lot of physical AI devices under development isn&#39;t included in the sandbagged memory demand forecasts.",
+    "tag": "bull"
+   },
+   {
+    "h": "MoneyManNow",
+    "fol": 396,
+    "t": "2026-11-27T02:29:43Z",
+    "eng": 3,
+    "url": "https://stocktwits.com/MoneyManNow/message/670263130",
+    "fr": "$SNDK $SPCX $NVDA 🔥🔥🔥",
+    "tag": "bull"
+   },
+   {
+    "h": "Tradernumber0",
+    "fol": 63,
+    "t": "2026-11-27T02:26:07Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Tradernumber0/message/670263007",
+    "fr": "$MU $SNDK $SPY",
+    "tag": "mix"
+   },
+   {
+    "h": "Tradernumber0",
+    "fol": 63,
+    "t": "2026-11-27T02:25:18Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/Tradernumber0/message/670262977",
+    "fr": "$SNDK told you the bottom\nIs in\nNext week $120-$150",
+    "tag": "bull"
+   },
    {
     "h": "FF352",
     "fol": 2,
@@ -53773,7 +53776,7 @@
     "h": "GSP",
     "fol": 31383,
     "t": "2026-11-27T02:19:24Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/GSP/message/670262766",
     "fr": "$AMD $FCUV $NTSK $SLS $SNDK",
     "tag": "mix"
@@ -53791,7 +53794,7 @@
     "h": "MoneyManNow",
     "fol": 396,
     "t": "2026-11-27T02:14:54Z",
-    "eng": 2,
+    "eng": 3,
     "url": "https://stocktwits.com/MoneyManNow/message/670262624",
     "fr": "$SNDK",
     "tag": "bull"
@@ -53800,7 +53803,7 @@
     "h": "ToRni27",
     "fol": 166,
     "t": "2026-11-27T02:14:23Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/ToRni27/message/670262612",
     "fr": "$SNDK whales loading up",
     "tag": "bull"
@@ -53818,7 +53821,7 @@
     "h": "Armencho",
     "fol": 196,
     "t": "2026-11-27T02:09:02Z",
-    "eng": 3,
+    "eng": 6,
     "url": "https://stocktwits.com/Armencho/message/670262449",
     "fr": "$SNDK 100 tomorrow",
     "tag": "mix"
@@ -53827,7 +53830,7 @@
     "h": "Tomleeks",
     "fol": 55,
     "t": "2026-11-27T02:08:37Z",
-    "eng": 1,
+    "eng": 2,
     "url": "https://stocktwits.com/Tomleeks/message/670262436",
     "fr": "$SNDK futuresnroring again",
     "tag": "mix"
@@ -53840,63 +53843,36 @@
     "url": "https://stocktwits.com/BearRaider/message/670262343",
     "fr": "$META $NVDA $SNDK Me looking at futures..",
     "tag": "bull"
-   },
-   {
-    "h": "topstockalerts",
-    "fol": 110314,
-    "t": "2026-11-27T01:57:49Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/topstockalerts/message/670262144",
-    "fr": "$SNDK  this is the type of tape that changes opinions.",
-    "tag": "mix"
-   },
-   {
-    "h": "Steezbeez",
-    "fol": 166,
-    "t": "2026-11-27T01:54:35Z",
-    "eng": 5,
-    "url": "https://stocktwits.com/Steezbeez/message/670262071",
-    "fr": "$SNDK get us back to 100 bucks so we can breathe again",
-    "tag": "mix"
-   },
-   {
-    "h": "MoneyManNow",
-    "fol": 396,
-    "t": "2026-11-27T01:53:19Z",
-    "eng": 6,
-    "url": "https://stocktwits.com/MoneyManNow/message/670262040",
-    "fr": "$SNDK is so Undervalued!",
-    "tag": "bull"
-   },
-   {
-    "h": "BadBatch",
-    "fol": 19,
-    "t": "2026-11-27T01:52:22Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/BadBatch/message/670262025",
-    "fr": "$SNDK a Screaming",
-    "tag": "mix"
-   },
-   {
-    "h": "HigherTrend",
-    "fol": 22,
-    "t": "2026-11-27T01:44:39Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/HigherTrend/message/670261823",
-    "fr": "$SNDK If you bought this at $67 your good. Thing the Tutes decided Wed at 11:44 AM EST that was the bottom in the market.",
-    "tag": "mix"
-   },
-   {
-    "h": "TrickorTrade22",
-    "fol": 35,
-    "t": "2026-11-27T01:40:15Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/TrickorTrade22/message/670261704",
-    "fr": "$MU $SNDK Bulltard crackheads, don’t get your hopes up. Both of these will be red by end of day tomorrow. Tik tok…",
-    "tag": "mix"
    }
   ],
   "GOOGL": [
+   {
+    "h": "Virkitout",
+    "fol": 30,
+    "t": "2026-11-27T02:39:24Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Virkitout/message/670263427",
+    "fr": "$GOOGL adding at open",
+    "tag": "bull"
+   },
+   {
+    "h": "openclassaction2",
+    "fol": 87,
+    "t": "2026-11-27T02:35:59Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/openclassaction2/message/670263328",
+    "fr": "$GOOGL the european central bank puts cumulative big tech capex near 5.5 trillion dollars by 2030. seems like at that scale the question is not who wins ai, it is who funds it without breaking their balance sheet",
+    "tag": "mix"
+   },
+   {
+    "h": "EnergeticNuggets",
+    "fol": 0,
+    "t": "2026-11-27T02:25:19Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/EnergeticNuggets/message/670262979",
+    "fr": "$GOOGL not trusting after hours market. Yesterday we were up 1% and when it opened it was -4%",
+    "tag": "mix"
+   },
    {
     "h": "23bobsmith23",
     "fol": 97,
@@ -53919,7 +53895,7 @@
     "h": "CrispDry",
     "fol": 137,
     "t": "2026-11-27T02:08:34Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/CrispDry/message/670262432",
     "fr": "$ORCL I’m calling bottom here let’s goooo $AMZN $GOOGL",
     "tag": "bull"
@@ -54004,36 +53980,18 @@
     "url": "https://stocktwits.com/Ro_Patel/message/670258316",
     "fr": "Goldman Sachs: Major US hyperscalers can “very easily” achieve a 15%+ ROIC. This is framed as a bare-minimum hurdle on their Phase 2 (roughly 2026–2027) AI-related capex &amp; conclude these companies can clear that bar on their 2026–2027 (“Phase 2”) AI compute spending.\n\nKey supporting points from Sheridan and the surrounding GS work:\n\nRevs req’d for 15% ROIC: Approximately $1.42T cumulative rev ",
     "tag": "mix"
-   },
-   {
-    "h": "openclassaction2",
-    "fol": 87,
-    "t": "2026-11-26T22:24:32Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/openclassaction2/message/670258036",
-    "fr": "$GOOGL seems like pension funds did not vote for an ai capex arms race. they bought an index, the index bought the build, and now retirement money carries the depreciation",
-    "tag": "mix"
-   },
-   {
-    "h": "b1ngbong",
-    "fol": 63,
-    "t": "2026-11-26T21:55:48Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/b1ngbong/message/670257541",
-    "fr": "$GOOGL Back to 300 by Monday night",
-    "tag": "bull"
-   },
-   {
-    "h": "ElliottwaveForecast",
-    "fol": 48952,
-    "t": "2026-11-26T21:32:31Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/ElliottwaveForecast/message/670257153",
-    "fr": "As expected, $GOOGL completed its corrective phase and resumed lower, eventually reaching the extreme target area at 289.09 - 230.48 as forecast. \n \nTrade the right side. Trade the Blue box. \n \n#Trading #ElliottWave",
-    "tag": "mix"
    }
   ],
   "META": [
+   {
+    "h": "BBELLii",
+    "fol": 231,
+    "t": "2026-11-27T02:25:12Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/BBELLii/message/670262972",
+    "fr": "$KITT 👀👀$6 !?? \n$RDDT \n$SPCX \n$META \n$NVDA",
+    "tag": "mix"
+   },
    {
     "h": "23bobsmith23",
     "fol": 97,
@@ -54159,18 +54117,54 @@
     "url": "https://stocktwits.com/Jumper567/message/670259936",
     "fr": "$META nobody using that garbage they rolled out called Muse 🤣🤣🤣🤣🤣🤣",
     "tag": "bear"
-   },
-   {
-    "h": "JensenNVDA",
-    "fol": 146,
-    "t": "2026-11-27T00:03:19Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/JensenNVDA/message/670259854",
-    "fr": "$BABA \n\nI just MUTE them.  So I don’t need to listen to their drivel\n\nHowever, I don’t block them or I can’t continue to “preach” to them.  \n\nHopefully they just mute me too (in return) if they don’t like my “preaching”.  \n\nI muted @CarolWu .  Has  Saggy Carol @CarolWu muted me back yet or is she still enjoying my words of wisdom?  \n\n$NVDA $META",
-    "tag": "bull"
    }
   ],
   "TSLA": [
+   {
+    "h": "gaineous",
+    "fol": 763,
+    "t": "2026-11-27T02:35:13Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/gaineous/message/670263305",
+    "fr": "Arbitrary events are only explained properly w/hindsight &amp; we’re nowhere near there….yet.\n\n$ANT $NVDA $SPCX $TSLA $ONDS \n\n“Pentagon leaders weighed an audacious idea: invoking a Cold War-era law to pressure Nvidia to restore Jensen Huang as CEO, according to three people familiar with the debate.\n\nThe Defense Production Act, a 1950 law that grants the president broad authority to intervene in ",
+    "tag": "mix"
+   },
+   {
+    "h": "openclassaction2",
+    "fol": 87,
+    "t": "2026-11-27T02:34:04Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/openclassaction2/message/670263270",
+    "fr": "$TSLA seems like the end customer is still a car buyer, not a story buyer. valuations priced robots and autonomy for years, demand has to show up in deliveries and cash, not timelines that keep moving",
+    "tag": "mix"
+   },
+   {
+    "h": "shirtburglar",
+    "fol": 88,
+    "t": "2026-11-27T02:30:00Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/shirtburglar/message/670263142",
+    "fr": "$SPCX $TSLA $SPY $DJT",
+    "tag": "mix"
+   },
+   {
+    "h": "Brodyjones22",
+    "fol": 100,
+    "t": "2026-11-27T02:29:39Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/Brodyjones22/message/670263128",
+    "fr": "$TSLA 400+ tmrw",
+    "tag": "bull"
+   },
+   {
+    "h": "BullishAaFf",
+    "fol": 46,
+    "t": "2026-11-27T02:25:33Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/BullishAaFf/message/670262985",
+    "fr": "$FFAI $NIO $RIVN $LCID $TSLA  \n🚀🚀🚀🚀🚀  \nhttps://youtu.be/6cWc5LRNr4w?is=ulY_bZZQmMNDYFNm",
+    "tag": "bull"
+   },
    {
     "h": "SamGiancana",
     "fol": 62,
@@ -54211,7 +54205,7 @@
     "h": "beestMod516",
     "fol": 510,
     "t": "2026-11-27T01:35:29Z",
-    "eng": 5,
+    "eng": 6,
     "url": "https://stocktwits.com/beestMod516/message/670261585",
     "fr": "Congrats bears 🐻 \nYou played yourself \nThanks for playing \nTimes up 🙏 \n\n$SPY $MU $NBIS $TSLA",
     "tag": "mix"
@@ -54260,54 +54254,18 @@
     "url": "https://stocktwits.com/bagholdking/message/670260443",
     "fr": "$SPCX $TSLA OPINION ON MERGER",
     "tag": "mix"
-   },
-   {
-    "h": "_Thumper_",
-    "fol": 219,
-    "t": "2026-11-27T00:33:25Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/_Thumper_/message/670260362",
-    "fr": "$TSLA  &amp;   $SPCX   \n \nYou pick up and make a call to  \n \nYour Local Electric Company: \n \n“ Ya, ya, sure, don&#39;t worry, we&#39;ll get to you \n \nReal Soon. ” 😁 \n \nShoulda, Woulda, Coulda .  😖 \n \nPowerWalls &amp; Solar Panels,  \n \nThey&#39;re still in stock. \n \nTry calling Tesla next.  😉  \n \n✅",
-    "tag": "bull"
-   },
-   {
-    "h": "BullishAaFf",
-    "fol": 46,
-    "t": "2026-11-27T00:15:02Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/BullishAaFf/message/670260039",
-    "fr": "$FFAI $NIO $RIVN $LCID $TSLA  \n🚀🚀🚀🚀🚀  \nhttps://youtu.be/7DdJzKh-DqI?is=cMzW8bjtpY5RXOcH",
-    "tag": "bull"
-   },
-   {
-    "h": "YodaStockInvests",
-    "fol": 274,
-    "t": "2026-11-27T00:12:28Z",
-    "eng": 7,
-    "url": "https://stocktwits.com/YodaStockInvests/message/670260006",
-    "fr": "ARE YOU READY?! $NVDA $TSLA $IREN $CRWV",
-    "tag": "mix"
-   },
-   {
-    "h": "Thelonius_Stonk",
-    "fol": 10122,
-    "t": "2026-11-27T00:10:17Z",
-    "eng": 4,
-    "url": "https://stocktwits.com/Thelonius_Stonk/message/670259970",
-    "fr": "$RIVN $TSLA @@@@",
-    "tag": "mix"
-   },
-   {
-    "h": "openclassaction2",
-    "fol": 87,
-    "t": "2026-11-27T00:05:29Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/openclassaction2/message/670259883",
-    "fr": "$TSLA seems like valuation still prices an ai future while end demand pays car prices. two different customers, one multiple, and only one of them is real today",
-    "tag": "mix"
    }
   ],
   "MSFT": [
+   {
+    "h": "openclassaction2",
+    "fol": 87,
+    "t": "2026-11-27T02:36:40Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/openclassaction2/message/670263346",
+    "fr": "$MSFT fed data shows debt tied to advanced computing passed 680 billion dollars by october, versus about 130 billion in all of 2023. seems like the boom stopped being self funded a long time ago",
+    "tag": "mix"
+   },
    {
     "h": "23bobsmith23",
     "fol": 97,
@@ -54433,15 +54391,6 @@
     "url": "https://stocktwits.com/GTA_Terminal/message/670257517",
     "fr": "$MSFT SHAME! Lying to their own customers, hiding, putting your business at risk, even the ceo satya showed up on NYT conference live and said he knew 100% it was not a hack… \n\nThey deserve to be punished, just like $AMZN when they lied about having an AI store and it was people in india working for slave labor basically. \n\nVery magnificent for the mag7! These companies desperately need a haircut.",
     "tag": "bear"
-   },
-   {
-    "h": "TheExpertFellow",
-    "fol": 552,
-    "t": "2026-11-26T21:32:00Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/TheExpertFellow/message/670257148",
-    "fr": "The afterwards: \n \n \n$META $GOOG $MSFT $AMZN $AMD",
-    "tag": "bull"
    }
   ],
   "AAPL": [
@@ -54494,7 +54443,7 @@
     "h": "TaxAccountant1",
     "fol": 3,
     "t": "2026-11-26T23:32:32Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/TaxAccountant1/message/670259269",
     "fr": "$AAPL starting a short position here. Anyone who thinks this is a defensive stock against ai is stupid as fuck. At this price, compared to Google, who makes a better phone, is proof the market is not always correct",
     "tag": "bear"
@@ -54583,6 +54532,15 @@
   ],
   "AMZN": [
    {
+    "h": "openclassaction2",
+    "fol": 87,
+    "t": "2026-11-27T02:35:04Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/openclassaction2/message/670263295",
+    "fr": "$AMZN jpmorgan sees 450 billion dollars in ai bond issuance next year, up from 368 billion this year. seems like the build is not slowing, the bill is just moving from cash piles to bond buyers",
+    "tag": "mix"
+   },
+   {
     "h": "23bobsmith23",
     "fol": 97,
     "t": "2026-11-27T02:20:40Z",
@@ -54595,7 +54553,7 @@
     "h": "CrispDry",
     "fol": 137,
     "t": "2026-11-27T02:08:34Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/CrispDry/message/670262432",
     "fr": "$ORCL I’m calling bottom here let’s goooo $AMZN $GOOGL",
     "tag": "bull"
@@ -54620,7 +54578,7 @@
    },
    {
     "h": "peloswing",
-    "fol": 9224,
+    "fol": 9225,
     "t": "2026-11-27T01:03:03Z",
     "eng": 1,
     "url": "https://stocktwits.com/peloswing/message/670260842",
@@ -54707,18 +54665,36 @@
     "url": "https://stocktwits.com/openclassaction2/message/670258178",
     "fr": "$AMZN seems like ask who pays full price for all this capacity in 2027. if the answer is other ai companies paying each other, that is not demand, that is circulation",
     "tag": "mix"
-   },
-   {
-    "h": "TalkMarkets",
-    "fol": 32114,
-    "t": "2026-11-26T21:54:48Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/TalkMarkets/message/670257518",
-    "fr": "Can #Nvidia Keep Its Margins When Its Customers Build Their Own Chips? $NVDA $ORCL $META $AMZN $ANT https://talkmarkets.com/article/can-nvidia-keep-its-margins-when-its-customers-build-their-own-chips",
-    "tag": "mix"
    }
   ],
   "PLTR": [
+   {
+    "h": "Rangerbobtribute",
+    "fol": 168,
+    "t": "2026-11-27T02:37:59Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Rangerbobtribute/message/670263388",
+    "fr": "$PLTR here’s shit for brains epiphany on being a bull 😂😂😂😂🤣🤣🤣 joined STs 10/2026 such F’ing sage advice. The only thing this idiots held long is his dick. Something tells me this cockroach never heard of PLTR before it DPO’d…he thinks it was a spac…at least we haven’t heard that from a low IQ roach before. I’m damn sure he didn’t buy at $10 when it DPO’d…and rode the wave to $45 and down to below ",
+    "tag": "bull"
+   },
+   {
+    "h": "Super_Sketch",
+    "fol": 15,
+    "t": "2026-11-27T02:32:54Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/Super_Sketch/message/670263232",
+    "fr": "$PLTR",
+    "tag": "mix"
+   },
+   {
+    "h": "Rangerbobtribute",
+    "fol": 168,
+    "t": "2026-11-27T02:25:46Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/Rangerbobtribute/message/670262997",
+    "fr": "$PLTR winner of the Overnight Cockroach Award 🏆. Shit for brains @danglino. They did a DPO shithead. You can always tell when they were in Sped Class.",
+    "tag": "bull"
+   },
    {
     "h": "openclassaction2",
     "fol": 87,
@@ -54741,7 +54717,7 @@
     "h": "Johnmm98",
     "fol": 33,
     "t": "2026-11-27T02:00:45Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/Johnmm98/message/670262203",
     "fr": "$PLTR 🙏🙏🙏🙏",
     "tag": "bull"
@@ -54759,7 +54735,7 @@
     "h": "NBman1988",
     "fol": 126,
     "t": "2026-11-27T01:38:56Z",
-    "eng": 6,
+    "eng": 7,
     "url": "https://stocktwits.com/NBman1988/message/670261674",
     "fr": "$SNDK $NVDA $PLTR futures are up big!",
     "tag": "bull"
@@ -54804,7 +54780,7 @@
     "h": "JDKING",
     "fol": 1333,
     "t": "2026-11-27T00:29:22Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/JDKING/message/670260302",
     "fr": "$PLTR continues to impress. Even amid the recent market turmoil, Palantir keeps expanding its global footprint and strengthening its position in AI and national defense. Poland is another important step forward. A company that never stops executing.",
     "tag": "mix"
@@ -54822,37 +54798,10 @@
     "h": "Super_Sketch",
     "fol": 15,
     "t": "2026-11-26T23:57:24Z",
-    "eng": 4,
+    "eng": 5,
     "url": "https://stocktwits.com/Super_Sketch/message/670259767",
     "fr": "$PLTR Poland gonna pay a lot of zlotys",
     "tag": "bull"
-   },
-   {
-    "h": "ElliottwaveForecast",
-    "fol": 48952,
-    "t": "2026-11-26T23:48:18Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/ElliottwaveForecast/message/670259584",
-    "fr": "👀 $PLTR — Strong Fundamentals, but the Technical Picture Still Calls for Caution \n \nDespite strong AI demand and revenue growth, Palantir&#39;s Elliott Wave structure suggests the correction remains incomplete. \n \n🔹 Flat correction scenario: wave ((II)) could extend toward 111.00–48.02. \n \n🔹 Double correction scenario: wave II could find support around 115.02–107.38. \n \nBoth scenarios favor an eve",
-    "tag": "mix"
-   },
-   {
-    "h": "openclassaction2",
-    "fol": 87,
-    "t": "2026-11-26T23:44:35Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/openclassaction2/message/670259527",
-    "fr": "$PLTR seems like ai debt heading toward 12 percent of investment grade by 2028 means the bubble gets a bond index. equity pops first, credit owns the aftermath",
-    "tag": "mix"
-   },
-   {
-    "h": "openclassaction2",
-    "fol": 87,
-    "t": "2026-11-26T22:48:42Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/openclassaction2/message/670258470",
-    "fr": "$PLTR seems like valuation versus end demand still does not add up. government contracts are real, the multiple prices a much bigger future, and futures get repriced fast",
-    "tag": "mix"
    }
   ],
   "BTC": [
@@ -55513,10 +55462,10 @@
    "src": "Médecins Sans Frontières"
   },
   {
-   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
-   "title": "Cryptomonnaies : un homme écroué après la séquestration d’un couple dans les Yvelines et le vol de 900 000 € de bitcoins - Ouest-France",
-   "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNbnpkQnlGaEV1Vmw1eEQxNXR4QmRyVHFLMDBpQWZHd0ZocV9ySEloV0o2YnUtX0wwVGhqQzdsUjRxS1gtSXFad2w2NXpvZk9LZlVzYmhMQ1RQT3dVVXFmUkVWeEdWaTVENm9aTm5zWGJvZlVUcnhZOFJ5NWdRNTZVT05za2JrZGdyVWc4ZE1wdi1hbnFyLTJ1TEd1bElpV19HQ2FwSGk2T2JGVDhjQkN0aWR5M0diREpJeFZyMjI4THZSTzBIZjJqcFQwWlBCZktFRklFeXpvWndQcmVVRE1mUEthaVhRSHpzQnpKVXlsV0dmQjZqU1lDUncxQVREUURBX1dfaEFVbFBxYUFBWnprNzFLX3dlUkZiV3padEYtNm0xQ3F1eUcwdU1NN05vY2Z4?oc=5",
-   "src": "Ouest-France"
+   "t": "Fri, 30 Oct 2026 07:00:00 GMT",
+   "title": "Deux hommes condamnés pour une séquestration crypto estimée par erreur à 40 millions d'euros en bitcoins - Cryptoast",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObm9OY3JSeHJXLXhxYzBRR3lsWjRodVdXcjFydE5vSFUzTGg2Z01uMk1YSHNYOWE4azVDV0U5QUI1UE9oVmlVODFZTEF4T2p3bmdmalJ5aVY3ZmdZZzhrR3M5ZnFBREpYWm03TlVfMGhjVUU0VlFTMUZUY1EzQkdhU3JTZWNlX1pJRk5SaVBKYWRBMmtYVFE?oc=5",
+   "src": "Cryptoast"
   }
  ],
  "fed": [
