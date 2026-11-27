@@ -771,6 +771,7 @@ def firsts():
     # sur les tokens où il est parmi les 3 premiers, combien de comptes en parlent dans les 48 h qui suivent
     try:
         big = {r[0] for r in (OUT.get("top") or []) if (r[1] or 9999) <= 100}
+        big |= {str(x).upper().lstrip("$") for x in (CFG.get("tok_hidden") or [])}  # tokens masqués : hors classement
         # comme le dashboard : on écarte aussi les actions/matières cotées sur Hyperliquid et les tokens plus gros que le 100e
         try:
             body = json.dumps({"type": "meta", "dex": "xyz"}).encode()
@@ -863,8 +864,9 @@ def callstats():
             mo += 12; y -= 1
         allrec += list(load(f"{y:04d}-{mo:02d}").values())
     S = {}
+    TH = {str(x).upper().lstrip("$") for x in (CFG.get("tok_hidden") or [])}
     for r in allrec:
-        if r.get("big"):
+        if r.get("big") or r.get("T") in TH:
             continue
         q = S.setdefault(r["h"], {"h": r["h"], "n": 0, "win": 0, "sum24": 0.0, "summx": 0.0, "best": None, "toks": []})
         g = r["r24h"] * r.get("s", 1)
