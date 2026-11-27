@@ -73,7 +73,7 @@ out.rot_next = order[0] || null;
   for (const a of miss) {
     try { const p = await Promise.race([sp.getProfile(a), new Promise((_, r) => setTimeout(() => r(new Error('timeout')), 8000))]);
       out.influ_prof[a.toLowerCase()] = { h: p.username || a, n: p.name || '', fol: p.followersCount || 0, av: p.avatar || null }; ok++; }
-    catch (e) { out.prof_fail[a.toLowerCase()] = Date.now(); if (!out.errors.profils) out.errors.profils = (a + ': ' + String(e)).slice(0, 160); if (/rate|429/i.test(String(e))) break; }
+    catch (e) { out.prof_fail[a.toLowerCase()] = Date.now(); if (!out.errors.profils) out.errors.profils = (a + ': ' + String(e)).slice(0, 160); if (/status: 429|Too Many Requests|Rate limit exceeded/i.test(String(e).split('| headers')[0])) break; }
   }
   out.prof_ok = ok; }
 for (const a of slice) {
