@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-27T07:10:43Z",
+ "generated": "2026-11-27T07:25:52Z",
  "errors": {
-  "x_guest": "{'influ:CRyptOracl3': 'Error: Response status: 429 | headers: \"access-control-allow-credentials: true\\\\naccess-control-allow-origin: https://x.com\\\\naccess-control-expose-headers: Backo', 'rate_limit': 'limite X atteinte, reprise au prochain passage (à @CRyptOracl3)'}",
+  "x_guest": "{'influ:Crypto_Gambit_': 'Error: Response status: 429 | headers: \"access-control-allow-credentials: true\\\\naccess-control-allow-origin: https://x.com\\\\naccess-control-expose-headers: Backo', 'rate_limit': 'limite X atteinte, reprise au prochain passage (à @Crypto_Gambit_)'}",
   "traduction": "HTTPError",
   "callpx:MANIFEST": "HTTP Error 429: Too Many Requests",
+  "callpx:CLAUDIA": "HTTP Error 429: Too Many Requests",
   "callpx:SPCX": "HTTP Error 429: Too Many Requests",
   "callpx:ANSEM": "HTTP Error 429: Too Many Requests",
   "callpx:TSLA": "HTTP Error 429: Too Many Requests",
-  "callpx:OBI": "HTTP Error 429: Too Many Requests",
   "stocktwits:HYPE": "HTTP Error 404: Not Found",
   "reddit:wallstreetbets": "HTTP Error 404: Not Found",
-  "reddit:stocks": "HTTP Error 404: Not Found",
+  "reddit:stocks": "HTTP Error 429: Too Many Requests",
   "reddit:CryptoCurrency": "HTTP Error 429: Too Many Requests",
   "reddit:investing": "HTTP Error 429: Too Many Requests",
   "risks": "HTTPError: HTTP Error 429: Too Many Requests"
@@ -1098,7 +1098,7 @@
      "tag": "mix"
     }
    ],
-   "BTC": [
+   "GLD": [
     {
      "h": "Mr_Derivatives",
      "fol": 0,
@@ -1109,7 +1109,7 @@
      "tag": "mix"
     }
    ],
-   "GLD": [
+   "BTC": [
     {
      "h": "Mr_Derivatives",
      "fol": 0,
@@ -1520,202 +1520,202 @@
   [
    "BTC",
    1,
-   1241105122079
+   1243115663078
   ],
   [
    "ETH",
    2,
-   211833283774
+   212037216565
   ],
   [
    "USDT",
    3,
-   173819424116
+   173828966768
   ],
   [
    "BNB",
    4,
-   74399744727
+   74423450013
   ],
   [
    "USDC",
    5,
-   69173164823
+   69172787204
   ],
   [
    "XRP",
    6,
-   61811485169
+   62054781846
   ],
   [
    "SOL",
    7,
-   43213194796
+   43218797568
   ],
   [
    "FIGR_HELOC",
    8,
-   29222781160
+   29222087020
   ],
   [
    "TRX",
    9,
-   29031611157
+   29046509785
   ],
   [
    "HYPE",
    10,
-   15765307097
+   15732339671
   ],
   [
    "ZEC",
    11,
-   12695371751
+   12826479938
   ],
   [
    "DOGE",
    12,
-   9117831145
+   9120294237
   ],
   [
    "XMR",
    13,
-   8779492079
+   8757241527
   ],
   [
    "LEO",
    14,
-   8341916579
+   8342610789
   ],
   [
    "WBT",
    15,
-   7383687301
+   7391791126
   ],
   [
    "LINK",
    16,
-   7346148700
+   7347922256
   ],
   [
    "USDS",
    17,
-   6291144727
+   6291030197
   ],
   [
    "ADA",
    18,
-   5747515392
+   5757339808
   ],
   [
    "USDE",
    19,
-   4915656440
+   4915669140
   ],
   [
    "XLM",
    20,
-   4606337369
+   4608785373
   ],
   [
    "DAI",
    21,
-   4337977817
+   4338446405
   ],
   [
    "BCH",
    22,
-   4286676033
+   4289955617
   ],
   [
    "NEAR",
    23,
-   4073541074
+   4081647101
   ],
   [
    "LTC",
    24,
-   3447036661
+   3446051957
   ],
   [
    "CC",
    25,
-   3057365119
+   3065219037
   ],
   [
    "AVAX",
    26,
-   3021598347
+   3023469074
   ],
   [
    "UNI",
    27,
-   2958729591
+   2972073179
   ],
   [
    "XAUT",
    28,
-   2955537545
+   2952112131
   ],
   [
    "USD1",
    29,
-   2852290331
+   2852457617
   ],
   [
    "GRAM",
    30,
-   2843277642
+   2839816305
   ],
   [
    "SUI",
    31,
-   2829445016
+   2833133258
   ],
   [
    "RLUSD",
    32,
-   2780912943
+   2780912603
   ],
   [
    "USDG",
    33,
-   2573716638
+   2573740912
   ],
   [
    "HBAR",
    34,
-   2468807843
+   2469270282
   ],
   [
    "USDY",
    35,
-   2375655752
+   2374634291
   ],
   [
    "PYUSD",
    36,
-   2371911048
+   2372044217
   ],
   [
    "TAO",
    37,
-   2209307023
+   2212081248
   ],
   [
    "QNT",
    38,
-   2202354573
+   2196022648
   ],
   [
    "SHIB",
    39,
-   2172724454
+   2175010740
   ],
   [
    "EURSAFO",
    40,
-   2121185817
+   2121532823
   ],
   [
    "USYC",
@@ -1725,37 +1725,37 @@
   [
    "CRO",
    42,
-   2093802699
+   2092089541
   ],
   [
    "M",
    43,
-   1907728434
+   1910815378
   ],
   [
    "OKB",
    44,
-   1774432883
+   1776606811
   ],
   [
    "RAIN",
    45,
-   1725450499
+   1725506601
   ],
   [
    "USDF",
    46,
-   1712079256
+   1712016212
   ],
   [
    "PAXG",
    47,
-   1632613064
+   1631043868
   ],
   [
    "U",
    48,
-   1601677475
+   1601587381
   ],
   [
    "BUIDL",
@@ -1765,207 +1765,207 @@
   [
    "PEPE",
    50,
-   1518312480
+   1519099986
   ],
   [
    "USDD",
    51,
-   1491392296
+   1491709314
   ],
   [
    "AAVE",
    52,
-   1487325489
+   1487979473
   ],
   [
    "ONDO",
    53,
-   1445667247
+   1446989429
   ],
   [
    "ENA",
    54,
-   1445636935
+   1437096318
   ],
   [
    "BTW",
    55,
-   1423095158
+   1431125208
   ],
   [
    "VVV",
    56,
-   1351656710
-  ],
-  [
-   "BFUSD",
-   57,
-   1317868010
+   1341126006
   ],
   [
    "WLFI",
+   57,
+   1320420589
+  ],
+  [
+   "BFUSD",
    58,
-   1316774930
+   1317899224
   ],
   [
    "ASTER",
    59,
-   1309198422
+   1310744571
   ],
   [
    "HTX",
    60,
-   1291451170
+   1289015538
   ],
   [
    "MNT",
    61,
-   1275160817
+   1272885556
   ],
   [
    "DOT",
    62,
-   1180857298
+   1180800148
   ],
   [
    "MORPHO",
    63,
-   1171317192
-  ],
-  [
-   "JST",
-   64,
-   1138126670
+   1171623722
   ],
   [
    "ICP",
+   64,
+   1139559113
+  ],
+  [
+   "JST",
    65,
-   1136854697
+   1138221183
   ],
   [
    "PIEVERSE",
    66,
-   1099221341
+   1115607565
   ],
   [
    "SKY",
    67,
-   1080778792
+   1090279053
   ],
   [
    "BGB",
    68,
-   1066148767
+   1066722089
   ],
   [
    "OUSD",
    69,
-   1011660990
+   1011706158
   ],
   [
    "WLD",
    70,
-   967075948
+   967201721
   ],
   [
    "ETC",
    71,
-   953553135
+   955732424
   ],
   [
    "PUMP",
    72,
-   934536540
+   938184053
   ],
   [
    "USDGO",
    73,
-   923162913
+   923184657
   ],
   [
    "KCS",
    74,
-   861111715
+   861230428
   ],
   [
    "POL",
    75,
-   838633130
+   837717198
   ],
   [
    "NIGHT",
    76,
-   831543739
+   830775103
   ],
   [
    "JUP",
-   77,
-   827174510
+   78,
+   825639804
   ],
   [
    "ARB",
-   78,
-   825657314
+   77,
+   824347804
   ],
   [
    "RENDER",
    79,
-   757376488
+   758547658
   ],
   [
    "KAS",
    80,
-   754224548
+   753404994
   ],
   [
    "ALGO",
    81,
-   747119178
+   748538943
   ],
   [
    "GT",
    82,
-   733734924
+   733909887
   ],
   [
    "PEARL",
    83,
-   714478788
+   711422968
   ],
   [
    "GHO",
    84,
-   697785143
+   697804072
   ],
   [
    "USTB",
-   85,
+   86,
    677119465
   ],
   [
    "ATOM",
-   86,
-   673697026
+   85,
+   676459821
   ],
   [
    "LIT",
    87,
-   663761314
-  ],
-  [
-   "NEXO",
-   88,
-   639286558
+   666689632
   ],
   [
    "INJ",
+   88,
+   644216617
+  ],
+  [
+   "NEXO",
    89,
-   637112984
+   640361678
   ],
   [
    "PI",
    90,
-   613200814
+   614088050
   ],
   [
    "JAAA",
@@ -1975,152 +1975,152 @@
   [
    "USD0",
    92,
-   536665933
+   536678501
   ],
   [
    "BDX",
    93,
-   524716330
+   527245424
   ],
   [
    "XDC",
    94,
-   521810601
-  ],
-  [
-   "CAKE",
-   95,
-   506282375
+   522181477
   ],
   [
    "STX",
+   95,
+   506649079
+  ],
+  [
+   "CAKE",
    96,
-   504239630
+   506393386
   ],
   [
    "EURC",
    97,
-   502686018
+   502621071
   ],
   [
    "TUSD",
    98,
-   493893652
+   493811564
   ],
   [
    "EUTBL",
    99,
-   476028899
+   476152254
   ],
   [
    "DASH",
    100,
-   471781093
+   471980472
   ],
   [
    "FIL",
    101,
-   467680765
+   469153236
   ],
   [
    "STABLE",
    102,
-   461803648
+   461028563
   ],
   [
    "ZRO",
    103,
-   456194495
+   457259834
   ],
   [
    "ETHFI",
    104,
-   454604014
+   453238461
   ],
   [
    "币安人生",
    105,
-   452430600
+   452581310
   ],
   [
    "A7A5",
    106,
-   450747115
+   450757822
   ],
   [
    "FLR",
    107,
-   448236656
+   449010359
   ],
   [
    "VET",
    108,
-   428658310
+   429158851
   ],
   [
    "DRV",
    109,
-   400815349
+   401154201
   ],
   [
    "PYTH",
    110,
-   397779122
+   397133416
   ],
   [
    "HASH",
    111,
-   382970730
+   382913798
   ],
   [
    "SOFID",
    112,
-   380007638
+   380016279
   ],
   [
    "YLDS",
    113,
-   365919055
+   365926891
   ],
   [
    "FF",
    114,
-   363381619
+   363200237
   ],
   [
    "RAY",
    115,
-   361021582
+   362573076
   ],
   [
    "APT",
    116,
-   350146986
+   350853901
   ],
   [
    "TIA",
    117,
-   345667581
+   346057700
   ],
   [
    "KITE",
    118,
-   341075326
+   341233918
   ],
   [
    "REUSD",
    119,
-   336806959
+   336814959
   ],
   [
    "KAU",
    120,
-   318571641
+   318579208
   ],
   [
    "AERO",
    121,
-   317904124
+   317938399
   ],
   [
    "OUSG",
@@ -2130,77 +2130,77 @@
   [
    "APEPE",
    123,
-   302526978
+   302570736
   ],
   [
    "BSV",
    124,
-   292110279
+   292759394
   ],
   [
    "BTT",
    125,
-   289766498
+   290097263
   ],
   [
    "FET",
    126,
-   288877278
+   289291726
   ],
   [
    "PENGU",
    127,
-   285349886
+   285267124
   ],
   [
    "CRV",
    128,
-   284286072
+   284414438
   ],
   [
    "GRASS",
    129,
-   280140911
+   281291266
   ],
   [
    "SUN",
    130,
-   279104517
-  ],
-  [
-   "FDUSD",
-   131,
-   272018079
-  ],
-  [
-   "APXUSD",
-   132,
-   271479047
+   279130837
   ],
   [
    "MON",
+   131,
+   272828276
+  ],
+  [
+   "FDUSD",
+   132,
+   272026480
+  ],
+  [
+   "APXUSD",
    133,
-   270117251
+   271485097
   ],
   [
    "UB",
    134,
-   268801123
+   268822094
   ],
   [
    "SPX",
    135,
-   263625073
+   263081873
   ],
   [
    "SEI",
    136,
-   259873678
+   260388131
   ],
   [
    "TRUMP",
    137,
-   258044280
+   258161252
   ],
   [
    "SAFO",
@@ -2208,34 +2208,34 @@
    254799137
   ],
   [
-   "LUNC",
+   "STRK",
    139,
-   251303128
+   251867669
   ],
   [
-   "STRK",
+   "LUNC",
    140,
-   249975157
+   250646632
   ],
   [
    "VIRTUAL",
    141,
-   247691368
+   248021973
   ],
   [
    "XTZ",
    142,
-   243229765
+   243351956
   ],
   [
    "XPL",
    143,
-   240505714
+   240318687
   ],
   [
    "GNO",
    144,
-   231989694
+   230804764
   ],
   [
    "PC0000031",
@@ -2250,107 +2250,107 @@
   [
    "OZO",
    147,
-   220729745
+   220749032
   ],
   [
    "OHM",
    148,
-   218234726
+   218067515
   ],
   [
    "FRAX",
    149,
-   217776954
+   217803832
   ],
   [
    "PENDLE",
    150,
-   214766108
+   215504855
   ],
   [
    "NVDAB",
    151,
-   205254213
+   204483837
   ],
   [
    "USX",
    152,
-   201029697
+   201034556
   ],
   [
    "LDO",
    153,
-   199328981
+   199843161
   ],
   [
    "BP",
    154,
-   198310202
+   198327933
   ],
   [
    "BONK",
    155,
-   192711599
+   193186378
   ],
   [
    "RUNE",
    156,
-   191386612
+   191474796
   ],
   [
    "DCR",
    157,
-   190097029
+   190377995
   ],
   [
    "USAT",
    158,
-   189054267
+   189066254
   ],
   [
    "KAIA",
    159,
-   187827142
+   187909821
   ],
   [
    "BEAM",
    160,
-   185363883
+   185147255
   ],
   [
    "EURCV",
    161,
-   184762229
+   184745049
   ],
   [
    "GRT",
    162,
-   184432764
+   184366829
   ],
   [
    "BTSE",
    163,
-   183702377
+   183382971
   ],
   [
    "CFX",
    164,
-   182785710
+   182050488
   ],
   [
    "COMP",
    165,
-   181737938
+   181832929
   ],
   [
    "NFT",
    166,
-   178911290
+   178953688
   ],
   [
    "KOGE",
    167,
-   175006581
+   174968382
   ],
   [
    "USTBL",
@@ -2360,132 +2360,132 @@
   [
    "SHFL",
    169,
-   172804694
+   172305202
   ],
   [
    "ZBCN",
    170,
-   169241288
+   168024533
   ],
   [
    "OP",
    171,
-   165154286
+   165196657
   ],
   [
    "FLOKI",
-   173,
-   162661025
+   172,
+   162744413
   ],
   [
    "PC0000033",
-   172,
+   173,
    162500000
   ],
   [
    "SENT",
    174,
-   161575766
+   162263036
   ],
   [
    "KAG",
    175,
-   159753571
+   159757366
   ],
   [
    "USDAI",
    176,
-   159317485
+   159321260
   ],
   [
    "JASMY",
    177,
-   157939861
+   157926527
   ],
   [
    "IOTA",
    178,
-   156739499
+   156329106
   ],
   [
    "AKT",
    179,
-   154224120
+   154240162
   ],
   [
    "CARDS",
    180,
-   153623087
+   153461597
   ],
   [
    "AR",
    181,
-   152988558
+   153331484
   ],
   [
    "ENS",
    182,
-   152588125
+   152442025
   ],
   [
    "AUSD",
    183,
-   151670982
+   151710627
   ],
   [
    "GUSD",
    184,
-   149623019
+   149626573
   ],
   [
    "GOMINING",
    185,
-   148200184
+   148152338
   ],
   [
    "KMNO",
    186,
-   145847890
-  ],
-  [
-   "ZAMA",
-   187,
-   145453873
+   145768523
   ],
   [
    "CAP",
+   187,
+   144877290
+  ],
+  [
+   "ZAMA",
    188,
-   144853011
+   144434090
   ],
   [
    "GEOD",
    189,
-   142179736
+   143062090
   ],
   [
    "CRVUSD",
    190,
-   139957505
+   140008993
   ],
   [
    "NVDAX",
    191,
-   138178998
-  ],
-  [
-   "DGAI",
-   192,
-   137859261
-  ],
-  [
-   "WIF",
-   193,
-   137604193
+   137741831
   ],
   [
    "THETA",
+   192,
+   137127575
+  ],
+  [
+   "DGAI",
+   193,
+   137060056
+  ],
+  [
+   "WIF",
    194,
-   137221371
+   137005721
   ],
   [
    "PC0000097",
@@ -2495,127 +2495,127 @@
   [
    "CASH",
    196,
-   133987197
+   133989983
   ],
   [
    "APYUSD",
    197,
-   132552522
+   132555304
   ],
   [
    "FLUID",
    198,
-   130984163
-  ],
-  [
-   "TWT",
-   199,
-   130540241
+   130774016
   ],
   [
    "JTO",
    200,
-   130532258
+   130516433
   ],
   [
-   "MX",
-   202,
-   129365831
+   "TWT",
+   199,
+   130512269
   ],
   [
    "BORG",
    201,
-   128754677
+   129481814
+  ],
+  [
+   "MX",
+   202,
+   129324012
   ],
   [
    "JPYSC",
    203,
-   126757435
+   126788265
   ],
   [
    "S",
-   205,
-   126707489
+   204,
+   126740364
   ],
   [
    "Q",
-   204,
-   126507693
+   205,
+   126448272
   ],
   [
    "COCO",
    206,
-   126271969
+   126303425
   ],
   [
    "VSN",
    207,
-   124973154
-  ],
-  [
-   "SOXLB",
-   208,
-   122068836
+   124859480
   ],
   [
    "XCN",
+   208,
+   122304985
+  ],
+  [
+   "SOXLB",
    209,
-   121804590
+   120564489
+  ],
+  [
+   "TRAC",
+   210,
+   119649242
   ],
   [
    "USDF",
-   210,
-   119574556
+   211,
+   119576899
   ],
   [
    "CRCLB",
    212,
-   119336516
+   119506967
   ],
   [
    "BAT",
-   211,
-   119019632
+   213,
+   118684721
   ],
   [
    "MET",
-   213,
-   118661088
-  ],
-  [
-   "TRAC",
    214,
-   118450414
+   118638974
   ],
   [
    "EIGEN",
    215,
-   118346813
+   118023036
   ],
   [
    "THBILL",
    216,
-   117675892
+   117678687
   ],
   [
    "BR",
    217,
-   117290340
+   117571883
   ],
   [
    "AUTO",
    218,
-   115736615
+   115713734
   ],
   [
    "SN51",
-   219,
-   115063367
+   220,
+   115065504
   ],
   [
    "AXS",
-   220,
-   114836852
+   219,
+   114988958
   ],
   [
    "PC0000023",
@@ -2630,17 +2630,17 @@
   [
    "MANA",
    223,
-   113661616
+   113919891
   ],
   [
    "NEO",
    224,
-   113620391
+   113692197
   ],
   [
    "SPCXB",
    225,
-   112468362
+   112309152
   ],
   [
    "PC0000085",
@@ -2648,34 +2648,34 @@
    111874199
   ],
   [
-   "SOSO",
+   "NOPAL",
    227,
-   111635973
+   111056108
   ],
   [
-   "NOPAL",
+   "SOSO",
    228,
-   111056108
+   110982395
   ],
   [
    "USD3",
    229,
-   110180850
-  ],
-  [
-   "ANVL",
-   231,
-   110138001
+   110049241
   ],
   [
    "A",
    230,
-   109787105
+   109691146
   ],
   [
    "CVX",
+   231,
+   109357875
+  ],
+  [
+   "ANVL",
    232,
-   109230749
+   109235126
   ],
   [
    "STAC",
@@ -2685,42 +2685,42 @@
   [
    "BC",
    234,
-   106350513
+   106340487
   ],
   [
    "XEC",
    235,
-   106323657
-  ],
-  [
-   "O",
-   236,
-   106250562
+   106158487
   ],
   [
    "PC0000015",
-   237,
+   236,
    105971760
+  ],
+  [
+   "O",
+   237,
+   105787818
   ],
   [
    "AWE",
    238,
-   102567033
+   102670276
   ],
   [
    "STRCX",
    239,
-   102292965
+   102295199
   ],
   [
    "SAND",
    240,
-   102186820
+   102236325
   ],
   [
    "CRCLX",
    241,
-   102013304
+   102091613
   ],
   [
    "PC0000077",
@@ -2730,42 +2730,42 @@
   [
    "UUSD",
    243,
-   99861616
+   99870470
   ],
   [
    "RLB",
    244,
-   98107681
+   98110701
   ],
   [
    "CHZ",
    245,
-   97604353
+   97702247
   ],
   [
    "B",
    246,
-   97079782
+   97113316
   ],
   [
    "AIOZ",
    247,
-   96957239
+   97005747
   ],
   [
    "ULTIMA",
    248,
-   96351013
+   96301660
   ],
   [
    "GLM",
    249,
-   95604540
+   95605229
   ],
   [
-   "RAIL",
+   "DBR",
    250,
-   94053293
+   94745319
   ],
   [
    "DBR",
@@ -12220,15 +12220,15 @@
   }
  },
  "metals": {
-  "au": 3685.0,
+  "au": 3687.2,
   "au_prev": 3515.4,
-  "au_t": 1795762860,
-  "ag": 44.44,
+  "au_t": 1795763768,
+  "ag": 44.545,
   "ag_prev": 41.035,
-  "ag_t": 1795762855,
-  "eurusd": 1.0984,
+  "ag_t": 1795763768,
+  "eurusd": 1.0978,
   "eurusd_prev": 1.0972,
-  "eurusd_t": 1795763447
+  "eurusd_t": 1795764347
  },
  "influ_prof": {
   "altstreetbet": {
@@ -12950,6 +12950,66 @@
    "n": "Cobie",
    "fol": 1245177,
    "av": "https://pbs.twimg.com/profile_images/1955773696565719040/zVpm_8at.jpg"
+  },
+  "chadcaff": {
+   "h": "ChadCaff",
+   "n": "Caff",
+   "fol": 130347,
+   "av": "https://pbs.twimg.com/profile_images/1543725577009520640/HvEmQEYb.jpg"
+  },
+  "_bartocrypto": {
+   "h": "_BartoCrypto",
+   "n": "Barto",
+   "fol": 14727,
+   "av": "https://pbs.twimg.com/profile_images/1411750080730775556/u0DKhZEt.jpg"
+  },
+  "cryptonewton": {
+   "h": "CryptoNewton",
+   "n": "Shelby",
+   "fol": 266298,
+   "av": "https://pbs.twimg.com/profile_images/2049866260939198464/YKBNQ_Ex.jpg"
+  },
+  "chrissmiiic": {
+   "h": "ChrisSmiiic",
+   "n": "Chris",
+   "fol": 68708,
+   "av": "https://pbs.twimg.com/profile_images/2047099029595561984/zebQxU8b.jpg"
+  },
+  "livercoin": {
+   "h": "Livercoin",
+   "n": "Livercoin",
+   "fol": 105179,
+   "av": "https://pbs.twimg.com/profile_images/1450806938825068544/sBR-wuK4.png"
+  },
+  "theeurosniper": {
+   "h": "TheEuroSniper",
+   "n": "€ｕｒｏＳｎｉｐｅｒ",
+   "fol": 85768,
+   "av": "https://pbs.twimg.com/profile_images/1993714814942646274/aiP9p4VQ.jpg"
+  },
+  "jjcycles": {
+   "h": "JJcycles",
+   "n": "JJcycles",
+   "fol": 133759,
+   "av": "https://pbs.twimg.com/profile_images/2102351097528557569/bPli1vN3.jpg"
+  },
+  "100trillionusd": {
+   "h": "100trillionUSD",
+   "n": "PlanB",
+   "fol": 2154563,
+   "av": "https://pbs.twimg.com/profile_images/1541188633163595776/DB1plS2K.jpg"
+  },
+  "wizardingfans": {
+   "h": "WizardingFans",
+   "n": "Wizarding Fans",
+   "fol": 767,
+   "av": "https://pbs.twimg.com/profile_images/2123185022463012864/bsa21ehF.jpg"
+  },
+  "jumperapp": {
+   "h": "jumperapp",
+   "n": "Jumper",
+   "fol": 216108,
+   "av": "https://pbs.twimg.com/profile_images/2067547103996313600/dcaz50HM.jpg"
   }
  },
  "influ_mode": "compte",
@@ -13170,10 +13230,38 @@
  "influ_n": 212,
  "influ": [
   {
+   "h": "CryptoTony__",
+   "n": "Crypto Tony",
+   "t": "2026-11-27T07:21:14.000Z",
+   "eng": 5,
+   "url": "https://x.com/CryptoTony__/status/2126214751592042725",
+   "fr": "CRYPTO FEAR AND GREED INDEX \n\n\"11\" - EXTREME FEAR. Every day we are gaining points, but we need a change in market structure on Bitcoin before we get too excited. https://t.co/vWqTdpHt8E",
+   "rt": false,
+   "img": "https://pbs.twimg.com/media/HYHU6ttWgAAFDIJ.jpg",
+   "fol": 567428,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
+   "h": "gsmferrari",
+   "n": "cycle insider",
+   "t": "2026-11-27T07:11:38.000Z",
+   "eng": 7,
+   "url": "https://x.com/gsmferrari/status/2126212334691700860",
+   "fr": "$NASDAQ FUTURES : le low de vendredi était un higher low, c'est un premier signe bullish.\nLes bougies ont créé des mèches puissantes qui ont tiré le cours vers le haut, deuxième bon signe.\nMaintenant, je veux voir un break of structure et la diagonale sauter! https://t.co/2NZmdIHSin",
+   "rt": false,
+   "img": "https://pbs.twimg.com/media/HYHSq8lXkAAB0yW.jpg",
+   "fol": 7947,
+   "tickers": [
+    "NASDAQ"
+   ],
+   "tag": "bull"
+  },
+  {
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-27T07:01:47.000Z",
-   "eng": 5,
+   "eng": 8,
    "url": "https://x.com/gsmferrari/status/2126209856696639961",
    "fr": "$NATGAS : quand le low protégé sautera, j'enverrai ma dernière cartouche sur le retest de cette trend, ça sera la dernière chasse aux SL des bears avant l'expansion baissière en ligne droite https://t.co/k2VlNnQyEr",
    "rt": false,
@@ -13189,7 +13277,7 @@
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-27T06:55:19.000Z",
-   "eng": 4,
+   "eng": 5,
    "url": "https://x.com/gsmferrari/status/2126208227088253183",
    "fr": "$NATGAS : j'avais des doutes avec tous ces pump &amp; dump mais cela s'explique. Les MM détestent que tu te places en même temps qu'eux sur les sommets et les bottoms, c'est la raison pour laquelle ils chassent les SL à chaque prise de low depuis le sommet avec des gros pump",
    "rt": false,
@@ -13205,7 +13293,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-27T06:53:59.000Z",
-   "eng": 17,
+   "eng": 23,
    "url": "https://x.com/CryptoTony__/status/2126207894202814768",
    "fr": "Good Morning Legends \n\nHow are we all ?",
    "rt": false,
@@ -13218,7 +13306,7 @@
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-27T06:53:01.000Z",
-   "eng": 374,
+   "eng": 376,
    "url": "https://x.com/gsmferrari/status/2126207652308935098",
    "fr": "RT @KobeissiLetter: BREAKING: S&amp;P 500 futures extend gains to rise above 7,300 for the first time since November 19th, now up +6% from Frid…",
    "rt": true,
@@ -13231,7 +13319,7 @@
    "h": "CryptocapoOO",
    "n": "cryptocapo",
    "t": "2026-11-27T06:53:00.000Z",
-   "eng": 2,
+   "eng": 3,
    "url": "https://x.com/CryptocapoOO/status/2126207644935577684",
    "fr": "🚨ÚLTIMA HORA 🚨 \n\nCIRCLE ACABA DE ACUÑAR 1.000 MILLONES DE USDC EN SOLANA.\n\n4 operaciones de 250 millones de dólares cada una, realizadas en cuestión de horas y directamente vinculadas a su tesorería.\n\n💰 UN BILLÓN DE DÓLARES DE NUEVA LIQUIDEZ EN USDC.\n\n¿Quién está preparando semejante cantidad de liquidez? \n\nTransacciones:\nhttps://t.co/MH6lxIjjPx\n\nhttps://t.co/tLqIRTVEaQ",
    "rt": false,
@@ -13244,7 +13332,7 @@
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-27T06:49:35.000Z",
-   "eng": 12,
+   "eng": 14,
    "url": "https://x.com/gsmferrari/status/2126206787703722021",
    "fr": "J'ai fait une simulation de cours sur le $NATGAS pour vous repérer! Normalement, le cours devrait latéraliser / baisser un peu ce matin puis s'écrouler cet après midi OU lundi https://t.co/vPyWIMkKOP",
    "rt": false,
@@ -13277,7 +13365,7 @@
    "h": "DrRitikaS",
    "n": "Dr. Ritika Singhal",
    "t": "2026-11-27T05:11:03.000Z",
-   "eng": 40,
+   "eng": 44,
    "url": "https://x.com/DrRitikaS/status/2126181989724401994",
    "fr": "RT @lookonchain: A whale swapped 1,023 $BTC ($62.5M) for 36,195 $ETH ($62.5M) via #THORChain over the past 3 days.\n\nhttps://t.co/m3wub2LCia…",
    "rt": true,
@@ -13293,7 +13381,7 @@
    "h": "BigCheds",
    "n": "Cheds Trading",
    "t": "2026-11-27T04:39:01.000Z",
-   "eng": 92,
+   "eng": 96,
    "url": "https://x.com/BigCheds/status/2126173926027841565",
    "fr": "$BTC 4H some progression off that higher low https://t.co/9LAPM3PFYk",
    "rt": false,
@@ -13321,7 +13409,7 @@
    "h": "BigCheds",
    "n": "Cheds Trading",
    "t": "2026-11-27T03:01:44.000Z",
-   "eng": 134,
+   "eng": 138,
    "url": "https://x.com/BigCheds/status/2126149446538854458",
    "fr": "$BTC RSI still trying to come out of oversold on daily https://t.co/iHmqrZlL04",
    "rt": false,
@@ -13333,10 +13421,23 @@
    "tag": "mix"
   },
   {
+   "h": "iambroots",
+   "n": "MOON KING B-ROOTS",
+   "t": "2026-11-27T02:21:58.000Z",
+   "eng": 33,
+   "url": "https://x.com/iambroots/status/2126139440007451093",
+   "fr": "Celebrate your wins!\nAnd continued success! https://t.co/WjkoB9eMzG",
+   "rt": false,
+   "img": "https://pbs.twimg.com/media/HYGETToXQAEw7ul.jpg",
+   "fol": 115157,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "ElonTrades",
    "n": "ElonTrades",
    "t": "2026-11-27T02:15:48.000Z",
-   "eng": 1564,
+   "eng": 1618,
    "url": "https://x.com/ElonTrades/status/2126137885917380905",
    "fr": "RT @crypto_birb: Didn’t expect Tyson Fury to hit me like that  https://t.co/g9jfQpfXGO",
    "rt": true,
@@ -13362,7 +13463,7 @@
    "h": "CryptoGodJohn",
    "n": "John",
    "t": "2026-11-27T01:33:38.000Z",
-   "eng": 67,
+   "eng": 68,
    "url": "https://x.com/CryptoGodJohn/status/2126127273900175625",
    "fr": "Cowboys are legit embarrassing",
    "rt": false,
@@ -13385,6 +13486,19 @@
    "tag": "bull"
   },
   {
+   "h": "iambroots",
+   "n": "MOON KING B-ROOTS",
+   "t": "2026-11-27T01:14:56.000Z",
+   "eng": 57,
+   "url": "https://x.com/iambroots/status/2126122568088424899",
+   "fr": "If you aren't in a coin like this....... you are in the wrong coin.\n\nAll this during the Bitcoin drop too\n\nMOON KING DOES IT AGAIN!!!! https://t.co/UBw2RoEGtw",
+   "rt": false,
+   "img": "https://pbs.twimg.com/media/HYGBKKGXYAA93xv.jpg",
+   "fol": 115157,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "ka1n0s",
    "n": "Darkly Energized",
    "t": "2026-11-27T00:46:08.000Z",
@@ -13401,13 +13515,28 @@
    "h": "CryptocapoOO",
    "n": "cryptocapo",
    "t": "2026-11-27T00:32:52.000Z",
-   "eng": 23,
+   "eng": 24,
    "url": "https://x.com/CryptocapoOO/status/2126111981174129065",
    "fr": "🚨 Arthur Hayes advierte de una posible sacudida para las criptomonedas este fin de semana.\n\nSegún Hayes, el mercado podría sufrir fuertes ventas antes de la apertura del lunes si la Fed no adopta un tono más dovish (flexible) antes de que comience el periodo de silencio previo a la reunión del FOMC este viernes.\n\n⚠️ El mercado podría quedarse sin nuevas señales de la Fed durante todo el fin de semana.",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HYF3jj3WQAAIdaZ.jpg",
    "fol": 69595,
    "tickers": [],
+   "tag": "mix"
+  },
+  {
+   "h": "Bleeding_Crypto",
+   "n": "Bleeding Crypto",
+   "t": "2026-11-27T00:29:19.000Z",
+   "eng": 6,
+   "url": "https://x.com/Bleeding_Crypto/status/2126111088307736811",
+   "fr": "RT @Bleeding_Crypto: $BTC Market Update Video\n\nToday Thursday Nov 26th\n\nHappy Thanksgiving to you all.\nplease adjust speed to 1.5x to view…",
+   "rt": true,
+   "img": null,
+   "fol": 0,
+   "tickers": [
+    "BTC"
+   ],
    "tag": "mix"
   },
   {
@@ -13507,7 +13636,7 @@
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-26T23:01:42.000Z",
-   "eng": 21,
+   "eng": 22,
    "url": "https://x.com/gsmferrari/status/2126089039342391532",
    "fr": "$COPPER : un range est en train de se former tout proche d'un support avec des divergences bullish de RSI en H4.\nJe surveille une future structure Wyckoff accumulation pour un call si ça se présente https://t.co/b3BO2cRs14",
    "rt": false,
@@ -13550,7 +13679,7 @@
    "h": "trader1sz",
    "n": "TraderSZ",
    "t": "2026-11-26T22:55:02.000Z",
-   "eng": 105,
+   "eng": 107,
    "url": "https://x.com/trader1sz/status/2126087359867597041",
    "fr": "opening my own central bank with zcash shorts profit",
    "rt": false,
@@ -13618,10 +13747,23 @@
    "tag": "mix"
   },
   {
+   "h": "0xFitz",
+   "n": "Fitz",
+   "t": "2026-11-26T22:50:37.000Z",
+   "eng": 7,
+   "url": "https://x.com/0xFitz/status/2126086251644338596",
+   "fr": "He single handedly carried season 2.",
+   "rt": false,
+   "img": null,
+   "fol": 34270,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-26T22:47:14.000Z",
-   "eng": 123,
+   "eng": 125,
    "url": "https://x.com/eliz883/status/2126085397277286679",
    "fr": "Every morning, before I get to the office and start working on the charts 😂\n\nGN best https://t.co/UPMaWTuADD",
    "rt": false,
@@ -13646,16 +13788,44 @@
    "tag": "bull"
   },
   {
+   "h": "0xFitz",
+   "n": "Fitz",
+   "t": "2026-11-26T22:38:36.000Z",
+   "eng": 10,
+   "url": "https://x.com/0xFitz/status/2126083227173458039",
+   "fr": "There's no way this is real.\n\nWhat a bizarre choice.",
+   "rt": false,
+   "img": null,
+   "fol": 34270,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-26T22:38:18.000Z",
-   "eng": 108750,
+   "eng": 108912,
    "url": "https://x.com/gsmferrari/status/2126083148672815345",
    "fr": "RT @elonmusk: Every child in America will receive two SpaceX shares, one from the company and one from me personally",
    "rt": true,
    "img": null,
    "fol": 7947,
    "tickers": [],
+   "tag": "mix"
+  },
+  {
+   "h": "crypto_g0at",
+   "n": "Stocks GOAT",
+   "t": "2026-11-26T22:34:59.000Z",
+   "eng": 0,
+   "url": "https://x.com/crypto_g0at/status/2126082314753257750",
+   "fr": "$VRAX btw",
+   "rt": false,
+   "img": null,
+   "fol": 3493,
+   "tickers": [
+    "VRAX"
+   ],
    "tag": "mix"
   },
   {
@@ -13736,7 +13906,7 @@
    "h": "trader1sz",
    "n": "TraderSZ",
    "t": "2026-11-26T22:29:32.000Z",
-   "eng": 127,
+   "eng": 130,
    "url": "https://x.com/trader1sz/status/2126080943534514463",
    "fr": "main 3 shorts added today are $ZEC $NEAR AND pearl-2:native \ncan find charts and entries invalidations targets on timeline\n\nall 3 are zionist coins\n\ngoodnight",
    "rt": false,
@@ -13764,6 +13934,19 @@
    "tag": "bear"
   },
   {
+   "h": "crypto_g0at",
+   "n": "Stocks GOAT",
+   "t": "2026-11-26T22:19:36.000Z",
+   "eng": 0,
+   "url": "https://x.com/crypto_g0at/status/2126078442965995841",
+   "fr": "Barely 2 months ago btw",
+   "rt": false,
+   "img": null,
+   "fol": 3493,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "gsmferrari",
    "n": "cycle insider",
    "t": "2026-11-26T22:18:59.000Z",
@@ -13783,7 +13966,7 @@
    "h": "trader1sz",
    "n": "TraderSZ",
    "t": "2026-11-26T22:17:23.000Z",
-   "eng": 304,
+   "eng": 311,
    "url": "https://x.com/trader1sz/status/2126077887413694504",
    "fr": "Don't be scared of death. We all die one day. Embrace it, be at peace with it. know your time is limited. It will make you live a better life and make better decisions. You know not to waste a moment. you will become a better person",
    "rt": false,
@@ -13880,7 +14063,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T21:57:43.000Z",
-   "eng": 49,
+   "eng": 50,
    "url": "https://x.com/CryptoTony__/status/2126072938906763391",
    "fr": "Goodnight legends",
    "rt": false,
@@ -13893,7 +14076,7 @@
    "h": "DrRitikaS",
    "n": "Dr. Ritika Singhal",
    "t": "2026-11-26T21:56:09.000Z",
-   "eng": 134,
+   "eng": 136,
    "url": "https://x.com/DrRitikaS/status/2126072542419177595",
    "fr": "RT @Enter_Elysium: Elysium has crossed $1B in total DEX volume.\n\nThankful for everyone building across the ecosystem. https://t.co/jPwzrwy7…",
    "rt": true,
@@ -14060,6 +14243,19 @@
    "tag": "mix"
   },
   {
+   "h": "0xFitz",
+   "n": "Fitz",
+   "t": "2026-11-26T21:31:52.000Z",
+   "eng": 23,
+   "url": "https://x.com/0xFitz/status/2126066432572084618",
+   "fr": "Wait what... I can get Omarchy on my TV?!\n\nLMFAO, Okay this is amazing...\n\nMrs looking at me in disgust as I nerd out over customisation. She doesn't get it... what a loser. https://t.co/UStmCPb6Ya",
+   "rt": false,
+   "img": "https://pbs.twimg.com/media/HYFOJQFWkAAZG2L.jpg",
+   "fol": 34270,
+   "tickers": [],
+   "tag": "mix"
+  },
+  {
    "h": "trader1sz",
    "n": "TraderSZ",
    "t": "2026-11-26T21:27:19.000Z",
@@ -14078,7 +14274,7 @@
    "h": "CryptocapoOO",
    "n": "cryptocapo",
    "t": "2026-11-26T21:25:28.000Z",
-   "eng": 61,
+   "eng": 63,
    "url": "https://x.com/CryptocapoOO/status/2126064821997089042",
    "fr": "🚨 $BTC MAPA DE LIQUIDACIÓN \n\nUn ENORME clúster de liquidez se concentra por encima de los 80.000$.\n\n¿Sabes lo que esto significa?\n\nEl precio podría tener un objetivo muy claro: ir a cazar toda esa liquidez acumulada.\n\nSi Bitcoin consigue recuperar impulso, podríamos asistir a un movimiento explosivo hacia esa zona, desencadenando liquidaciones masivas de posiciones en corto.\n\n🐻 Los bajistas podrían convertirse en el combustible del próximo movimiento alcista.\n\nOJO CON BITCOIN. La liquidez siem",
    "rt": false,
@@ -14158,7 +14354,7 @@
    "h": "BigCheds",
    "n": "Cheds Trading",
    "t": "2026-11-26T21:00:51.000Z",
-   "eng": 234,
+   "eng": 235,
    "url": "https://x.com/BigCheds/status/2126058625831759947",
    "fr": "I remember buying $LTC at $70 thanksgiving 2017 right after my cancer diagnosis",
    "rt": false,
@@ -14253,7 +14449,7 @@
    "h": "YieldFields_RH",
    "n": "Yield Fields (🧑‍🌾,🧑‍🌾)",
    "t": "2026-11-26T20:53:19.000Z",
-   "eng": 221,
+   "eng": 223,
    "url": "https://x.com/YieldFields_RH/status/2126056731054862753",
    "fr": "🌾 THE FIRST HARVEST IS COMING\n\nWhen the fields open Saturday, Yield Fields kicks off a launch event:\n\n🍄 10% of total $YIELD supply, for farmers over 30 days\n🏪 $500k seeding the Farmers Co-op, $250k of it on day 1\n🏡 Co-op Rewards for Deed owners\n\nHere's how it works 🧵 https://t.co/OGBMim48oH",
    "rt": false,
@@ -14452,7 +14648,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T20:36:00.000Z",
-   "eng": 177,
+   "eng": 179,
    "url": "https://x.com/CryptoTony__/status/2126052371620872681",
    "fr": "The big pumps will return soon do not worry",
    "rt": false,
@@ -14478,7 +14674,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T20:33:08.000Z",
-   "eng": 350,
+   "eng": 352,
    "url": "https://x.com/CryptoWizardd/status/2126051652180332815",
    "fr": "$LTC",
    "rt": false,
@@ -14589,7 +14785,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T20:19:07.000Z",
-   "eng": 514,
+   "eng": 517,
    "url": "https://x.com/CryptoWizardd/status/2126048125810770045",
    "fr": "Few https://t.co/U3Pbgmbm0f",
    "rt": false,
@@ -14615,7 +14811,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T20:17:10.000Z",
-   "eng": 126,
+   "eng": 128,
    "url": "https://x.com/0xSweep/status/2126047631369703527",
    "fr": "7.12 million Bitcoin are sitting with their public keys out in the open while rumors spread that AI broke the math protecting them\n\nScott Aaronson is a UT Austin computer scientist who used to work at OpenAI and this week he said he has heard rumor after rumor that OpenAI or Anthropic is sitting on a way to crack RSA encryption\n\nLedger's outgoing CTO Charles Guillemet said he'd heard three separate rumors and one of them was that AI had broken elliptic curve cryptography\n\nElliptic curve cryptogr",
    "rt": false,
@@ -14641,7 +14837,7 @@
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-26T20:13:43.000Z",
-   "eng": 428,
+   "eng": 429,
    "url": "https://x.com/eliz883/status/2126046764750844179",
    "fr": "We’ve been long since the temporary low around 57k, so we’ve already benefited from a decent rally.\nTo clarify things a bit, if we manage to break above and hold 61,800, I expect the rally to continue first towards 64,500 and then towards 66/67k, where there’s an interesting liquidity zone.\nFor the time being, I’m in no hurry to open any new positions. We’ll manage the long position whilst it’s in profit. $BTC update",
    "rt": false,
@@ -14685,7 +14881,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T20:12:00.000Z",
-   "eng": 104,
+   "eng": 108,
    "url": "https://x.com/CryptoWizardd/status/2126046334733988304",
    "fr": "RT @CryptoWizardd: Will post my #btc view in a hour or so if there is people intrested leme know\n\nLike and comment below https://t.co/x9IfN…",
    "rt": true,
@@ -14724,7 +14920,7 @@
    "h": "MaxCrypto",
    "n": "Max Crypto",
    "t": "2026-11-26T20:10:00.000Z",
-   "eng": 213,
+   "eng": 217,
    "url": "https://x.com/MaxCrypto/status/2126045828770898031",
    "fr": "Remember Polkadot $DOT?\n\nIn 2021, it was the 4th largest crypto with $60B MCap.\n\nNow, it's down 98.9% from its peak and has hit an ALL-TIME LOW.\n\nAbsolutely brutal. https://t.co/A7Ix7rmq8V",
    "rt": false,
@@ -14752,7 +14948,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T20:08:36.000Z",
-   "eng": 103,
+   "eng": 106,
    "url": "https://x.com/0xSweep/status/2126045477376573565",
    "fr": "Loracle has now flipped short on $BTC\n\n2 days ago, he closed his Bitcoin long for a $23M loss and is now shorting BTC\n\nHe has opened a $54.2 Million BTC short with liquidation at $81,200\n\nWill he be right this time? https://t.co/ei5eun7wAx",
    "rt": false,
@@ -14998,7 +15194,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T19:41:56.000Z",
-   "eng": 18,
+   "eng": 30,
    "url": "https://x.com/LongtermR/status/2126038764644679794",
    "fr": "$INJ $BTC 📸 https://t.co/ZpRckpBVfn",
    "rt": false,
@@ -15027,7 +15223,7 @@
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-26T19:38:29.000Z",
-   "eng": 203,
+   "eng": 204,
    "url": "https://x.com/eliz883/status/2126037899519074361",
    "fr": "A quiet day; I have no need to force any trades. My $BTC long position has gone very well and is still partly open.\nAt this stage of the market, we must aim for the utmost selectivity, trading only when there are clear triggers and an excellent risk-reward ratio.\nWe shouldn’t trade just for the sake of it; we should do so only when the market offers us an edge.\nFewer trades, higher quality",
    "rt": false,
@@ -15042,7 +15238,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T19:37:46.000Z",
-   "eng": 170,
+   "eng": 173,
    "url": "https://x.com/0xSweep/status/2126037719914877395",
    "fr": "We got outperformed by a gay dating app in 2026 https://t.co/RoOAqaQgoq",
    "rt": false,
@@ -15068,7 +15264,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-26T19:35:06.000Z",
-   "eng": 24,
+   "eng": 83,
    "url": "https://x.com/0xFitz/status/2126037046615851142",
    "fr": "Just connected Claude to my NVIDIA Shield and it completely stripped it of all ads and bloat.\n\nI fucking love AI",
    "rt": false,
@@ -15293,7 +15489,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T19:11:41.000Z",
-   "eng": 10,
+   "eng": 12,
    "url": "https://x.com/LongtermR/status/2126031153706435056",
    "fr": "RT @LongtermR: $TAO shipped a quantum-resistant wallet with post-quantum signatures this month.\n\nOne wallet can now pay subnet fees in TAO…",
    "rt": true,
@@ -15308,7 +15504,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T19:09:23.000Z",
-   "eng": 0,
+   "eng": 2,
    "url": "https://x.com/LongtermR/status/2126030575211553229",
    "fr": "RT @LongtermR: Yup 🤝🏻 \nUSDT https://t.co/oc3kTQYRvb",
    "rt": true,
@@ -15321,7 +15517,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T19:08:57.000Z",
-   "eng": 4,
+   "eng": 6,
    "url": "https://x.com/LongtermR/status/2126030466847531045",
    "fr": "RT @LongtermR: Look at the data. \n\n@injective now holds more $USDC than Cardano, Tron, Hedera, and Starknet.\n\nStablecoins are the lifeblood…",
    "rt": true,
@@ -15405,7 +15601,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T18:55:24.000Z",
-   "eng": 778,
+   "eng": 781,
    "url": "https://x.com/CryptoWizardd/status/2126027055326478463",
    "fr": "$ETH \n\ndo you see it. https://t.co/u5CYMGSjKs",
    "rt": false,
@@ -15524,7 +15720,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T18:48:11.000Z",
-   "eng": 1572,
+   "eng": 1580,
    "url": "https://x.com/CryptoWizardd/status/2126025240253800766",
    "fr": "Will post my #btc view in a hour or so if there is people intrested leme know\n\nLike and comment below https://t.co/x9IfNh3ZsA",
    "rt": false,
@@ -15876,7 +16072,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T18:11:50.000Z",
-   "eng": 24,
+   "eng": 26,
    "url": "https://x.com/LongtermR/status/2126016090689995231",
    "fr": "RT @LongtermR: $DOT holders backed a new strategy with 97% of the vote, focused on products and the dotUSD stablecoin.\n\nThere's also a spot…",
    "rt": true,
@@ -15919,7 +16115,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T18:07:47.000Z",
-   "eng": 121,
+   "eng": 122,
    "url": "https://x.com/CryptoTony__/status/2126015074930213005",
    "fr": "$ETH - Update \n\nThe next leg up is coming, but i still want to see lower come to fruition first so we can enter safely. https://t.co/VuLMBkFc1G",
    "rt": false,
@@ -16121,7 +16317,7 @@
    "h": "BigCheds",
    "n": "Cheds Trading",
    "t": "2026-11-26T17:47:37.000Z",
-   "eng": 349,
+   "eng": 350,
    "url": "https://x.com/BigCheds/status/2126009999646499038",
    "fr": "$BTC has daily bullish divergence brewing as weekly works on an inside bar",
    "rt": false,
@@ -16315,7 +16511,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T17:11:23.000Z",
-   "eng": 0,
+   "eng": 2,
    "url": "https://x.com/LongtermR/status/2126000879535030377",
    "fr": "RT @LongtermR: $PENDLE did $1.43B in volume over 30 days, up about 80%.\n\nTogether with Ethena it launched fixed-term USDe markets, from 3 t…",
    "rt": true,
@@ -16330,7 +16526,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T17:08:00.000Z",
-   "eng": 140,
+   "eng": 141,
    "url": "https://x.com/CryptoTony__/status/2126000027017306620",
    "fr": "What Altcoin excites you the most for the long term ?",
    "rt": false,
@@ -16436,7 +16632,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T16:59:07.000Z",
-   "eng": 320,
+   "eng": 321,
    "url": "https://x.com/CryptoWizardd/status/2125997794485825629",
    "fr": "$LTC",
    "rt": false,
@@ -16464,7 +16660,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T16:56:50.000Z",
-   "eng": 341,
+   "eng": 342,
    "url": "https://x.com/CryptoWizardd/status/2125997215768350728",
    "fr": "$ZEC VS #BTC\n\nZoom out. This will go higher. https://t.co/WkvQAh5KEG",
    "rt": false,
@@ -16720,7 +16916,7 @@
    "fr": "Harry Spotter https://t.co/ifZdL5Nlq6",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -16744,7 +16940,7 @@
    "h": "CryptoGodJohn",
    "n": "John",
    "t": "2026-11-26T16:17:33.000Z",
-   "eng": 133,
+   "eng": 134,
    "url": "https://x.com/CryptoGodJohn/status/2125987329990963649",
    "fr": "Smart money accumulating $MANIFEST \n\nUtility szn coming back in 2027. Time to bid real companies with real working products",
    "rt": false,
@@ -16847,7 +17043,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T16:08:58.000Z",
-   "eng": 249,
+   "eng": 251,
    "url": "https://x.com/0xSweep/status/2125985173443686830",
    "fr": "Stablecoin dominance has most likely peaked\n\nThis'll start the reversal in the crypto market https://t.co/LJob3RtZ8A",
    "rt": false,
@@ -16860,7 +17056,7 @@
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-26T16:07:27.000Z",
-   "eng": 404,
+   "eng": 405,
    "url": "https://x.com/eliz883/status/2125984790642147581",
    "fr": "Bear market 👌🏻 like new 800 km \n\nLet’s see how much this investment will earn me in 6 months https://t.co/j5GVVfb74P",
    "rt": false,
@@ -16873,7 +17069,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T16:03:58.000Z",
-   "eng": 747,
+   "eng": 750,
    "url": "https://x.com/CryptoWizardd/status/2125983914430787765",
    "fr": "Last time when $Zec had its correction from $700+ to $200 we seen the same stories\n\nTargets such as $0 $50 ....\n\nThis time its likely to play out the same\n\n$ZEC to new highs and $NEAR will likely follow\n\nPatience😉⏳️",
    "rt": false,
@@ -17094,7 +17290,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T15:48:00.000Z",
-   "eng": 452,
+   "eng": 455,
    "url": "https://x.com/CryptoTony__/status/2125979894467244355",
    "fr": "99% of Altcoins are completely worthless",
    "rt": false,
@@ -17125,7 +17321,7 @@
    "fr": "RT @deanfluence: losing 199 $ETH to bad timing hurts lmao, at least they didn't lose it to bad routing\n\nthey ran the whole $28.6M $DAI → $E…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [
     "DAI",
     "ETH"
@@ -17294,7 +17490,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T15:11:38.000Z",
-   "eng": 4,
+   "eng": 8,
    "url": "https://x.com/LongtermR/status/2125970741417882043",
    "fr": "RT @LongtermR: $INJ has a staked ETF trading on Nasdaq since Nov 5.\n\nGoogle Cloud and Deutsche Telekom now run validators on its new Instit…",
    "rt": true,
@@ -17309,7 +17505,7 @@
    "h": "MaxCrypto",
    "n": "Max Crypto",
    "t": "2026-11-26T15:10:49.000Z",
-   "eng": 513,
+   "eng": 514,
    "url": "https://x.com/MaxCrypto/status/2125970537725993172",
    "fr": "$BTC and $ETH are dumping again.\n\n$30 Million longs liquidated in 10 minutes. https://t.co/eQ6o08zs0X",
    "rt": false,
@@ -17394,7 +17590,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T15:06:23.000Z",
-   "eng": 29,
+   "eng": 36,
    "url": "https://x.com/LongtermR/status/2125969421537816955",
    "fr": "Look at the data. \n\n@injective now holds more $USDC than Cardano, Tron, Hedera, and Starknet.\n\nStablecoins are the lifeblood of on-chain finance, and capital is clearly choosing the fastest L1 built for trading.\n\nBullish on $INJ  🥷",
    "rt": false,
@@ -17451,7 +17647,7 @@
    "h": "Bleeding_Crypto",
    "n": "Bleeding Crypto",
    "t": "2026-11-26T15:02:22.000Z",
-   "eng": 37,
+   "eng": 59,
    "url": "https://x.com/Bleeding_Crypto/status/2125968411125829663",
    "fr": "$BTC Market Update Video\n\nToday Thursday Nov 26th\n\nHappy Thanksgiving to you all.\nplease adjust speed to 1.5x to view it quicker. https://t.co/7cqfQ6iGyY",
    "rt": false,
@@ -17505,7 +17701,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T14:57:33.000Z",
-   "eng": 267,
+   "eng": 268,
    "url": "https://x.com/0xSweep/status/2125967198594470059",
    "fr": "Bitfinex whales keep on adding to their $SOL longs\n\nThey definitely know something https://t.co/clRfXPhM2k",
    "rt": false,
@@ -17520,7 +17716,7 @@
    "h": "i_am_jackis",
    "n": "JACKIS",
    "t": "2026-11-26T14:57:00.000Z",
-   "eng": 110,
+   "eng": 132,
    "url": "https://x.com/i_am_jackis/status/2125967059804963292",
    "fr": "If I were to \"assume\" where Bitcoin could be in the cycle time/psychologically wise, I'd point towards October 2014\n\nBear market, followed by a quick & violent rally with many \"confirming THE bottom\", only to find out it was a bear market rally after all, as the price loses all levels & reclaims it made and makes a new Yearly low.\n\nNaturally, range followed, with a subsequent sell-off, which however was the final one. More or less.\n\nHistory never repeats but there are lots of parallels each cycl",
    "rt": false,
@@ -17631,7 +17827,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T14:47:19.000Z",
-   "eng": 8,
+   "eng": 11,
    "url": "https://x.com/LongtermR/status/2125964623442522529",
    "fr": "Yup 🤝🏻 \nUSDT https://t.co/oc3kTQYRvb",
    "rt": false,
@@ -17716,7 +17912,7 @@
    "h": "CryptoTony__",
    "n": "Crypto Tony",
    "t": "2026-11-26T14:37:00.000Z",
-   "eng": 86,
+   "eng": 87,
    "url": "https://x.com/CryptoTony__/status/2125962026573041954",
    "fr": "$ZEC - Update \n\n$590 is my next target on this drop, but we may consolidate here for a little bit and distribute. https://t.co/fXPdf2kl1v",
    "rt": false,
@@ -17731,7 +17927,7 @@
    "h": "CryptoGodJohn",
    "n": "John",
    "t": "2026-11-26T14:36:22.000Z",
-   "eng": 167,
+   "eng": 168,
    "url": "https://x.com/CryptoGodJohn/status/2125961868975980860",
    "fr": "Think the biggest issue with altcoins is vamp culture \n\nEveryone used to rally around a narrative and a runner. Now if somebody misses the original they just create a vamp that sucks attention & liquidity away \n\nWhat’s the solution to vamp culture? Because as long as this continues to be a thing the alt market won’t ever be like it once was",
    "rt": false,
@@ -17774,7 +17970,7 @@
    "h": "Bleeding_Crypto",
    "n": "Bleeding Crypto",
    "t": "2026-11-26T14:32:34.000Z",
-   "eng": 26,
+   "eng": 30,
    "url": "https://x.com/Bleeding_Crypto/status/2125960913480241417",
    "fr": "$BTC I am going to record a Market Update video and post it shortly for you all! Standby",
    "rt": false,
@@ -17802,7 +17998,7 @@
    "h": "TeddyCleps",
    "n": "Teddy",
    "t": "2026-11-26T14:25:52.000Z",
-   "eng": 41,
+   "eng": 43,
    "url": "https://x.com/TeddyCleps/status/2125959223737827576",
    "fr": "Bitcoin is still chopping in the same range, trapping sellers near the lows and longs near the highs\n\nCould be stuck here a little longer\n\nMACD is slowly turning up, with a potential bullish crossover coming\n\nLet's see if momentum can finally pick up https://t.co/qlVcRZc9ph",
    "rt": false,
@@ -17856,7 +18052,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-26T14:12:13.000Z",
-   "eng": 207,
+   "eng": 250,
    "url": "https://x.com/CozomoMedici/status/2125955788611125612",
    "fr": "Happy Thanksgiving Day to my USA friends 🇺🇸🦃",
    "rt": false,
@@ -17925,7 +18121,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T14:10:00.000Z",
-   "eng": 65,
+   "eng": 76,
    "url": "https://x.com/LongtermR/status/2125955231984779472",
    "fr": "$TAO shipped a quantum-resistant wallet with post-quantum signatures this month.\n\nOne wallet can now pay subnet fees in TAO or alpha tokens, no API keys per subnet.\n\nPrice is back in the $165-220 zone that served as a spring in 2024 and 2025 🧨 https://t.co/VPNBdo5Hob",
    "rt": false,
@@ -18070,7 +18266,7 @@
    "h": "CryptocapoOO",
    "n": "cryptocapo",
    "t": "2026-11-26T14:03:44.000Z",
-   "eng": 159,
+   "eng": 161,
    "url": "https://x.com/CryptocapoOO/status/2125953656088408118",
    "fr": "🚨 ALERTA MÁXIMA EN EL MERCADO CRIPTO\n\nUn supuesto insider vinculado al entorno de Trump, conocido por su histórico de operaciones, acaba de abrir dos posiciones en CORTO de dimensiones enormes:\n\n🔴 869,39 BTC → $52,96 MILLONES\n🔴 3.284 ETH → $5,59 MILLONES\n\nEn total, más de 58,5 MILLONES DE DÓLARES apostando a la caída de Bitcoin y Ethereum.\n\n¿Casualidad? ¿Información privilegiada? ¿O está anticipando algo que el resto del mercado todavía no sabe?\n\nCuando alguien mueve semejante cantidad de din",
    "rt": false,
@@ -18189,7 +18385,7 @@
    "h": "CryptoWizardd",
    "n": "WIZZ🥷 ( beware scammers )",
    "t": "2026-11-26T13:54:16.000Z",
-   "eng": 608,
+   "eng": 609,
    "url": "https://x.com/CryptoWizardd/status/2125951273056760124",
    "fr": "Ltc vs #btc\n\nThe run will start soon.\n\n$LTC https://t.co/Qt1wVnyZF8",
    "rt": false,
@@ -18204,7 +18400,7 @@
    "h": "iambroots",
    "n": "MOON KING B-ROOTS",
    "t": "2026-11-26T13:52:16.000Z",
-   "eng": 38,
+   "eng": 48,
    "url": "https://x.com/iambroots/status/2125950770084237444",
    "fr": "If only you listened to this tweet. \n\nHappy Thanksgiving to those who listened. Their food will taste extra good today.\n\nHappy Thanksgiving to those who didn’t. Your food won’t taste as good.\n\nThat’s ok Smile, there will ALWAYS be another one.",
    "rt": false,
@@ -18284,7 +18480,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T13:39:54.000Z",
-   "eng": 231,
+   "eng": 232,
    "url": "https://x.com/0xSweep/status/2125947659542536676",
    "fr": "If Altcoin MCap doesn't bottom here, we are cooked https://t.co/fwjLGgj4nw",
    "rt": false,
@@ -18527,7 +18723,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T13:10:00.000Z",
-   "eng": 72,
+   "eng": 84,
    "url": "https://x.com/LongtermR/status/2125940132650123301",
    "fr": "$DOT holders backed a new strategy with 97% of the vote, focused on products and the dotUSD stablecoin.\n\nThere's also a spot DOT ETF trading on Nasdaq since March.\n\nThis month it dipped under the October 2025 crash wick and climbed back above it 🤝 https://t.co/PsmEoZDekr",
    "rt": false,
@@ -19113,7 +19309,7 @@
    "h": "i_am_jackis",
    "n": "JACKIS",
    "t": "2026-11-26T12:17:10.000Z",
-   "eng": 122,
+   "eng": 129,
    "url": "https://x.com/i_am_jackis/status/2125926837020749957",
    "fr": "Crypto market looks as if it could give a decent bounce heading into December.\n\nDaily RSI at Feb 6th level, market in wide fear &amp; anxiety, liquidity is defo on the upside locally speaking, price usually needs to wait for MAs to catch up &amp; so forth.\n\nWhat do you all think? https://t.co/PK8HcZuZwT",
    "rt": false,
@@ -19126,7 +19322,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T12:10:00.000Z",
-   "eng": 5,
+   "eng": 9,
    "url": "https://x.com/LongtermR/status/2125925032895688947",
    "fr": "$PENDLE did $1.43B in volume over 30 days, up about 80%.\n\nTogether with Ethena it launched fixed-term USDe markets, from 3 to 12 months.\n\nNovember pulled it right back into the base it's been building since April. https://t.co/rhdZ9NMhdD",
    "rt": false,
@@ -19305,7 +19501,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T11:51:40.000Z",
-   "eng": 137,
+   "eng": 138,
    "url": "https://x.com/0xSweep/status/2125920418527904079",
    "fr": "There's nothing bad left to happen in Q4 2026:\n\nCrypto crash\nExchange hack\nWar escalation \nTariff uncertainty \nRising inflation \nRate hike (December)\nGlobal markets meltdown\nCyberattack\n\nHow much more do we have to suffer before the bottom?",
    "rt": false,
@@ -19385,7 +19581,7 @@
    "h": "MaxCrypto",
    "n": "Max Crypto",
    "t": "2026-11-26T11:42:05.000Z",
-   "eng": 420,
+   "eng": 421,
    "url": "https://x.com/MaxCrypto/status/2125918006593368417",
    "fr": "Whales are placing massive bids below $60K for Bitcoin.\n\nThe bottom must be close now. https://t.co/akRoZrqqrW",
    "rt": false,
@@ -19398,7 +19594,7 @@
    "h": "crypto_g0at",
    "n": "Stocks GOAT",
    "t": "2026-11-26T11:40:42.000Z",
-   "eng": 54,
+   "eng": 58,
    "url": "https://x.com/crypto_g0at/status/2125917659753820581",
    "fr": "RT @tacitfi: $BTC &lt;&gt; $ETH  trustless swaps are now LIVE!\n\nShield ETH, and swap into BTC all in one flow. \n\nHave BTC? Receive the ETH privat…",
    "rt": true,
@@ -19533,7 +19729,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-26T11:10:00.000Z",
-   "eng": 10,
+   "eng": 11,
    "url": "https://x.com/LongtermR/status/2125909933128647025",
    "fr": "$AAVE opened its savings app to everyone on iOS and Android. Early access alone pulled in over $63M.\n\nAave Labs also brought in the Avon team to build fixed-rate lending.\n\nMonthly is back in the $80-110 zone where the last bull run started ✍🏻 https://t.co/Qx5o7rO3Xh",
    "rt": false,
@@ -19687,7 +19883,7 @@
    "fr": "RT @jumperapp: chads vs chuds is live\n\n8 traders. $5,000 funded by jumper\n\nteam chads: 4 x $1,000\nteam chuds: 4 x $250\n\nfirst to grow their…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -19715,7 +19911,7 @@
    "fr": "RT @jumperapp: RWA Ecosystem Week: Trade RWA rTokens on Jumper &amp; get up to 2.5% in rewards\n\nIn collaboration with @BitgetWallet &amp; @arbitrum…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -19723,7 +19919,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-26T10:45:47.000Z",
-   "eng": 23,
+   "eng": 28,
    "url": "https://x.com/0xFitz/status/2125903839949664497",
    "fr": "Noticed the timeline starting to get alot more quieter on GTAVI. \n\nI haven't completed Chapter 1 yet, so far Lucia is a sociopath and Jason has less personality than a plank of wood. \n\nDoes it get better?",
    "rt": false,
@@ -19818,7 +20014,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-26T10:30:08.000Z",
-   "eng": 278,
+   "eng": 310,
    "url": "https://x.com/0xFitz/status/2125899902123176352",
    "fr": "https://t.co/62VtgIOo3U",
    "rt": false,
@@ -19904,7 +20100,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-26T10:25:17.000Z",
-   "eng": 3,
+   "eng": 4,
    "url": "https://x.com/0xFitz/status/2125898682218545292",
    "fr": "Why is this on my timeline? \n\nI thought I paid for blue check mark that has no advertisements. https://t.co/FoYBA2jpqK",
    "rt": false,
@@ -19988,7 +20184,7 @@
    "h": "MaxCrypto",
    "n": "Max Crypto",
    "t": "2026-11-26T10:22:11.000Z",
-   "eng": 259,
+   "eng": 260,
    "url": "https://x.com/MaxCrypto/status/2125897899615863256",
    "fr": "Altcoin MCap is repeating its 2022-23 cycle history again.\n\nThe next few years are going to be massive for Altcoin holders. https://t.co/pduVAzwUIc",
    "rt": false,
@@ -20001,7 +20197,7 @@
    "h": "i_am_jackis",
    "n": "JACKIS",
    "t": "2026-11-26T10:20:42.000Z",
-   "eng": 91430,
+   "eng": 108920,
    "url": "https://x.com/i_am_jackis/status/2125897528386150598",
    "fr": "RT @elonmusk: Every child in America will receive two SpaceX shares, one from the company and one from me personally",
    "rt": true,
@@ -20239,7 +20435,7 @@
    "fr": "HOODWARTS https://t.co/1SEfehqUIo",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -20385,7 +20581,7 @@
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-26T09:31:55.000Z",
-   "eng": 397,
+   "eng": 398,
    "url": "https://x.com/eliz883/status/2125885250618437797",
    "fr": "You might think it’s easy … but even now, after 20 years of working on charts, I still struggle and fight to achieve perfection",
    "rt": false,
@@ -20439,7 +20635,7 @@
    "h": "crypto_g0at",
    "n": "Stocks GOAT",
    "t": "2026-11-26T09:24:37.000Z",
-   "eng": 13,
+   "eng": 26,
    "url": "https://x.com/crypto_g0at/status/2125883412187631860",
    "fr": "$TAC should be a lot higher really, can tell just by looking at the logo?? https://t.co/tNOEkXpNie",
    "rt": false,
@@ -20498,7 +20694,7 @@
    "h": "i_am_jackis",
    "n": "JACKIS",
    "t": "2026-11-26T09:17:15.000Z",
-   "eng": 106,
+   "eng": 113,
    "url": "https://x.com/i_am_jackis/status/2125881561232900385",
    "fr": "The AI trade continues to unwind and people are slowly realizing that it is not just a small correction.\n\nThe data was there but naturally people refused to look at it because it was not pleasant to do so.\n\nThe margin was at record highs & cash at historical lows. So naturally all global markets went through a de-leveraging period to provide additional margin with many who got liquidated already.\n\nLogically, after so many forced closed positions, it is more likely than not to see the market boun",
    "rt": false,
@@ -21068,7 +21264,7 @@
    "h": "0xSweep",
    "n": "Sweep",
    "t": "2026-11-26T08:22:15.000Z",
-   "eng": 311,
+   "eng": 312,
    "url": "https://x.com/0xSweep/status/2125867719639834702",
    "fr": "Bitcoin has a long liquidation cluster between $56K and $60K\n\nIf you go below $56K, there's very little leverage until $47K\n\nAt the same time, short liquidations have been piling up from $62K to $88K\n\nSafe to say that the max pain here is a short squeeze https://t.co/jqropfJvrb",
    "rt": false,
@@ -21243,7 +21439,7 @@
    "h": "MaxCrypto",
    "n": "Max Crypto",
    "t": "2026-11-26T08:03:42.000Z",
-   "eng": 327,
+   "eng": 328,
    "url": "https://x.com/MaxCrypto/status/2125863049366220852",
    "fr": "JUST IN:\n\nA whale has opened a 50.6 Million $ETH long with 20x leverage.\n\nI hope he knows something. https://t.co/CFgd04UgIU",
    "rt": false,
@@ -21312,7 +21508,7 @@
    "h": "ZenRacc00n",
    "n": "Zen Raccoon",
    "t": "2026-11-26T07:50:09.000Z",
-   "eng": 17,
+   "eng": 20,
    "url": "https://x.com/ZenRacc00n/status/2125859642190258272",
    "fr": "With GPU project taking off like robinhood:0x0ddcab9ae04bda0c87ecc1640636fa11e8e613e8 & robinhood:0x524988ccc8d7a23566e2fffb24b1b07e5aa2f134 \n\nI'm hunting for new plays and found robinhood:0x08cc2dad18452344995049f6669b9684f459a2f8 here around $50k MC >> I think this will run as well #NFA #DYOR \n\n@sparecycle7",
    "rt": false,
@@ -21570,7 +21766,7 @@
    "h": "CryptocapoOO",
    "n": "cryptocapo",
    "t": "2026-11-26T07:00:02.000Z",
-   "eng": 256,
+   "eng": 257,
    "url": "https://x.com/CryptocapoOO/status/2125847027078902057",
    "fr": "🚨 ALERTA MÁXIMA: ¿OPENAI O ANTHROPIC HAN CONSEGUIDO ROMPER LA CRIPTOGRAFÍA MODERNA?\n\nCirculan rumores de que una de estas compañías, o ambas, podrían haber logrado un avance matemático capaz de comprometer sistemas de cifrado actuales.\n\nLas posibles consecuencias serían enormes:\n\n• Si se rompieran las firmas de Bitcoin, las wallets con claves públicas expuestas podrían quedar vulnerables al robo de BTC.\n• La minería de Bitcoin se vería afectada automáticamente.\n• Incluso algunos sistemas de cri",
    "rt": false,
@@ -21759,7 +21955,7 @@
    "fr": "RT @OctavioNotPunk: @jumperapp Perps got way smarter after the release this week:\n\n- Chart markers: possible to setup an order or set a TP/…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -21772,7 +21968,7 @@
    "fr": "just use jumper",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -21865,7 +22061,7 @@
    "fr": "RT @OndoPerps: Eight traders are facing off in a trading competition on Ondo Perps via @jumperapp.\n\nJumper funds every trader’s wallet: fou…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -21888,7 +22084,7 @@
    "h": "woofBIGDAWG",
    "n": "BIG DAWG crypto",
    "t": "2026-11-26T03:56:33.000Z",
-   "eng": 5,
+   "eng": 6,
    "url": "https://x.com/woofBIGDAWG/status/2125800854074564834",
    "fr": "I’ve NEVER accepted $$ from low caps to promote over the years \n\nWhy❔\n\nWell 2 main reasons: \n\n1.) I don’t ever want to be told what to do or post \n\n2.) IF I believe in a project - \nI can get my own bag\n\nBlockchain doesn’t lie - \nYou’ll never find otherwise \n\nAnd yet I’ve posted MULTIPLE 100x’s from 2017-2026\n\nThat’s just how you do it",
    "rt": false,
@@ -22015,7 +22211,7 @@
    "fr": "RWA Ecosystem Week: Trade RWA rTokens on Jumper &amp; get up to 2.5% in rewards\n\nIn collaboration with @BitgetWallet &amp; @arbitrum\n\nBitget Wallet → Rewards Hub → Choose Jumper\nFull details &amp; T&amp;Cs: https://t.co/8n5Kmgfa7r https://t.co/S8See8V3DK",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -22036,7 +22232,7 @@
    "h": "iambroots",
    "n": "MOON KING B-ROOTS",
    "t": "2026-11-26T02:03:41.000Z",
-   "eng": 49,
+   "eng": 52,
    "url": "https://x.com/iambroots/status/2125772450843812105",
    "fr": "Can I remind you……. \nSubscribers are winning!",
    "rt": false,
@@ -22049,7 +22245,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-26T01:57:37.000Z",
-   "eng": 172,
+   "eng": 181,
    "url": "https://x.com/IncomeSharks/status/2125770923961946128",
    "fr": "Ended up getting a green day after hours. Not how I imagined it'd go at all but will definitely share again if we get the rare setup of no signals then calls being the play the next day. https://t.co/AmlrQa1uXs",
    "rt": false,
@@ -22106,7 +22302,7 @@
    "fr": "https://t.co/AbJfyghPY9",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -22289,7 +22485,7 @@
    "h": "iambroots",
    "n": "MOON KING B-ROOTS",
    "t": "2026-11-26T00:02:12.000Z",
-   "eng": 49,
+   "eng": 50,
    "url": "https://x.com/iambroots/status/2125741878876258778",
    "fr": "You don’t have to bet the farm to buy a farm…….",
    "rt": false,
@@ -22603,7 +22799,7 @@
    "h": "jollygreenmoney",
    "n": "Jolly Green Investor 🍀",
    "t": "2026-11-25T22:01:11.000Z",
-   "eng": 138,
+   "eng": 146,
    "url": "https://x.com/jollygreenmoney/status/2125711422168727755",
    "fr": "Most altcoins will die during this bear market and never come back\n\nHowever, ones that have grown their ARR from $10M to $70M within a few months?\n\nThey will flourish when things turn bullish\n\n$TAO is a shining example ⭐️",
    "rt": false,
@@ -23629,7 +23825,7 @@
    "h": "jollygreenmoney",
    "n": "Jolly Green Investor 🍀",
    "t": "2026-11-25T18:20:08.000Z",
-   "eng": 20,
+   "eng": 22,
    "url": "https://x.com/jollygreenmoney/status/2125655794867917085",
    "fr": "This coin has held up better than anything on-chain over the last month of market sell off\n\nAnd for this reason, among others, is why I have started to add a bag 👇\n\n0:00 Intro \n1:35 Up Only \n3:00 The Big Print Is Coming \n4:05 The Altcoin Pick\n6:00 The Gold Floor \n8:00 Strong Performance \n10:00 A Seat At The Table",
    "rt": false,
@@ -23844,7 +24040,7 @@
    "h": "Bleeding_Crypto",
    "n": "Bleeding Crypto",
    "t": "2026-11-25T18:03:28.000Z",
-   "eng": 30,
+   "eng": 31,
    "url": "https://x.com/Bleeding_Crypto/status/2125651598357803015",
    "fr": "$BTC IF YOU ARE NOT CATCHING THESE MOVES PLEASE CONSIDER JOINING MY $25 PER MONTH TG CHANNEL. IF I WAS BULLSHITING YOU I THINK THE 800 MEMBERS I HAVE WOULD BE CALLING ME OUT!!!\n\nNO ONE WILL WORK HARDER FOR YOU!",
    "rt": false,
@@ -23934,9 +24130,9 @@
     "POMPOM",
     "WASTED",
     "TEXEL",
-    "DUH",
     "JINGYU",
-    "JAOJIU"
+    "JAOJIU",
+    "DUH"
    ],
    "tag": "bull"
   },
@@ -23985,7 +24181,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-25T17:29:35.000Z",
-   "eng": 748,
+   "eng": 764,
    "url": "https://x.com/IncomeSharks/status/2125643071920677116",
    "fr": "$NVDA - Gap filled. Still deeply undervalued. Fear at 9, probably will come back to this tweet in the future wondering why more wasn't purchased. https://t.co/uhOZYGv2CW",
    "rt": false,
@@ -24013,7 +24209,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-25T17:25:41.000Z",
-   "eng": 312,
+   "eng": 316,
    "url": "https://x.com/IncomeSharks/status/2125642088796873059",
    "fr": "Sometimes you just have to complain about the markets to get them moving. https://t.co/3YM9THmev8",
    "rt": false,
@@ -24052,7 +24248,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-25T17:23:53.000Z",
-   "eng": 209,
+   "eng": 211,
    "url": "https://x.com/IncomeSharks/status/2125641637489705197",
    "fr": "Finally got a signal later in the day. Call signal with exit in 15 minutes. Might be tough to close the day green but it's still possible. https://t.co/Sj2wJoZzuW",
    "rt": false,
@@ -24119,7 +24315,7 @@
    "h": "eliz883",
    "n": "EliZ",
    "t": "2026-11-25T17:18:45.000Z",
-   "eng": 409,
+   "eng": 412,
    "url": "https://x.com/eliz883/status/2125640346873032792",
    "fr": "$BTC \n\nEverything was explained as clearly as possible in the previous post, so the children won’t complain https://t.co/9EPWTEkstP",
    "rt": false,
@@ -24460,7 +24656,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-25T16:41:37.000Z",
-   "eng": 348,
+   "eng": 352,
    "url": "https://x.com/IncomeSharks/status/2125631002018283990",
    "fr": "The market after hours trading like the VIX is 40 and during the day trading like it's 15.",
    "rt": false,
@@ -24631,7 +24827,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-25T16:21:05.000Z",
-   "eng": 676,
+   "eng": 704,
    "url": "https://x.com/CozomoMedici/status/2125625831674314989",
    "fr": "Art is the endgame https://t.co/g1d7qkWEkI",
    "rt": false,
@@ -24662,7 +24858,7 @@
    "fr": "Sponsored by @jumperapp. Funded competition: traders use Jumper's capital, not their own. Perps are leveraged and high-risk; you can lose your full margin. Not investment advice. Not available in the UK, US, Canada, Belgium or restricted regions. Rules: https://t.co/9aTzXyziwA",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -24675,7 +24871,7 @@
    "fr": "chads vs chuds is live\n\n8 traders. $5,000 funded by jumper\n\nteam chads: 4 x $1,000\nteam chuds: 4 x $250\n\nfirst to grow their account to $10,000 wins\nchuds need to turn $250 into $10k, chads need to turn $1,000 into $10k\nnobody said it was fair\n\nondo perps only, via jumper perps. every wallet public and tracked\n\ncheck out the live action here: https://t.co/Sr3acp1YFE",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -24735,7 +24931,7 @@
    "h": "jollygreenmoney",
    "n": "Jolly Green Investor 🍀",
    "t": "2026-11-25T16:15:34.000Z",
-   "eng": 15,
+   "eng": 16,
    "url": "https://x.com/jollygreenmoney/status/2125624446778216801",
    "fr": "Starting to increase my position size in the system which continues to perform well\n\nYou are all going to love this https://t.co/cJfZDCev7R",
    "rt": false,
@@ -25238,7 +25434,7 @@
    "fr": "Harry Potter: The Boy Who Mogged https://t.co/VA9JMbi5Pc",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -25456,7 +25652,7 @@
    "fr": "Everytime you think it was cooked already it turns out they can cooker is harder. \n\nGosh it’s looking bleak out there.",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 133759,
    "tickers": [],
    "tag": "mix"
   },
@@ -25521,7 +25717,7 @@
    "fr": "RT @WatcherGuru: JUST IN: 🇺🇸 $2 trillion erased from the US stock market at open after the Trump administration proposes new tariffs on 14…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -25944,7 +26140,7 @@
    "h": "ZenRacc00n",
    "n": "Zen Raccoon",
    "t": "2026-11-25T14:00:18.000Z",
-   "eng": 764,
+   "eng": 770,
    "url": "https://x.com/ZenRacc00n/status/2125590404917608722",
    "fr": "RT @Dola_porr: So I’ve been following Toly’s 3SAT repo and decided to build something around it.\n\nFor context, he’s exploring whether it’s…",
    "rt": true,
@@ -26075,7 +26271,7 @@
    "h": "iambroots",
    "n": "MOON KING B-ROOTS",
    "t": "2026-11-25T13:46:48.000Z",
-   "eng": 21,
+   "eng": 22,
    "url": "https://x.com/iambroots/status/2125587005828440285",
    "fr": "🚨Issues w/crypto twitter 🚨\n\nI gave the playbook to smash it in the last month. \n\nI’m  smashing it right now. \n\nSubscribers are smashing it. \n\nMeanwhile, bald headed losers w/ low testosterone, that hasn’t been laid since 2010, like this talk about me 24/7 & DON’T give his following the playbook bc they’re broke. Nobody subscribes to them bc they are pointless and have 0 alpha.\n\nName Sir Bald a lots last 5x he gave his people. I can easily give mine. I’ll Wait……\n\nI block these people, and when ",
    "rt": false,
@@ -27102,7 +27298,7 @@
    "fr": "Swagwarts https://t.co/emQUyqidkT",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -27210,7 +27406,7 @@
    "fr": "RT @pierre_crypt0: Just logging in in a November bear market year, to see everyone say it’s over for ever, and ever, like every 4 years.\n\nS…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "bear"
   },
@@ -27487,7 +27683,7 @@
    "fr": "jm chat",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -27922,7 +28118,7 @@
    "fr": "Harry Potter and the Modern Warfare https://t.co/mabjFYDKMI",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -28315,7 +28511,7 @@
    "fr": "RT @okx: OKX Community Connects are coming to Europe.\n\nJoin us in Paris, France, and in Cologne, Germany, and meet the OKX team along with…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -28336,7 +28532,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-24T23:11:47.000Z",
-   "eng": 325,
+   "eng": 326,
    "url": "https://x.com/IncomeSharks/status/2125366801446085038",
    "fr": "Since I started tracking the shark indicator it's only not printed a signal 3 times. Today was one of those days where not a single signal was giving. After a record setting Monday it makes sense we went flat to chew up options. If I had to guess green tomorrow unless PCE is bad https://t.co/wHYLjGkwHH",
    "rt": false,
@@ -28349,7 +28545,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-24T23:11:24.000Z",
-   "eng": 1134,
+   "eng": 1135,
    "url": "https://x.com/0xFitz/status/2125366706260283845",
    "fr": "As an Australian who's been playing on EU realms, a few observations:\n\n- EU is a lot more chill. Nobody's angry. It's weird.  \n- I try to chat and get nothing back. Could be the language barrier? Or am I just playing with too many Swedes? \n- I haven't been called cunt yet and I miss it. On Oceanic that's how you know someone likes you.\n- Trade chat has twelve languages and I understand none of them, which is also what Oceanic trade chat was like... just in English.\n- Europe's thousand year grudg",
    "rt": false,
@@ -28393,7 +28589,7 @@
    "fr": "RT @CryptoGodJohn: $WW coded \n\n$GTA6 ran from $100k to $33m - i think this does similar type numbers",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [
     "GTA6",
     "WW"
@@ -28409,7 +28605,7 @@
    "fr": "RT @CryptoGodJohn: Harry Potter coin giving me early GTA vibes before it went parabolic \n\nThe most anticipated TV show ever about Harry Pot…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -28775,7 +28971,7 @@
    "h": "jollygreenmoney",
    "n": "Jolly Green Investor 🍀",
    "t": "2026-11-24T20:20:43.000Z",
-   "eng": 56,
+   "eng": 57,
    "url": "https://x.com/jollygreenmoney/status/2125323752984736080",
    "fr": "Market probably cooked until 2027 at this point ngl\n\nHope I’m wrong",
    "rt": false,
@@ -28924,7 +29120,7 @@
    "h": "0xFitz",
    "n": "Fitz",
    "t": "2026-11-24T19:35:03.000Z",
-   "eng": 344,
+   "eng": 345,
    "url": "https://x.com/0xFitz/status/2125312258267824513",
    "fr": "I've been so deep in bugs, managing players desires/wants/needs that it can often feel like the walls are closing in on me.\n\nI forget that hundreds of thousands of players are actually enjoying what I've created.\n\nSo when I see something like this, it reminds me it's all worth it....\n\nThanks Scruffy, I needed that.",
    "rt": false,
@@ -28968,7 +29164,7 @@
    "fr": "$TAO is back at a major daily demand zone.\n\nNot calling the bottom yet, but this is definitely a zone worth watching. 👀 https://t.co/4Eje2QnVgF",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HX6bbO5XoAA8l1Y.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "TAO"
    ],
@@ -29009,7 +29205,7 @@
    "fr": "solana:6ZnCkq5t8XG4q42b5JiVvU6hV5cZFaNdSBoFq5E7Vf9q is getting interesting here.\n\nRazor Harmonics has detected a bullish AB=CD pattern on the 4H.\n\nStill early, but definitely one to watch. 👀\n\nsolana:6ZnCkq5t8XG4q42b5JiVvU6hV5cZFaNdSBoFq5E7Vf9q is available on Binance, MEXC, BingX, https://t.co/SGGSENncyF, KuCoin, Bybit, Kraken and more.",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HX6SmGbWwAEJotv.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "BLUAI"
    ],
@@ -29247,7 +29443,7 @@
    "fr": "RT @WatcherGuru: JUST IN: Jim Cramer says it's \"time\" to buy. https://t.co/MvapXZZwLL",
    "rt": true,
    "img": "https://pbs.twimg.com/media/HX6ISU9XgAA77ea.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "bull"
   },
@@ -29301,7 +29497,7 @@
    "fr": "Malfoid saves Harry Potter from bullies https://t.co/6zqC5IGgQg",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -29484,7 +29680,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-24T17:25:55.000Z",
-   "eng": 348,
+   "eng": 350,
    "url": "https://x.com/IncomeSharks/status/2125279761840984499",
    "fr": "This made sense when the dollar was up but now it's down too. 2026 is a movie",
    "rt": false,
@@ -29741,7 +29937,7 @@
    "h": "woofBIGDAWG",
    "n": "BIG DAWG crypto",
    "t": "2026-11-24T16:08:30.000Z",
-   "eng": 278,
+   "eng": 280,
    "url": "https://x.com/woofBIGDAWG/status/2125260278392594799",
    "fr": "RT @cz_binance: Woah...\n\n\"You know that Binance’s $SPCX perpetual futures traded 1.957 billion USDT on November 23, but I bet you didn’t kn…",
    "rt": true,
@@ -30262,7 +30458,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-24T13:41:37.000Z",
-   "eng": 973,
+   "eng": 982,
    "url": "https://x.com/CozomoMedici/status/2125223312317984946",
    "fr": "Art is in the air. \n\nFor #ArtTank this week, I’m on a mission to acquire art from 5 “new names” / artists I’ve never bought from before. \n\nDrop your art + link to buy below. \n\nMille Grazie @rollbit for supporting the arts 🎨👇",
    "rt": false,
@@ -30438,7 +30634,7 @@
    "fr": "$5,000 in rewards on @XLayerOfficial. Four days only.\n\nTwo missions, live now on Jumper:\n\n- Move into X Layer and deposit USDT0 on @aave for up to 10% boosted APR on top of native yield\n- Swap $250+ on X Layer and retweet this post to enter a $2,500 raffle. RWA swaps count double\n\nMake the jump: https://t.co/96Ip3oN5T3",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -30451,7 +30647,7 @@
    "fr": "Mission 2: X Layer Volume Raffle\n\n- Move into X Layer through Jumper\n- Swap $250+ on X Layer through Jumper (any pair, and RWA swaps count 2x)\n- Retweet the announcement\n\n10 winning tickets of $250. Your Pass level and volume stack your tickets. Every entry earns 5 XP.\n\nhttps://t.co/ni6vXFsQ4O",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -30464,7 +30660,7 @@
    "fr": "https://t.co/0tQt5zjOe1",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HX4wFAobgAAs4nV.jpg",
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -30520,7 +30716,7 @@
    "fr": "Harry Potter and the Order of the Roadman https://t.co/Ag7VjBmXcU",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -30624,7 +30820,7 @@
    "fr": "https://t.co/ieE1dW0CIP",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HX4pYPGawAAJeiV.jpg",
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -30637,7 +30833,7 @@
    "fr": "and $TTWOc epoch 1 results are live\n\n250 winning tickets drawn. if you entered, head to your Jumper profile to see if you won and claim\n\nresults: https://t.co/tqFiYMt2Gz",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [
     "TTWOC"
    ],
@@ -30652,7 +30848,7 @@
    "fr": "two raffles. up to 500 winning tickets\n\n$TTWOc epoch 2 and $ANTc epoch 1 are both live on Jumper RWA, on @base\n\nhere's how to get in on both 🧵",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [
     "ANTC",
     "TTWOC"
@@ -31328,7 +31524,7 @@
    "fr": "@Ondo @solana https://t.co/pcWaAOk8qz",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HX3ZF7MasAAyMlY.jpg",
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -31341,7 +31537,7 @@
    "fr": "20 wallets just got $250 richer for swapping @Ondo Stocks on @solana \n\nno claiming, no forms. it's already in your wallet\n\ndraw info: https://t.co/LyZ4EzXvqe",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "mix"
   },
@@ -31449,7 +31645,7 @@
    "fr": "https://t.co/HKqNivzK7k",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -31637,7 +31833,7 @@
    "h": "IncomeSharks",
    "n": "IncomeSharks",
    "t": "2026-11-24T01:30:56.000Z",
-   "eng": 248,
+   "eng": 249,
    "url": "https://x.com/IncomeSharks/status/2125039431912731077",
    "fr": "A lot of Puts punished today. A heavily shorted market is one that has violent bounces.",
    "rt": false,
@@ -32622,7 +32818,7 @@
    "h": "woofBIGDAWG",
    "n": "BIG DAWG crypto",
    "t": "2026-11-23T18:10:33.000Z",
-   "eng": 1776,
+   "eng": 1774,
    "url": "https://x.com/woofBIGDAWG/status/2124928605960782010",
    "fr": "RT @cz_binance: Glad to see @JensenHuang back. 👏",
    "rt": true,
@@ -32948,7 +33144,7 @@
    "fr": "Dark Lord of the Dance https://t.co/qDsg5Ikei6",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -32982,7 +33178,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-23T16:40:01.000Z",
-   "eng": 137,
+   "eng": 138,
    "url": "https://x.com/CozomoMedici/status/2124905823449260529",
    "fr": "Love the presentation here. Always been a strong point for Sam ⚔️",
    "rt": false,
@@ -33137,7 +33333,7 @@
    "h": "iambroots",
    "n": "MOON KING B-ROOTS",
    "t": "2026-11-23T15:43:03.000Z",
-   "eng": 96,
+   "eng": 97,
    "url": "https://x.com/iambroots/status/2124891486810775790",
    "fr": "I told yall $CBUCkS will take the next leg up!!!!!!!!!\n\nYes I’m shilling a Solana Coin\n\nBe Multi Chain!!!!!!!!!! Moon King is money max not a chain maxi https://t.co/tn1SygdI7M",
    "rt": false,
@@ -33504,9 +33700,18 @@
    "fr": "Wow",
    "rt": false,
    "img": null,
+   "q": {
+    "id": "2124872489377607725",
+    "h": "WatcherGuru",
+    "tx": "JUST IN: 🇺🇸 Nasdaq hits circuit breaker as stocks surge following Nvidia's $NVDA announcement to reinstate Jensen Huang as CEO."
+   },
    "fol": 0,
-   "tickers": [],
-   "tag": "mix"
+   "tickers": [
+    "NVDA"
+   ],
+   "tag": "bull",
+   "via": "quote",
+   "of": "WatcherGuru"
   },
   {
    "h": "insiliconot",
@@ -33595,9 +33800,18 @@
    "fr": "They looked @ the markets direction and said this was a bad call \n\nResume 🆙",
    "rt": false,
    "img": null,
+   "q": {
+    "id": "2124864947167670336",
+    "h": "WatcherGuru",
+    "tx": "BREAKING: Nvidia $NVDA reinstates Jensen Huang as CEO and President. https://t.co/lP36vxIznH"
+   },
    "fol": 0,
-   "tickers": [],
-   "tag": "mix"
+   "tickers": [
+    "NVDA"
+   ],
+   "tag": "bull",
+   "via": "quote",
+   "of": "WatcherGuru"
   },
   {
    "h": "mert",
@@ -33863,9 +34077,18 @@
    "fr": "As you've seen the pattern is complete\n\nThey filled the bags, and are injecting back on these news \n\nIt was never a organic sell pressure but in the end it doesn't matter because you can't do anything besides playing the game with them \n\nThere's a massive difference between a real bear market and shenanigans like this that are planned by 20 billionaires in the same telegram equal to your shitcoin influencers\n\nThe world is not ready for this V shape\n\nLast leg of this parabola my friends \n\n2027 gi",
    "rt": false,
    "img": null,
+   "q": {
+    "id": "2124864947167670336",
+    "h": "WatcherGuru",
+    "tx": "BREAKING: Nvidia $NVDA reinstates Jensen Huang as CEO and President. https://t.co/lP36vxIznH"
+   },
    "fol": 151846,
-   "tickers": [],
-   "tag": "bear"
+   "tickers": [
+    "NVDA"
+   ],
+   "tag": "bear",
+   "via": "quote",
+   "of": "WatcherGuru"
   },
   {
    "h": "Tareeq_23",
@@ -34010,7 +34233,7 @@
    "fr": "RT @ElonTrades: $WW is the only Harry Potter meme coin with a live House Cup gamification layer (four houses burning, paying, and stacking…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [
     "WW"
    ],
@@ -34033,7 +34256,7 @@
    "h": "crypto_g0at",
    "n": "Stocks GOAT",
    "t": "2026-11-23T13:20:04.000Z",
-   "eng": 21,
+   "eng": 22,
    "url": "https://x.com/crypto_g0at/status/2124855504413348057",
    "fr": "I’ve added some $TAC",
    "rt": false,
@@ -34290,7 +34513,7 @@
    "fr": "Heavy Potter: The Boy Who Ate https://t.co/f3YWmlepYO",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -34713,7 +34936,7 @@
    "h": "KadunaBull",
    "n": "Kaduna (🐀, 🐀)",
    "t": "2026-11-23T07:52:28.000Z",
-   "eng": 112,
+   "eng": 113,
    "url": "https://x.com/KadunaBull/status/2124773058359787687",
    "fr": "Huge",
    "rt": false,
@@ -34963,7 +35186,7 @@
    "fr": "https://t.co/r4QBv6f0AJ",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -35215,7 +35438,7 @@
    "fr": "Insane bleed on the top 2 coin of Robinhood chain. \n\nWhat’s even more interesting now is that there is a huge daily bullish divergence shaping up. \n\nPotential bottom. \n\n$CASHCAT https://t.co/OhdvSXXQmr",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXxJKYWXwAAa_Ta.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "CASHCAT"
    ],
@@ -35256,7 +35479,7 @@
    "fr": "https://t.co/fsrvbswegc",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -35375,7 +35598,7 @@
    "fr": "Drew some lines, increased the bullishness. \n\n$BTC https://t.co/vhRZMkDaar",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXwYHuHWAAArr4Q.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "BTC"
    ],
@@ -35570,7 +35793,7 @@
    "fr": "After the chain launch hype,\nthe first corrective cleansing of the chain,\n\nthis is currently what the top 10 native coins looks like.\n\nWhich coins are you accumulating for the second wave? https://t.co/HRuIBb1ctk",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXvwRp2XoAEKlY5.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [],
    "tag": "bull"
   },
@@ -35697,7 +35920,7 @@
    "fr": "Harry Potter and the Goblet of Creatine https://t.co/dTx5nvJAt6",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -35751,7 +35974,7 @@
    "fr": "RT @CryptoGodJohn: I was one of the first people to the GTA narrative and we saw everyone FOMO in\n\nNow I am telling you Harry Potter coins…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -35764,7 +35987,7 @@
    "fr": "RT @CryptoGodJohn: GTA6 did 330x from $100k to $33m\n\nNow I think solana:8rjgC1GsBo4fwuXjq7Hy12SAFxgFxbtSJJSFBYkVpump can do similar",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [
     "WW"
    ],
@@ -36116,7 +36339,7 @@
    "fr": "Les serveurs GTA 6 RP seront une grosse opportunité financière online pour prochaines années imo\n\nSuffit de jouer quelques heures pour voir le gap qu’il y a eu entre le 5 et le 6\n\nl’arrivé des IA dev ça va énormément aider aussi, il suffit d’être créatif et bien marketer son produit",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -38078,7 +38301,7 @@
    "h": "LongtermR",
    "n": "𝐋𝐨𝐧𝐠𝐓𝐞𝐫𝐦®📊🏆",
    "t": "2026-11-20T22:45:01.000Z",
-   "eng": 32,
+   "eng": 36,
    "url": "https://x.com/LongtermR/status/2123910515046887694",
    "fr": "The only chart you need right now in crypto 🤝\n\nUSDT https://t.co/8saNByoe5P",
    "rt": false,
@@ -38703,7 +38926,7 @@
    "fr": "Looks like people want to buy the dip?\n\nWhat dip?\n\n$WALLET https://t.co/yvHXQAqU8Y",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXlioG7XoAAKabL.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "WALLET"
    ],
@@ -38909,7 +39132,7 @@
    "fr": "RT @saylor: Remember why you ₿ought. https://t.co/UxYdpFJutx",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -38922,7 +39145,7 @@
    "fr": "RT @star_okx: 一个长期操控舆论、谎话连篇的人，如今却在抱怨别人说谎，还声称背后有巨额资金和强大势力在针对他。\n\n有没有一种可能，不是什么阴谋，而是你真的惹了众怒？ 🤣\n\n与其不断制造阴谋论、把自己包装成受害者，不如正面回应公众的质疑，拿事实和证据说话。\n\n互联网是…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -38935,7 +39158,7 @@
    "fr": "RT @WatcherGuru: JUST IN: Michael Saylor's 'Strategy' currently has a $14,100,000,000 unrealized loss on its Bitcoin investment.  \n\nTom Lee…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -39173,7 +39396,7 @@
    "fr": "RT @kaisercrypto: Time to admit.\n \nMost of alts have died.\n\nThey are just awaiting delisting.\n\nAnd final burial.\n\nIt was a good ride. \n\n🫡",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -39480,7 +39703,7 @@
    "fr": "Will be building a large spot bag of $LIT 🎯\n\n$1.60 - $2 https://t.co/Op30ruIadK",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXj7XC_W0AALzPZ.png",
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "LIT"
    ],
@@ -40136,7 +40359,7 @@
    "h": "KadunaBull",
    "n": "Kaduna (🐀, 🐀)",
    "t": "2026-11-19T20:06:32.000Z",
-   "eng": 147,
+   "eng": 148,
    "url": "https://x.com/KadunaBull/status/2123508242219479308",
    "fr": "Stocks are crashing.\n\nBitcoin is trading at 62k.\n\nStudy the relative strength of solana:6FhVPctYg363pQbs4iSvqyHe2cJzfsvFD96gePy6pump @exfildotfun. https://t.co/WFRPDPby8g",
    "rt": false,
@@ -40156,7 +40379,7 @@
    "fr": "What if $BTC #Bitcoin is forming a massive Broadening Bottom on the weekly chart?\n\nThe structure looks remarkably similar to the textbook pattern.\n\nIf this scenario plays out, $BTC could see one final capitulation toward $54K–$56K.\n\nThe pattern is not confirmed yet, but it's definitely worth watching.\n\nSometimes, the most bullish opportunities are hidden inside the ugliest charts.\n\nLet's see how this plays out. 👀",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXg2Tj7XoAA_4zF.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "BTC"
    ],
@@ -40509,7 +40732,7 @@
    "fr": "RT @The__Solstice: Info from a large account that does not wish to be named.\n\nPart of pumpfun's stipulations is they want you to ape in and…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -40563,7 +40786,7 @@
    "fr": "https://t.co/Co6DCkC4mq",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 767,
    "tickers": [],
    "tag": "mix"
   },
@@ -40917,7 +41140,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-19T01:30:54.000Z",
-   "eng": 160,
+   "eng": 161,
    "url": "https://x.com/CozomoMedici/status/2123227484573548673",
    "fr": "In the words of Fat Joe… “yesterdays price is not today’s price”",
    "rt": false,
@@ -41258,7 +41481,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-18T17:52:02.000Z",
-   "eng": 360,
+   "eng": 362,
    "url": "https://x.com/CozomoMedici/status/2123112006475730996",
    "fr": "HBD to the one and only @ClaireSilver 🌸\n\nSome of my fav Claire works 👇 https://t.co/WqtLt1bl3d",
    "rt": false,
@@ -41371,7 +41594,7 @@
    "fr": "$TIBBIR Now entering lower bid zone. Ill be loading slowly. (IF) BTC goes to 45k area id expect to get filled on this down to 0.06\n\nIt's all just opportunity until the bull begins with a lesser known crypto asset. https://t.co/9BnaDZZRV7",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXbCt8cWYAAeMeY.png",
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "TIBBIR"
    ],
@@ -41398,7 +41621,7 @@
    "h": "CozomoMedici",
    "n": "Cozomo de’ Medici",
    "t": "2026-11-18T16:26:31.000Z",
-   "eng": 367,
+   "eng": 369,
    "url": "https://x.com/CozomoMedici/status/2123090484541456852",
    "fr": "rekt gm https://t.co/62zF3Cv9Ed",
    "rt": false,
@@ -41483,7 +41706,7 @@
    "fr": "RT @kaisercrypto: The problem is not buying the dip.\n\nThe problem is where is the dip.\n\n$BTC",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "BTC"
    ],
@@ -41734,7 +41957,7 @@
    "fr": "$USDT.D https://t.co/oHHcfUccRS",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXZwaNqXkAA1-7N.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -42170,7 +42393,7 @@
    "fr": "Selling any is just not the play. \n\nBuying more 🪶\n\n$WALLET",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "WALLET"
    ],
@@ -42291,7 +42514,7 @@
    "fr": "$PYTH https://t.co/PpYDKtQFcU",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXVp6wzXEAAigXu.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "PYTH"
    ],
@@ -42336,7 +42559,7 @@
    "fr": "I bought more ozone-chain:native on the MEXC exchange and expanded my position. \n\nThe chart and volume suggest it’s ready for an upward move. My initial target is now $1.\n\n Let’s push it to $1 ✅ https://t.co/bx0lTdyw46",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXVc36XWoAAztSN.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -42431,7 +42654,7 @@
    "fr": "$STX https://t.co/c4t9iwKAsl",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXU8-5-W4AAS0Ev.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "STX"
    ],
@@ -42472,7 +42695,7 @@
    "fr": "$BTC I'm not calling the bottom, but I'm watching this zone very closely. If it fails, $50K–$55K comes into play. https://t.co/UeEjuBSjuc",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HXUle_3XYAA4uZP.jpg",
-   "fol": 0,
+   "fol": 266298,
    "tickers": [
     "BTC"
    ],
@@ -42859,7 +43082,7 @@
    "h": "KashKysh",
    "n": "KashKysh ❄️",
    "t": "2026-11-16T20:03:10.000Z",
-   "eng": 86,
+   "eng": 85,
    "url": "https://x.com/KashKysh/status/2122420231083557089",
    "fr": "the fact that the only bull case left on CT is a video game dropping thursday is lowkey concerning\n\nlike we went from \"global financial system\" to \"rockstar please save us\"",
    "rt": false,
@@ -43440,7 +43663,7 @@
    "fr": "RT @razoralpha_io: Most signal channels only post the winners.\n\nHere’s our Confluence feed, all of it, last 7 days:\n\n✅ 25 hit TP1+ (15 ran…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -43671,7 +43894,7 @@
    "fr": "RT @kaisercrypto: From hero to villain. \n\nAll because of greed. \n\nCZ of Binance. \n\nSad.",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -43684,7 +43907,7 @@
    "fr": "RT @star_okx: While the entire crypto industry has been suffering from the consequences of their stupid incidents for two consecutive years…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "mix"
   },
@@ -43764,7 +43987,7 @@
    "fr": "CZ posted 10 reasons why crypto is dumping.😂",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 266298,
    "tickers": [],
    "tag": "bear"
   },
@@ -43862,7 +44085,7 @@
    "fr": "RT @ChrisSmiiic: Jviens d’ouvrir mes wallets https://t.co/ionEz35j2E",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -44041,7 +44264,7 @@
    "fr": "RT @BestcryptoBD: Celebrating our teams recent success growing @okx in Europe 🇪🇺 \n\nWe will do our best to scale further and are hungry for…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -44067,7 +44290,7 @@
    "fr": "RT @LeJournalDuCoin: 🇫🇷 @OKX débarque à Station F pour l’un des gros rendez-vous crypto de cette fin d’année à Paris !\n\nLe jeudi 26 novembr…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -44734,7 +44957,7 @@
    "h": "KadunaBull",
    "n": "Kaduna (🐀, 🐀)",
    "t": "2026-11-13T21:51:19.000Z",
-   "eng": 40428,
+   "eng": 40426,
    "url": "https://x.com/KadunaBull/status/2121360283838943609",
    "fr": "RT @elonmusk: @yunta_tsai A petition is underway to reinstate Jensen and I’m signing it too",
    "rt": true,
@@ -45102,7 +45325,7 @@
    "fr": "Retesting mid range of the bottom accumulation zone. \n\nOr see it as a filling of the weekly inefficiency. \n\nEither way:\n\nBullmarket kick off starting TODAY\n\n$BTC https://t.co/AKdYFbTL70",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW_0SKQXsAAnFJf.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "BTC"
    ],
@@ -45433,7 +45656,7 @@
    "fr": "Extremely bullish $WALLET relative strength while all of Robinhood chain capitulates as BTC tries to find a bottom.\n\nBigger onchain liquidity pool than CASHCAT (50m) and almost matching PONS (100m).\n\nRobinhood wallet app has only one coin with a black logo instead of initials. https://t.co/ABsfHZRj4e",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW8XmBQWYAALby6.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "WALLET"
    ],
@@ -45500,7 +45723,7 @@
    "fr": "#Bitcoin update\n\n2025 low failed to provide intra-week support.\n\nI am currently not looking for any trade here. \n\nThe initial thesis could still play out but we would need to V-shape reverse here and close the weekly candle above 2025 low which seems quite unlikely.\n\nIt's a mess right now, we will have more clarity next week",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW72OP2WEAAyEKG.jpg",
-   "fol": 0,
+   "fol": 105179,
    "tickers": [],
    "tag": "mix"
   },
@@ -45696,7 +45919,7 @@
    "fr": "RT @VoltaFamily: Markets are shaky. Your chart doesn't have to be.\n\nStable pairs are live on Volta: launch your token against $USDC.\n\nYour…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -45750,7 +45973,7 @@
    "fr": "Chain, app, wallet\n\n*Black logo*\n\n🔁 https://t.co/CJrU2gDljq",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW6i0KjXMAA7e6x.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [],
    "tag": "mix"
   },
@@ -45884,7 +46107,7 @@
    "fr": "Crypto has a significant identity crisis after so many failed hopes, dreams and ideals but even after all the revolutionary ideas, a simple value still stands - privacy and self-custody\n\nIt's apparent due to the massive $ZEC rally but a lot of people are sleeping on monero:native \n\nYou would hardly find a better looking monthly chart in the high caps. It's not a get rich quick shiny new coin but a rather boring, field-tested, simple and proven pick.\n\nImo. $ZEC is a solid bet for swing trading an",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW3A6XjXwAEzgcu.jpg",
-   "fol": 0,
+   "fol": 105179,
    "tickers": [
     "ZEC"
    ],
@@ -45899,7 +46122,7 @@
    "fr": "$NEAR just bounced off of a major historical support\n\nIt's also one of the better performing coins from the recent rally. Notice how most of them retracted their entire pumps but NEAR just formed a higher low.\n\nI am not buying just yet. Waiting for a clear reclaim of $4.3 https://t.co/CFBYQ3H8bL",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW25YP8WYAAdBw0.jpg",
-   "fol": 0,
+   "fol": 105179,
    "tickers": [
     "NEAR"
    ],
@@ -45942,7 +46165,7 @@
    "fr": "You have the rest of this month &amp; possibly December to load before market flips Bull 🎯\n\n• $TIBBIR bulls know this.\n• $LIT bulls know this.\n• $NEAR bulls know this.\n\nThe max R/R window is now - wrong above red! https://t.co/5xHyBj5ZhU",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW2lHbzXQAABDg_.png",
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "LIT",
     "NEAR",
@@ -46050,7 +46273,7 @@
    "fr": "Price is flirting with the 2025 low\n\nIf we form a higher low here and reclaim last month's low as well, I think we are looking at a really solid long-term buying opportunity\n\nFailure to establish support here will probably send us back to the pump origin at $65K\n\n#Bitcoin https://t.co/BzgKM3K6db",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW2Xs3AWoAAW0mS.jpg",
-   "fol": 0,
+   "fol": 105179,
    "tickers": [],
    "tag": "bull"
   },
@@ -46143,7 +46366,7 @@
    "fr": "Soon (1-3 months) Q1 most likely you'll look back and wish you spent these weeks buying on spot.\n\n• Every bull market starts like this.\n• Every bull market starts with max fear, doom & chop.\n• If you have high conviction projects, buy them soon.\n\nThese conditions of endless chop are not the conditions for leverage, wait until we are trending deeper into Bull.\n\nMy top choices for the future are:\n\n$TIBBIR $LIT $HYPE $TAO $VIRTUAL $NEAR $AERO \n\nLow caps:  $PACKD $SIBYL $UBIK $WALLET 🎯",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "AERO",
     "HYPE",
@@ -46207,7 +46430,7 @@
    "fr": "Reminder: Only posts from @jumperapp or associated team members are official. \nDo not trust posts or links from other accounts, or users claiming release information.\n\nOfficial site: https://t.co/fyq2NFeY8r\n\nWe will never DM you first, ask for your seed phrase, or send claim links.\n\nAll official updates will be shared here first.",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HW0qxTNaoAE-GoA.jpg",
-   "fol": 0,
+   "fol": 216108,
    "tickers": [],
    "tag": "bull"
   },
@@ -46246,7 +46469,7 @@
    "fr": "RT @VoltaFamily: Hey @fomo and @pumpfun traders, your trades count toward the airdrop!\n\n✧ $600,000+ in the pool. 20% of the supply.\n\nJust p…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46259,7 +46482,7 @@
    "fr": "Is it $WALLET time? Yes. https://t.co/pCmjVBToXH",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWyckjTXUAE_Y0Q.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "WALLET"
    ],
@@ -46332,7 +46555,7 @@
    "fr": "$VOID is so far ahead when it comes to privacy",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "VOID"
    ],
@@ -46459,7 +46682,7 @@
    "fr": "RT @VoidCashio: #1 of every coin creator on @VoltaFamily.\n#2 of 5,700+ wallets.\n\nEvery airdrop point voidcash earns goes to VOID holders. H…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46472,7 +46695,7 @@
    "fr": "RT @VoltaFamily: ✧ VOLTA BUILDER OF THE WEEK \n@VoidCashio - The private layer of Elysium.  \n\nVoid let users shield $HYPE and supported toke…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "HYPE"
    ],
@@ -46487,7 +46710,7 @@
    "fr": "RT @binance: A vulnerability (worse_query) affecting iOS 26.7.1, 27.0.1, and 27.2 allows malicious apps to read local files from other apps…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46515,7 +46738,7 @@
    "fr": "Resurgence of Robinhood Chain while the main meme goes to 6 billion from here?\n\n$CASHCAT https://t.co/EsEoYEcjt6",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWwV0BdW8AACxtz.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "CASHCAT"
    ],
@@ -46630,7 +46853,7 @@
    "fr": "Sooner or later mr @DefinitiveFi is going to tell us. \n\nIn the meantime, keep accumulating. \n\n$WALLET https://t.co/nnwM3rF7A4",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWt6rIaXQAAh9wv.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [
     "WALLET"
    ],
@@ -46645,7 +46868,7 @@
    "fr": "RT @VoidCashio: Mainnet just went live, and usage keeps growing.\n\n70+ HYPE shielded.\n300+ private transactions.\n1,500+ notes.\n\nElysium is g…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46686,7 +46909,7 @@
    "fr": "RT @VoidCashio: Wallet trackers, copy-trade bots and alert channels are an entire industry built on reading your account. \n\nEvery buy you m…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "bull"
   },
@@ -46712,7 +46935,7 @@
    "fr": "RT @VoltaFamily: Elysium mainnet is live, and the Volta journey has just begun.\n\nMarkets move in days. Ecosystems are built in years.\nDay o…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46725,7 +46948,7 @@
    "fr": "The $VOLTA numbers are hard to ignore\n\nElysium mainnet went live today, and look at what @VoltaFamily has already achieved:\n\n- Over 4% of total $VOLTA supply permanently burned\n- 500+ tokens launched\n- Hundreds of automated buybacks\n- 20% of supply allocated to the upcoming ecosystem airdrop\n\n$VOLTA has pulled back significantly from its highs, back around $2M marketcap currently, but the buyback & burn flywheel is already delivering results\n\nIf Elysium attracts sustained volume, imagine what th",
    "rt": false,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "VOLTA"
    ],
@@ -46768,7 +46991,7 @@
    "fr": "RT @VoltaFamily: 👀 @fomo traders, we've got you.\n\nYour trades on Elysium chain count toward the $VOLTA airdrop: ~$800,000, 20% of the suppl…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "VOLTA"
    ],
@@ -46783,7 +47006,7 @@
    "fr": "RT @VoidCashio: 1% of $VOID is gone. 10M tokens burned in under five days.\n\nThe flywheel is running. Trades pay fees, fees buy VOID, VOID g…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "VOID"
    ],
@@ -46824,7 +47047,7 @@
    "fr": "RT @fomo: Elysium is now live on fomo.\n\nEarn 2x trader rewards on @Enter_Elysium tokens. https://t.co/1qXi7fS5Oc",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46837,7 +47060,7 @@
    "fr": "RT @Enter_Elysium: Elysium mainnet is now live.\n\nhttps://t.co/svpWTVntyn https://t.co/Fx1rGAQBfs",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46863,7 +47086,7 @@
    "fr": "RT @Yieldex_markets: The Launchpads ETF is up 15% in its first day.\n\n$VOLTA carried it, more than doubling. \n$KLEOS and $OBOL lagged, both…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [
     "KLEOS",
     "OBOL",
@@ -46880,7 +47103,7 @@
    "fr": "RT @VoidCashio: How a private trade works on voidcash:\n\nYour browser builds a zero-knowledge proof that the funds are yours. The vault chec…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46893,7 +47116,7 @@
    "fr": "RT @VoltaFamily: Today is the day: Elysium Mainnet Day. ✧\n\nMajor trading platforms are integrating @Enter_Elysium, official RPC and explore…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -46906,7 +47129,7 @@
    "fr": "$UBIK \n\n• Buying daily while at the lows 🎯 https://t.co/sa5qundQJj",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWrCI3OWcAALHQ_.png",
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "UBIK"
    ],
@@ -46921,7 +47144,7 @@
    "fr": "$TIBBIR\n\n• Adding daily to my buys at 0.17 \n• Eyes next are on 0.135 - 0.104  \n• The lower it goes the more I buy 🎯 https://t.co/2SrCVsIb0Q",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWq_iLBXQAAeLdj.png",
-   "fol": 0,
+   "fol": 85768,
    "tickers": [
     "TIBBIR"
    ],
@@ -46988,7 +47211,7 @@
    "fr": "RT @VoltaFamily: The VOLTA flywheel keeps accelerating. ✧\n3.60% supply burned, worth $260,000+.\n\nEvery trade generates fees. Fees fuel buyb…",
    "rt": true,
    "img": null,
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -47014,7 +47237,7 @@
    "fr": "https://t.co/ApyZNGPCyV",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWoM6jlWMAA0RP1.jpg",
-   "fol": 0,
+   "fol": 130347,
    "tickers": [],
    "tag": "mix"
   },
@@ -47133,7 +47356,7 @@
    "fr": "We all know what comes next…\n\nRobinhood Chain 🪶 https://t.co/DshiynRTKx",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWjBV-6XgAEhj1x.jpg",
-   "fol": 0,
+   "fol": 133759,
    "tickers": [],
    "tag": "mix"
   },
@@ -47172,7 +47395,7 @@
    "fr": "Milan partner event 📍\n\n@OKXItalian https://t.co/C1wYIXfQSf",
    "rt": false,
    "img": "https://pbs.twimg.com/media/HWilp-8WwAAEfgt.jpg",
-   "fol": 0,
+   "fol": 68708,
    "tickers": [],
    "tag": "mix"
   },
@@ -47279,145 +47502,6 @@
    "fol": 66944,
    "tickers": [],
    "tag": "mix"
-  },
-  {
-   "h": "Cryptogether_",
-   "n": "Nico | ᴄʀʏᴘᴛᴏɢᴇᴛʜᴇʀ",
-   "t": "2026-11-06T17:35:17.000Z",
-   "eng": 72,
-   "url": "https://x.com/Cryptogether_/status/2118759136053637614",
-   "fr": "Article sorti sur @usedotai !\n\nLe $DOT est clairement un token à surveiller pour ce cycle.\n\nJ’aime bien ce format un peu plus long, ça change.\n\nAvoir un peu de conviction dans ce marché, ça fait jamais de mal.\n\nBonne lecture et bonne soirée les copains.",
-   "rt": false,
-   "img": null,
-   "fol": 10757,
-   "tickers": [
-    "DOT"
-   ],
-   "tag": "bull"
-  },
-  {
-   "h": "Cryptogether_",
-   "n": "Nico | ᴄʀʏᴘᴛᴏɢᴇᴛʜᴇʀ",
-   "t": "2026-11-06T17:28:19.000Z",
-   "eng": 37,
-   "url": "https://x.com/Cryptogether_/status/2118757384734773303",
-   "fr": "https://t.co/8o5QJC36iR",
-   "rt": false,
-   "img": null,
-   "fol": 10757,
-   "tickers": [],
-   "tag": "mix"
-  },
-  {
-   "h": "metaversejoji",
-   "n": "joji",
-   "t": "2026-11-06T15:54:37.000Z",
-   "eng": 205,
-   "url": "https://x.com/metaversejoji/status/2118733801526284510",
-   "fr": "have to adapt my mind that any coin no matter how good I feel about it will top between 200-300k every single time for the idk how lasting future",
-   "rt": false,
-   "img": null,
-   "fol": 0,
-   "tickers": [],
-   "tag": "mix"
-  },
-  {
-   "h": "playtowin2026",
-   "n": "S",
-   "t": "2026-11-06T15:51:42.000Z",
-   "eng": 5,
-   "url": "https://x.com/playtowin2026/status/2118733068521624007",
-   "fr": "Happy Friday\n\nWhat a week that’s why I’m selective what I post and what I buy \nDon’t blindly follow pumpers on here who post about the same stock 10 times and go quiet after \n\nI post exact bottoms and let’s recap \n\n$sdst 200 percent ✅\n$INLF 200 percent ✅\n$SHFS 200 percent ✅ again at 100 percent ✅\n\nMy current trade is \n\n$BGL I posted exact bottoms 11s it’s about to run fast thank you potential to .50 cents where warrants are but take profits when you like as green is always good \n\nI’m also holdin",
-   "rt": false,
-   "img": null,
-   "fol": 619,
-   "tickers": [
-    "BGL",
-    "INLF",
-    "SDST",
-    "SHFS"
-   ],
-   "tag": "bull"
-  },
-  {
-   "h": "ABaradez",
-   "n": "Alexandre Baradez",
-   "t": "2026-11-06T15:28:46.000Z",
-   "eng": 25,
-   "url": "https://x.com/ABaradez/status/2118727296815161791",
-   "fr": "📺 Je serai sur le plateau de @FRANCE24 avec @karinaf24 à partir de 17h pour parler de la réaction des marchés 📈📉 après les midterms et des perspectives économiques américaines 🇺🇸",
-   "rt": false,
-   "img": null,
-   "fol": 55005,
-   "tickers": [],
-   "tag": "mix"
-  },
-  {
-   "h": "Cryptogether_",
-   "n": "Nico | ᴄʀʏᴘᴛᴏɢᴇᴛʜᴇʀ",
-   "t": "2026-11-06T13:45:01.000Z",
-   "eng": 86,
-   "url": "https://x.com/Cryptogether_/status/2118701188249977185",
-   "fr": "RT @usedotai: Here's what you can expect over the next 12 weeks at base:0x23a2847d772803f9efc64b4277b782b06296fe51:\n\n- Introduction of our…",
-   "rt": true,
-   "img": null,
-   "fol": 10757,
-   "tickers": [
-    "DOT"
-   ],
-   "tag": "mix"
-  },
-  {
-   "h": "tradingjip",
-   "n": "Jip Molenaar",
-   "t": "2026-11-06T13:34:35.000Z",
-   "eng": 92,
-   "url": "https://x.com/tradingjip/status/2118698562095657404",
-   "fr": "Every trade I post, in one place\n\nCalled live, before it plays out\nQuoted here with the result\nWins and losses, no deleting\n\nRunning tally at the bottom\n\nUpdated after every trade",
-   "rt": false,
-   "img": null,
-   "fol": 27442,
-   "tickers": [],
-   "tag": "bull"
-  },
-  {
-   "h": "abu_crypto1",
-   "n": "Abu",
-   "t": "2026-11-06T11:53:15.000Z",
-   "eng": 32,
-   "url": "https://x.com/abu_crypto1/status/2118673059980947777",
-   "fr": "GM future millionaires 👊🏻",
-   "rt": false,
-   "img": null,
-   "fol": 59779,
-   "tickers": [],
-   "tag": "mix"
-  },
-  {
-   "h": "cryptowhitewalk",
-   "n": "whitewalker",
-   "t": "2026-11-06T11:07:20.000Z",
-   "eng": 26,
-   "url": "https://x.com/cryptowhitewalk/status/2118661507156418857",
-   "fr": "I want to thank those 6 individuals who continuously like my tweets \nRest can just fuck off 👋🏻",
-   "rt": false,
-   "img": null,
-   "fol": 23761,
-   "tickers": [],
-   "tag": "mix"
-  },
-  {
-   "h": "CryptArchitect_",
-   "n": "⚜️ T̴H̴E̴ ̴C̴R̴Y̴P̴T̴O̴ ̴A̴R̴C̴H̴I̴T̴E̴C̴T̴ ⚜️",
-   "t": "2026-11-06T10:53:46.000Z",
-   "eng": 4,
-   "url": "https://x.com/CryptArchitect_/status/2118658090635530333",
-   "fr": "The launch is here.. 🚨",
-   "rt": false,
-   "img": null,
-   "fol": 0,
-   "tickers": [],
-   "tag": "mix"
   }
  ],
  "tokens": {
@@ -47425,9 +47509,9 @@
    "name": "Polygon Ecosystem Token",
    "price": 0.07856,
    "mcap": 837264534,
-   "ch24": 3.44,
+   "ch24": 3.11,
    "liq": 32264.79,
-   "vol24": 4072.3,
+   "vol24": 4065.49,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/ethereum/0x88ada7b1dd1c728ea87404cea7a0780139eb35d1",
@@ -47457,11 +47541,11 @@
   },
   "SWOGE": {
    "name": "Swole Doge",
-   "price": 6.305e-05,
-   "mcap": 63055,
-   "ch24": 142,
-   "liq": 21528.12,
-   "vol24": 476090.08,
+   "price": 6.567e-05,
+   "mcap": 65679,
+   "ch24": 152,
+   "liq": 21991.39,
+   "vol24": 478252.96,
    "logo": "https://cdn.dexscreener.com/cms/images/S6T603vhYg6MHwbF?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/VKVWp6M5sSfPepec?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/bsc/0xc84118b31a79cb4120b5a72bb763a89567109210",
@@ -47474,11 +47558,11 @@
   },
   "TORCH": {
    "name": "Torch",
-   "price": 0.003415,
-   "mcap": 3218599,
-   "ch24": -0.79,
-   "liq": 1023562.29,
-   "vol24": 84437.67,
+   "price": 0.003421,
+   "mcap": 3224687,
+   "ch24": -1.15,
+   "liq": 1025462.63,
+   "vol24": 82991.05,
    "logo": "https://cdn.dexscreener.com/cms/images/XhCHHfeIrnIrPUXz?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/WB_GdPszcGTp_Rbs?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x1649550af1e3363b4c25236434530af7e6886b183e1f574a98fdd1d04d287a2d",
@@ -47491,11 +47575,11 @@
   },
   "VVV": {
    "name": "Venice Token",
-   "price": 27.34,
-   "mcap": 1354551879,
-   "ch24": -1.79,
-   "liq": 7398337.98,
-   "vol24": 1362337.25,
+   "price": 27.24,
+   "mcap": 1349437665,
+   "ch24": -0.82,
+   "liq": 7391642.39,
+   "vol24": 1329338.35,
    "logo": "https://cdn.dexscreener.com/cms/images/a581d4cf10079a278196c97485dda06cf4fb77d539a94f8d986be6d1f2445ddc?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/19c7cb5ca5528b41b262b9bfd5a8c5594cedf5e792a0577f6c0d6ff7ce70582e?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/base/0x01784ef301d79e4b2df3a21ad9a536d4cf09a5ce",
@@ -47510,9 +47594,9 @@
    "name": "Silencio",
    "price": 0.0003764,
    "mcap": 22398355,
-   "ch24": 3.3,
+   "ch24": 2.71,
    "liq": 651473.5,
-   "vol24": 34011.86,
+   "vol24": 34001.85,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/ftmjofr6shjnksggzyxxjg21q46ztqbgopmuvorw2rnn",
@@ -47526,10 +47610,10 @@
   "TEXEL": {
    "name": "Texel",
    "price": 0.001528,
-   "mcap": 1430593,
-   "ch24": -22.32,
+   "mcap": 1430589,
+   "ch24": -22.43,
    "liq": 95287.82,
-   "vol24": 258394.51,
+   "vol24": 258295.02,
    "logo": "https://cdn.dexscreener.com/cms/images/6ST6AfcBaYreF3Hq?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/j7i7EezuQs-K-Jur?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x5e73f5892ef5cf4d553fe0cc9b109e884c3c2a52635bf6c4f1dceff9637fe932",
@@ -47542,11 +47626,11 @@
   },
   "IDLEX": {
    "name": "Idlex Network",
-   "price": 8.383e-05,
-   "mcap": 79617,
-   "ch24": -56.59,
-   "liq": 22309.78,
-   "vol24": 103778.25,
+   "price": 8.629e-05,
+   "mcap": 81960,
+   "ch24": -62.09,
+   "liq": 22648.66,
+   "vol24": 102568.19,
    "logo": "https://cdn.dexscreener.com/cms/images/c2ZMJk4I-E827alT?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/_NbrHqFO9xuw4OAD?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xaec1358ed0f1057b498209f75903c86885a2d046da76d53bfdf372bd11e6bf9d",
@@ -47578,9 +47662,9 @@
    "name": "Priors Agents",
    "price": 0.002595,
    "mcap": 2595726,
-   "ch24": 6.7,
+   "ch24": 5.16,
    "liq": 347289.51,
-   "vol24": 27506.61,
+   "vol24": 27116.23,
    "logo": "https://cdn.dexscreener.com/cms/images/8KTm_COcGu7GjsW0?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/6q0Ed8NXqtmJ0qBs?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xff7b3bd2db34d9ed8160e6dedf1d448777abaa1fa6fc8a31144930a1a656fd92",
@@ -47595,9 +47679,9 @@
    "name": "Avici",
    "price": 0.235,
    "mcap": 3031578,
-   "ch24": 4.27,
+   "ch24": 6.31,
    "liq": 1147212.2,
-   "vol24": 32929.94,
+   "vol24": 22237.64,
    "logo": "https://cdn.dexscreener.com/cms/images/c4ba034e91f254cf25913e9d44080722b5f9f40957d5b14bca0836b4961c278d?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/423f25cc752c023e8dacdcb9f1ee460e528876d83289ff1a22426ec653926805?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/3d854kknnqhu9xvarnv154oz9on2wf3txsq3ldu7ffmn",
@@ -47608,30 +47692,13 @@
    "x": "https://x.com/Avici",
    "age": 1760806818000
   },
-  "DUH": {
-   "name": "duh",
-   "price": 0.0003761,
-   "mcap": 364740,
-   "ch24": -21.18,
-   "liq": 51907,
-   "vol24": 138467,
-   "logo": "https://cdn.dexscreener.com/cms/images/7ThfyOrimP6hfkTm?width=800&height=800&quality=95&format=auto",
-   "banner": "https://cdn.dexscreener.com/cms/images/aEU4Tfp1V0rQHqFv?width=1500&height=500&quality=95&format=auto",
-   "url": "https://dexscreener.com/solana/3igr3kungvhed9hadx4hc4y9phhjunci2gawtpt2jra6",
-   "chain": "solana",
-   "pair": "3iGr3kuNGVheD9HAdx4hc4y9PhhJuNCi2GawTpT2jra6",
-   "ca": "ngwxpGYdkauMcxLFrNTKp8qBgK7JV53zVvd7F2spump",
-   "byca": 1,
-   "x": "https://x.com/duhscat?s=11",
-   "age": 1794334818000
-  },
   "JINGYU": {
    "name": "The Great Whale",
-   "price": 1.286e-05,
-   "mcap": 12476,
-   "ch24": -84.89,
-   "liq": 8600.38,
-   "vol24": 41654.18,
+   "price": 1.133e-05,
+   "mcap": 10990,
+   "ch24": -87.19,
+   "liq": 7997.51,
+   "vol24": 42079.4,
    "logo": "https://cdn.dexscreener.com/cms/images/90Rl7H_rYM4BKnMG?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/r_bOzLDKbq96_CId?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/3d4szgvyhhwdo3dndzkqnppdqp1ffnvrzfvlrn94j1bp",
@@ -47646,9 +47713,9 @@
    "name": "JaoJiu",
    "price": 6.308e-06,
    "mcap": 6117,
-   "ch24": -41.99,
+   "ch24": -47.6,
    "liq": 5167.04,
-   "vol24": 9064.08,
+   "vol24": 8543.71,
    "logo": "https://cdn.dexscreener.com/cms/images/m4GPG6AJ4x7jQGR6?width=800&height=800&quality=95&format=auto",
    "banner": null,
    "url": "https://dexscreener.com/solana/4f4f69asrnnyycidkkmng9esft1fgw2cwineqcrwatn8",
@@ -47659,13 +47726,30 @@
    "x": "https://x.com/khaokheowzoo/status/2125478838293651888?a=XRf3Z7D9IXutgLY6q_Q&s=46",
    "age": 1795590938000
   },
+  "DUH": {
+   "name": "duh",
+   "price": 0.0003772,
+   "mcap": 365824,
+   "ch24": -19.79,
+   "liq": 51977.44,
+   "vol24": 137789.38,
+   "logo": "https://cdn.dexscreener.com/cms/images/7ThfyOrimP6hfkTm?width=800&height=800&quality=95&format=auto",
+   "banner": "https://cdn.dexscreener.com/cms/images/aEU4Tfp1V0rQHqFv?width=1500&height=500&quality=95&format=auto",
+   "url": "https://dexscreener.com/solana/3igr3kungvhed9hadx4hc4y9phhjunci2gawtpt2jra6",
+   "chain": "solana",
+   "pair": "3iGr3kuNGVheD9HAdx4hc4y9PhhJuNCi2GawTpT2jra6",
+   "ca": "ngwxpGYdkauMcxLFrNTKp8qBgK7JV53zVvd7F2spump",
+   "byca": 1,
+   "x": "https://x.com/duhscat?s=11",
+   "age": 1794334818000
+  },
   "ODDS": {
    "name": "OddsEngine",
-   "price": 6.873e-05,
-   "mcap": 68026,
-   "ch24": 60.81,
-   "liq": 29630.87,
-   "vol24": 27880.87,
+   "price": 6.921e-05,
+   "mcap": 68502,
+   "ch24": 48.14,
+   "liq": 29789.67,
+   "vol24": 26458.2,
    "logo": "https://cdn.dexscreener.com/cms/images/ZY8x1F2bdYyRn7vF?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/37vnryNye_HVYayw?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0xfc54380c986aa7be949f34524b819f4bec8aa5e5972141b549429fca4ad1361b",
@@ -47678,11 +47762,11 @@
   },
   "ZC": {
    "name": "zipcoin",
-   "price": 0.000442,
-   "mcap": 442015,
-   "ch24": -22.57,
-   "liq": 70339.39,
-   "vol24": 95448.46,
+   "price": 0.0004241,
+   "mcap": 424177,
+   "ch24": -22.05,
+   "liq": 68935.96,
+   "vol24": 96152.23,
    "logo": "https://cdn.dexscreener.com/cms/images/NpW_xg88-pWBFy3W?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/OSTNCOugSM8TsHLO?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/ethereum/0x9da454e2798840f8eb5fa9044165dff321a32bb4",
@@ -47695,11 +47779,11 @@
   },
   "HOOKR": {
    "name": "Hookr.fun",
-   "price": 0.009046,
-   "mcap": 8981314,
-   "ch24": 5.88,
-   "liq": 639383.12,
-   "vol24": 267752.58,
+   "price": 0.009139,
+   "mcap": 9073887,
+   "ch24": 7.35,
+   "liq": 643027.28,
+   "vol24": 270360.46,
    "logo": "https://cdn.dexscreener.com/cms/images/DeCi17PPGMS19XYS?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/aDdgTAdHk2nRzVIb?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
@@ -47712,11 +47796,11 @@
   },
   "ANSEM": {
    "name": "The Black Bull",
-   "price": 0.01899,
-   "mcap": 18949622,
-   "ch24": -2.11,
-   "liq": 774151.42,
-   "vol24": 481945.48,
+   "price": 0.019,
+   "mcap": 18955959,
+   "ch24": -3.73,
+   "liq": 773803.9,
+   "vol24": 478077.07,
    "logo": "https://cdn.dexscreener.com/cms/images/A8aHRXC8VPrpfPIF?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/et-RLU3d-f5Hg851?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/fnzky6x7entq1er3d225dqyt7ybfka4pskbmqhb8l3cc",
@@ -47731,9 +47815,9 @@
    "name": "HODL",
    "price": 0.001442,
    "mcap": 1442669,
-   "ch24": 1.58,
+   "ch24": 0.18,
    "liq": 179421.37,
-   "vol24": 21385.2,
+   "vol24": 20966.15,
    "logo": "https://cdn.dexscreener.com/cms/images/Ur9HtTsmXtjiJF1E?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/E865TcOfYXgoj1BB?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/dtdthux79bmnmnesv3au7pzbkakb3muui8gwudz6suw",
@@ -47746,11 +47830,11 @@
   },
   "BLUAI": {
    "name": "Bluwhale AI",
-   "price": 0.005866,
-   "mcap": 117333,
-   "ch24": 5.86,
-   "liq": 240088.9,
-   "vol24": 37287.17,
+   "price": 0.005879,
+   "mcap": 117597,
+   "ch24": 6.14,
+   "liq": 240220.36,
+   "vol24": 37882.52,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/dnbaw9cs3qlixetpvtmprjhrxhun2d5t64dxhxbuzjz6",
@@ -47763,11 +47847,11 @@
   },
   "CARDS": {
    "name": "Collector Crypt",
-   "price": 0.1726,
-   "mcap": 153709994,
-   "ch24": 8.01,
-   "liq": 3437777.14,
-   "vol24": 523297.32,
+   "price": 0.1725,
+   "mcap": 153646943,
+   "ch24": 8.04,
+   "liq": 3435224.71,
+   "vol24": 524278.31,
    "logo": "https://cdn.dexscreener.com/cms/images/3277f5f414a940e7d009f9cbc9147c6ab25eae6a6cda10e682319f7b6394e328?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/572d776262a45078bc6ece228e95ee4b2c2e918aafce66fa2fd95c1ba1fe6193?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/hnhpjpjgbg2kwnimtnw8cvbhvk1hfog3rc3kjnyc23td",
@@ -47780,11 +47864,11 @@
   },
   "WW": {
    "name": "The Wizarding World ",
-   "price": 0.0007166,
-   "mcap": 672184,
-   "ch24": 61.42,
-   "liq": 64194.54,
-   "vol24": 117516.6,
+   "price": 0.0007107,
+   "mcap": 666636,
+   "ch24": 58.9,
+   "liq": 63890.81,
+   "vol24": 118918.52,
    "logo": "https://cdn.dexscreener.com/cms/images/BeXJI_JjPrT9IbTd?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Unw98V4BB4o6FGUi?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/pjxgzmudyerjcvi1etnfkcyhhmnnpgwutlqtf63p6oa",
@@ -47797,11 +47881,11 @@
   },
   "CORE": {
    "name": "core",
-   "price": 0.000803,
-   "mcap": 800743,
-   "ch24": 5.45,
-   "liq": 97220,
-   "vol24": 21546.98,
+   "price": 0.0008172,
+   "mcap": 814945,
+   "ch24": 6.91,
+   "liq": 98017.85,
+   "vol24": 21547.38,
    "logo": "https://cdn.dexscreener.com/cms/images/IfGezOSXIstKrcO9?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/f1yu9lOnKNXqUshr?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/cmrjpwzrclfrw3iyi2dt7s5osxqdstw5z2dybtbuxq7a",
@@ -47814,11 +47898,11 @@
   },
   "CBUCKS": {
    "name": "Cartoon Money",
-   "price": 0.007005,
-   "mcap": 6601556,
-   "ch24": 20.78,
-   "liq": 298891.38,
-   "vol24": 332491.8,
+   "price": 0.007176,
+   "mcap": 6763148,
+   "ch24": 21.87,
+   "liq": 302566.19,
+   "vol24": 335085.63,
    "logo": "https://cdn.dexscreener.com/cms/images/2bajn2a05AdQGV-4?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/dQ4E_XBvLaPRg67y?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
@@ -47831,11 +47915,11 @@
   },
   "EXFIL": {
    "name": "Exfil.fun",
-   "price": 0.001178,
-   "mcap": 1144447,
-   "ch24": -0.67,
-   "liq": 95304.75,
-   "vol24": 21844.85,
+   "price": 0.001188,
+   "mcap": 1154579,
+   "ch24": 1,
+   "liq": 95795.02,
+   "vol24": 21841.43,
    "logo": "https://cdn.dexscreener.com/cms/images/JXVT03G4pLMgLsGu?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Ct770pf8EML_c2R3?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/2zpfdgd48k7b2u9yqz4hjspaptovu9uiebfqyxeoexkv",
@@ -47848,11 +47932,11 @@
   },
   "SYMB": {
    "name": "Symbolon",
-   "price": 0.0005597,
-   "mcap": 553847,
-   "ch24": 85.73,
-   "liq": 65337.16,
-   "vol24": 256345.48,
+   "price": 0.0005004,
+   "mcap": 495158,
+   "ch24": 57.39,
+   "liq": 61975.71,
+   "vol24": 258072.4,
    "logo": "https://cdn.dexscreener.com/cms/images/Iw4qCH3BGohrfZeP?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/bN9Xegaia-J7FIKZ?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/elysium/0x0ed997775a0e19a1e45483538679486d099a830e9f1abda89423577fffb829e2",
@@ -47865,11 +47949,11 @@
   },
   "AGI": {
    "name": "Agorian",
-   "price": 0.0002859,
-   "mcap": 284604,
-   "ch24": 51.16,
-   "liq": 53822.7,
-   "vol24": 68016.65,
+   "price": 0.0002848,
+   "mcap": 283541,
+   "ch24": 47.51,
+   "liq": 53651.59,
+   "vol24": 68039.8,
    "logo": "https://cdn.dexscreener.com/cms/images/TV2vP7CqLSoEYHYh?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/mRJyTFOO6VcY5v1k?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/elysium/0x4226074a01c6b6259bebd14bc84beb40a9ebeeee44ab8997dc893e51ac98fc3d",
@@ -47884,9 +47968,9 @@
    "name": "Etchy",
    "price": 0.0007451,
    "mcap": 692672,
-   "ch24": -2.35,
+   "ch24": -1.86,
    "liq": 75478.62,
-   "vol24": 27675.77,
+   "vol24": 27512.33,
    "logo": "https://cdn.dexscreener.com/cms/images/ZkY0_FpUTxxeSION?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/p9w1WNZUHJg2gZvw?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/a17ssu23iadcwlx5ykz7qxpgdlptpcsegfl9dbzjphx2",
@@ -47901,9 +47985,9 @@
    "name": "Injective Token",
    "price": 6.39,
    "mcap": 639197448,
-   "ch24": 4.49,
+   "ch24": 4.39,
    "liq": 377791.69,
-   "vol24": 7407.3,
+   "vol24": 7279.23,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/ethereum/0xbe0c5a04c471267beea7586550008f4892a62833e071a9f96e5ca4bc0ff5cbb3",
@@ -47916,11 +48000,11 @@
   },
   "VINE": {
    "name": "Vine Coin",
-   "price": 0.008851,
-   "mcap": 8851565,
-   "ch24": -4.88,
-   "liq": 1451406.82,
-   "vol24": 302384.05,
+   "price": 0.008877,
+   "mcap": 8877401,
+   "ch24": -3.3,
+   "liq": 1453327.23,
+   "vol24": 297031.19,
    "logo": "https://cdn.dexscreener.com/cms/images/74a2255eb11fd430603a2ae1823456c98a5e241fa2e526c253c92ad16d1fa1ce?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/03362b3c1cdb3a1fb8c1d1aaec131a08573c5dad0081a9ea1441a3f30106a227?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/58fzjmbx5patnfjpqwwsqkvfprkptkbb5r2vcw4qq3z9",
@@ -47933,11 +48017,11 @@
   },
   "MIHAO": {
    "name": "ni hao cat",
-   "price": 0.006119,
-   "mcap": 5756999,
-   "ch24": 35.36,
-   "liq": 313153,
-   "vol24": 1002729.39,
+   "price": 0.006241,
+   "mcap": 5871599,
+   "ch24": 36.29,
+   "liq": 316166.57,
+   "vol24": 1005221.87,
    "logo": "https://cdn.dexscreener.com/cms/images/CN2GXn9xCwxqB6AH?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/7UaNwmp2IgLSZCvA?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/ho1asg6wgh1ffxdehrk2f4ggt1hoxo9s5jclmdqeyebz",
@@ -47950,11 +48034,11 @@
   },
   "XMRVM": {
    "name": "XMRvm",
-   "price": 3.099e-05,
-   "mcap": 29216,
-   "ch24": -9.39,
-   "liq": 12004.17,
-   "vol24": 5085.07,
+   "price": 3.027e-05,
+   "mcap": 28542,
+   "ch24": -11.21,
+   "liq": 11847.61,
+   "vol24": 5179.07,
    "logo": "https://cdn.dexscreener.com/cms/images/Pkn8Cb548gaH49z_?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/9mjq5RUxu0jwV-6Q?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/6arhcprfzn1gz9xlhtjhci94thrd4ki61yrhwdee8wrk",
@@ -47965,30 +48049,13 @@
    "x": "https://x.com/XMRVMachine",
    "age": 1792597272000
   },
-  "DOT": {
-   "name": "Dot",
-   "price": 0.004441,
-   "mcap": 3689974,
-   "ch24": 4.98,
-   "liq": 313011.69,
-   "vol24": 164719.6,
-   "logo": "https://cdn.dexscreener.com/cms/images/dicwjZDJp7ma1FU9?width=800&height=800&quality=95&format=auto",
-   "banner": "https://cdn.dexscreener.com/cms/images/q1Ds1M-OJ3j0_d_f?width=1500&height=500&quality=95&format=auto",
-   "url": "https://dexscreener.com/base/0x5f547579519beaa158cddd3543604029165f66e86a00c373d0ee90c38784921b",
-   "chain": "base",
-   "pair": "0x5f547579519beaa158cddd3543604029165f66e86a00c373d0ee90c38784921b",
-   "ca": "0x23a2847d772803f9efc64b4277b782b06296fe51",
-   "byca": 1,
-   "x": "https://x.com/usedotai",
-   "age": 1779901859000
-  },
   "NVDA": {
    "name": "NVIDIA • Robinhood Token",
-   "price": 155.64,
-   "mcap": 21604548,
-   "ch24": 3.95,
-   "liq": 2004577.29,
-   "vol24": 4666268.53,
+   "price": 155.33,
+   "mcap": 21561075,
+   "ch24": 3.29,
+   "liq": 2001355.88,
+   "vol24": 4580414.55,
    "logo": "https://cdn.dexscreener.com/cms/images/https%3A%2F%2Fcoin-images.coingecko.com%2Fcoins%2Fimages%2F102174110%2Flarge%2F0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec.png%3F1782444565?width=800&height=800&quality=95&format=auto",
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
@@ -48001,8 +48068,8 @@
    "price": 80.0043,
    "mcap": 800043414,
    "ch24": null,
-   "liq": 799802627.1,
-   "vol24": 166832.11,
+   "liq": 799802629.17,
+   "vol24": 187539.06,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/e9rf4fj3amubh4qvspynhzquuqzj4lb1bhl5vgefjxgq",
@@ -48012,11 +48079,11 @@
   },
   "ANT": {
    "name": "Anthropic, PBC Class A Common Stock • Robinhood Token",
-   "price": 88.68,
-   "mcap": 3639896,
-   "ch24": 6.46,
-   "liq": 1240970.03,
-   "vol24": 8142396.41,
+   "price": 88.37,
+   "mcap": 3627104,
+   "ch24": 5.84,
+   "liq": 1239622.23,
+   "vol24": 7999226.82,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x75ae79fd767a7cc410ab4eed13f8d3498e878d6a",
@@ -48042,9 +48109,9 @@
    "name": "Nash Alliance Token",
    "price": 0.002465,
    "mcap": 513506,
-   "ch24": 1.27,
-   "liq": 189509.28,
-   "vol24": 864.77,
+   "ch24": 1.26,
+   "liq": 189509.51,
+   "vol24": 864.33,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/bsc/0xee56cab7a8fe03c1077589fbc2fd32acd726a6bd",
@@ -48054,11 +48121,11 @@
   },
   "CLAUDIA": {
    "name": "Claudia",
-   "price": 85.59,
-   "mcap": 80990760463,
-   "ch24": 3.05,
-   "liq": 13901476.27,
-   "vol24": 41473240.06,
+   "price": 86.021,
+   "mcap": 81397755400,
+   "ch24": 3.09,
+   "liq": 13941292.3,
+   "vol24": 40805413.47,
    "logo": "https://cdn.dexscreener.com/cms/images/qF2ypYau95TgBZR8?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/fGrMUqZ31YKjxmk0?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/62phjxdxrhottqfdz7mblsd655ffdr7yvu3qjxhjzxkp",
@@ -48072,7 +48139,7 @@
    "mcap": 2944738446,
    "ch24": null,
    "liq": 2944425319.97,
-   "vol24": 35.91,
+   "vol24": 48.86,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/dbwbreonbwvpfcvh8tufioqetcfygaj6v77ruyt2vjyf",
@@ -48099,8 +48166,8 @@
    "price": 0.2023,
    "mcap": 202316880,
    "ch24": null,
-   "liq": 202124988.37,
-   "vol24": 166832.11,
+   "liq": 202124990.45,
+   "vol24": 187539.06,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/8fww9cqgaphesb7u3arsuctjxbs3srufhmmekmg7fxvy",
@@ -48110,11 +48177,11 @@
   },
   "AMD": {
    "name": "AMD",
-   "price": 14.79,
-   "mcap": 2257432,
-   "ch24": 0.13,
-   "liq": 473579.28,
-   "vol24": 176.49,
+   "price": 14.8,
+   "mcap": 2258177,
+   "ch24": 0.16,
+   "liq": 473671.26,
+   "vol24": 215.58,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/arbitrum/0xe5757c7db63f1e2f119a9335351741ec2b27b14b",
@@ -48124,11 +48191,11 @@
   },
   "WALLET": {
    "name": "Robinhood Wallet",
-   "price": 0.01018,
-   "mcap": 9631352,
-   "ch24": 7.4,
-   "liq": 1219562.99,
-   "vol24": 67100.48,
+   "price": 0.01019,
+   "mcap": 9636084,
+   "ch24": 7.45,
+   "liq": 1220219.42,
+   "vol24": 67129.1,
    "logo": "https://cdn.dexscreener.com/cms/images/I2L-IaR50qberU4d?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/7nG68p6Jwved9Gya?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x9501a20bedb8bea0798fe5d4c411f5e270965d49",
@@ -48152,11 +48219,11 @@
   },
   "MU": {
    "name": "Micron Technology - Backpack Securities",
-   "price": 640.049,
-   "mcap": 777242,
-   "ch24": -0.73,
-   "liq": 2533980.74,
-   "vol24": 387102.28,
+   "price": 636.21,
+   "mcap": 772590,
+   "ch24": -1.32,
+   "liq": 2522136.34,
+   "vol24": 390109.85,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/13mex6gjradjnudmtoagszgewhlh7fzscuqs9mc5nyf5",
@@ -48194,11 +48261,11 @@
   },
   "PLTR": {
    "name": "Palantir Technologies • Robinhood Token",
-   "price": 168.64,
-   "mcap": 2129233,
-   "ch24": 2.02,
-   "liq": 244154.89,
-   "vol24": 69609.8,
+   "price": 168.43,
+   "mcap": 2126518,
+   "ch24": 1.89,
+   "liq": 243985.39,
+   "vol24": 70609.22,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xb8d9b6b622bb03dd06d95790553f327710a73d85d845a59fa9e652638ca96ae6",
@@ -48222,11 +48289,11 @@
   },
   "TSLA": {
    "name": "Tesla - Backpack Securities",
-   "price": 388.95,
-   "mcap": 1044343,
-   "ch24": 1.69,
-   "liq": 930123.31,
-   "vol24": 95106.56,
+   "price": 388.73,
+   "mcap": 1043759,
+   "ch24": 1.65,
+   "liq": 929848.22,
+   "vol24": 96257.98,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/solana/4hzm9mbgp4a8hxm9tb7dnfqfyt7qrxr58q8jyxcxldo3",
@@ -48264,11 +48331,11 @@
   },
   "WASTED": {
    "name": "WASTED",
-   "price": 0.0008599,
-   "mcap": 843632,
-   "ch24": 3.41,
-   "liq": 93248.49,
-   "vol24": 122125.87,
+   "price": 0.0008662,
+   "mcap": 849873,
+   "ch24": 2.87,
+   "liq": 93566.34,
+   "vol24": 123399.05,
    "logo": "https://cdn.dexscreener.com/cms/images/SQKcaWEJWDeZewbS?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/4FqlijzC7aBLOQ4U?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/tt7dks9yjjzj1fwmgopmkbmdrezzymamrhodcgdfwqn",
@@ -48292,11 +48359,11 @@
   },
   "YEE": {
    "name": "Yee Token",
-   "price": 0.004016,
-   "mcap": 4016862,
-   "ch24": 9.47,
-   "liq": 407389.68,
-   "vol24": 21611.24,
+   "price": 0.004031,
+   "mcap": 4031016,
+   "ch24": 9.72,
+   "liq": 408196.96,
+   "vol24": 22670.3,
    "logo": "https://cdn.dexscreener.com/cms/images/VpfOXuEWTs9zFFGO?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/ImaBDNuyRdltqe2d?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/ethereum/0xbc7ce7b6b5437d7d715fbb1cc7b4ec12399c5516",
@@ -48306,11 +48373,11 @@
   },
   "MANIFEST": {
    "name": "Manifesting",
-   "price": 0.002822,
-   "mcap": 2540066,
-   "ch24": 1.54,
-   "liq": 232816.24,
-   "vol24": 28382.64,
+   "price": 0.002854,
+   "mcap": 2569354,
+   "ch24": 3.97,
+   "liq": 234186.58,
+   "vol24": 28043.92,
    "logo": "https://cdn.dexscreener.com/cms/images/rBThiQOd4Gq-4ZgI?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/Y3p75O_FiB9BzDX6?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/solana/2dvbu5h8jcd37gaxajuz4t77hsjjw22lldutzk7gsa43",
@@ -48320,11 +48387,11 @@
   },
   "INTC": {
    "name": "Intel • Robinhood Token",
-   "price": 57.1,
-   "mcap": 1315907,
-   "ch24": 4.08,
-   "liq": 228276.39,
-   "vol24": 138040.92,
+   "price": 56.9,
+   "mcap": 1311234,
+   "ch24": 3.61,
+   "liq": 227705.23,
+   "vol24": 138985.5,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x7fb585f108d921de3b197cf7e26b5aebc96b035fec13f972b868e008ea062394",
@@ -48336,9 +48403,9 @@
    "name": "ORBOFI",
    "price": 0.0005487,
    "mcap": 508791,
-   "ch24": -8.45,
+   "ch24": -8.44,
    "liq": 45402.68,
-   "vol24": 7061.54,
+   "vol24": 7036.03,
    "logo": "https://cdn.dexscreener.com/cms/images/641f80bd4a2f7054de8b9b6685d9aa4b560d1fc95e74d247023968ad64b645a0?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/f0b3fa1313ff4b41d4df1646a5b3d3159bf98a0732c21ba8dea6b25007eae46b?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/bsc/0x4b85749cdb12edb26bbf8bc80016ff354fe7da74",
@@ -48350,9 +48417,9 @@
    "name": "Apple • Robinhood Token",
    "price": 358.46,
    "mcap": 3294142,
-   "ch24": 0.69,
+   "ch24": 0.77,
    "liq": 368496.55,
-   "vol24": 167224.99,
+   "vol24": 164053.19,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0xeab0adac76db99a233ed077ca6be7a3f708baee6f98b17df69f7e1a07d1dc2e4",
@@ -48362,11 +48429,11 @@
   },
   "AMZN": {
    "name": "Amazon • Robinhood Token",
-   "price": 250.77,
-   "mcap": 2437116,
-   "ch24": 1.39,
-   "liq": 465803.53,
-   "vol24": 101113.25,
+   "price": 250.91,
+   "mcap": 2438524,
+   "ch24": 1.47,
+   "liq": 461137.83,
+   "vol24": 101876.24,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x68beff3b4270ffbbb78a48d7670648909b9de6736456b0f450fee242e1d10a8b",
@@ -48390,11 +48457,11 @@
   },
   "TSM": {
    "name": "Taiwan Semiconductor Manufacturing • Robinhood Token",
-   "price": 355.75,
-   "mcap": 1245511,
-   "ch24": 2.58,
-   "liq": 279955.97,
-   "vol24": 61776.4,
+   "price": 354.48,
+   "mcap": 1241054,
+   "ch24": 2.2,
+   "liq": 279111.24,
+   "vol24": 63762.26,
    "logo": null,
    "banner": null,
    "url": "https://dexscreener.com/robinhood/0x4c862e5846659b086fe73896bbb9058513417e4e6938a1be93aeb7a768fa5754",
@@ -48402,27 +48469,13 @@
    "x": null,
    "pair": "0x4c862e5846659b086fe73896bbb9058513417e4e6938a1be93aeb7a768fa5754"
   },
-  "BGL": {
-   "name": "Bitgesell",
-   "price": 1.71e-14,
-   "mcap": null,
-   "ch24": null,
-   "liq": 0,
-   "vol24": 17.05,
-   "logo": null,
-   "banner": null,
-   "url": "https://dexscreener.com/base/0x221bcfa5c93485b31f69c26cc370c79214d81529",
-   "chain": "base",
-   "x": null,
-   "pair": "0x221bCFa5C93485b31f69c26cC370C79214d81529"
-  },
   "PONS": {
    "name": "Pons",
-   "price": 0.1034,
-   "mcap": 69079814,
-   "ch24": 18.94,
-   "liq": 1269922.56,
-   "vol24": 319290.07,
+   "price": 0.1041,
+   "mcap": 69580257,
+   "ch24": 19.96,
+   "liq": 1274532.27,
+   "vol24": 327870.25,
    "logo": "https://cdn.dexscreener.com/cms/images/dkmXs8KYMyMXjuU1?width=800&height=800&quality=95&format=auto",
    "banner": "https://cdn.dexscreener.com/cms/images/6IKrI-WtX92dxhL0?width=1500&height=500&quality=95&format=auto",
    "url": "https://dexscreener.com/robinhood/0x10cc6bd38112cac182db90b6a71d8bb5939526ba",
@@ -48462,10 +48515,10 @@
  "callpx": {
   "GAS": {
    "src": "hl",
-   "now": 0.9758,
+   "now": 0.97421,
    "calls": {
     "https://x.com/gsmferrari/status/2126209856696639961": {
-     "px": 0.9758,
+     "px": 0.97421,
      "mc": null
     },
     "https://x.com/gsmferrari/status/2126208227088253183": {
@@ -48512,11 +48565,11 @@
   },
   "NAT": {
    "src": "dex",
-   "now": 0.00247540205199302,
+   "now": 0.00247295762638305,
    "calls": {
     "https://x.com/gsmferrari/status/2126209856696639961": {
-     "px": 0.00247540205199302,
-     "mc": 515672.94365546753
+     "px": 0.00247295762638305,
+     "mc": 515163.7236890281
     },
     "https://x.com/gsmferrari/status/2126208227088253183": {
      "px": 0.00247540205199302,
@@ -48562,7 +48615,7 @@
   },
   "BTC": {
    "src": "hl",
-   "now": 61740.0,
+   "now": 61840.0,
    "calls": {
     "https://x.com/gsmferrari/status/2126205046270603591": {
      "px": 61705.0,
@@ -48578,6 +48631,10 @@
     },
     "https://x.com/BigCheds/status/2126149446538854458": {
      "px": 61399.0,
+     "mc": null
+    },
+    "https://x.com/Bleeding_Crypto/status/2126111088307736811": {
+     "px": 60666.0,
      "mc": null
     },
     "https://x.com/trader1sz/status/2126092063150113075": {
@@ -49396,7 +49453,7 @@
   },
   "ETH": {
    "src": "hl",
-   "now": 1733.2,
+   "now": 1735.1,
    "calls": {
     "https://x.com/DrRitikaS/status/2126181989724401994": {
      "px": 1741.3,
@@ -49600,7 +49657,7 @@
   },
   "XMR": {
    "src": "hl",
-   "now": 467.79,
+   "now": 461.51,
    "calls": {
     "https://x.com/BigCheds/status/2126087033286210019": {
      "px": 453.61,
@@ -49654,7 +49711,7 @@
   },
   "ZEC": {
    "src": "hl",
-   "now": 750.0,
+   "now": 750.28,
    "calls": {
     "https://x.com/trader1sz/status/2126086451536539676": {
      "px": 695.95,
@@ -49796,7 +49853,7 @@
   },
   "NEAR": {
    "src": "hl",
-   "now": 3.1053,
+   "now": 3.1008,
    "calls": {
     "https://x.com/trader1sz/status/2126080943534514463": {
      "px": 3.0601,
@@ -49854,7 +49911,7 @@
   },
   "INJ": {
    "src": "hl",
-   "now": 6.4293,
+   "now": 6.4286,
    "calls": {
     "https://x.com/CryptoWizardd/status/2126067680645923188": {
      "px": 6.2494,
@@ -49892,7 +49949,7 @@
   },
   "LTC": {
    "src": "hl",
-   "now": 44.281,
+   "now": 44.222,
    "calls": {
     "https://x.com/BigCheds/status/2126058625831759947": {
      "px": 44.15,
@@ -49922,7 +49979,7 @@
   },
   "POL": {
    "src": "hl",
-   "now": 0.078688,
+   "now": 0.078536,
    "calls": {
     "https://x.com/trader1sz/status/2126054211544576367": {
      "px": 0.077483,
@@ -49932,7 +49989,7 @@
   },
   "HYPE": {
    "src": "hl",
-   "now": 66.247,
+   "now": 66.225,
    "calls": {
     "https://x.com/trader1sz/status/2126049479769956766": {
      "px": 63.129,
@@ -50002,7 +50059,7 @@
   },
   "DOT": {
    "src": "hl",
-   "now": 0.69078,
+   "now": 0.68453,
    "calls": {
     "https://x.com/MaxCrypto/status/2126045828770898031": {
      "px": 0.67338,
@@ -50014,14 +50071,6 @@
     },
     "https://x.com/LongtermR/status/2125940132650123301": {
      "px": 0.67199,
-     "mc": null
-    },
-    "https://x.com/Cryptogether_/status/2118759136053637614": {
-     "px": 0.9256,
-     "mc": null
-    },
-    "https://x.com/Cryptogether_/status/2118701188249977185": {
-     "px": 0.9315,
      "mc": null
     }
    }
@@ -50042,7 +50091,7 @@
   },
   "BNB": {
    "src": "hl",
-   "now": 566.01,
+   "now": 565.9,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 554.66,
@@ -50068,7 +50117,7 @@
   },
   "LINK": {
    "src": "hl",
-   "now": 9.5882,
+   "now": 9.5644,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 9.2703,
@@ -50102,7 +50151,7 @@
   },
   "SOL": {
    "src": "hl",
-   "now": 73.035,
+   "now": 72.904,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 71.259,
@@ -50168,7 +50217,7 @@
   },
   "XRP": {
    "src": "hl",
-   "now": 0.97472,
+   "now": 0.97586,
    "calls": {
     "https://x.com/MaxCrypto/status/2126032254841598008": {
      "px": 0.9527,
@@ -50190,7 +50239,7 @@
   },
   "TAO": {
    "src": "hl",
-   "now": 188.53,
+   "now": 188.2,
    "calls": {
     "https://x.com/LongtermR/status/2126031153706435056": {
      "px": 184.36,
@@ -50282,7 +50331,7 @@
   },
   "WLFI": {
    "src": "hl",
-   "now": 0.041575,
+   "now": 0.041635,
    "calls": {
     "https://x.com/trader1sz/status/2126023212555460951": {
      "px": 0.04224,
@@ -50292,17 +50341,17 @@
   },
   "SWOGE": {
    "src": "dex",
-   "now": 6.266012931862669e-05,
+   "now": 6.543751532293499e-05,
    "calls": {
     "https://x.com/moneymancalls/status/2126023111426392225": {
      "px": 8.898120226364979e-05,
-     "mc": 88988.2586635121
+     "mc": 88993.39703782937
     }
    }
   },
   "ADA": {
    "src": "hl",
-   "now": 0.15335,
+   "now": 0.15289,
    "calls": {
     "https://x.com/CW8900/status/2126018222780711319": {
      "px": 0.1502,
@@ -50316,7 +50365,7 @@
   },
   "VVV": {
    "src": "hl",
-   "now": 27.33,
+   "now": 27.1,
    "calls": {
     "https://x.com/Tareeq_23/status/2126012895393992868": {
      "px": 27.099,
@@ -50354,7 +50403,7 @@
   },
   "PENDLE": {
    "src": "hl",
-   "now": 1.2331,
+   "now": 1.2342,
    "calls": {
     "https://x.com/LongtermR/status/2126000879535030377": {
      "px": 1.2123,
@@ -50368,19 +50417,19 @@
   },
   "YEE": {
    "src": "dex",
-   "now": 0.004024577383758729,
+   "now": 0.004022822471509849,
    "calls": {
     "https://x.com/moneymancalls/status/2125993196488433753": {
      "px": 0.00365025870104876,
-     "mc": 3651042.1978117838
+     "mc": 3650273.1897957744
     },
     "https://x.com/moneymancalls/status/2125690598619578773": {
      "px": 0.00339716875701458,
-     "mc": 3397897.930189019
+     "mc": 3397182.2411872693
     },
     "https://x.com/moneymancalls/status/2125630390027370648": {
      "px": 0.0032753038473978297,
-     "mc": 3276006.8633132824
+     "mc": 3275316.84785964
     }
    }
   },
@@ -50400,7 +50449,7 @@
   },
   "AAVE": {
    "src": "hl",
-   "now": 96.463,
+   "now": 96.269,
    "calls": {
     "https://x.com/LongtermR/status/2125985953944944943": {
      "px": 93.25,
@@ -50420,23 +50469,9 @@
     }
    }
   },
-  "CLAUDIA": {
-   "src": "dex",
-   "now": 0.009138937814256724,
-   "calls": {
-    "https://x.com/thebreadmakerx/status/2125982582550786330": {
-     "px": 0.008831647845132339,
-     "mc": 8357072.9655179735
-    },
-    "https://x.com/thebreadmakerx/status/2125660539938324550": {
-     "px": 0.008198309665846499,
-     "mc": 7757767.663840067
-    }
-   }
-  },
   "CASHCAT": {
    "src": "hl",
-   "now": 0.049824,
+   "now": 0.050456,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.042158,
@@ -50470,7 +50505,7 @@
   },
   "FARTCOIN": {
    "src": "hl",
-   "now": 0.08324,
+   "now": 0.08294,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.08091,
@@ -50480,7 +50515,7 @@
   },
   "TRUMP": {
    "src": "hl",
-   "now": 0.87843,
+   "now": 0.87593,
    "calls": {
     "https://x.com/SeffafNet/status/2125964693067932100": {
      "px": 0.86977,
@@ -50490,7 +50525,7 @@
   },
   "STX": {
    "src": "hl",
-   "now": 0.2676,
+   "now": 0.26799,
    "calls": {
     "https://x.com/BeatTheInsider/status/2125953958091075946": {
      "px": 0.26479,
@@ -50504,7 +50539,7 @@
   },
   "AXS": {
    "src": "hl",
-   "now": 0.65447,
+   "now": 0.65367,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.64444,
@@ -50514,7 +50549,7 @@
   },
   "FET": {
    "src": "hl",
-   "now": 0.1253,
+   "now": 0.12483,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.11542,
@@ -50524,7 +50559,7 @@
   },
   "SUSHI": {
    "src": "hl",
-   "now": 0.15539,
+   "now": 0.15499,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.15331,
@@ -50534,7 +50569,7 @@
   },
   "YGG": {
    "src": "hl",
-   "now": 0.02069,
+   "now": 0.020718,
    "calls": {
     "https://x.com/CW8900/status/2125932896754307159": {
      "px": 0.020494,
@@ -50544,7 +50579,7 @@
   },
   "XAU": {
    "src": "dex",
-   "now": 80.3406304637168,
+   "now": 79.90236420563517,
    "calls": {
     "https://x.com/MirMuneeb999/status/2125921224291500426": {
      "px": 79.98405758630636,
@@ -50630,7 +50665,7 @@
   },
   "LIT": {
    "src": "hl",
-   "now": 2.6543,
+   "now": 2.6729,
    "calls": {
     "https://x.com/asedd72/status/2125872082739482828": {
      "px": 2.5054,
@@ -50654,6 +50689,24 @@
     }
    }
   },
+  "OBI": {
+   "src": "dex",
+   "now": 0.000546201341264416,
+   "calls": {
+    "https://x.com/CryptoNaija042/status/2125867966612795595": {
+     "px": 0.0006073479296,
+     "mc": 563173.2466723413
+    },
+    "https://x.com/CryptoNaija042/status/2125614837074190570": {
+     "px": 0.0005481643310775969,
+     "mc": 508294.2922786617
+    },
+    "https://x.com/crypto_ideology/status/2124803848456056956": {
+     "px": 0.000569604706973722,
+     "mc": 528175.2295714726
+    }
+   }
+  },
   "JIMMY": {
    "src": "dex",
    "now": 0.0008913706222069913,
@@ -50661,7 +50714,7 @@
   },
   "DOGE": {
    "src": "hl",
-   "now": 0.058169,
+   "now": 0.058101,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.056703,
@@ -50671,7 +50724,7 @@
   },
   "SUI": {
    "src": "hl",
-   "now": 0.68409,
+   "now": 0.68302,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.67579,
@@ -50681,7 +50734,7 @@
   },
   "TRX": {
    "src": "hl",
-   "now": 0.30557,
+   "now": 0.30573,
    "calls": {
     "https://x.com/BigCheds/status/2125757753507594500": {
      "px": 0.30313,
@@ -50695,7 +50748,7 @@
   },
   "SPX": {
    "src": "hl",
-   "now": 0.283,
+   "now": 0.2817,
    "calls": {
     "https://x.com/thuhkang/status/2125674273595367495": {
      "px": 0.26904,
@@ -50725,7 +50778,7 @@
   },
   "UNI": {
    "src": "hl",
-   "now": 4.8846,
+   "now": 4.8898,
    "calls": {
     "https://x.com/AltcoinDaily/status/2125653432296243466": {
      "px": 4.6599,
@@ -50735,7 +50788,7 @@
   },
   "MON": {
    "src": "hl",
-   "now": 0.010516,
+   "now": 0.010606,
    "calls": {
     "https://x.com/Okada_DeFi0x/status/2125580364416795061": {
      "px": 0.009826,
@@ -50745,7 +50798,7 @@
   },
   "PONS": {
    "src": "hl",
-   "now": 0.10358,
+   "now": 0.10386,
    "calls": {
     "https://x.com/Okada_DeFi0x/status/2125449066935103905": {
      "px": 0.083761,
@@ -50761,27 +50814,19 @@
     }
    }
   },
-  "ASTER": {
+  "USELESS": {
    "src": "hl",
-   "now": 0.50976,
+   "now": 0.076774,
    "calls": {
-    "https://x.com/CRyptOracl3/status/2122596679278821818": {
-     "px": 0.595,
-     "mc": null
-    },
-    "https://x.com/CRyptOracl3/status/2122359714973426131": {
-     "px": 0.56763,
-     "mc": null
-    },
-    "https://x.com/CRyptOracl3/status/2122075251970572312": {
-     "px": 0.51897,
+    "https://x.com/TraderShaoor/status/2123346790703648964": {
+     "px": 0.10444,
      "mc": null
     }
    }
   },
   "JUP": {
    "src": "hl",
-   "now": 0.24913,
+   "now": 0.24919,
    "calls": {
     "https://x.com/CRyptOracl3/status/2122071793993502932": {
      "px": 0.26572,
@@ -50789,9 +50834,29 @@
     }
    }
   },
+  "GOAT": {
+   "src": "hl",
+   "now": 0.011401,
+   "calls": {
+    "https://x.com/shintosworld/status/2120997984292770165": {
+     "px": 0.012089,
+     "mc": null
+    }
+   }
+  },
+  "AERO": {
+   "src": "hl",
+   "now": 0.40912,
+   "calls": {
+    "https://x.com/TheEuroSniper/status/2120466194847216083": {
+     "px": 0.54121,
+     "mc": null
+    }
+   }
+  },
   "VIRTUAL": {
    "src": "hl",
-   "now": 0.37562,
+   "now": 0.3753,
    "calls": {
     "https://x.com/TheEuroSniper/status/2120466194847216083": {
      "px": 0.53195,
@@ -50801,7 +50866,7 @@
   },
   "ENA": {
    "src": "hl",
-   "now": 0.10724,
+   "now": 0.1061,
    "calls": {
     "https://x.com/thecryptocactus/status/2120220408897269925": {
      "px": 0.14894,
@@ -51652,7 +51717,7 @@
    "url": "https://x.com/CryptoLady_M/status/2120812260910313921",
    "px": null,
    "mc": null,
-   "n": 19,
+   "n": 21,
    "acc": [
     [
      "CryptoLady_M",
@@ -51675,8 +51740,16 @@
      "2026-11-23T11:48:03.000Z"
     ],
     [
+     "cryptoskullx",
+     "2026-11-23T14:02:42.000Z"
+    ],
+    [
      "Tareeq_23",
      "2026-11-23T14:03:30.000Z"
+    ],
+    [
+     "woofBIGDAWG",
+     "2026-11-23T14:24:41.000Z"
     ],
     [
      "BillBrooklyn10",
@@ -51693,14 +51766,6 @@
     [
      "ka1n0s",
      "2026-11-24T01:17:04.000Z"
-    ],
-    [
-     "InTheAssembly",
-     "2026-11-24T09:13:04.000Z"
-    ],
-    [
-     "Okada_DeFi0x",
-     "2026-11-24T09:14:52.000Z"
     ]
    ]
   },
@@ -53640,34 +53705,6 @@
     ]
    ]
   },
-  "INLF": {
-   "h": "playtowin2026",
-   "t": "2026-11-06T15:51:42.000Z",
-   "url": "https://x.com/playtowin2026/status/2118733068521624007",
-   "px": null,
-   "mc": null,
-   "n": 1,
-   "acc": [
-    [
-     "playtowin2026",
-     "2026-11-06T15:51:42.000Z"
-    ]
-   ]
-  },
-  "SDST": {
-   "h": "playtowin2026",
-   "t": "2026-11-06T15:51:42.000Z",
-   "url": "https://x.com/playtowin2026/status/2118733068521624007",
-   "px": null,
-   "mc": null,
-   "n": 1,
-   "acc": [
-    [
-     "playtowin2026",
-     "2026-11-06T15:51:42.000Z"
-    ]
-   ]
-  },
   "MYRAD": {
    "h": "anger_trading",
    "t": "2026-11-23T17:30:55.000Z",
@@ -53681,15 +53718,119 @@
      "2026-11-23T17:30:55.000Z"
     ]
    ]
+  },
+  "NASDAQ": {
+   "h": "gsmferrari",
+   "t": "2026-11-27T07:11:38.000Z",
+   "url": "https://x.com/gsmferrari/status/2126212334691700860",
+   "px": null,
+   "mc": null,
+   "n": 1,
+   "acc": [
+    [
+     "gsmferrari",
+     "2026-11-27T07:11:38.000Z"
+    ]
+   ]
   }
  },
  "stocktwits": {
   "NVDA": [
    {
+    "h": "Cardwizard",
+    "fol": 126,
+    "t": "2026-11-27T07:28:06Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Cardwizard/message/670269422",
+    "fr": "$NVDA you see what I mean, the stock is already back in the 154s. Glad I bailed out of this fucker an hour ago. at $157…..\n\nMotherfuckers ain’t taking my money ￼￼",
+    "tag": "mix"
+   },
+   {
+    "h": "Charizardforlife",
+    "fol": 159,
+    "t": "2026-11-27T07:26:17Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/Charizardforlife/message/670269400",
+    "fr": "$NVDA It’s basically free money if you buy now!",
+    "tag": "bull"
+   },
+   {
+    "h": "bsurve1",
+    "fol": 7,
+    "t": "2026-11-27T07:25:46Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/bsurve1/message/670269390",
+    "fr": "$NVDA definitely reaching 160 tomorrow..looking very bullish to me.",
+    "tag": "mix"
+   },
+   {
+    "h": "Charizardforlife",
+    "fol": 159,
+    "t": "2026-11-27T07:22:52Z",
+    "eng": 5,
+    "url": "https://stocktwits.com/Charizardforlife/message/670269348",
+    "fr": "$NVDA Up 30% today and another 80% on Monday",
+    "tag": "bull"
+   },
+   {
+    "h": "Graduate",
+    "fol": 114,
+    "t": "2026-11-27T07:19:44Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/Graduate/message/670269318",
+    "fr": "$NVDA Forward! Roma Victor!",
+    "tag": "bull"
+   },
+   {
+    "h": "ShadowBanningIsBad",
+    "fol": 481,
+    "t": "2026-11-27T07:19:22Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/ShadowBanningIsBad/message/670269313",
+    "fr": "@ShadovvV I think $NVDA is fairly valued and will go up and down 20 percent from current prices for years. \n \nBut your reasons are very wrong.   China still needs the compute.  They don&#39;t have the HBM and can&#39;t make it at a reasonable price.  \n \nI have listed the dozen or so reasons why $NVDA will not each earning growth expectations long term.   BUT the key issue is memory is still too ch",
+    "tag": "mix"
+   },
+   {
+    "h": "LucasVance",
+    "fol": 4,
+    "t": "2026-11-27T07:19:06Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/LucasVance/message/670269308",
+    "fr": "$NVDA",
+    "tag": "bull"
+   },
+   {
+    "h": "flywithfitz81",
+    "fol": 985,
+    "t": "2026-11-27T07:19:02Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/flywithfitz81/message/670269306",
+    "fr": "The US Justice Department did not conduct a formal investigation into Jensen Huang before US President Donald Trump pushed for his return as Nvidia chief executive this week, despite active probes into the ​chipmaker&#39;s customers and allegations he conducted an affair with a woman linked to Chinese intelligence, according to three people familiar with the matter.&quot;\n\nUh-oh...\n\nhttps://www.re",
+    "tag": "bear"
+   },
+   {
+    "h": "Swangin808",
+    "fol": 48,
+    "t": "2026-11-27T07:16:31Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/Swangin808/message/670269281",
+    "fr": "$NVDA $155-170",
+    "tag": "bull"
+   },
+   {
+    "h": "christoffee",
+    "fol": 0,
+    "t": "2026-11-27T07:15:13Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/christoffee/message/670269265",
+    "fr": "$NVDA https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html  - already priced in? I&#39;m uncertain",
+    "tag": "mix"
+   },
+   {
     "h": "ShadovvV",
     "fol": 5,
     "t": "2026-11-27T07:11:27Z",
-    "eng": 1,
+    "eng": 2,
     "url": "https://stocktwits.com/ShadovvV/message/670269221",
     "fr": "$NVDA - You got it. That&#39;s spot on.",
     "tag": "mix"
@@ -53707,7 +53848,7 @@
     "h": "danglino",
     "fol": 11,
     "t": "2026-11-27T07:09:29Z",
-    "eng": 1,
+    "eng": 3,
     "url": "https://stocktwits.com/danglino/message/670269199",
     "fr": "$NVDA Bears think it can&#39;t possibly go up to $200... Meanwhile it went up over 30% in one day lol",
     "tag": "bull"
@@ -53729,104 +53870,41 @@
     "url": "https://stocktwits.com/BOXHOGG/message/670269193",
     "fr": "$NVDA pretty sure @LottaMoneyInThisShit did this",
     "tag": "mix"
-   },
-   {
-    "h": "BOXHOGG",
-    "fol": 45,
-    "t": "2026-11-27T07:08:07Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/BOXHOGG/message/670269180",
-    "fr": "$NVDA 🤣🤣🤣🤣🤣",
-    "tag": "mix"
-   },
-   {
-    "h": "ShadovvV",
-    "fol": 5,
-    "t": "2026-11-27T07:08:05Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/ShadovvV/message/670269178",
-    "fr": "$NVDA - Hahahah  🤣",
-    "tag": "mix"
-   },
-   {
-    "h": "PanchyPanch",
-    "fol": 176,
-    "t": "2026-11-27T07:08:00Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/PanchyPanch/message/670269176",
-    "fr": "$NVDA downnnn from here",
-    "tag": "bear"
-   },
-   {
-    "h": "dsj2021",
-    "fol": 14,
-    "t": "2026-11-27T07:07:39Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/dsj2021/message/670269173",
-    "fr": "$NVDA 240 coming 12 Dec",
-    "tag": "mix"
-   },
-   {
-    "h": "Headofstate",
-    "fol": 2,
-    "t": "2026-11-27T07:07:01Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/Headofstate/message/670269166",
-    "fr": "$NVDA no naps after turkey I’m going to see this chart play out 🦃🫡",
-    "tag": "bull"
-   },
-   {
-    "h": "nasdaqnostalgia",
-    "fol": 34,
-    "t": "2026-11-27T07:06:39Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/nasdaqnostalgia/message/670269163",
-    "fr": "$NVDA",
-    "tag": "mix"
-   },
-   {
-    "h": "TheUnmaker",
-    "fol": 492,
-    "t": "2026-11-27T07:06:18Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/TheUnmaker/message/670269160",
-    "fr": "$NVDA is showing a healthy correction to the 30m 9 EMA with buyers waiting to buy the dip. Price rebounding over the 1m 200EM and breaking through the VWAP sell it back to tonight&#39;s recent highs. $SPY $QQQ $AMD $SPCX",
-    "tag": "bull"
-   },
-   {
-    "h": "danglino",
-    "fol": 11,
-    "t": "2026-11-27T07:05:09Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/danglino/message/670269151",
-    "fr": "$NVDA Bears be like &quot;something China, something &#39;circular financing&#39;&quot;. Lol sorry, badass coming through",
-    "tag": "bull"
-   },
-   {
-    "h": "Flickted",
-    "fol": 267,
-    "t": "2026-11-27T07:04:53Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/Flickted/message/670269144",
-    "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \n2AM EST \n \n~",
-    "tag": "bull"
-   },
-   {
-    "h": "ShadovvV",
-    "fol": 5,
-    "t": "2026-11-27T07:04:04Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/ShadovvV/message/670269136",
-    "fr": "$NVDA - Ignore the bitter greedmongers. They&#39;re the type of people you see speed by on the highway at 90mph and then a few miles up the road you see a highway patrol sitting behind them on the side of the road.",
-    "tag": "mix"
    }
   ],
   "ANT": [
    {
+    "h": "flywithfitz81",
+    "fol": 985,
+    "t": "2026-11-27T07:24:09Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/flywithfitz81/message/670269370",
+    "fr": "$ANT the market will rip today, this won&#39;t.\n\nSacrificial lamb for the shorts",
+    "tag": "mix"
+   },
+   {
+    "h": "PTY_KC",
+    "fol": 66,
+    "t": "2026-11-27T07:16:22Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/PTY_KC/message/670269278",
+    "fr": "$ANT going back to the $70’s and maybe even lower 🩸🩸🩸",
+    "tag": "bear"
+   },
+   {
+    "h": "Jumper567",
+    "fol": 11,
+    "t": "2026-11-27T07:13:45Z",
+    "eng": 1,
+    "url": "https://stocktwits.com/Jumper567/message/670269244",
+    "fr": "$ANT red by 4 AM",
+    "tag": "bear"
+   },
+   {
     "h": "Investorwarrior",
     "fol": 1,
     "t": "2026-11-27T06:58:40Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/Investorwarrior/message/670269077",
     "fr": "$ANT",
     "tag": "mix"
@@ -53844,7 +53922,7 @@
     "h": "Giopalm1969",
     "fol": 66,
     "t": "2026-11-27T06:47:00Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/Giopalm1969/message/670268940",
     "fr": "$ANT short squeeze when markets open.. panic station for all those bears",
     "tag": "bull"
@@ -53853,7 +53931,7 @@
     "h": "Giopalm1969",
     "fol": 66,
     "t": "2026-11-27T06:45:39Z",
-    "eng": 1,
+    "eng": 3,
     "url": "https://stocktwits.com/Giopalm1969/message/670268926",
     "fr": "$ANT 97 is the next resistance .. going much higher",
     "tag": "bull"
@@ -53929,36 +54007,18 @@
     "url": "https://stocktwits.com/Nasdaq_Casino/message/670267863",
     "fr": "$ANT Short this scam guys !!!",
     "tag": "mix"
-   },
-   {
-    "h": "Stonksgoup11",
-    "fol": 1,
-    "t": "2026-11-27T05:34:52Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/Stonksgoup11/message/670267616",
-    "fr": "$ANT wish I would’ve got calls on this and not just nvda. Defiantly getting some soon",
-    "tag": "bull"
-   },
-   {
-    "h": "morgangj",
-    "fol": 132,
-    "t": "2026-11-27T05:34:10Z",
-    "eng": 4,
-    "url": "https://stocktwits.com/morgangj/message/670267592",
-    "fr": "$ANT Heading much higher!",
-    "tag": "bull"
-   },
-   {
-    "h": "GoodInvestor",
-    "fol": 59,
-    "t": "2026-11-27T05:32:24Z",
-    "eng": 0,
-    "url": "https://stocktwits.com/GoodInvestor/message/670267557",
-    "fr": "$ANT no faith in the ipo 😂",
-    "tag": "mix"
    }
   ],
   "AMD": [
+   {
+    "h": "openclassaction2",
+    "fol": 87,
+    "t": "2026-11-27T07:17:26Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/openclassaction2/message/670269288",
+    "fr": "$AMD seems like pension exposure is not abstract. ai names sit at index weight in retirement funds, so when the basket deflates the loss lands on people who never picked a chip stock",
+    "tag": "mix"
+   },
    {
     "h": "TheUnmaker",
     "fol": 492,
@@ -53979,9 +54039,9 @@
    },
    {
     "h": "Flickted",
-    "fol": 267,
+    "fol": 268,
     "t": "2026-11-27T07:04:53Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/Flickted/message/670269144",
     "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \n2AM EST \n \n~",
     "tag": "bull"
@@ -54053,7 +54113,7 @@
     "h": "TheUnmaker",
     "fol": 492,
     "t": "2026-11-27T06:09:41Z",
-    "eng": 2,
+    "eng": 3,
     "url": "https://stocktwits.com/TheUnmaker/message/670268312",
     "fr": "$AMD $NVDA $BB $SPY $QQQ",
     "tag": "bull"
@@ -54069,38 +54129,56 @@
    },
    {
     "h": "Flickted",
-    "fol": 267,
+    "fol": 268,
     "t": "2026-11-27T06:05:29Z",
-    "eng": 1,
+    "eng": 2,
     "url": "https://stocktwits.com/Flickted/message/670268232",
     "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \n1AM EST \n \n~",
     "tag": "bull"
    },
    {
     "h": "Flickted",
-    "fol": 267,
+    "fol": 268,
     "t": "2026-11-27T06:02:02Z",
-    "eng": 7,
+    "eng": 8,
     "url": "https://stocktwits.com/Flickted/message/670268149",
     "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \nIf you didn&#39;t take advantage of the pullbacks from the FUD and drama to get in on the cheap. Then you might want to go back to buying scratch offs. There is only one direction to go once you find the bottom. Good luck folks!",
-    "tag": "bull"
-   },
-   {
-    "h": "makeshifttrade23",
-    "fol": 112,
-    "t": "2026-11-27T05:56:57Z",
-    "eng": 4,
-    "url": "https://stocktwits.com/makeshifttrade23/message/670268058",
-    "fr": "$QQQ $SPY $SMH $AMD $NVDA it’s gettin CHIPPY out there 😉",
     "tag": "bull"
    }
   ],
   "MU": [
    {
+    "h": "Seeker1980",
+    "fol": 62,
+    "t": "2026-11-27T07:28:56Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Seeker1980/message/670269430",
+    "fr": "$MU Oh from 645 down to 633. Hopefully will recover big time today.",
+    "tag": "bull"
+   },
+   {
+    "h": "MrAppleseed23",
+    "fol": 47,
+    "t": "2026-11-27T07:20:31Z",
+    "eng": 2,
+    "url": "https://stocktwits.com/MrAppleseed23/message/670269328",
+    "fr": "$MU",
+    "tag": "bull"
+   },
+   {
+    "h": "CmonManGiveMeABreak",
+    "fol": 186,
+    "t": "2026-11-27T07:16:01Z",
+    "eng": 4,
+    "url": "https://stocktwits.com/CmonManGiveMeABreak/message/670269274",
+    "fr": "$MU Jim Cramer Says Micron Stock Is “Comically Cheap” at About 3 Times Earnings",
+    "tag": "mix"
+   },
+   {
     "h": "SophieSuperInvestor",
     "fol": 0,
     "t": "2026-11-27T07:13:26Z",
-    "eng": 1,
+    "eng": 6,
     "url": "https://stocktwits.com/SophieSuperInvestor/message/670269239",
     "fr": "$MU Undervalued  as  I  read  the last  quarter  results  and This  Quarter  guidance",
     "tag": "bull"
@@ -54109,7 +54187,7 @@
     "h": "MuneeMakr",
     "fol": 9,
     "t": "2026-11-27T07:11:31Z",
-    "eng": 0,
+    "eng": 3,
     "url": "https://stocktwits.com/MuneeMakr/message/670269223",
     "fr": "$MU we’re back 🤪",
     "tag": "bull"
@@ -54118,7 +54196,7 @@
     "h": "bobbbbbbb99999",
     "fol": 2,
     "t": "2026-11-27T07:08:51Z",
-    "eng": 0,
+    "eng": 3,
     "url": "https://stocktwits.com/bobbbbbbb99999/message/670269190",
     "fr": "$MU  Stock buy back + Earning   both in DEC ~",
     "tag": "mix"
@@ -54134,18 +54212,18 @@
    },
    {
     "h": "CmonManGiveMeABreak",
-    "fol": 185,
+    "fol": 186,
     "t": "2026-11-27T07:07:01Z",
-    "eng": 2,
+    "eng": 7,
     "url": "https://stocktwits.com/CmonManGiveMeABreak/message/670269165",
     "fr": "$MU Micron strikes multiyear memory deals! let fucking gooool!",
     "tag": "mix"
    },
    {
     "h": "Flickted",
-    "fol": 267,
+    "fol": 268,
     "t": "2026-11-27T07:04:53Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/Flickted/message/670269144",
     "fr": "$NVDA $AMD $MU $SKHY $SMCI  \n \n2AM EST \n \n~",
     "tag": "bull"
@@ -54190,7 +54268,7 @@
     "h": "Kingdr13",
     "fol": 12,
     "t": "2026-11-27T06:36:48Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/Kingdr13/message/670268803",
     "fr": "$INTC $NVDA $MU 🇺🇲super squeeze day! Bravo to bulls 🐃🌋📈🗽",
     "tag": "bull"
@@ -54203,36 +54281,45 @@
     "url": "https://stocktwits.com/BullseyeGains/message/670268792",
     "fr": "$MU $SNDK $SKHY $KORU $MUU 🎯 BULLSEYE STRONG BUY ALERT 🎯 \n \nOn July 1 premarket, near the peak of the AI trade, we sent a mass strong sell alert on memory and chips right here on Stocktwits. Nearly 5 months later, we&#39;re issuing our first mass strong buy calls 👇 \n \nMemory took the brunt of this selloff, but the worries are all out in the open now. NAND and DRAM price expectations have already c",
     "tag": "bull"
-   },
-   {
-    "h": "CandleStickler",
-    "fol": 73,
-    "t": "2026-11-27T06:34:30Z",
-    "eng": 4,
-    "url": "https://stocktwits.com/CandleStickler/message/670268760",
-    "fr": "$MU is the best deal on the market right now",
-    "tag": "bull"
-   },
-   {
-    "h": "Rpipstocks",
-    "fol": 0,
-    "t": "2026-11-27T06:26:11Z",
-    "eng": 6,
-    "url": "https://stocktwits.com/Rpipstocks/message/670268637",
-    "fr": "$MU took a big position in this Wednesday.",
-    "tag": "bull"
-   },
-   {
-    "h": "wow999",
-    "fol": 27,
-    "t": "2026-11-27T06:24:07Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/wow999/message/670268595",
-    "fr": "$QQQ after recent market crash, only bulls left in the market $NVDA $MU let&#39;s go Bull 🐂 Friday shopping 🛒 $SPY",
-    "tag": "mix"
    }
   ],
   "SNDK": [
+   {
+    "h": "Degen_Mirage",
+    "fol": 120,
+    "t": "2026-11-27T07:27:02Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Degen_Mirage/message/670269406",
+    "fr": "$SNDK going for a trade first thing Friday!",
+    "tag": "bull"
+   },
+   {
+    "h": "inhomewindows",
+    "fol": 20,
+    "t": "2026-11-27T07:22:47Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/inhomewindows/message/670269347",
+    "fr": "$SNDK this guy is a little retarded dont be like him",
+    "tag": "bull"
+   },
+   {
+    "h": "52Evergreen",
+    "fol": 12,
+    "t": "2026-11-27T07:22:31Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/52Evergreen/message/670269344",
+    "fr": "$SNDK — The pullback is approaching a key support zone. The next move depends on the rebound structure. \n \nSanDisk has continued to pull back and is now approaching a major high-volume price area from its previous trading range, which also marks the key support zone on the chart. \n \nI don&#39;t see a reason to be overly bearish here, but there&#39;s no need to expect an immediate V-shaped recovery",
+    "tag": "mix"
+   },
+   {
+    "h": "AnalystKrishna",
+    "fol": 2295,
+    "t": "2026-11-27T07:21:12Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/AnalystKrishna/message/670269333",
+    "fr": "$SNDK at 80.22 in preopen on Nov-27-2026 :: \nFell 77% from 52-week high from 294.3 till 67, \nA lot of stocks will retrace till 0.236 and test around this price level \nand then rise. \n \nLikewise, SNDK fell a little below 0.236 to 67 and rised to 9% @ 80 the following day \n \nCan invest little now, \naccumulate after 116, 150 , 184 for target of 295 in 12 to 18 months \n \nweak below 65 and on further b",
+    "tag": "bull"
+   },
    {
     "h": "Jumper567",
     "fol": 11,
@@ -54264,7 +54351,7 @@
     "h": "fla6987",
     "fol": 68,
     "t": "2026-11-27T06:54:34Z",
-    "eng": 3,
+    "eng": 4,
     "url": "https://stocktwits.com/fla6987/message/670269041",
     "fr": "$SNDK this stock is going to go up so rápido and furiously that people won’t be able to cover their shorts…",
     "tag": "mix"
@@ -54331,42 +54418,6 @@
     "url": "https://stocktwits.com/Targetbot/message/670268600",
     "fr": "$SNDK Either TradingView is glitching or this is from the future.  Tough to say",
     "tag": "mix"
-   },
-   {
-    "h": "NatoshiSakomato",
-    "fol": 112,
-    "t": "2026-11-27T06:22:24Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/NatoshiSakomato/message/670268569",
-    "fr": "$MU $SNDK $SPCX $AMD $VOO \nMy offer is still valid…\n\nOne country with the balls !!!\n\n61000*2000000=122B\n\nCan someone buy the rest of the Bitcoin from the exchanges and put in the cold wallet so we can just move on?\n\nThus we can get rid of manipulation and option play gamblers…\n\n$122B…(It’s nothing for some tutes , I know)\n\nThat’s all you need for supply shock!!!\n\nBitcoin to the moon…",
-    "tag": "bull"
-   },
-   {
-    "h": "Jimmymc1337",
-    "fol": 4,
-    "t": "2026-11-27T06:21:41Z",
-    "eng": 2,
-    "url": "https://stocktwits.com/Jimmymc1337/message/670268550",
-    "fr": "$SNDK better hold its gains in market open!",
-    "tag": "mix"
-   },
-   {
-    "h": "Buytheripsellthedipest",
-    "fol": 371,
-    "t": "2026-11-27T06:21:40Z",
-    "eng": 3,
-    "url": "https://stocktwits.com/Buytheripsellthedipest/message/670268548",
-    "fr": "$NVDA $SNDK $NBIS $FARTCOIN.X",
-    "tag": "bull"
-   },
-   {
-    "h": "MstzKING",
-    "fol": 281,
-    "t": "2026-11-27T06:14:23Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/MstzKING/message/670268404",
-    "fr": "$BTC.X $MSTR $MSTU $SNDK $SNDU $MSTU $SNDU Although I&#39;m enjoying this scam pump ..... I&#39;m looking forward to reshorting it soon..... 🤷🏼‍♂️🤣.... DONT HATE THE PLAYER....HATE THE GAME 😏",
-    "tag": "bear"
    }
   ],
   "GOOGL": [
@@ -54437,7 +54488,7 @@
     "h": "Ryu131",
     "fol": 249,
     "t": "2026-11-27T05:33:49Z",
-    "eng": 12,
+    "eng": 13,
     "url": "https://stocktwits.com/Ryu131/message/670267579",
     "fr": "$NBIS $APLD $SPCX $GOOGL $IBIT  \n \nIs it real? 🚀🙏",
     "tag": "bull"
@@ -54508,6 +54559,15 @@
   ],
   "META": [
    {
+    "h": "omijan",
+    "fol": 32,
+    "t": "2026-11-27T07:26:40Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/omijan/message/670269402",
+    "fr": "$META let’s gooo next Friday $700",
+    "tag": "bull"
+   },
+   {
     "h": "openclassaction2",
     "fol": 87,
     "t": "2026-11-27T07:06:16Z",
@@ -54538,7 +54598,7 @@
     "h": "MakeWiseDecisions2027",
     "fol": 38,
     "t": "2026-11-27T06:24:45Z",
-    "eng": 5,
+    "eng": 6,
     "url": "https://stocktwits.com/MakeWiseDecisions2027/message/670268610",
     "fr": "$VKTX $RZLV Rezolveai $META $MSFT",
     "tag": "bull"
@@ -54632,15 +54692,6 @@
     "url": "https://stocktwits.com/PadZone1/message/670266131",
     "fr": "Short day in the market tomorrow. I’ll be watching $SPY &amp; $QQQ for some intraday setups in the morning ONLY as I do expect volatility to dry up quickly. I’ll also be watching $META $NVDA and $SPCX for new major swing positions as all are targeting major LZI zones. I’ll keep you all updated with my exact entries and exits. Goodnight all ❤️ 💤  Happy Thanksgiving 🍁",
     "tag": "mix"
-   },
-   {
-    "h": "Bodybags",
-    "fol": 73,
-    "t": "2026-11-27T04:16:46Z",
-    "eng": 5,
-    "url": "https://stocktwits.com/Bodybags/message/670265956",
-    "fr": "$NVDA “If I had invested $10,000 in NVIDIA in 2015, I would have $2.97 million today.” \n \n It’s not that simple. To get there, you would have had to invest $10,000 and watch it turn into $16,000 and do nothing.  Then $53,000, then $140,000. \n \nThen it fell over 60% to $66,300.  Would you have held?   If so, you would then watch that $66,300 turn into $649,000. Would you have sold then?  Turning 10",
-    "tag": "mix"
    }
   ],
   "TSLA": [
@@ -54691,7 +54742,7 @@
    },
    {
     "h": "CmonManGiveMeABreak",
-    "fol": 185,
+    "fol": 186,
     "t": "2026-11-27T06:05:45Z",
     "eng": 2,
     "url": "https://stocktwits.com/CmonManGiveMeABreak/message/670268241",
@@ -54720,7 +54771,7 @@
     "h": "fjohnson",
     "fol": 13,
     "t": "2026-11-27T05:43:46Z",
-    "eng": 0,
+    "eng": 1,
     "url": "https://stocktwits.com/fjohnson/message/670267798",
     "fr": "$SPCX $TSLA \nSHARE PRINTING MACHINE. ￼\n\nSpaceX’s total share count expanded dramatically in 2026 through four distinct moves:\n• The xAI &amp; X Merger (Feb 2026). SpaceX absorbed xAI (which had already absorbed X) in an all-stock deal valued at $250 billion, issuing massive blocks of new stock to convert xAI shares and jumping total shares from ~2.94B to over 12.5B.\n• Pure Primary IPO (June 2026).",
     "tag": "bear"
@@ -54774,7 +54825,7 @@
     "h": "Debtfree2024",
     "fol": 154,
     "t": "2026-11-27T05:16:07Z",
-    "eng": 6,
+    "eng": 7,
     "url": "https://stocktwits.com/Debtfree2024/message/670267197",
     "fr": "$TSLA come on tsla baby hold the gain this time and blast through 400 + 🙏🏾🙌🏾🫶🏾",
     "tag": "bull"
@@ -54794,7 +54845,7 @@
     "h": "MakeWiseDecisions2027",
     "fol": 38,
     "t": "2026-11-27T06:24:45Z",
-    "eng": 5,
+    "eng": 6,
     "url": "https://stocktwits.com/MakeWiseDecisions2027/message/670268610",
     "fr": "$VKTX $RZLV Rezolveai $META $MSFT",
     "tag": "bull"
@@ -55193,6 +55244,15 @@
   ],
   "PLTR": [
    {
+    "h": "Br331",
+    "fol": 287,
+    "t": "2026-11-27T07:15:15Z",
+    "eng": 0,
+    "url": "https://stocktwits.com/Br331/message/670269266",
+    "fr": "$PLTR Ptir on watch",
+    "tag": "mix"
+   },
+   {
     "h": "Chillymango",
     "fol": 62,
     "t": "2026-11-27T07:08:32Z",
@@ -55223,7 +55283,7 @@
     "h": "RoadWarrior66",
     "fol": 519,
     "t": "2026-11-27T06:59:37Z",
-    "eng": 1,
+    "eng": 2,
     "url": "https://stocktwits.com/RoadWarrior66/message/670269089",
     "fr": "$PLTR …Saw this on another board and had to share it with my fellow PLTR holders….Bears you should give it a read too…you might actually learn how sitting through volatility with a growth stock pays off in the long term..PLTR Bulls we always hear that patience pays off and I think this NVDA example is what that patience could look like for many of us if we are willing to sit through the downturns ",
     "tag": "bull"
@@ -55317,15 +55377,6 @@
     "url": "https://stocktwits.com/Brass_Bulls/message/670267484",
     "fr": "$PLTR SEEMS LIKE you write &quot;seems like&quot; in every one of your PLTR posts.  Seems like its written into your code or something.  Seems like you might want to get that checked out.  Seems like it.",
     "tag": "bull"
-   },
-   {
-    "h": "openclassaction2",
-    "fol": 87,
-    "t": "2026-11-27T05:07:15Z",
-    "eng": 1,
-    "url": "https://stocktwits.com/openclassaction2/message/670266987",
-    "fr": "$PLTR cape topped 40 for six straight months, a level last seen when the dotcom bubble burst. seems like story stocks priced for perfection get repriced first",
-    "tag": "mix"
    }
   ],
   "BTC": [
@@ -55980,16 +56031,16 @@
    "src": "Actu.fr"
   },
   {
-   "t": "Fri, 06 Nov 2026 08:00:00 GMT",
+   "t": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "title": "Crypto-rapt dans les Yvelines : un homme mis en examen et placé en détention provisoire - Linfo.re",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVEhxUHE0VUhlZTByT0NlR2MwZUFsaHVLdVM4UTVfQkhOc09tRnlZTlpyVTM0X3puT2toQ3U2Mll1ajRRcHloUjM0Q0lDa004MV9DbWl2dWNqM2RYOUNKS2pzcEtZZFQ4QnZzRDlqaDlvWGx6YTNhalVUM01GZmZpTDg4NVBteGVCQlVIZmdObElkTGFjay1Cd1c1ak8zQS1RXzJ2azFSbllseHdOUk82MmtncnFIVmEweUptSTNqRFVfN0xz?oc=5",
+   "src": "Linfo.re"
+  },
+  {
+   "t": "Fri, 06 Nov 2026 14:14:01 GMT",
    "title": "Séquestration crypto près de Rennes : 4 suspects interpellés après s'être trompés de maison - Cryptoast",
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNUmpJTHFieXJtS2t0N3l6a1pOZm9QZGZBQWZpdG5pVVJWZS1mSE9WNDFuTXh4dTNKazBDOWhPcDR1eGhMZXg3b2p0ME5ULWFLRHBNcW1CRHE1UVJuMm1zZk5lZ01VX2hQOUdzSFE0WWtvT3NnY25fbzV2SzlwNjNpSF9xNy1CS01UMW1wdXBnY25mVl9aaHc?oc=5",
    "src": "Cryptoast"
-  },
-  {
-   "t": "Sun, 15 Nov 2026 08:00:00 GMT",
-   "title": "Cryptomonnaies : un homme écroué après la séquestration d’un couple dans les Yvelines et le vol de 900 000 € de bitcoins - Ouest-France",
-   "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNbnpkQnlGaEV1Vmw1eEQxNXR4QmRyVHFLMDBpQWZHd0ZocV9ySEloV0o2YnUtX0wwVGhqQzdsUjRxS1gtSXFad2w2NXpvZk9LZlVzYmhMQ1RQT3dVVXFmUkVWeEdWaTVENm9aTm5zWGJvZlVUcnhZOFJ5NWdRNTZVT05za2JrZGdyVWc4ZE1wdi1hbnFyLTJ1TEd1bElpV19HQ2FwSGk2T2JGVDhjQkN0aWR5M0diREpJeFZyMjI4THZSTzBIZjJqcFQwWlBCZktFRklFeXpvWndQcmVVRE1mUEthaVhRSHpzQnpKVXlsV0dmQjZqU1lDUncxQVREUURBX1dfaEFVbFBxYUFBWnprNzFLX3dlUkZiV3padEYtNm0xQ3F1eUcwdU1NN05vY2Z4?oc=5",
-   "src": "Ouest-France"
   }
  ],
  "fed": [
