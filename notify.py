@@ -6,8 +6,14 @@ Lit data/feed.json (que collect.py vient d'écrire), repère :
 Les abonnements et préférences viennent de Supabase (table push_subs).
 La clé privée VAPID est un secret GitHub : VAPID_PRIVATE. Sans elle, rien n'est envoyé.
 Le texte d'une notification ne contient jamais de prix (anti-spoil).
+Alertes graves (danger.py) : envoyées même pendant les heures calmes, car une info dangereuse n'attend pas le matin.
 """
 import json, os, sys, time, datetime, urllib.request, urllib.parse
+try:
+    from danger import nonum  # retire prix et pourcentages d'un texte (anti-spoil)
+except Exception:
+    def nonum(s):
+        return s
 
 PRIV = os.environ.get("VAPID_PRIVATE", "").strip()
 SBU = "https://lqefewiwrecdjommktgm.supabase.co/rest/v1/"
@@ -134,10 +140,22 @@ def main():
             rk = [r["h"].lower() for r in (F.get("follow") or [])].index(t["h"].lower()) + 1
             events.append({"k": "trig:" + t["url"] + ":" + T, "type": "trig", "title": f"@{t['h']} (n°{rk} à suivre) call ${T}",
                            "body": "Nouveau token, personne n'en parlait avant lui. " + (t.get("fr") or "").replace("\n", " ")[:110], "tag": "trig:" + T, "url": "/"})
+    # 4) alertes graves (danger.py) : notifications déjà rédigées, sans prix ; seulement les toutes fraîches (moins de 3 h)
+    for a in (F.get("danger") or []):
+        for e in (a.get("push") or []) if isinstance(a, dict) else []:
+            try:
+                if now * 1000 - float(e.get("t") or 0) > 3 * 3600 * 1000:
+                    continue
+                events.append({"k": str(e["k"]), "type": "danger", "title": str(e.get("title") or "ALERTE GRAVE")[:90],
+                               "body": str(e.get("body") or "")[:230], "tag": str(e["k"]), "url": "/"})
+            except Exception:
+                continue
+    for e in events:  # anti-spoil : aucun prix ni pourcentage dans le texte d'une notification
+        e["title"], e["body"] = nonum(e["title"]), nonum(e["body"])
     new = [e for e in events if e["k"] not in sent]
     for e in new:
         sent[e["k"]] = now
-    S = {"init": True, "sent": sent, "at": datetime.datetime.utcnow().isoformat() + "Z"}
+    S.update({"init": True, "sent": sent, "at": datetime.datetime.utcnow().isoformat() + "Z"})
     if first_run:
         print(f"notify: premier passage, {len(new)} évènements mémorisés sans envoi")
         json.dump(S, open(STATE, "w"))
@@ -146,20 +164,21 @@ def main():
     count = 0
     for s in subs:
         p = s.get("prefs") or {}
-        if quiet(p, h):
-            continue
-        mine = [e for e in new if (e["type"] == "trig" and p.get("trig", True)) or (e["type"] == "vip" and p.get("vip", True)) or
-                (e["type"] == "heat" and p.get("heat", True) and e["n"] >= int(p.get("heatMin", 3)))]
+        mine = [e for e in new if e["type"] == "danger" and p.get("danger", True)]  # alerte grave : même la nuit
+        if not quiet(p, h):
+            mine += [e for e in new if (e["type"] == "trig" and p.get("trig", True)) or (e["type"] == "vip" and p.get("vip", True)) or
+                     (e["type"] == "heat" and p.get("heat", True) and e["n"] >= int(p.get("heatMin", 3)))]
         # pour un même token qui chauffe, une seule notification (le palier le plus haut)
         best = {}
         for e in mine:
             key = e.get("T") or e["k"]
             if key not in best or e.get("n", 0) > best[key].get("n", 0):
                 best[key] = e
-        for e in list(best.values())[:MAXN]:
+        for e in sorted(best.values(), key=lambda e: 0 if e["type"] == "danger" else 1)[:MAXN]:
             try:
                 webpush(subscription_info=s["sub"], data=json.dumps({k: e[k] for k in ("title", "body", "tag", "url")}),
-                        vapid_private_key=PRIV, vapid_claims={"sub": "mailto:collecteur@users.noreply.github.com"}, ttl=3600)
+                        vapid_private_key=PRIV, vapid_claims={"sub": "mailto:collecteur@users.noreply.github.com"},
+                        ttl=4 * 3600 if e["type"] == "danger" else 3600)
                 count += 1
             except WebPushException as ex:
                 code = getattr(ex.response, "status_code", None)
