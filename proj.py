@@ -345,8 +345,14 @@ for coin in UNI:
         # suivi de la projection en cours (mêmes règles que le test historique)
         op, fin = trader.track(OPEN.get(coin), a, c1h, NOW, coin, cls)
         NEWREC += fin
+        if op.get("t0") == NOW:  # nouvelle projection : on garde son niveau majeur, ses temps médians et l'avertissement de départ
+            for k_ in ("obst", "tm"):
+                if a.get(k_):
+                    op[k_] = a[k_]
+            if a.get("avoid") and op.get("bias") in ("long", "short"):
+                op["avoid"] = True
         OPEN[coin] = op
-        a["open"] = {k: op.get(k) for k in ("t0", "px0", "bias", "setup", "conf", "edge", "nref", "e", "sl", "tp", "fill", "fill_t", "band", "hz", "mfe")}
+        a["open"] = {k: op.get(k) for k in ("t0", "px0", "bias", "setup", "conf", "edge", "nref", "e", "sl", "tp", "fill", "fill_t", "band", "hz", "mfe", "obst", "tm", "avoid")}
         a["track"] = ST["coin"].get(coin)
         BY[coin] = a
     except Budget:
