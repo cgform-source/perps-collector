@@ -1,0 +1,23 @@
+name: Test historique des projections
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rejouer le moteur sur ~7 mois
+        run: timeout 4800 python backtest.py
+      - name: Enregistrer le résultat
+        run: |
+          git config user.name "collecteur"
+          git config user.email "collecteur@users.noreply.github.com"
+          git add data/backtest.json
+          git commit -m "test historique $(date -u +%F_%H%M)" || echo "rien"
+          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done

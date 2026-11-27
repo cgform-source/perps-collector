@@ -1024,6 +1024,12 @@ def follow():
 
 for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, callstats, follow, stocktwits, trump, trends, analyst, risks, kidnap, fed):
     fn()
+try:  # projections : gardées du passage précédent tant que proj.py ne les a pas remplacées (le dashboard vérifie leur fraîcheur)
+    _pp = json.load(open("data/feed.json", encoding="utf-8")).get("proj")
+    if _pp:
+        OUT["proj"] = _pp
+except Exception:
+    pass
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", {k: (len(v) if hasattr(v, "__len__") else v) for k, v in OUT.items() if k != "generated"})

@@ -22,6 +22,9 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
+PARAM = {"thr": 2.0}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
+
+
 def post(body, timeout=20):
     req = urllib.request.Request(API, data=json.dumps(body).encode(), headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -39,6 +42,22 @@ def candles(coin, interval, days):
                     k[f] /= r
                 k["v"] *= r
     return cs
+
+
+def agg_days(cs, days):
+    """Regroupe des bougies journalières en bougies de N jours (semaine = 7, alignée sur le lundi)."""
+    out, cur, key = [], None, None
+    for k in cs:
+        b = (k["t"] // 86400000 + 3) // days
+        if b != key:
+            if cur:
+                out.append(cur)
+            key, cur = b, dict(k)
+        else:
+            cur["h"] = max(cur["h"], k["h"]); cur["l"] = min(cur["l"], k["l"]); cur["c"] = k["c"]; cur["v"] += k["v"]
+    if cur:
+        out.append(cur)
+    return out
 
 
 def agg(cs, hours):
@@ -227,6 +246,14 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             add("tendance", -0.5, f"Sous la moyenne 200 jours ({fmt(e200d)}) malgré des rebonds")
     else:
         add("tendance", 1.0 if px > e50d else -1.0, f"Prix {'au-dessus' if px > e50d else 'en dessous'} de sa moyenne 50 jours ({fmt(e50d)})")
+    wk = agg_days(c1d, 7)
+    if len(wk) >= 22:
+        wc = [k["c"] for k in wk]
+        w10, w20 = ema(wc, 10)[-1], ema(wc, 20)[-1]
+        if wc[-1] > w10 > w20:
+            add("tendance", 0.5, "Graphique hebdomadaire haussier (prix au-dessus des moyennes 10 et 20 semaines)")
+        elif wc[-1] < w10 < w20:
+            add("tendance", -0.5, "Graphique hebdomadaire baissier (prix sous les moyennes 10 et 20 semaines)")
     if adxd >= 25:
         d = 1 if pdid > mdid else -1
         add("tendance", 0.6 * d, f"ADX journalier {adxd:.0f} : tendance {'haussière' if d > 0 else 'baissière'} solide")
@@ -274,6 +301,15 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         add("momentum", -0.7, "Divergence baissière : nouveau sommet de prix mais RSI plus faible")
     if len(L) >= 2 and L[-1][2] < L[-2][2] and r4[off + L[-1][0]] > r4[off + L[-2][0]] + 3:
         add("momentum", 0.7, "Divergence haussière : nouveau creux de prix mais RSI plus fort")
+    last24 = c1h[-24:]
+    vv = sum(k["v"] for k in last24)
+    if vv > 0:
+        vwap = sum((k["h"] + k["l"] + k["c"]) / 3 * k["v"] for k in last24) / vv
+        dv = (px - vwap) / a4
+        if dv > 0.5:
+            add("momentum", 0.2, f"Au-dessus du prix moyen pondéré des dernières 24 h ({fmt(vwap)}) : les acheteurs du jour sont gagnants")
+        elif dv < -0.5:
+            add("momentum", -0.2, f"Sous le prix moyen pondéré des dernières 24 h ({fmt(vwap)}) : les acheteurs du jour sont perdants")
     # 4. emplacement (où est le prix par rapport aux niveaux)
     ds = (px - sup[0]["p"]) / a4 if sup else 9
     dr = (res[0]["p"] - px) / a4 if res else 9
@@ -313,6 +349,13 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         pr = (ctx["mark"] / ctx["orc"] - 1) * 100
         if abs(pr) >= 0.3:
             add("dérivés", -0.3 if pr > 0 else 0.3, f"Le perp cote {pr:+.2f} % par rapport au prix de référence")
+    bk = extra.get("book")
+    if bk and bk[0] + bk[1] > 0:
+        rb = bk[0] / max(bk[1], 1e-9)
+        if rb >= 2:
+            add("dérivés", 0.3, f"Carnet d'ordres : {rb:.1f} fois plus d'acheteurs que de vendeurs près du prix")
+        elif rb <= 0.5:
+            add("dérivés", -0.3, f"Carnet d'ordres : {1 / max(rb, 1e-9):.1f} fois plus de vendeurs que d'acheteurs près du prix")
     oi = extra.get("oi_chg")
     if oi:
         dp, doi = oi
@@ -364,7 +407,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         risk_flags.append(f"Résultats dans {extra['earn_days']} jour(s) : risque de gap, pas de nouvelle position")
 
     # ------------------------------------------------ setup et plan
-    bias = "long" if score >= 2.0 else "short" if score <= -2.0 else "neutre"
+    thr = PARAM["thr"]
+    bias = "long" if score >= thr else "short" if score <= -thr else "neutre"
     if any("Résultats" in x for x in risk_flags):
         bias = "neutre"
     plan, setup = None, "Attendre"
@@ -420,8 +464,9 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     # texte façon trader
     good = [s[2] for s in sorted(dirs, key=lambda s: -abs(s[1])) if (s[0] == "bull") == (bias == "long")][:3] if bias != "neutre" else []
     bad = [s[2] for s in sorted(dirs, key=lambda s: -abs(s[1])) if (s[0] == "bull") != (bias == "long")][:2] if bias != "neutre" else []
+    band = None
     if bias == "neutre":
-        band = [sup[0]["p"] if sup else px - 1.5 * a4, res[0]["p"] if res else px + 1.5 * a4]
+        band = [min(sup[0]["p"] if sup else px, px - 1.5 * a4), max(res[0]["p"] if res else px, px + 1.5 * a4)]
         view = (f"ATTENDRE : les signaux se contredisent (score {score:+.1f}). Zone de range attendue entre {fmt(band[0])} et {fmt(band[1])}. "
                 f"Une clôture 4 h au-dessus de {fmt(band[1])} ou sous {fmt(band[0])} donnerait la direction.")
         invalid = f"Sortie franche du range {fmt(band[0])} – {fmt(band[1])}"
@@ -435,6 +480,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
             "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags, "view": view, "invalid": invalid,
+            "band": [round(band[0], 8), round(band[1], 8)] if band else None,
             "hz": 72 if extra.get("crypto") else 96}
 
 
@@ -451,48 +497,113 @@ def evaluate(p, c1h, now_ms):
             break  # seulement des bougies terminées
         p["last"] = k["t"] + 3600000
         if p["bias"] == "neutre":
+            p["hi_c"] = max(p.get("hi_c", k["c"]), k["c"]); p["lo_c"] = min(p.get("lo_c", k["c"]), k["c"])
             continue
         e0, e1 = p["e"]
+        just = False
         if not p.get("fill"):
             if k["l"] <= e1 and k["h"] >= e0:
                 p["fill"] = min(max(k["o"], e0), e1)
                 p["fill_t"] = k["t"]
+                just = True
             else:
                 continue
         risk = abs(p["fill"] - p["sl"]) or 1e-12
+        if just:
+            hit = (k["l"] <= p["sl"]) if lg else (k["h"] >= p["sl"])
+            if hit:
+                p.update(status="stop", r=-1.0, end=k["t"]); return p
+            continue
         # première chose touchée : le stop (perte) ou la cible 1 (gain). Bougie qui touche les deux : on compte le stop (prudence).
         if lg:
             p["mfe"] = round(max(p.get("mfe", 0), (k["h"] - p["fill"]) / risk), 2)
             if k["l"] <= p["sl"]:
-                p.update(status="stop", r=-1.0, end=k["t"], dir_ok=False); return p
+                p.update(status="stop", r=-1.0, end=k["t"]); return p
             if k["h"] >= p["tp"][0]:
                 big = k["h"] >= p["tp"][1]
-                p.update(status="cible2" if big else "cible1", r=round(((p["tp"][1] if big else p["tp"][0]) - p["fill"]) / risk, 2), end=k["t"], dir_ok=True); return p
+                p.update(status="cible2" if big else "cible1", r=round(((p["tp"][1] if big else p["tp"][0]) - p["fill"]) / risk, 2), end=k["t"]); return p
         else:
             p["mfe"] = round(max(p.get("mfe", 0), (p["fill"] - k["l"]) / risk), 2)
             if k["h"] >= p["sl"]:
-                p.update(status="stop", r=-1.0, end=k["t"], dir_ok=False); return p
+                p.update(status="stop", r=-1.0, end=k["t"]); return p
             if k["l"] <= p["tp"][0]:
                 big = k["l"] <= p["tp"][1]
-                p.update(status="cible2" if big else "cible1", r=round((p["fill"] - (p["tp"][1] if big else p["tp"][0])) / risk, 2), end=k["t"], dir_ok=True); return p
+                p.update(status="cible2" if big else "cible1", r=round((p["fill"] - (p["tp"][1] if big else p["tp"][0])) / risk, 2), end=k["t"]); return p
     if now_ms >= hz_end:
         last = None
         for k in c1h:
-            if k["t"] <= hz_end:
+            if k["t"] + 3600000 <= hz_end:
                 last = k["c"]
         last = last if last is not None else c1h[-1]["c"]
         p["px_end"] = last
         if p["bias"] == "neutre":
             lo, hi = p.get("band", [None, None])
-            p.update(status="range tenu" if lo is not None and lo <= last <= hi else "range cassé", end=hz_end)
+            tol = 0.3 * (p.get("atr") or 0)
+            held = lo is not None and lo - tol <= last <= hi + tol
+            p.update(status="range tenu" if held else "range cassé", end=hz_end)
             return p
-        p["dir_ok"] = None if abs(last / p["px0"] - 1) < 0.002 else (last > p["px0"]) == (p["bias"] == "long")
+        dir_fill(p, c1h)
         if p.get("fill"):
             risk = abs(p["fill"] - p["sl"]) or 1e-12
             p.update(status="expirée", r=round(((last - p["fill"]) if lg else (p["fill"] - last)) / risk, 2), end=hz_end)
         else:
             p.update(status="non déclenchée", end=hz_end)
     return p
+
+
+def new_proj(coin, cls, a, now):
+    op = {"id": f"{coin}:{now}", "coin": coin, "cls": cls, "t0": now, "px0": a["px"], "bias": a["bias"], "setup": a["setup"],
+          "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"]}
+    if a["plan"]:
+        op.update(e=a["plan"]["e"], sl=a["plan"]["sl"], tp=a["plan"]["tp"], rr=a["plan"]["rr"])
+    else:
+        lo = a["sup"][0][0] if a["sup"] else a["px"] - 1.5 * a["atr4h"]
+        hi = a["res"][0][1] if a["res"] else a["px"] + 1.5 * a["atr4h"]
+        op["band"] = a.get("band") or [round(lo, 8), round(hi, 8)]
+    return op
+
+
+def track(op, a, c1h, now, coin, cls):
+    """Une étape de suivi. Retourne (projection en cours, projections terminées).
+
+    Une projection déclenchée n'est jamais remplacée : elle va au stop, à une cible ou à l'échéance.
+    Pas encore déclenchée, elle est remplacée si le marché se retourne (sens inverse), si un neutre devient
+    directionnel (après 2 h) ou si la zone d'entrée a bougé de plus d'un ATR 4 h (après 6 h). Les remplacées
+    ne comptent pas dans les statistiques."""
+    done = []
+    if op:
+        op = evaluate(op, c1h, now)
+        if op.get("status") != "open":
+            done.append(op); op = None
+        elif not op.get("fill") and a["bias"] != "neutre" and a["conf"] >= 60:
+            age = now - op["t0"]
+            rev = op["bias"] in ("long", "short") and op["bias"] != a["bias"]
+            wake = op["bias"] == "neutre" and age >= 2 * 3600000 and a["conf"] >= 62
+            moved = op["bias"] == a["bias"] and age >= 6 * 3600000 and abs(sum(op["e"]) / 2 - sum(a["plan"]["e"]) / 2) > a["atr4h"]
+            if rev or wake or moved:
+                op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None
+    if not op:
+        op = new_proj(coin, cls, a, now)
+    return op, done
+
+
+def dir_fill(r, c1h):
+    """Direction à l'échéance (indépendante du stop) : le prix est-il allé dans le sens annoncé entre le départ et t0 + horizon ?"""
+    if r.get("bias") not in ("long", "short") or r.get("dir_ok") is not None or r.get("status") == "remplacée":
+        return False
+    hz_end = r["t0"] + r["hz"] * 3600000
+    last = None
+    for k in c1h:
+        if k["t"] + 3600000 <= hz_end:
+            last = k["c"]
+        else:
+            break
+    if last is None or not c1h or c1h[-1]["t"] + 3600000 < hz_end:
+        return False
+    r["px_hz"] = last
+    r["dir_ok"] = None if abs(last / r["px0"] - 1) < 0.002 else (last > r["px0"]) == (r["bias"] == "long")
+    r["dir_done"] = True
+    return True
 
 
 def stats(recs):
@@ -502,10 +613,12 @@ def stats(recs):
         l_ = sum(1 for r in tr_ if r["status"] == "stop")
         dirs = [r for r in rs if r.get("dir_ok") is not None]
         rng = [r for r in rs if r.get("status") in ("range tenu", "range cassé")]
+        dr = [r for r in rs if r.get("bias") in ("long", "short") and r.get("status") not in ("remplacée", None, "open")]
         return {"n": len(rs), "trades": len(tr_), "win": w, "loss": l_, "wr": round(w / (w + l_), 3) if w + l_ else None,
                 "avgR": round(sum(r.get("r", 0) for r in tr_) / len(tr_), 2) if tr_ else None,
                 "dir": round(sum(1 for r in dirs if r["dir_ok"]) / len(dirs), 3) if dirs else None,
-                "range": round(sum(1 for r in rng if r["status"] == "range tenu") / len(rng), 3) if rng else None}
+                "range": round(sum(1 for r in rng if r["status"] == "range tenu") / len(rng), 3) if rng else None,
+                "fill": round(len(tr_) / len(dr), 3) if dr else None, "ndir": len(dirs), "nrange": len(rng)}
     out = {"all": agg_(recs), "setup": {}, "class": {}, "conf": {}, "coin": {}}
     for key, fn in (("setup", lambda r: r.get("setup")), ("class", lambda r: r.get("cls")),
                     ("conf", lambda r: "< 55" if r.get("conf", 0) < 55 else "55–69" if r.get("conf", 0) < 70 else "70 +"),
