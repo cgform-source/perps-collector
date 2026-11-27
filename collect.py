@@ -3,7 +3,7 @@ Tourne sur GitHub Actions (gratuit) 3 fois par jour et écrit data/feed.json.
 Sources : X/Twitter (via Scweet + cookie d'un compte X secondaire), Truth Social de Trump (archive trumpstruth.org),
 Reddit, actualités mondiales à risque (GDELT), enlèvements liés à la crypto en France (GDELT), calendrier de la Fed.
 Chaque source est indépendante : si l'une échoue, les autres sont quand même écrites."""
-import json, os, urllib.error, re, time, datetime as dt, traceback, urllib.request, urllib.parse, xml.etree.ElementTree as ET
+import json, os, html, urllib.error, re, time, datetime as dt, traceback, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; perps-dashboard-collector/1.0)"}
 OUT = {"generated": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "errors": {}}
@@ -206,7 +206,7 @@ def stocktwits():
         try:
             j = json.loads(get(f"https://api.stocktwits.com/api/2/streams/symbol/{tk}.json", headers={"Accept": "application/json"}))
             out[tk] = [{"h": m["user"]["username"], "fol": m["user"].get("followers", 0), "t": m["created_at"], "eng": (m.get("likes") or {}).get("total", 0),
-                        "url": f"https://stocktwits.com/{m['user']['username']}/message/{m['id']}", "fr": m["body"][:400],
+                        "url": f"https://stocktwits.com/{m['user']['username']}/message/{m['id']}", "fr": html.unescape(m["body"])[:400],
                         "tag": {"Bullish": "bull", "Bearish": "bear"}.get(((m.get("entities") or {}).get("sentiment") or {}).get("basic"), "mix")} for m in j.get("messages", [])[:15]]
             time.sleep(1)
         except Exception as e:
@@ -216,9 +216,13 @@ def stocktwits():
 IBULL = re.compile(r"\b(long|longed|longing|bull(ish)?|moon|pump(ing)?|send(ing)?|breakout|higher|ath|buy(ing)?|bid|accumulat\w*|undervalued|reversal|bottom(ed)?|rip|green)\b", re.I)
 IBEAR = re.compile(r"\b(short(s|ed|ing)?|bear(ish)?|dump(s|ed|ing)?|rug(ged)?|sell(s|ing)?|sold|lower|top(ped)? is in|breakdown|overvalued|rekt|crash(es|ed|ing)?|exit|slam(s|med)?|down(side)?|drop(s|ped|ping)?|fall(s|ing)?|nuke[ds]?|fade|fading|puts?|tank(s|ed|ing)?|bleed(ing)?|capitulat\w*|collapse[ds]?)\b", re.I)
 TALIAS = {"MATIC": "POL", "WBTC": "BTC", "WETH": "ETH", "XBT": "BTC"}
+QUOTES = {"BTC", "ETH", "SOL", "BNB", "HYPE"}
+MACROW = {"NATGAS", "USOIL", "UKOIL", "BRENT", "WTI", "GOLD", "SILVER", "COPPER", "XAUUSD", "XAGUSD", "PLATINUM", "URANIUM", "SPX", "SPY", "QQQ",
+          "NDX", "DXY", "VIX", "TNX", "US10Y", "EURUSD", "USDJPY", "CORN", "WHEAT", "MAGS", "SOXL"}
 def norm_tk(L):
     """$ETHUSD -> ETH, $HYPEBTC -> HYPE + BTC, $MATIC -> POL (nom actuel)."""
     known = {r[0] for r in (OUT.get("top") or [])} | {"BTC", "ETH", "SOL", "HYPE"}
+    major = {r[0] for r in (OUT.get("top") or []) if (r[1] or 9999) <= 100} | {"BTC", "ETH", "SOL", "HYPE"}
     out = []
     for t in L:
         t = TALIAS.get(t, t)
@@ -226,9 +230,12 @@ def norm_tk(L):
         if m and (m.group(1) in known or len(m.group(1)) >= 3):
             out.append(TALIAS.get(m.group(1), m.group(1)))
             continue
+        if t in MACROW:
+            out.append(t)
+            continue
         if t not in known and len(t) >= 5:
             for i in range(2, len(t) - 1):
-                if t[:i] in known and t[i:] in known:
+                if t[:i] in known and t[i:] in known and (t[i:] in QUOTES or (t[:i] in major and t[i:] in major)):
                     out += [t[:i], t[i:]]
                     break
             else:
@@ -252,12 +259,21 @@ def tr_fr(text):
     prot = JRX.sub(sub, text)
     # les $tickers, @comptes et liens ne sont pas traduits non plus
     prot = re.sub(r"(\$[A-Za-z][A-Za-z0-9]{1,9}|@\w+|https?://\S+)", lambda m: (keep.append(m.group(0)), f"ZQ{len(keep) - 1}Q")[1], prot)
-    url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q=" + urllib.parse.quote(prot)
-    j = json.loads(get(url, timeout=10))
-    src = j[2] if len(j) > 2 else ""
+    q = urllib.parse.quote(prot)
+    try:
+        j = json.loads(get("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q=" + q, timeout=10))
+        src = j[2] if len(j) > 2 else ""
+        out = "".join(seg[0] for seg in j[0] if seg and seg[0])
+    except urllib.error.HTTPError:
+        # second point d'accès Google, souvent accepté quand le premier refuse les serveurs GitHub
+        j = json.loads(get("https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=auto&tl=fr&q=" + q, timeout=10))
+        first = j[0] if isinstance(j, list) and j else j
+        if isinstance(first, list):
+            out, src = first[0], (first[1] if len(first) > 1 else "")
+        else:
+            out, src = str(first), ""
     if src == "fr":
         return None
-    out = "".join(seg[0] for seg in j[0] if seg and seg[0])
     out = re.sub(r"Z\s?Q\s?(\d+)\s?Q", lambda m: keep[int(m.group(1))] if int(m.group(1)) < len(keep) else m.group(0), out, flags=re.I)
     if re.search(r"Z\s?Q\s?\d", out, re.I):
         return None  # repère abîmé par la traduction : on laisse le dashboard traduire lui-même
@@ -288,7 +304,7 @@ def translate_influ(rows):
                 t["o_fr"], t["fr"] = txt, cache[u]
             time.sleep(0.4)
         except Exception as e:
-            OUT["errors"]["traduction"] = f"{type(e).__name__}"[:80]
+            OUT["errors"]["traduction"] = (f"{type(e).__name__} {getattr(e, 'code', '')}").strip()[:80]
             break
     keep = {t.get("url") for t in rows}
     cache = {k: v for k, v in cache.items() if k in keep}
@@ -353,9 +369,26 @@ def influ():
             continue  # simple réponse sans token : bruit
         out.append(t)
     translate_influ(out)
+    # le dashboard recoupe aussi les tickers composés (HYPEBTC → HYPE + BTC) : on lui signale ceux qui ne doivent pas l'être (NATGAS…)
+    try:
+        topset = {r[0] for r in (OUT.get("top") or [])}
+        K2 = topset | {"BTC", "ETH", "SOL", "USD"}
+        extra = set()
+        for t in out:
+            for T in t.get("tickers") or []:
+                if T in topset or len(T) < 5:
+                    continue
+                if any(T[:i] in K2 and T[i:] in K2 for i in range(2, len(T) - 1)):
+                    extra.add(T)
+        if extra and OUT.get("top"):
+            OUT["top"] = OUT["top"] + [[T, 99999, None] for T in sorted(extra)]
+    except Exception as e:
+        OUT["errors"]["tickers_composes"] = str(e)[:100]
     return out
 
-SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM"}
+SKIPT = {"BTC.D", "USD", "USDT", "USDC", "SPX", "DXY", "ETF", "CPI", "FOMC", "AI", "CT", "ATH", "TA", "NFA", "DYOR", "GM",
+         "ES", "NQ", "CL", "NG", "GC", "SI", "HG", "YM", "RTY", "WTI", "BRENT", "NATGAS", "USOIL", "UKOIL", "OIL", "GOLD", "SILVER", "XAU", "XAG",
+         "COPPER", "VIX", "NDX", "QQQ", "SPY", "DJI", "TNX", "US10Y", "EURUSD", "USDJPY", "CORN", "WHEAT", "URANIUM", "PLATINUM", "MAGS"}
 @section("top")
 def top():
     """Classement CoinGecko (top 1000) pour masquer les grosses capitalisations dans l'onglet Influenceurs.
@@ -367,7 +400,7 @@ def top():
         prev = json.load(open("data/feed.json", encoding="utf-8"))
     except Exception:
         prev = {}
-    old = [r for r in (prev.get("top") or []) if (r[1] or 0) > 250]
+    old = [r for r in (prev.get("top") or []) if 250 < (r[1] or 0) <= 1000]
     at = prev.get("top_deep_at") or ""
     fresh = at and (dt.datetime.utcnow() - dt.datetime.strptime(at, "%Y-%m-%dT%H:%M:%SZ")).total_seconds() < 6 * 3600
     if fresh and len(old) > 500:
@@ -544,7 +577,28 @@ def callpx():
             if px is None and hist and hist[0][0] - ts < 7200:
                 px = hist[0][1]
             if px:
-                res[t["url"]] = {"px": px, "mc": supply * px if supply else None}
+                r = {"px": px, "mc": supply * px if supply else None}
+                # performance après le call, lue dans le même historique horaire (pas de requête en plus)
+                try:
+                    def at(sec):
+                        for (h, cl) in hist:
+                            if h >= ts + sec:
+                                return cl
+                        return None
+                    for lab, sec in (("r1h", 3600), ("r24h", 86400), ("r3d", 3 * 86400), ("r7d", 7 * 86400)):
+                        v = at(sec)
+                        if v is not None and hist[-1][0] >= ts + sec:
+                            r[lab] = round(max(-1.0, min(50.0, v / px - 1)), 4)
+                    w24 = [cl for (h, cl) in hist if ts < h <= ts + 86400]
+                    w7 = [cl for (h, cl) in hist if ts < h <= ts + 7 * 86400]
+                    if w24:
+                        r["mx24"] = round(max(-1.0, min(50.0, max(w24) / px - 1)), 4)
+                        r["mn24"] = round(max(-1.0, min(50.0, min(w24) / px - 1)), 4)
+                    if w7:
+                        r["mx7d"] = round(max(-1.0, min(50.0, max(w7) / px - 1)), 4)
+                except Exception:
+                    pass
+                res[t["url"]] = r
         out[k] = {"src": src, "now": hist[-1][1], "calls": res}
     return out
 
@@ -556,8 +610,9 @@ def trump():
     for it in root.iter("item"):
         title = (it.findtext("title") or "").strip()
         desc = re.sub(r"<[^>]+>", " ", it.findtext("description") or "")
-        txt = re.sub(r"\s+", " ", desc or title).strip()
-        if not txt or txt.lower().startswith("[no title]") and len(txt) < 20:
+        txt = html.unescape(re.sub(r"\s+", " ", desc or title).strip())
+        txt = re.sub(r"^RT:?\s*https?://\S+\s*", "", txt).strip()
+        if not txt or txt.lower().startswith("[no title]") and len(txt) < 20 or re.fullmatch(r"(view image|image|video)\W*", txt, re.I):
             continue
         items.append({"t": it.findtext("pubDate"), "fr": txt[:600], "url": it.findtext("link"), "tag": tag(txt),
                       "market": bool(re.search(r"tariff|china|fed|rate|stock|market|crypto|bitcoin|oil|deal|trade|dollar|powell|inflation|tax", txt, re.I))})
@@ -757,7 +812,72 @@ def firsts():
     return {k: {"h": v["h"], "t": v["t"], "url": v.get("url"), "px": v.get("px"), "mc": v.get("mc"), "n": len(v.get("acc", {})),
                 "acc": sorted(v.get("acc", {}).items(), key=lambda x: x[1])[:12]} for k, v in M.items() if k in cur}
 
-for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, stocktwits, trump, reddit, risks, kidnap, fed):
+@section("callstats")
+def callstats():
+    """Qui fait les meilleurs call : résultat de chaque call (24 h, 3 j, 7 j, plus haut atteint), gardé au-delà des 30 jours de tweets
+    dans data/perf/AAAA-MM.json (un fichier par mois), puis classement par influenceur."""
+    cp = OUT.get("callpx") or {}
+    byurl = {t.get("url"): t for t in (OUT.get("influ") or [])}
+    big = {r[0] for r in (OUT.get("top") or []) if (r[1] or 9999) <= 100}
+    os.makedirs("data/perf", exist_ok=True)
+    months = {}
+    def load(m):
+        if m not in months:
+            try:
+                months[m] = json.load(open(f"data/perf/{m}.json", encoding="utf-8"))
+            except Exception:
+                months[m] = {}
+        return months[m]
+    changed = set()
+    for T, v in cp.items():
+        for url, r in (v.get("calls") or {}).items():
+            t = byurl.get(url)
+            if not t or "r24h" not in r:
+                continue
+            side = -1 if t.get("tag") == "bear" else 1
+            rec = {"h": t.get("h"), "T": T, "t": t.get("t"), "s": side, "big": 1 if T in big else 0,
+                   **{k: r[k] for k in ("r1h", "r24h", "r3d", "r7d", "mx24", "mn24", "mx7d") if k in r}}
+            m = (t.get("t") or "")[:7]
+            if not m:
+                continue
+            M = load(m)
+            if M.get(url) != rec:
+                M[url] = rec
+                changed.add(m)
+    for m in changed:
+        json.dump(months[m], open(f"data/perf/{m}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # tableau des 3 derniers mois
+    allrec = []
+    today = dt.datetime.utcnow()
+    for k in range(3):
+        y, mo = today.year, today.month - k
+        while mo <= 0:
+            mo += 12; y -= 1
+        allrec += list(load(f"{y:04d}-{mo:02d}").values())
+    S = {}
+    for r in allrec:
+        if r.get("big"):
+            continue
+        q = S.setdefault(r["h"], {"h": r["h"], "n": 0, "win": 0, "sum24": 0.0, "summx": 0.0, "best": None, "toks": []})
+        g = r["r24h"] * r.get("s", 1)
+        mx = r.get("mx24") if r.get("s", 1) > 0 else (-(r.get("mn24") or 0))
+        q["n"] += 1
+        q["win"] += 1 if g > 0 else 0
+        q["sum24"] += g
+        q["summx"] += mx or 0
+        if q["best"] is None or (r.get("mx7d") or -9) > q["best"][1]:
+            q["best"] = [r["T"], r.get("mx7d")]
+        q["toks"].append(r["T"])
+    R = []
+    for q in S.values():
+        if q["n"] < 3:
+            continue
+        R.append({"h": q["h"], "n": q["n"], "win": round(q["win"] / q["n"], 3), "avg24": round(q["sum24"] / q["n"], 4),
+                  "avgmx24": round(q["summx"] / q["n"], 4), "best": q["best"], "toks": list(dict.fromkeys(q["toks"]))[-6:]})
+    R.sort(key=lambda x: -(x["avgmx24"] * 0.6 + x["avg24"] * 0.4) * min(1, x["n"] / 10))
+    return {"by": R[:40], "n": len(allrec)}
+
+for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, callstats, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
 json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
