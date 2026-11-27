@@ -22,7 +22,7 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
 
 
 def post(body, timeout=20):
@@ -410,6 +410,15 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     # ------------------------------------------------ setup et plan
     thr = PARAM["thr"]
     bias = "long" if score >= thr else "short" if score <= -thr else "neutre"
+    mr = PARAM.get("mr")
+    if mr:
+        # « acheter la faiblesse dans une tendance forte » : la direction vient de la tendance de fond et du contexte,
+        # le moment d'entrer vient d'un repli à court terme (RSI 4 h retombé ou prix revenu sous sa moyenne 20 en 4 h)
+        trend = max(-2.5, min(2.5, cat.get("tendance", 0))) + max(-1.3, min(1.3, cat.get("contexte", 0))) + 0.5 * max(-1.6, min(1.6, cat.get("structure", 0)))
+        D = 1 if trend >= thr else -1 if trend <= -thr else 0
+        pull = (r <= 45 or px < e20h4) if D > 0 else (r >= 55 or px > e20h4) if D < 0 else False
+        bias = "long" if D > 0 and pull else "short" if D < 0 and pull else "neutre"
+        score = round(trend, 2)
     if any("Résultats" in x for x in risk_flags):
         bias = "neutre"
     plan, setup = None, "Attendre"
@@ -424,7 +433,11 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         cands = [z["p"] for z in lv] + [e20h4, e50h4] + ([vwap] if vwap else [])
         cands = [x for x in cands if dmin <= (px - x) * sgn <= 2.5 * a4]
         brk = H[-1][2] if (lg and bos == 1 and H) else (L[-1][2] if (not lg and bos == -1 and L) else None)
-        if brk and rv >= 1.5 and adx4 >= 20 and 0 <= (px - brk) * sgn <= 1.5 * a4:
+        if mr:
+            # le repli est en cours : entrée près du prix, stop sous le dernier creux (au-dessus du dernier sommet pour un short)
+            setup = "Achat sur repli" if lg else "Vente sur rebond"
+            e = [px - 0.3 * a4, px] if lg else [px, px + 0.3 * a4]
+        elif brk and rv >= 1.5 and adx4 >= 20 and 0 <= (px - brk) * sgn <= 1.5 * a4:
             # cassure confirmée par le volume et une tendance 4 h : entrée sur le retour vers le niveau cassé
             setup = "Cassure" if lg else "Cassure baissière"
             e = [brk, brk + 0.25 * a4] if lg else [brk - 0.25 * a4, brk]
@@ -555,6 +568,18 @@ def evaluate(p, c1h, now_ms):
     return p
 
 
+def to_neutral(a, why):
+    """Le signal penche d'un côté mais ce type d'entrée perd de l'argent en moyenne : un trader passe son tour."""
+    if a["bias"] == "neutre":
+        return a
+    a4, px = a["atr4h"], a["px"]
+    s0 = (a["sup"][0][0] + a["sup"][0][1]) / 2 if a["sup"] else px
+    r0 = (a["res"][0][0] + a["res"][0][1]) / 2 if a["res"] else px
+    a.update(lean=a["bias"], lean_setup=a["setup"], avoid=why, bias="neutre", setup="Attendre", plan=None,
+             band=[round(min(s0, px - 1.5 * a4), 8), round(max(r0, px + 1.5 * a4), 8)])
+    return a
+
+
 def new_proj(coin, cls, a, now):
     op = {"id": f"{coin}:{now}", "coin": coin, "cls": cls, "t0": now, "px0": a["px"], "bias": a["bias"], "setup": a["setup"],
           "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"]}
@@ -617,14 +642,14 @@ def stats(recs):
         l_ = sum(1 for r in tr_ if r["status"] == "stop")
         dirs = [r for r in rs if r.get("dir_ok") is not None]
         rng = [r for r in rs if r.get("status") in ("range tenu", "range cassé")]
-        dr = [r for r in rs if r.get("bias") in ("long", "short") and r.get("status") not in ("remplacée", None, "open")]
+        dr = [r for r in rs if r.get("bias") in ("long", "short") and r.get("status") not in (None, "open")]
         return {"n": len(rs), "trades": len(tr_), "win": w, "loss": l_, "wr": round(w / (w + l_), 3) if w + l_ else None,
                 "avgR": round(sum(r.get("r", 0) for r in tr_) / len(tr_), 2) if tr_ else None,
                 "dir": round(sum(1 for r in dirs if r["dir_ok"]) / len(dirs), 3) if dirs else None,
                 "range": round(sum(1 for r in rng if r["status"] == "range tenu") / len(rng), 3) if rng else None,
                 "fill": round(len(tr_) / len(dr), 3) if dr else None, "ndir": len(dirs), "nrange": len(rng)}
-    out = {"all": agg_(recs), "setup": {}, "class": {}, "conf": {}, "coin": {}}
-    for key, fn in (("setup", lambda r: r.get("setup")), ("class", lambda r: r.get("cls")),
+    out = {"all": agg_(recs), "setup": {}, "class": {}, "conf": {}, "coin": {}, "sc": {}}
+    for key, fn in (("setup", lambda r: r.get("setup")), ("class", lambda r: r.get("cls")), ("sc", lambda r: f'{r.get("setup")}|{r.get("cls")}'),
                     ("conf", lambda r: "< 55" if r.get("conf", 0) < 55 else "55–69" if r.get("conf", 0) < 70 else "70 +"),
                     ("coin", lambda r: r.get("coin"))):
         groups = {}

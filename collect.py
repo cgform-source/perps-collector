@@ -961,6 +961,12 @@ def analyst():
         old = {}
     if old.get("at") and (dt.datetime.utcnow() - dt.datetime.strptime(old["at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds() < 20 * 3600:
         return old
+
+    def later(why):
+        """Yahoo limite parfois les serveurs GitHub : on garde l'ancienne version et on réessaie dans ~2 h (pas à chaque passage)."""
+        back = {"at": (dt.datetime.utcnow() - dt.timedelta(hours=18)).strftime("%Y-%m-%dT%H:%M:%SZ"), "by": old.get("by") or {}, "fail": why[:80]}
+        json.dump(back, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        return back
     import http.cookiejar
     cj = http.cookiejar.CookieJar()
     op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
@@ -969,7 +975,17 @@ def analyst():
         op.open(urllib.request.Request("https://fc.yahoo.com", headers=hd), timeout=15)
     except Exception:
         pass  # répond 404 mais pose le cookie
-    crumb = op.open(urllib.request.Request("https://query2.finance.yahoo.com/v1/test/getcrumb", headers=hd), timeout=15).read().decode().strip()
+    crumb, host = None, None
+    for h_ in ("query2", "query1"):
+        try:
+            crumb = op.open(urllib.request.Request(f"https://{h_}.finance.yahoo.com/v1/test/getcrumb", headers=hd), timeout=15).read().decode().strip()
+            host = h_
+            break
+        except Exception as e:
+            why = f"crumb {h_}: {type(e).__name__} {getattr(e, 'code', '')}"
+            time.sleep(2)
+    if not crumb:
+        return later(why)
     names = []
     try:
         body = json.dumps({"type": "meta", "dex": "xyz"}).encode()
@@ -983,7 +999,7 @@ def analyst():
     res = {"at": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "by": {}}
     for n in names:
         try:
-            u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{n}?modules=financialData,calendarEvents&crumb={urllib.parse.quote(crumb)}"
+            u = f"https://{host}.finance.yahoo.com/v10/finance/quoteSummary/{n}?modules=financialData,calendarEvents&crumb={urllib.parse.quote(crumb)}"
             j = json.loads(op.open(urllib.request.Request(u, headers=hd), timeout=15).read())
             res0 = (((j.get("quoteSummary") or {}).get("result") or [{}])[0] or {})
             fd = res0.get("financialData") or {}
@@ -996,8 +1012,8 @@ def analyst():
             time.sleep(0.6)
         except Exception as e:
             OUT["errors"]["analyst"] = f"{n}: {type(e).__name__} {getattr(e, 'code', '')}"[:100]
-    if len(res["by"]) < 5 and old.get("by"):
-        return old  # Yahoo indisponible : on garde la dernière version
+    if len(res["by"]) < 5:
+        return later(OUT["errors"].get("analyst") or "trop peu de réponses")
     json.dump(res, open(path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     return res
 

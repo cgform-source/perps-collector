@@ -147,6 +147,42 @@ LIM = NOW - 60 * 86400000
 RECS = [r for m in MONTHS for r in BYM[m] if r.get("t0", 0) >= LIM]
 ST = trader.stats(RECS)
 
+BT = jload("data/backtest.json", {})
+BV = (((BT.get("variants") or {}).get(BT.get("chosen") or "") or {}).get("stats")) or {}
+_par = ((BT.get("variants") or {}).get(BT.get("chosen") or "") or {}).get("par")
+if _par:  # le moteur en direct utilise les réglages retenus par le test historique : statistiques et projections restent cohérentes
+    trader.PARAM.update({k: v for k, v in _par.items() if k in trader.PARAM})
+
+
+def edge(setup, cls):
+    """(chances en %, gain moyen en R, nombre de cas) pour un type de setup : test historique (poids de 60 trades au plus),
+    complété par les projections terminées en direct, qui prennent peu à peu le dessus."""
+    live = (ST.get("setup") or {}).get(setup) or {}
+    if setup == "Attendre":
+        h = (BV.get("sc") or {}).get(f"Attendre|{cls}") or (BV.get("setup") or {}).get("Attendre") or {}
+        hn = h.get("nrange") or 0
+        p0 = h.get("range") if h.get("range") is not None else 0.5
+        k = min(60, hn)
+        ln = live.get("nrange") or 0
+        lp = live.get("range") or 0
+        p = (p0 * k + lp * ln) / (k + ln) if k + ln else p0
+        return round(p * 100), None, hn + ln
+    h = None
+    for x in ((BV.get("sc") or {}).get(f"{setup}|{cls}"), (BV.get("setup") or {}).get(setup), BV.get("all")):
+        if x and (x.get("win", 0) + x.get("loss", 0)) >= 30:
+            h = x
+            break
+    h = h or {}
+    hw, hl = h.get("win", 0), h.get("loss", 0)
+    p0 = hw / (hw + hl) if hw + hl else 0.35
+    e0 = h.get("avgR") if h.get("avgR") is not None else 0.0
+    k = min(60, hw + hl)
+    lw, ll, lt = live.get("win", 0), live.get("loss", 0), live.get("trades", 0)
+    p = (p0 * k + lw) / (k + lw + ll) if k + lw + ll else p0
+    e = (e0 * k + (live.get("avgR") or 0) * lt) / (k + lt) if k + lt else e0
+    return round(p * 100), round(e, 2), hw + hl + lw + ll
+
+
 BY, NEWREC = {}, []
 for coin in UNI:
     try:
@@ -198,11 +234,15 @@ for coin in UNI:
         if not a:
             continue
         cls = "crypto" if crypto else ("indice/matière" if sym in trader.NOT_STOCK else "action")
-        # calibration de la confiance par l'historique du même type de setup
-        s_ = ST["setup"].get(a["setup"]) or {}
-        if s_.get("wr") is not None and (s_.get("win", 0) + s_.get("loss", 0)) >= 8:
-            a["conf"] = round(0.65 * a["conf"] + 0.35 * s_["wr"] * 100)
-            a["calib"] = {"wr": s_["wr"], "n": s_["win"] + s_["loss"]}
+        # chances de toucher la 1re cible avant le stop et gain moyen par trade : test historique puis résultats en direct
+        if a["bias"] != "neutre":
+            ch, ed, nref = edge(a["setup"], cls)
+            if ed is not None and ed < -0.05 and nref >= 50:
+                # pas de blocage automatique (il figerait le moteur sur la période testée) : un avertissement clair
+                a["avoid"] = f"Ce type d'entrée ({a['setup'].lower()}) a perdu en moyenne {abs(ed):.2f} R par trade sur les cas comparables : prudence".replace(".", ",", 1)
+        if a["bias"] == "neutre":
+            ch, ed, nref = edge("Attendre", cls)
+        a["conf"], a["edge"], a["nref"] = ch, ed, nref
         # direction à l'échéance des projections terminées avant leur horizon (stop ou cible touchés tôt)
         for m in MONTHS:
             for r in BYM[m]:

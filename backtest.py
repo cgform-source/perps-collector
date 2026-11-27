@@ -12,8 +12,8 @@ COINS = ["BTC", "ETH", "SOL", "HYPE", "XRP", "DOGE", "BNB", "SUI", "LINK", "AVAX
          "xyz:NVDA", "xyz:AAPL", "xyz:MSFT", "xyz:AMZN", "xyz:GOOGL", "xyz:META", "xyz:TSLA", "xyz:AMD", "xyz:PLTR",
          "xyz:COIN", "xyz:MSTR", "xyz:GOLD", "xyz:SILVER", "xyz:CL", "xyz:SP500"]
 STEP_H = 4
-VARIANTS = {"repli 0,6": {"thr": 2.0, "pb_min": 0.6}, "repli 1": {"thr": 2.0, "pb_min": 1.0}, "repli 1,5": {"thr": 2.0, "pb_min": 1.5},
-            "repli 1 strict": {"thr": 2.5, "pb_min": 1.0}}
+VARIANTS = {"tendance + repli 1,5": {"thr": 1.5, "mr": 1}, "tendance + repli 2": {"thr": 2.0, "mr": 1},
+            "niveaux 0,6": {"thr": 2.0, "pb_min": 0.6, "mr": 0}}
 H, D = 3600000, 86400000
 T0 = time.time()
 
