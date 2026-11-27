@@ -882,9 +882,11 @@ def inject(F, S, pub):
         if not isinstance(X.get("latest"), list):
             X["latest"] = []
         X["latest"].insert(0, dict(item))
-        # 3) colonne « Risques mondiaux » (visible même en anti-spoil)
-        if not isinstance(F.get("risks"), list):
-            F["risks"] = []
+        # 3) colonne « Risques mondiaux » (visible même en anti-spoil). Si la presse (GDELT) n'a pas répondu à ce passage,
+        # on reprend sa dernière liste de moins de 6 h : sinon le dashboard n'afficherait que l'alerte
+        if not isinstance(F.get("risks"), list) or not F["risks"]:
+            rc = S.get("risks_cache") or {}
+            F["risks"] = [dict(r) for r in rc.get("items", [])] if NOW - (rc.get("at") or 0) < 6 * H else []
         F["risks"].insert(0, {"t": iso(p["last"]), "title": p.get("head_en") or p["head"], "fr": txt, "tr": 1, "url": p.get("url") or "",
                               "src": "Alerte du dashboard", "lang": "French", "danger": 3})
         # 4) verdict et graphique de l'actif
@@ -931,6 +933,9 @@ def main():
     except Exception:
         S = {}
     clean(F)
+    rk = F.get("risks")
+    if isinstance(rk, list) and rk:
+        S["risks_cache"] = {"at": NOW, "items": [r for r in rk if isinstance(r, dict)][:20]}
     run(F, S)
     pub = [public(a) for a in S["alerts"] if a.get("sev", 0) >= 2 and NOW - a.get("last", 0) < 24 * H]
     pub.sort(key=lambda p: (-p["sev"], -(p["last"] or 0)))
