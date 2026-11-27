@@ -880,5 +880,5 @@ def callstats():
 for fn in (x_feed, top, eu, metals, influ, tokens, callpx, firsts, callstats, stocktwits, trump, reddit, risks, kidnap, fed):
     fn()
 os.makedirs("data", exist_ok=True)
-json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(OUT, open("data/feed.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", {k: (len(v) if hasattr(v, "__len__") else v) for k, v in OUT.items() if k != "generated"})
