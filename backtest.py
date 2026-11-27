@@ -13,10 +13,10 @@ COINS = ["BTC", "ETH", "SOL", "HYPE", "XRP", "DOGE", "BNB", "SUI", "LINK", "AVAX
          "xyz:COIN", "xyz:MSTR", "xyz:GOLD", "xyz:SILVER", "xyz:CL", "xyz:SP500"]
 STEP_H = 4
 B_ = {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 0, "obst": 0, "fb": 0}
-VARIANTS = {"+ rejet 1": {**B_, "ev": 0, "ev_sl": 0},
-            "+ calendrier (pause avant/après CPI et Fed)": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0},
-            "+ calendrier + stop élargi": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0.5},
-            "+ stop élargi les semaines de publication": {**B_, "ev": 0, "ev_sl": 0.5}}
+VARIANTS = {"+ rejet 1": {**B_, "ev": 0, "ev_sl": 0, "cpi_tilt": 0},
+            "+ calendrier (pause avant/après CPI et Fed)": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0, "cpi_tilt": 0},
+            "+ calendrier + après-CPI baissier": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0, "cpi_tilt": 0.4},
+            "+ après-CPI baissier": {**B_, "ev": 0, "ev_sl": 0, "cpi_tilt": 0.4}}
 H, D = 3600000, 86400000
 T0 = time.time()
 
@@ -150,7 +150,9 @@ def ev_study():
 EVS = ev_study() if DATA else {}
 print("évènements", EVS)
 ok_ = [k for k in RES if (RES[k]["stats"]["all"].get("trades") or 0) >= 300] or list(RES)  # assez de trades pour ne pas choisir sur du bruit
-best = max(ok_, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
+# la pause autour des publications protège des sauts de prix que ce test ne sait pas mesurer (il suppose un stop toujours
+# exécuté au bon prix) : à résultat presque égal (écart de moins de 0,015 R), on la préfère par prudence
+best = max(ok_, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9) + (0.015 if RES[k]["par"].get("ev") else 0), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
 json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best, "events": EVS},
           open("data/backtest.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", f"{time.time() - T0:.0f}s")

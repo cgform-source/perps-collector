@@ -24,7 +24,7 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
 
 
 PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0, "obst": 0, "obst_rr": 1.0, "fb": 0,
-         "ev": 0, "ev_pre": 18, "ev_post": 2, "ev_sl": 0}
+         "ev": 0, "ev_pre": 18, "ev_post": 2, "ev_sl": 0, "cpi_tilt": 0}
 
 # Calendrier macro officiel (BLS pour le CPI à 8 h 30, Réserve fédérale pour les décisions de taux à 14 h, heure de New York)
 _NY, _PAR = ZoneInfo("America/New_York"), ZoneInfo("Europe/Paris")
@@ -445,6 +445,12 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             add("sentiment", 0.3, f"Influenceurs plutôt acheteurs ({b} haussiers / {s_} baissiers sur 24 h)")
         elif s_ >= 2 * b:
             add("sentiment", -0.3, f"Influenceurs plutôt vendeurs ({s_} baissiers / {b} haussiers sur 24 h)")
+    # après un CPI : les jours suivants ont souvent été baissiers (E*TRADE sur plusieurs années, et 7 cas sur 7 mois chez nous)
+    if PARAM.get("cpi_tilt"):
+        now_ = extra.get("now") or (c1h[-1]["t"] + 3600000)
+        lc = max((t for t, k in EVENTS if k == "CPI" and t <= now_), default=None)
+        if lc and now_ - lc <= 72 * 3600000:
+            add("contexte", -PARAM["cpi_tilt"], "Lendemain de chiffre d'inflation (CPI) : les 3 jours suivants ont souvent été baissiers, actions comme crypto")
     caps = {"tendance": 2.5, "structure": 1.6, "momentum": 1.8, "emplacement": 1.0, "volume": 0.9, "dérivés": 1.0, "contexte": 1.3, "fondamental": 0.3, "sentiment": 0.3}
     score = sum(max(-caps.get(k, 1), min(caps.get(k, 1), v)) for k, v in cat.items())
     risk_flags = []
