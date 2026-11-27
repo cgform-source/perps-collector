@@ -22,7 +22,7 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0}
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0, "obst": 0, "obst_rr": 1.0, "fb": 0}
 ENGINE = 3  # version du moteur : une projection pas encore déclenchée d'une ancienne version est retirée (sans compter dans les résultats)
 
 
@@ -319,6 +319,26 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         add("emplacement", 0.7, f"Collé à un support testé {sup[0]['n']} fois ({fmt(sup[0]['p'])})")
     if dr < 0.8 and res:
         add("emplacement", -0.7, f"Collé à une résistance testée {res[0]['n']} fois ({fmt(res[0]['p'])})")
+    # fausse cassure : niveau testé au moins 3 fois, cassé en clôture 4 h ces deux derniers jours puis repris (ou perdu)
+    fbk = None
+    for z in sup:
+        if z["n"] >= 3 and any(k["c"] < z["p"] - 0.2 * a4 for k in c4[-13:-1]) and cl4[-1] > z["p"] + 0.1 * a4:
+            fbk = ("bull", z)
+            break
+    if not fbk:
+        for z in res:
+            if z["n"] >= 3 and any(k["c"] > z["p"] + 0.2 * a4 for k in c4[-13:-1]) and cl4[-1] < z["p"] - 0.1 * a4:
+                fbk = ("bear", z)
+                break
+    if fbk:
+        z = fbk[1]
+        fb_txt = (f"Fausse cassure du support {fmt(z['p'])} (testé {z['n']} fois) : cassé en clôture 4 h ces deux derniers jours puis repris, les vendeurs ont échoué"
+                  if fbk[0] == "bull" else
+                  f"Fausse cassure de la résistance {fmt(z['p'])} (testée {z['n']} fois) : dépassée en clôture 4 h ces deux derniers jours puis perdue, les acheteurs ont échoué")
+        if PARAM.get("fb"):
+            add("structure", 0.6 if fbk[0] == "bull" else -0.6, fb_txt)
+        else:
+            sig.append(["mix", 0, fb_txt, "structure"])
     # 5. volatilité et volume
     sq = pctile(bw, bw[-1]) if bw else 50
     if sq <= 15:
@@ -403,6 +423,14 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     caps = {"tendance": 2.5, "structure": 1.6, "momentum": 1.8, "emplacement": 1.0, "volume": 0.9, "dérivés": 1.0, "contexte": 1.3, "fondamental": 0.3, "sentiment": 0.3}
     score = sum(max(-caps.get(k, 1), min(caps.get(k, 1), v)) for k, v in cat.items())
     risk_flags = []
+    notes = []  # informations de prudence qui ne modifient pas la force du signal (identique au test historique)
+    for ev in extra.get("events") or []:
+        if 0 <= ev["h"] <= 24:
+            notes.append(f"{ev['lbl']} {ev['quand']} : forte volatilité possible, un trader évite d'ouvrir juste avant ou divise sa taille par deux")
+        elif ev["h"] <= (72 if extra.get("crypto") else 96):
+            notes.append(f"{ev['lbl']} {ev['quand']}, pendant la projection : le scénario peut être bousculé ce jour-là")
+    if extra.get("early"):
+        notes.append("Séance écourtée aujourd'hui (fermeture à 19 h, heure de Paris) : volumes faibles, les mouvements peuvent être trompeurs")
     if extra.get("closed"):
         risk_flags.append("Bourse fermée : liquidité faible, le prix peut sauter à l'ouverture")
     if extra.get("earn_days") is not None and extra["earn_days"] <= 3:
@@ -451,6 +479,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     if any("Résultats" in x for x in risk_flags):
         bias = "neutre"
     plan, setup = None, "Attendre"
+    obs = blocked = None
     if bias != "neutre":
         lg = bias == "long"
         sgn = 1 if lg else -1
@@ -492,6 +521,13 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             cap = PARAM.get("t1_max") or 0
             if cap and t1 - e[1] > cap * risk:  # niveau suivant trop loin pour quelques jours : prise de profit à distance raisonnable
                 t1 = e[1] + 0.8 * cap * risk
+            st_ = [z for z in opp if z["n"] >= 3 and e[1] < z["p"] < t1]
+            if st_:
+                obs = min(st_, key=lambda z: z["p"])
+                if PARAM.get("obst"):  # résistance majeure sur le chemin : profit juste avant ; trop proche → pas de trade
+                    t1 = obs["p"] - 0.1 * a4
+                    if t1 - e[1] < PARAM["obst_rr"] * risk:
+                        blocked = obs
             t2c = [z["p"] for z in opp if z["p"] > t1 + 0.5 * risk]
             t2 = t2c[0] if t2c else max(t1 + 0.9 * risk, e[1] + 2.6 * risk)
             if cap and t2 - e[1] > (cap + 1.5) * risk:
@@ -510,6 +546,13 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
             cap = PARAM.get("t1_max") or 0
             if cap and e[0] - t1 > cap * risk:  # niveau suivant trop loin pour quelques jours : prise de profit à distance raisonnable
                 t1 = e[0] - 0.8 * cap * risk
+            st_ = [z for z in opp if z["n"] >= 3 and t1 < z["p"] < e[0]]
+            if st_:
+                obs = max(st_, key=lambda z: z["p"])
+                if PARAM.get("obst"):  # support majeur sur le chemin : profit juste avant ; trop proche → pas de trade
+                    t1 = obs["p"] + 0.1 * a4
+                    if e[0] - t1 < PARAM["obst_rr"] * risk:
+                        blocked = obs
             t2c = [z["p"] for z in opp if z["p"] < t1 - 0.5 * risk]
             t2 = t2c[0] if t2c else min(t1 - 0.9 * risk, e[0] - 2.6 * risk)
             if cap and e[0] - t2 > (cap + 1.5) * risk:
@@ -517,6 +560,16 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         mid = (e[0] + e[1]) / 2
         rr = abs(t1 - mid) / max(abs(mid - sl), 1e-12)
         plan = {"e": [round(e[0], 8), round(e[1], 8)], "sl": round(sl, 8), "tp": [round(t1, 8), round(t2, 8)], "rr": round(rr, 2)}
+        if blocked:
+            lean_txt = (f"Tendance de fond {'haussière' if lg else 'baissière'}, mais {'la résistance majeure' if lg else 'le support majeur'} à {fmt(blocked['p'])} "
+                        f"(testé{'e' if lg else ''} {blocked['n']} fois) est trop proche pour que le trade vaille le risque : un trader attend "
+                        f"{'un repli plus bas' if lg else 'un rebond plus haut'} ou une cassure franche de ce niveau avant d'entrer")
+            bias, plan, setup = "neutre", None, "Attendre"
+        elif obs and not PARAM.get("obst"):
+            notes.append(f"{'Résistance majeure' if lg else 'Support majeur'} à {fmt(obs['p'])} (testé{'e' if lg else ''} {obs['n']} fois) entre l'entrée et la cible 1 : "
+                         f"la projection suppose qu'{'elle' if lg else 'il'} cède. S'{'elle' if lg else 'il'} tient, le mouvement s'arrêtera probablement là")
+        if fbk and bias != "neutre" and (fbk[0] == "bull") != lg:
+            notes.append(f"Attention : {fb_txt.split(' : ')[0].lower()} juste avant, un signal qui joue contre ce {'long' if lg else 'short'}")
     # confiance : force et accord des signaux, puis calibrée par l'historique (ailleurs)
     dirs = [s for s in sig if s[0] != "mix"]
     agree = (sum(1 for s in dirs if (s[0] == "bull") == (score > 0)) / len(dirs)) if dirs else 0.5
@@ -545,7 +598,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     zone = lambda z: [round(z["p"] - 0.15 * a4, 8), round(z["p"] + 0.15 * a4, 8)]
     return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
-            "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags, "view": view, "invalid": invalid,
+            "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags + notes, "view": view, "invalid": invalid,
             "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean,
             "hz": 72 if extra.get("crypto") else 96}
 

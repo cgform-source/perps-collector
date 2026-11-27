@@ -12,9 +12,11 @@ COINS = ["BTC", "ETH", "SOL", "HYPE", "XRP", "DOGE", "BNB", "SUI", "LINK", "AVAX
          "xyz:NVDA", "xyz:AAPL", "xyz:MSFT", "xyz:AMZN", "xyz:GOOGL", "xyz:META", "xyz:TSLA", "xyz:AMD", "xyz:PLTR",
          "xyz:COIN", "xyz:MSTR", "xyz:GOLD", "xyz:SILVER", "xyz:CL", "xyz:SP500"]
 STEP_H = 4
-VARIANTS = {"+ rejet 1": {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 0},
-            "+ rejet 1, cible ≤ 2,5 R": {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 2.5},
-            "+ rejet 1, cible ≤ 2 R": {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 2.0}}
+B_ = {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 0}
+VARIANTS = {"+ rejet 1": {**B_, "obst": 0, "fb": 0},
+            "+ supports majeurs respectés": {**B_, "obst": 1, "obst_rr": 1.0, "fb": 0},
+            "+ fausses cassures": {**B_, "obst": 0, "fb": 1},
+            "+ supports respectés + fausses cassures": {**B_, "obst": 1, "obst_rr": 1.0, "fb": 1}}
 H, D = 3600000, 86400000
 T0 = time.time()
 

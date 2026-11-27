@@ -136,6 +136,51 @@ try:
 except Exception:
     pass
 CLOSED = us_closed()
+
+
+def calendar():
+    """Rendez-vous macro des 4 prochains jours (CPI, décision et discours de la Fed) et séance écourtée du jour."""
+    import re
+    from zoneinfo import ZoneInfo
+    out = []
+    PAR = ZoneInfo("Europe/Paris")
+    J = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    for e in F.get("fed") or []:
+        try:
+            ts = dt.datetime.fromisoformat(str(e.get("when")).replace("Z", "+00:00"))
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=UTC)
+        except Exception:
+            continue
+        h = (ts.timestamp() * 1000 - NOW) / 3600000
+        if not (0 <= h <= 100):
+            continue
+        t = str(e.get("title") or "")
+        if e.get("type") == "CPI" or "CPI" in t:
+            lbl = "Chiffre de l'inflation US (CPI)"
+        elif re.search(r"FOMC|rate decision", t, re.I):
+            lbl = "Décision de taux de la Fed"
+        elif re.search(r"Chair|Powell|Warsh|testimony", t, re.I):
+            lbl = "Discours du président de la Fed"
+        else:
+            continue
+        lp = ts.astimezone(PAR)
+        quand = ("aujourd'hui" if lp.date() == dt.datetime.now(PAR).date() else J[lp.weekday()]) + lp.strftime(" à %H h %M").replace(" h 00", " h")
+        out.append({"lbl": lbl, "h": round(h, 1), "quand": quand})
+    seen, ev = set(), []
+    for x in sorted(out, key=lambda x: x["h"]):
+        if x["lbl"] not in seen:
+            seen.add(x["lbl"]); ev.append(x)
+    n = dt.datetime.now(ZoneInfo("America/New_York"))
+    early = n.strftime("%Y-%m-%d") in {"2026-11-27", "2026-12-24", "2027-11-26"} and n.weekday() < 5 and n.hour * 60 + n.minute < 780
+    return ev, early
+
+
+try:
+    EVENTS, EARLY = calendar()
+except Exception as e_:
+    EVENTS, EARLY = [], False
+    ERR["calendrier"] = str(e_)[:80]
 AN = (F.get("analyst") or {}).get("by") or {}
 TW = [t for t in (F.get("influ") or []) if t.get("t", "") >= dt.datetime.fromtimestamp(time.time() - 86400, UTC).strftime("%Y-%m-%dT%H:%M:%S")]
 
@@ -229,6 +274,7 @@ for coin in UNI:
         bull = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bull")
         bear = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bear")
         extra = {"crypto": crypto, "fg": FG, "analyst": an, "senti": (bull, bear), "oi_chg": oi_chg, "book": book,
+                 "events": EVENTS, "early": (not crypto) and EARLY,
                  "closed": (not crypto) and sym not in trader.NOT_STOCK and CLOSED, "earn_days": earn}
         a = trader.analyze(coin, c1h, d1, ctx, bench, extra)
         if not a:
