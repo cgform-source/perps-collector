@@ -253,7 +253,7 @@ for coin in UNI:
         op, fin = trader.track(OPEN.get(coin), a, c1h, NOW, coin, cls)
         NEWREC += fin
         OPEN[coin] = op
-        a["open"] = {k: op.get(k) for k in ("t0", "px0", "bias", "setup", "conf", "e", "sl", "tp", "fill", "fill_t", "band", "hz", "mfe")}
+        a["open"] = {k: op.get(k) for k in ("t0", "px0", "bias", "setup", "conf", "edge", "nref", "e", "sl", "tp", "fill", "fill_t", "band", "hz", "mfe")}
         a["track"] = ST["coin"].get(coin)
         BY[coin] = a
     except Budget:
@@ -264,7 +264,7 @@ for coin in UNI:
 signal.alarm(0)
 
 # --- enregistrement des projections terminées (par mois de départ)
-KEYS = ("id", "coin", "cls", "t0", "px0", "bias", "setup", "conf", "hz", "e", "sl", "tp", "rr", "band", "atr",
+KEYS = ("id", "coin", "cls", "t0", "px0", "bias", "setup", "conf", "edge", "nref", "hz", "e", "sl", "tp", "rr", "band", "atr",
         "fill", "fill_t", "status", "r", "end", "px_end", "px_hz", "dir_ok", "dir_done", "mfe")
 for r in NEWREC:
     m = dt.datetime.fromtimestamp(r["t0"] / 1000, UTC).strftime("%Y-%m")

@@ -590,6 +590,8 @@ def to_neutral(a, why):
 def new_proj(coin, cls, a, now):
     op = {"id": f"{coin}:{now}", "coin": coin, "cls": cls, "t0": now, "px0": a["px"], "bias": a["bias"], "setup": a["setup"],
           "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"]}
+    if a.get("nref") is not None:  # chances et gain moyen annoncés au départ (pour l'affichage et la calibration)
+        op.update(edge=a.get("edge"), nref=a.get("nref"))
     if a["plan"]:
         op.update(e=a["plan"]["e"], sl=a["plan"]["sl"], tp=a["plan"]["tp"], rr=a["plan"]["rr"])
     else:
