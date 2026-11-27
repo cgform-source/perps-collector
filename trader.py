@@ -22,7 +22,7 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6}
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0}
 ENGINE = 3  # version du moteur : une projection pas encore déclenchée d'une ancienne version est retirée (sans compter dans les résultats)
 
 
@@ -489,8 +489,13 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                 sl = e[1] - 3 * a4; risk = 3 * a4
             cands = [z["p"] for z in opp if z["p"] - e[1] >= PARAM["t1_r"] * risk]
             t1 = cands[0] if cands else e[1] + max(1.6, PARAM["t1_r"]) * risk
+            cap = PARAM.get("t1_max") or 0
+            if cap and t1 - e[1] > cap * risk:  # niveau suivant trop loin pour quelques jours : prise de profit à distance raisonnable
+                t1 = e[1] + 0.8 * cap * risk
             t2c = [z["p"] for z in opp if z["p"] > t1 + 0.5 * risk]
             t2 = t2c[0] if t2c else max(t1 + 0.9 * risk, e[1] + 2.6 * risk)
+            if cap and t2 - e[1] > (cap + 1.5) * risk:
+                t2 = e[1] + (cap + 1.0) * risk
         else:
             sl = e[1] + PARAM["sl_k"] * a4
             if H and H[-1][2] - e[1] < 2.5 * a4 and H[-1][2] > e[1]:
@@ -502,8 +507,13 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                 sl = e[0] + 3 * a4; risk = 3 * a4
             cands = [z["p"] for z in opp if e[0] - z["p"] >= PARAM["t1_r"] * risk]
             t1 = cands[0] if cands else e[0] - max(1.6, PARAM["t1_r"]) * risk
+            cap = PARAM.get("t1_max") or 0
+            if cap and e[0] - t1 > cap * risk:  # niveau suivant trop loin pour quelques jours : prise de profit à distance raisonnable
+                t1 = e[0] - 0.8 * cap * risk
             t2c = [z["p"] for z in opp if z["p"] < t1 - 0.5 * risk]
             t2 = t2c[0] if t2c else min(t1 - 0.9 * risk, e[0] - 2.6 * risk)
+            if cap and e[0] - t2 > (cap + 1.5) * risk:
+                t2 = e[0] - (cap + 1.0) * risk
         mid = (e[0] + e[1]) / 2
         rr = abs(t1 - mid) / max(abs(mid - sl), 1e-12)
         plan = {"e": [round(e[0], 8), round(e[1], 8)], "sl": round(sl, 8), "tp": [round(t1, 8), round(t2, 8)], "rr": round(rr, 2)}
