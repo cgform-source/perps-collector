@@ -274,7 +274,7 @@ for coin in UNI:
         bull = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bull")
         bear = sum(1 for t in TW if sym in (t.get("tickers") or []) and t.get("tag") == "bear")
         extra = {"crypto": crypto, "fg": FG, "analyst": an, "senti": (bull, bear), "oi_chg": oi_chg, "book": book,
-                 "events": EVENTS, "early": (not crypto) and EARLY,
+                 "events": EVENTS, "early": (not crypto) and EARLY, "now": NOW,
                  "closed": (not crypto) and sym not in trader.NOT_STOCK and CLOSED, "earn_days": earn}
         a = trader.analyze(coin, c1h, d1, ctx, bench, extra)
         if not a:

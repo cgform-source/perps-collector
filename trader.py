@@ -10,6 +10,7 @@ résultat en multiples du risque (R), direction juste ou fausse à l'échéance.
 servent à calibrer la confiance des projections suivantes.
 """
 import json, math, os, time, urllib.request, datetime as dt
+from zoneinfo import ZoneInfo
 
 API = "https://api.hyperliquid.xyz/info"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; perps-dashboard-collector/1.0)", "Content-Type": "application/json"}
@@ -22,7 +23,31 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0, "obst": 0, "obst_rr": 1.0, "fb": 0}
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3, "mr": 0, "rej": 0, "rej_k": 0.6, "t1_max": 0, "obst": 0, "obst_rr": 1.0, "fb": 0,
+         "ev": 0, "ev_pre": 18, "ev_post": 2, "ev_sl": 0}
+
+# Calendrier macro officiel (BLS pour le CPI à 8 h 30, Réserve fédérale pour les décisions de taux à 14 h, heure de New York)
+_NY, _PAR = ZoneInfo("America/New_York"), ZoneInfo("Europe/Paris")
+_CPI = ["2026-01-13", "2026-02-13", "2026-03-11", "2026-04-10", "2026-05-12", "2026-06-10", "2026-07-14", "2026-08-12", "2026-09-11",
+        "2026-10-14", "2026-11-10", "2026-12-10", "2027-01-13", "2027-02-11", "2027-03-10", "2027-04-13", "2027-05-12", "2027-06-10",
+        "2027-07-14", "2027-08-11", "2027-09-14", "2027-10-14", "2027-11-10", "2027-12-10"]
+_FOMC = ["2026-01-28", "2026-03-18", "2026-04-29", "2026-06-17", "2026-07-29", "2026-09-16", "2026-10-28", "2026-12-09",
+         "2027-01-27", "2027-03-17", "2027-04-28", "2027-06-09", "2027-07-28", "2027-09-15", "2027-12-08"]
+
+
+def _et(d, hh, mm):
+    y, m, dd = map(int, d.split("-"))
+    return int(dt.datetime(y, m, dd, hh, mm, tzinfo=_NY).timestamp() * 1000)
+
+
+EVENTS = sorted([(_et(d, 8, 30), "CPI") for d in _CPI] + [(_et(d, 14, 0), "FOMC") for d in _FOMC])
+EV_LBL = {"CPI": "Chiffre de l'inflation US (CPI)", "FOMC": "Décision de taux de la Fed"}
+_JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+def ev_when(ts):
+    d = dt.datetime.fromtimestamp(ts / 1000, _PAR)
+    return _JOURS[d.weekday()] + d.strftime(" %d/%m à %H h %M").replace(" h 00", " h")
 ENGINE = 3  # version du moteur : une projection pas encore déclenchée d'une ancienne version est retirée (sans compter dans les résultats)
 
 
@@ -426,7 +451,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     notes = []  # informations de prudence qui ne modifient pas la force du signal (identique au test historique)
     for ev in extra.get("events") or []:
         if 0 <= ev["h"] <= 24:
-            notes.append(f"{ev['lbl']} {ev['quand']} : forte volatilité possible, un trader évite d'ouvrir juste avant ou divise sa taille par deux")
+            notes.append(f"{ev['lbl']} {ev['quand']} : " + (f"pas de nouvelle entrée de {PARAM['ev_pre']} h avant à {PARAM['ev_post']} h après la publication (gros mouvements dans les deux sens)"
+                                                            if PARAM.get("ev") else "forte volatilité possible, un trader évite d'ouvrir juste avant ou divise sa taille par deux"))
         elif ev["h"] <= (72 if extra.get("crypto") else 96):
             notes.append(f"{ev['lbl']} {ev['quand']}, pendant la projection : le scénario peut être bousculé ce jour-là")
     if extra.get("early"):
@@ -478,6 +504,25 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                         f"ou un RSI 4 h {'sous 45' if D > 0 else 'au-dessus de 55'} pour {'acheter' if D > 0 else 'vendre à découvert'}")
     if any("Résultats" in x for x in risk_flags):
         bias = "neutre"
+    # calendrier : pas de nouvelle entrée de ev_pre heures avant à ev_post heures après une publication majeure
+    now = extra.get("now") or (c1h[-1]["t"] + 3600000)
+    evs = [e for e in EVENTS if now - 6 * 3600000 <= e[0] <= now + 5 * 86400000]
+    nxt = next((e for e in evs if e[0] >= now), None)
+    prv = max((e for e in evs if e[0] < now), key=lambda e: e[0], default=None)
+    freeze = None
+    if PARAM.get("ev"):
+        if nxt and nxt[0] - now <= PARAM["ev_pre"] * 3600000:
+            freeze = ("pre", nxt)
+        elif prv and now - prv[0] <= PARAM["ev_post"] * 3600000:
+            freeze = ("post", prv)
+    if freeze and bias != "neutre" and mr and D:
+        k_, e_ = freeze[1][1], freeze[1][0]
+        lean_txt = (f"Signal {'acheteur' if bias == 'long' else 'vendeur'} en attente : {EV_LBL[k_]} {ev_when(e_)}. Un trader n'ouvre pas de position "
+                    f"juste avant une publication majeure (gros mouvements dans les deux sens) ; la projection reprendra après"
+                    if freeze[0] == "pre" else
+                    f"Signal {'acheteur' if bias == 'long' else 'vendeur'} en attente : {EV_LBL[k_]} publié il y a moins de {PARAM['ev_post']} h, "
+                    f"on laisse le marché digérer la nouvelle avant d'entrer")
+        bias = "neutre"
     plan, setup = None, "Attendre"
     obs = blocked = None
     if bias != "neutre":
@@ -513,6 +558,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                 sl = min(sl, L[-1][2] - 0.25 * a4)
             if mr and rej:
                 sl = min(rej["ext"] - 0.25 * a4, e[0] - 0.3 * a4)  # stop juste sous le creux du repli
+            if PARAM.get("ev_sl") and any(now < e_[0] <= now + (72 if extra.get("crypto") else 96) * 3600000 for e_ in evs):
+                sl -= PARAM["ev_sl"] * a4  # publication pendant la projection : stop plus large (la taille baisse d'autant)
             risk = e[1] - sl
             if risk > 3 * a4:
                 sl = e[1] - 3 * a4; risk = 3 * a4
@@ -538,6 +585,8 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                 sl = max(sl, H[-1][2] + 0.25 * a4)
             if mr and rej:
                 sl = max(rej["ext"] + 0.25 * a4, e[1] + 0.3 * a4)  # stop juste au-dessus du sommet du rebond
+            if PARAM.get("ev_sl") and any(now < e_[0] <= now + (72 if extra.get("crypto") else 96) * 3600000 for e_ in evs):
+                sl += PARAM["ev_sl"] * a4  # publication pendant la projection : stop plus large (la taille baisse d'autant)
             risk = sl - e[0]
             if risk > 3 * a4:
                 sl = e[0] + 3 * a4; risk = 3 * a4
@@ -599,7 +648,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
             "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags + notes, "view": view, "invalid": invalid,
-            "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean,
+            "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean, "freeze": bool(freeze),
             "hz": 72 if extra.get("crypto") else 96}
 
 
@@ -685,6 +734,8 @@ def to_neutral(a, why):
 def new_proj(coin, cls, a, now):
     op = {"id": f"{coin}:{now}", "coin": coin, "cls": cls, "t0": now, "px0": a["px"], "bias": a["bias"], "setup": a["setup"],
           "conf": a["conf"], "hz": a["hz"], "status": "open", "last": 0, "atr": a["atr4h"], "v": ENGINE}
+    if a.get("freeze"):
+        op["frz"] = True
     if a.get("nref") is not None:  # chances et gain moyen annoncés au départ (pour l'affichage et la calibration)
         op.update(edge=a.get("edge"), nref=a.get("nref"))
     if a["plan"]:
@@ -710,6 +761,10 @@ def track(op, a, c1h, now, coin, cls):
             done.append(op); op = None
         elif not op.get("fill") and op.get("v") != ENGINE:
             op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None
+        elif not op.get("fill") and a.get("freeze") and op["bias"] in ("long", "short"):
+            op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None  # ordre annulé avant la publication
+        elif op.get("frz") and not a.get("freeze") and a["bias"] != "neutre":
+            op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None  # fin du gel : la projection reprend
         elif not op.get("fill") and a["bias"] != "neutre" and a.get("sconf", a["conf"]) >= 60:
             age = now - op["t0"]
             rev = op["bias"] in ("long", "short") and op["bias"] != a["bias"]

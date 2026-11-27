@@ -12,11 +12,11 @@ COINS = ["BTC", "ETH", "SOL", "HYPE", "XRP", "DOGE", "BNB", "SUI", "LINK", "AVAX
          "xyz:NVDA", "xyz:AAPL", "xyz:MSFT", "xyz:AMZN", "xyz:GOOGL", "xyz:META", "xyz:TSLA", "xyz:AMD", "xyz:PLTR",
          "xyz:COIN", "xyz:MSTR", "xyz:GOLD", "xyz:SILVER", "xyz:CL", "xyz:SP500"]
 STEP_H = 4
-B_ = {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 0}
-VARIANTS = {"+ rejet 1": {**B_, "obst": 0, "fb": 0},
-            "+ supports majeurs respectés": {**B_, "obst": 1, "obst_rr": 1.0, "fb": 0},
-            "+ fausses cassures": {**B_, "obst": 0, "fb": 1},
-            "+ supports respectés + fausses cassures": {**B_, "obst": 1, "obst_rr": 1.0, "fb": 1}}
+B_ = {"thr": 2.0, "mr": 1, "rej": 1, "rej_k": 1.0, "t1_max": 0, "obst": 0, "fb": 0}
+VARIANTS = {"+ rejet 1": {**B_, "ev": 0, "ev_sl": 0},
+            "+ calendrier (pause avant/après CPI et Fed)": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0},
+            "+ calendrier + stop élargi": {**B_, "ev": 1, "ev_pre": 18, "ev_post": 2, "ev_sl": 0.5},
+            "+ stop élargi les semaines de publication": {**B_, "ev": 0, "ev_sl": 0.5}}
 H, D = 3600000, 86400000
 T0 = time.time()
 
@@ -117,8 +117,40 @@ for vname, par in VARIANTS.items():
     print(vname, a_, f"{time.time() - T0:.0f}s", flush=True)
 
 span = [min(v[0][0]["t"] for v in DATA.values()), max(v[0][-1]["t"] for v in DATA.values())] if DATA else [0, 0]
+
+
+def ev_study():
+    """Comportement réel des marchés autour des CPI et des décisions de la Fed sur la période testée."""
+    def cls_of(c):
+        return "crypto" if ":" not in c else ("indice/matière" if c.split(":")[-1] in trader.NOT_STOCK else "action")
+    mean = lambda L: round(sum(L) / len(L) * 100, 2) if L else None
+    out = {}
+    for kind in ("CPI", "FOMC"):
+        evs = [t for t, k in trader.EVENTS if k == kind and span[0] + 4 * D < t < span[1] - 4 * D]
+        R = {"n": len(evs)}
+        for cl_ in ("crypto", "action", "indice/matière"):
+            a24, b24, r72, b72, p24, bp24 = [], [], [], [], [], []
+            for c, (h1, d1) in DATA.items():
+                if cls_of(c) != cl_:
+                    continue
+                ts = [k["t"] for k in h1]; cl = [k["c"] for k in h1]
+                for i in range(24, len(h1) - 72, 24):
+                    b24.append(abs(cl[i + 24] / cl[i] - 1)); b72.append(cl[i + 72] / cl[i] - 1); bp24.append(cl[i] / cl[i - 24] - 1)
+                for t in evs:
+                    i = bisect.bisect_left(ts, t) - 1
+                    if i < 24 or i + 72 >= len(h1):
+                        continue
+                    a24.append(abs(cl[i + 24] / cl[i] - 1)); r72.append(cl[i + 72] / cl[i] - 1); p24.append(cl[i] / cl[i - 24] - 1)
+            R[cl_] = {"mouv24": mean(a24), "mouv24_normal": mean(b24), "apres72": mean(r72), "apres72_normal": mean(b72),
+                      "avant24": mean(p24), "avant24_normal": mean(bp24), "cas": len(a24)}
+        out[kind] = R
+    return out
+
+
+EVS = ev_study() if DATA else {}
+print("évènements", EVS)
 ok_ = [k for k in RES if (RES[k]["stats"]["all"].get("trades") or 0) >= 300] or list(RES)  # assez de trades pour ne pas choisir sur du bruit
 best = max(ok_, key=lambda k: ((RES[k]["stats"]["all"].get("avgR") or -9), RES[k]["stats"]["all"].get("trades") or 0)) if RES else None
-json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best},
+json.dump({"at": int(time.time() * 1000), "from": span[0], "to": span[1], "coins": list(DATA), "step_h": STEP_H, "variants": RES, "best": best, "chosen": best, "events": EVS},
           open("data/backtest.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("ok", f"{time.time() - T0:.0f}s")
