@@ -82,7 +82,8 @@ for (const a of slice) {
     let n = 0;
     // connecté : tweets ET réponses. Une réponse est gardée seulement si elle répond à un autre compte de la liste
     // (ex. « agreed », « this will send ») ou si elle cite elle-même un $ticker : c'est une validation du call.
-    const gen = LOGGED_OK ? s.getTweetsAndReplies(a, 20) : s.getTweets(a, 10);
+    // getTweetsAndReplies renvoie 404 avec cette version de la bibliothèque : on reste sur getTweets (tweets + citations)
+    const gen = s.getTweets(a, LOGGED_OK ? 20 : 10);
     for await (const t of gen) {
       if (!t || !t.text) continue;
       const row = { h: t.username || a, n: t.name || '', t: (t.timeParsed ? new Date(t.timeParsed) : new Date()).toISOString(), eng: (t.likes || 0) + 2 * (t.retweets || 0),
@@ -98,7 +99,7 @@ for (const a of slice) {
       out.influ.push(row);
       if (++n >= (LOGGED_OK ? 20 : 10)) break;
     }
-  } catch (e) { out.errors['influ:' + a] = String(e).slice(0, 160); if (/rate|429/i.test(String(e))) { rateHit = true; } }
+  } catch (e) { out.errors['influ:' + a] = String(e).slice(0, 160); if (/status: 429|Too Many Requests|Rate limit exceeded/i.test(String(e).split('| headers')[0])) { rateHit = true; } }
   if (rateHit) { if (!hot.includes(a)) out.rot_next = a; out.errors.rate_limit = 'limite X atteinte, reprise au prochain passage (à @' + a + ')'; break; }
   await new Promise(r => setTimeout(r, 1200));
 }
