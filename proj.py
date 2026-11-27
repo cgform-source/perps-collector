@@ -242,6 +242,7 @@ for coin in UNI:
                 a["avoid"] = f"Ce type d'entrée ({a['setup'].lower()}) a perdu en moyenne {abs(ed):.2f} R par trade sur les cas comparables : prudence".replace(".", ",", 1)
         if a["bias"] == "neutre":
             ch, ed, nref = edge("Attendre", cls)
+        a["sconf"] = a["conf"]  # force du signal (règles de suivi, identiques au test historique)
         a["conf"], a["edge"], a["nref"] = ch, ed, nref
         # direction à l'échéance des projections terminées avant leur horizon (stop ou cible touchés tôt)
         for m in MONTHS:

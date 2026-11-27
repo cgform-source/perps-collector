@@ -611,10 +611,10 @@ def track(op, a, c1h, now, coin, cls):
         op = evaluate(op, c1h, now)
         if op.get("status") != "open":
             done.append(op); op = None
-        elif not op.get("fill") and a["bias"] != "neutre" and a["conf"] >= 60:
+        elif not op.get("fill") and a["bias"] != "neutre" and a.get("sconf", a["conf"]) >= 60:
             age = now - op["t0"]
             rev = op["bias"] in ("long", "short") and op["bias"] != a["bias"]
-            wake = op["bias"] == "neutre" and age >= 2 * 3600000 and a["conf"] >= 62
+            wake = op["bias"] == "neutre" and age >= 2 * 3600000 and a.get("sconf", a["conf"]) >= 62
             moved = op["bias"] == a["bias"] and age >= 6 * 3600000 and abs(sum(op["e"]) / 2 - sum(a["plan"]["e"]) / 2) > a["atr4h"]
             if rev or wake or moved:
                 op.update(status="remplacée", end=now, px_end=a["px"]); done.append(op); op = None
