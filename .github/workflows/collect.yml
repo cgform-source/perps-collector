@@ -59,6 +59,7 @@ jobs:
           git config user.name "collecteur"
           git config user.email "collecteur@users.noreply.github.com"
           for f in data/feed.json data/x_guest.json data/notify_state.json data/following.json data/first_calls.json data/tr_cache.json config.json; do [ -f "$f" ] && git add "$f"; done
+          [ -d data/perf ] && git add data/perf || true
           git commit -m "collecte $(date -u +%F_%H%M)" || echo "rien de nouveau"
           git pull --rebase -X theirs origin main || true
           git push
