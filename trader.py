@@ -530,7 +530,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                     f"on laisse le marché digérer la nouvelle avant d'entrer")
         bias = "neutre"
     plan, setup = None, "Attendre"
-    obs = blocked = None
+    obs = blocked = obst_out = None
     if bias != "neutre":
         lg = bias == "long"
         sgn = 1 if lg else -1
@@ -621,6 +621,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
                         f"{'un repli plus bas' if lg else 'un rebond plus haut'} ou une cassure franche de ce niveau avant d'entrer")
             bias, plan, setup = "neutre", None, "Attendre"
         elif obs and not PARAM.get("obst"):
+            obst_out = {"p": round(obs["p"], 8), "n": obs["n"]}
             notes.append(f"{'Résistance majeure' if lg else 'Support majeur'} à {fmt(obs['p'])} (testé{'e' if lg else ''} {obs['n']} fois) entre l'entrée et la cible 1 : "
                          f"la projection suppose qu'{'elle' if lg else 'il'} cède. S'{'elle' if lg else 'il'} tient, le mouvement s'arrêtera probablement là")
         if fbk and bias != "neutre" and (fbk[0] == "bull") != lg:
@@ -654,7 +655,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     return {"at": int(time.time() * 1000), "px": px, "bias": bias, "setup": setup, "score": round(score, 2), "conf": conf, "plan": plan,
             "sup": [zone(z) for z in sup[:2]], "res": [zone(z) for z in res[:2]], "atr4h": a4, "atr1d": ad, "adx4": round(adx4), "adxd": round(adxd),
             "rsi4": round(r), "rsid": round(rd[-1]), "sig": [s[:3] for s in sig], "risk": risk_flags + notes, "view": view, "invalid": invalid,
-            "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean, "freeze": bool(freeze),
+            "band": [round(band[0], 8), round(band[1], 8)] if band else None, "lean": lean, "freeze": bool(freeze), "obst": obst_out,
             "hz": 72 if extra.get("crypto") else 96}
 
 
