@@ -22,7 +22,7 @@ NOT_STOCK = {"XYZ100", "SP500", "SILVER", "GOLD", "CL", "BRENTOIL", "COPPER", "N
              "DXY", "URANIUM", "PALLADIUM"}
 
 
-PARAM = {"thr": 2.0}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
+PARAM = {"thr": 2.0, "pb_min": 0.6, "sl_k": 0.7, "t1_r": 1.3}  # seuil du score pour prendre position (validé par le test historique, voir backtest.py)
 
 
 def post(body, timeout=20):
@@ -303,6 +303,7 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
         add("momentum", 0.7, "Divergence haussière : nouveau creux de prix mais RSI plus fort")
     last24 = c1h[-24:]
     vv = sum(k["v"] for k in last24)
+    vwap = None
     if vv > 0:
         vwap = sum((k["h"] + k["l"] + k["c"]) / 3 * k["v"] for k in last24) / vv
         dv = (px - vwap) / a4
@@ -414,41 +415,44 @@ def analyze(coin, c1h, c1d, ctx, bench, extra):
     plan, setup = None, "Attendre"
     if bias != "neutre":
         lg = bias == "long"
+        sgn = 1 if lg else -1
         lv = sup if lg else res
         opp = res if lg else sup
-        near = lv[0]["p"] if lv and abs(px - lv[0]["p"]) / a4 <= 2.5 else None
+        # un trader n'achète pas n'importe où : il attend un repli vers une zone de « valeur » (niveau testé,
+        # moyenne 20 ou 50 en 4 h, prix moyen pondéré du jour), au moins PARAM["pb_min"] ATR sous le prix (au-dessus pour un short)
+        dmin = PARAM["pb_min"] * a4
+        cands = [z["p"] for z in lv] + [e20h4, e50h4] + ([vwap] if vwap else [])
+        cands = [x for x in cands if dmin <= (px - x) * sgn <= 2.5 * a4]
         brk = H[-1][2] if (lg and bos == 1 and H) else (L[-1][2] if (not lg and bos == -1 and L) else None)
-        if brk and (sq <= 35 or rv >= 1.3):
+        if brk and rv >= 1.5 and adx4 >= 20 and 0 <= (px - brk) * sgn <= 1.5 * a4:
+            # cassure confirmée par le volume et une tendance 4 h : entrée sur le retour vers le niveau cassé
             setup = "Cassure" if lg else "Cassure baissière"
-            e = [brk, brk + 0.3 * a4] if lg else [brk - 0.3 * a4, brk]
-        elif near is not None:
-            setup = "Achat sur repli" if lg else "Vente sur rebond"
-            e = [near, near + 0.3 * a4] if lg else [near - 0.3 * a4, near]
+            e = [brk, brk + 0.25 * a4] if lg else [brk - 0.25 * a4, brk]
         else:
-            m = e20h4 if (lg and e20h4 < px) or (not lg and e20h4 > px) else px - (0.6 * a4 if lg else -0.6 * a4)
             setup = "Achat sur repli" if lg else "Vente sur rebond"
-            e = [m - 0.15 * a4, m + 0.15 * a4]
+            lvl = (max(cands) if lg else min(cands)) if cands else px - sgn * max(PARAM["pb_min"], 1.0) * a4
+            e = [lvl - 0.15 * a4, lvl + 0.15 * a4]
         e = sorted(e)
         if lg:
-            sl = e[0] - 0.7 * a4
+            sl = e[0] - PARAM["sl_k"] * a4
             if L and e[0] - L[-1][2] < 2.5 * a4 and L[-1][2] < e[0]:
                 sl = min(sl, L[-1][2] - 0.25 * a4)
             risk = e[1] - sl
             if risk > 3 * a4:
                 sl = e[1] - 3 * a4; risk = 3 * a4
-            cands = [z["p"] for z in opp if z["p"] - e[1] >= 1.2 * risk]
-            t1 = cands[0] if cands else e[1] + 1.6 * risk
+            cands = [z["p"] for z in opp if z["p"] - e[1] >= PARAM["t1_r"] * risk]
+            t1 = cands[0] if cands else e[1] + max(1.6, PARAM["t1_r"]) * risk
             t2c = [z["p"] for z in opp if z["p"] > t1 + 0.5 * risk]
             t2 = t2c[0] if t2c else max(t1 + 0.9 * risk, e[1] + 2.6 * risk)
         else:
-            sl = e[1] + 0.7 * a4
+            sl = e[1] + PARAM["sl_k"] * a4
             if H and H[-1][2] - e[1] < 2.5 * a4 and H[-1][2] > e[1]:
                 sl = max(sl, H[-1][2] + 0.25 * a4)
             risk = sl - e[0]
             if risk > 3 * a4:
                 sl = e[0] + 3 * a4; risk = 3 * a4
-            cands = [z["p"] for z in opp if e[0] - z["p"] >= 1.2 * risk]
-            t1 = cands[0] if cands else e[0] - 1.6 * risk
+            cands = [z["p"] for z in opp if e[0] - z["p"] >= PARAM["t1_r"] * risk]
+            t1 = cands[0] if cands else e[0] - max(1.6, PARAM["t1_r"]) * risk
             t2c = [z["p"] for z in opp if z["p"] < t1 - 0.5 * risk]
             t2 = t2c[0] if t2c else min(t1 - 0.9 * risk, e[0] - 2.6 * risk)
         mid = (e[0] + e[1]) / 2
