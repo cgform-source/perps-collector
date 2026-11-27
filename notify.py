@@ -112,6 +112,15 @@ def main():
         hidden = {str(x).upper() for x in (json.load(open("config.json")).get("tok_hidden") or [])}
     except Exception:
         pass
+    try:  # tokens masqués depuis le dashboard
+        import urllib.request as _u
+        _rq = _u.Request("https://lqefewiwrecdjommktgm.supabase.co/rest/v1/influ_prefs?id=eq.analyserxxx&select=tok_hidden",
+                         headers={"apikey": "sb_publishable_IMMxd7lqThb0elf0Z2JwNQ_3Da4tdWq", "User-Agent": "perps-collector"})
+        with _u.urlopen(_rq, timeout=10) as _r:
+            _j = json.loads(_r.read() or b"[]")
+        hidden |= {str(x).upper().lstrip("$") for x in ((_j[0].get("tok_hidden") or []) if _j else [])}
+    except Exception:
+        pass
     for t in tw:
         if t["h"].lower() not in top5 or now - ts(t) > 2 * 3600:
             continue

@@ -650,7 +650,7 @@ def stats(recs):
                 "fill": round(len(tr_) / len(dr), 3) if dr else None, "ndir": len(dirs), "nrange": len(rng)}
     out = {"all": agg_(recs), "setup": {}, "class": {}, "conf": {}, "coin": {}, "sc": {}}
     for key, fn in (("setup", lambda r: r.get("setup")), ("class", lambda r: r.get("cls")), ("sc", lambda r: f'{r.get("setup")}|{r.get("cls")}'),
-                    ("conf", lambda r: "< 55" if r.get("conf", 0) < 55 else "55–69" if r.get("conf", 0) < 70 else "70 +"),
+                    ("conf", lambda r: "< 30" if r.get("conf", 0) < 30 else "30–40" if r.get("conf", 0) < 40 else "40 +"),
                     ("coin", lambda r: r.get("coin"))):
         groups = {}
         for r in recs:
