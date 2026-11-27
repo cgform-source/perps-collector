@@ -245,14 +245,22 @@ def norm_tk(L):
     return sorted(set(out))
 
 # ---- traduction en français avec le jargon crypto protégé (« shorts » ne doit pas devenir « courts métrages »)
-JARGON = ["shorts", "short", "shorted", "shorting", "longs", "long", "longed", "longing", "pump", "pumps", "pumping", "dump", "dumps",
+JARGON = ["shorts", "short", "shorted", "shorting", "shorters", "longs", "long", "longed", "longing", "longers", "bottom longers", "pump", "pumps", "pumping", "dump", "dumps",
           "dumping", "bullish", "bearish", "bull", "bear", "ATH", "gm", "gn", "aped", "ape", "bags", "bag", "moon", "mooning", "send", "sends",
           "rug", "rugged", "degen", "alpha", "CT", "dip", "bid", "TP", "TPs", "SL", "stop loss", "breakout", "retest", "leverage", "perps", "perp",
           "spot", "airdrop", "memecoin", "memecoins", "entry", "entries", "invalidation", "invalidations", "chart", "charts", "rekt", "fade", "ser", "fren", "wagmi", "ngmi", "fomo", "fud"]
 JRX = re.compile(r"(?<![\w$])(" + "|".join(sorted((re.escape(w) for w in JARGON), key=len, reverse=True)) + r")(?![\w])", re.I)
 
+FIXED = {"breaking": "URGENT", "just in": "DERNIÈRE MINUTE", "última hora": "DERNIÈRE MINUTE", "ultima hora": "DERNIÈRE MINUTE"}
+FRX = re.compile(r"(?<![\w$])(" + "|".join(re.escape(k) for k in FIXED) + r")(?![\w])", re.I)
+
 def tr_fr(text):
     keep = []
+    # un texte écrit tout en majuscules se traduit mal : on le passe en minuscules (les $tickers restent protégés plus bas)
+    letters = [ch for ch in text if ch.isalpha()]
+    if letters and sum(ch.isupper() for ch in letters) / len(letters) > 0.6:
+        text = re.sub(r"(\$[A-Za-z][A-Za-z0-9]{1,9})|([^$]+)", lambda m: m.group(1) or m.group(2).lower(), text)
+    text = FRX.sub(lambda m: (keep.append(FIXED[m.group(0).lower()]), f"ZQ{len(keep) - 1}Q")[1], text)
     def sub(m):
         keep.append(m.group(0))
         return f"ZQ{len(keep) - 1}Q"
